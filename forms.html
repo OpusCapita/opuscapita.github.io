@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>OCUI Guideline</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/ocui-bootstrap-bundle-0.1.2.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="affix.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+
+		<section class="sidebar">
+
+			<nav class="navbar navbar-default">
+				<div class="nav-background"></div>
+				<div class="navbar-header hidden-sm">
+					<a class="navbar-brand visible-lg" href="#">
+						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
+					</a>
+				</div>
+
+
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Introduction
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">OCUI Overview</a></li>
+							<li><a href="styleguide.html">Styleguide</a></li>
+							<li><a href="get-started.html">Get Started</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+					<li>
+						<a href="layout.html">Layout</a>
+					</li>
+					<li>
+						<a href="patterns.html">Patterns</a>
+					</li>
+					<li class="active dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Components
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="nav.html">Navigation</a></li>
+							<li><a href="forms.html">Forms</a></li>
+							<li><a href="list-groups.html">List Groups</a></li>
+							<li><a href="tables.html">Tables</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+<!--					<li>
+						<a href="templates.html">Template Library</a>
+					</li>-->
+					<li>
+						<a href="grammar-and-copy.html">Grammar &amp; Copy</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							React.js
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="react-v2.html">React.js Introduction</a>
+							</li>
+							<li>
+								<a href="react-bootstrap.html">React-Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">React Components</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content">
+			<div class="applogo visible-md visible-sm visible-xs">
+				<a class="applogo visible-md visible-sm visible-xs" href="#">
+					<img src="../../img/oc-logo-rgb.svg">
+				</a>
+				<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+			</div>
+
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+
+
+				      <!--right-->
+				      <div class="col-md-9">
+
+
+    	<h1 class=page-header id=forms>OCUI Forms</h1>
+
+			<h2>General Rules</h2>
+			<p class="lead">Forms are always rendered as <code>.form-horizontal</code>. Field length is justified within the grid. Forms may contain <code>&lt;fieldset&gt;</code>, <code>&lt;hr&gt;</code> separators and intersecting <code>&lt;h2&gt;</code> &mdash; <code>&lt;h4&gt;</code>headlines, but these should be used sparingly, and only if necessary.
+			Each form always has a headline, a gridded set of fields and a <code>.form-submit</code> below the form content, with at least one submit action.</p>
+
+			<h2>Form Submit</h2>
+		  <p>Each form has at least one form-submit component located at its bottom end. A redundant form-submit may be placed on top of the form if the form is either very long or may be sumbitted without change. Use wisely!</p>
+			<p>Buttons are classed and sorted by importance / likeliness of usage. Each Form has one (!) primary action/submit, and may have several secondary actions, as well as a tertiary abort / cancel action. Order is right aligned, from primary (right) to tertiary (left)</p>
+
+			<div class=bs-example>
+
+				<h2>Form Heading</h2>
+				<form class="form-horizontal">
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+						</div>
+						<div class="col-md-4">
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+						</div>
+						<div class="col-md-4">
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Label</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+						</div>
+					</div>
+				</form>
+				<div class="form-submit text-right">
+					<input type="submit" class="btn btn-link" value="Cancel" name="submit">
+					<input type="submit" class="btn btn-default" value="Action" name="submit">
+					<input type="submit" class="btn btn-default" value="Action" name="submit">
+					<input type="submit" class="btn btn-primary" value="Primary Action" name="submit" id="submit">
+				</div>
+			</div>
+			<figure class=highlight>
+				<pre>
+					<code class=language-html data-lang=html>
+					</code>
+				</pre>
+			</figure>
+
+			<div class=bs-example>
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Cancel</button>
+					<button class="btn btn-primary">Submit</button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Cancel</button>
+					<button class="btn btn-default">Save</button>
+					<button class="btn btn-primary">Submit</button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Cancel</button>
+					<button class="btn btn-default">Export</button>
+					<button class="btn btn-default">Save</button>
+					<button class="btn btn-primary">Submit</button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Cancel</button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">Save</button>
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="caret"></span>
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu text-left">
+							<li><a href="#">Print</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Export to PDF</a></li>
+							<li><a href="#">Export to CSV</a></li>
+							<li><a href="#">Export to XLSX</a></li>
+						</ul>
+					</div>
+					<button class="btn btn-primary">Submit</button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-default"><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp; Back</button>
+					<button class="btn btn-primary">Save &amp; Next &nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Cancel</button>
+					<button class="btn btn-default"><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp; Back</button>
+					<button class="btn btn-primary">Save &amp; Next &nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+				</div>
+				<br>
+
+				<div class="form-submit text-right">
+					<button class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp; Back</button>
+					<button class="btn btn-default">Save</button>
+					<button class="btn btn-primary">Save &amp; Next &nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+			<div class="bs-callout bs-callout-info">
+				<h4>Use The Grid, Luke</h4>
+				<p>Make sure to use an appropriate amount of columns keeping minimum field lengths and label sizes in mind.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<h4>Don't Reduce Fields to Content Size</h4>
+				<p>It is often requested to have field length match the content dimensions. This is not recommended with bootstrap forms, as they are designed to work as justified/block level objects in columns.</p>
+			</div>
+
+			<div class="bs-example bs-example-danger">
+				<h2>Form Heading</h2>
+				<form class="form-horizontal">
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label">Label</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label">Label</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+						<div class="form-group">
+								<label class="col-sm-1 control-label">Label</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label">Label</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+						</div>
+					</div>
+				</form>
+				<div class="form-submit text-right">
+					<input type="submit" class="btn btn-default" value="Cancel" name="submit">
+					<input type="submit" class="btn btn-primary" value="Primary Action" name="submit" id="submit">
+				</div>
+			</div>
+
+			<div class="bs-example bs-example-danger">
+				<h2>Form Heading</h2>
+				<form class="form-horizontal">
+					<div class="row">
+						<div class="col-md-6">
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Label</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Label</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+						<div class="form-group">
+								<label class="col-sm-2 control-label">Label</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Label</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" placeholder="Placeholder">
+								</div>
+							</div><!-- /form-group -->
+						</div>
+					</div>
+				</form>
+				<div class="form-submit text-right">
+					<input type="submit" class="btn btn-default" value="Cancel" name="submit">
+					<input type="submit" class="btn btn-default" value="Primary Action" name="submit" id="submit">
+				</div>
+			</div>
+
+			<br><br>
+			<h1>BS 3.3 Forms</h1>
+			<h2 id=forms-example>Basic example</h2>
+			<p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+			<div class=bs-example data-example-id=basic-forms>
+				<form> <div class=form-group> <label for=exampleInputEmail1>Email address</label> <input type=email class=form-control id=exampleInputEmail1 placeholder=Email> </div> <div class=form-group> <label for=exampleInputPassword1>Password</label> <input type=password class=form-control id=exampleInputPassword1 placeholder=Password> </div> <div class=form-group> <label for=exampleInputFile>File input</label> <input type=file id=exampleInputFile> <p class=help-block>Example block-level help text here.</p> </div> <div class=checkbox> <label> <input type=checkbox> Check me out </label> </div> <button type=submit class="btn btn-default">Submit</button> </form> </div>
+			<figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"exampleInputEmail1"</span><span class=nt>&gt;</span>Email address<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"email"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputEmail1"</span> <span class=na>placeholder=</span><span class=s>"Email"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"exampleInputPassword1"</span><span class=nt>&gt;</span>Password<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"password"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputPassword1"</span> <span class=na>placeholder=</span><span class=s>"Password"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"exampleInputFile"</span><span class=nt>&gt;</span>File input<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"file"</span> <span class=na>id=</span><span class=s>"exampleInputFile"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"help-block"</span><span class=nt>&gt;</span>Example block-level help text here.<span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span> Check me out
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Submit<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure>
+
+			<div class="bs-callout bs-callout-warning"  id=callout-formgroup-inputgroup>
+				 <h4>Don't mix form groups with input groups</h4> <p>Do not mix form groups directly with <a href=/components/#input-groups>input groups</a>. Instead, nest the input group inside of the form group.</p>
+			</div>
+			<div>
+
+			<h2 id=forms-inline>Inline form</h2> <p>Add <code>.form-inline</code> to your form (which doesn't have to be a <code>&lt;form&gt;</code>) for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p> <div class="bs-callout bs-callout-danger" id=callout-inline-form-width> <h4>May require custom widths</h4> <p>Inputs and selects have <code>width: 100%;</code> applied by default in Bootstrap. Within inline forms, we reset that to <code>width: auto;</code> so multiple controls can reside on the same line. Depending on your layout, additional custom widths may be required.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-inline-form-labels> <h4>Always add labels</h4> <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class. There are further alternative methods of providing a label for assistive technologies, such as the <code>aria-label</code>, <code>aria-labelledby</code> or <code>title</code> attribute. If none of these is present, screen readers may resort to using the <code>placeholder</code> attribute, if present, but note that use of <code>placeholder</code> as a replacement for other labelling methods is not advised.</p> </div> <div class=bs-example data-example-id=simple-form-inline> <form class=form-inline> <div class=form-group> <label for=exampleInputName2>Name</label> <input class=form-control id=exampleInputName2 placeholder="Jane Doe"> </div> <div class=form-group> <label for=exampleInputEmail2>Email</label> <input type=email class=form-control id=exampleInputEmail2 placeholder=jane.doe@example.com> </div> <button type=submit class="btn btn-default">Send invitation</button> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"exampleInputName2"</span><span class=nt>&gt;</span>Name<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputName2"</span> <span class=na>placeholder=</span><span class=s>"Jane Doe"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"exampleInputEmail2"</span><span class=nt>&gt;</span>Email<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"email"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputEmail2"</span> <span class=na>placeholder=</span><span class=s>"<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="6e040f000b400a010b2e0b160f031e020b400d0103">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Send invitation<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <div class=bs-example data-example-id=simple-form-inline> <form class=form-inline> <div class=form-group> <label class=sr-only for=exampleInputEmail3>Email address</label> <input type=email class=form-control id=exampleInputEmail3 placeholder=Email> </div> <div class=form-group> <label class=sr-only for=exampleInputPassword3>Password</label> <input type=password class=form-control id=exampleInputPassword3 placeholder=Password> </div> <div class=checkbox> <label> <input type=checkbox> Remember me </label> </div> <button type=submit class="btn btn-default">Sign in</button> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"sr-only"</span> <span class=na>for=</span><span class=s>"exampleInputEmail3"</span><span class=nt>&gt;</span>Email address<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"email"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputEmail3"</span> <span class=na>placeholder=</span><span class=s>"Email"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"sr-only"</span> <span class=na>for=</span><span class=s>"exampleInputPassword3"</span><span class=nt>&gt;</span>Password<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"password"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputPassword3"</span> <span class=na>placeholder=</span><span class=s>"Password"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span> Remember me
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Sign in<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <div class=bs-example data-example-id=form-inline-with-input-group> <form class=form-inline> <div class=form-group> <label class=sr-only for=exampleInputAmount>Amount (in dollars)</label> <div class=input-group> <div class=input-group-addon>$</div> <input class=form-control id=exampleInputAmount placeholder=Amount> <div class=input-group-addon>.00</div> </div> </div> <button type=submit class="btn btn-primary">Transfer cash</button> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"sr-only"</span> <span class=na>for=</span><span class=s>"exampleInputAmount"</span><span class=nt>&gt;</span>Amount (in dollars)<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>$<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"exampleInputAmount"</span> <span class=na>placeholder=</span><span class=s>"Amount"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>.00<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span><span class=nt>&gt;</span>Transfer cash<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure>
+			<h2 id=forms-horizontal>Horizontal form</h2> <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form (which doesn't have to be a <code>&lt;form&gt;</code>). Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p> <div class=bs-example data-example-id=simple-horizontal-form> <form class=form-horizontal> <div class=form-group> <label for=inputEmail3 class="col-sm-2 control-label">Email</label> <div class=col-sm-10> <input type=email class=form-control id=inputEmail3 placeholder=Email> </div> </div> <div class=form-group> <label for=inputPassword3 class="col-sm-2 control-label">Password</label> <div class=col-sm-10> <input type=password class=form-control id=inputPassword3 placeholder=Password> </div> </div> <div class=form-group> <div class="col-sm-offset-2 col-sm-10"> <div class=checkbox> <label> <input type=checkbox> Remember me </label> </div> </div> </div> <div class=form-group> <div class="col-sm-offset-2 col-sm-10"> <button type=submit class="btn btn-default">Sign in</button> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-horizontal"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"inputEmail3"</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span><span class=nt>&gt;</span>Email<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"email"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputEmail3"</span> <span class=na>placeholder=</span><span class=s>"Email"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"inputPassword3"</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span><span class=nt>&gt;</span>Password<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"password"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputPassword3"</span> <span class=na>placeholder=</span><span class=s>"Password"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-offset-2 col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			  <span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span> Remember me
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-offset-2 col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Sign in<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure>
+			<h2 id=forms-controls>Supported controls</h2> <p>Examples of standard form controls supported in an example form layout.</p> <h3>Inputs</h3> <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p> <div class="bs-callout bs-callout-danger" id=callout-input-needs-type> <h4>Type declaration required</h4> <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p> </div> <div class=bs-example data-example-id=text-form-control> <form> <input class=form-control placeholder="Text input"> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Text input"</span><span class=nt>&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-info" id=callout-xref-input-group> <h4>Input groups</h4> <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href=../components/#input-groups>check out the input group component</a>.</p> </div> <h3>Textarea</h3> <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p> <div class=bs-example data-example-id=textarea-form-control> <form> <textarea class=form-control rows=3 placeholder=Textarea></textarea> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;textarea</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>rows=</span><span class=s>"3"</span><span class=nt>&gt;&lt;/textarea&gt;</span></code></pre></figure> <h3>Checkboxes and radios</h3> <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p> <p>Disabled checkboxes and radios are supported, but to provide a "not-allowed" cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the <code>.disabled</code> class to the parent <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline</code>.</p> <h4>Default (stacked)</h4> <div class=bs-example data-example-id=block-checkboxes-radios> <form> <div class=checkbox> <label> <input type=checkbox value=""> Option one is this and that&mdash;be sure to include why it's great </label> </div> <div class="checkbox disabled"> <label> <input type=checkbox value="" disabled> Option two is disabled </label> </div> <br> <div class=radio> <label> <input type=radio name=optionsRadios id=optionsRadios1 value=option1 checked> Option one is this and that&mdash;be sure to include why it's great </label> </div> <div class=radio> <label> <input type=radio name=optionsRadios id=optionsRadios2 value=option2> Option two can be something else and selecting it will deselect option one </label> </div> <div class="radio disabled"> <label> <input type=radio name=optionsRadios id=optionsRadios3 value=option3 disabled> Option three is disabled </label> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>value=</span><span class=s>""</span><span class=nt>&gt;</span>
+			Option one is this and that<span class=ni>&amp;mdash;</span>be sure to include why it's great
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox disabled"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>value=</span><span class=s>""</span> <span class=na>disabled</span><span class=nt>&gt;</span>
+			Option two is disabled
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"radio"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"optionsRadios"</span> <span class=na>id=</span><span class=s>"optionsRadios1"</span> <span class=na>value=</span><span class=s>"option1"</span> <span class=na>checked</span><span class=nt>&gt;</span>
+			Option one is this and that<span class=ni>&amp;mdash;</span>be sure to include why it's great
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"radio"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"optionsRadios"</span> <span class=na>id=</span><span class=s>"optionsRadios2"</span> <span class=na>value=</span><span class=s>"option2"</span><span class=nt>&gt;</span>
+			Option two can be something else and selecting it will deselect option one
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"radio disabled"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"optionsRadios"</span> <span class=na>id=</span><span class=s>"optionsRadios3"</span> <span class=na>value=</span><span class=s>"option3"</span> <span class=na>disabled</span><span class=nt>&gt;</span>
+			Option three is disabled
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h4>Inline checkboxes and radios</h4> <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p> <div class=bs-example data-example-id=inline-checkboxes-radios> <form> <label class=checkbox-inline> <input type=checkbox id=inlineCheckbox1 value=option1> 1 </label> <label class=checkbox-inline> <input type=checkbox id=inlineCheckbox2 value=option2> 2 </label> <label class=checkbox-inline> <input type=checkbox id=inlineCheckbox3 value=option3> 3 </label> </form> <br> <form> <label class=radio-inline> <input type=radio name=inlineRadioOptions id=inlineRadio1 value=option1> 1 </label> <label class=radio-inline> <input type=radio name=inlineRadioOptions id=inlineRadio2 value=option2> 2 </label> <label class=radio-inline> <input type=radio name=inlineRadioOptions id=inlineRadio3 value=option3> 3 </label> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"checkbox-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"inlineCheckbox1"</span> <span class=na>value=</span><span class=s>"option1"</span><span class=nt>&gt;</span> 1
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"checkbox-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"inlineCheckbox2"</span> <span class=na>value=</span><span class=s>"option2"</span><span class=nt>&gt;</span> 2
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"checkbox-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"inlineCheckbox3"</span> <span class=na>value=</span><span class=s>"option3"</span><span class=nt>&gt;</span> 3
+			<span class=nt>&lt;/label&gt;</span>
+
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"radio-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"inlineRadioOptions"</span> <span class=na>id=</span><span class=s>"inlineRadio1"</span> <span class=na>value=</span><span class=s>"option1"</span><span class=nt>&gt;</span> 1
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"radio-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"inlineRadioOptions"</span> <span class=na>id=</span><span class=s>"inlineRadio2"</span> <span class=na>value=</span><span class=s>"option2"</span><span class=nt>&gt;</span> 2
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"radio-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"inlineRadioOptions"</span> <span class=na>id=</span><span class=s>"inlineRadio3"</span> <span class=na>value=</span><span class=s>"option3"</span><span class=nt>&gt;</span> 3
+			<span class=nt>&lt;/label&gt;</span></code></pre></figure> <h4>Checkboxes and radios without label text</h4> <p>Should you have no text within the <code>&lt;label&gt;</code>, the input is positioned as you'd expect. <strong>Currently only works on non-inline checkboxes and radios.</strong> Remember to still provide some form of label for assistive technologies (for instance, using <code>aria-label</code>).</p> <div class=bs-example data-example-id=checkboxes-radios-without-labels> <form> <div class=checkbox> <label> <input type=checkbox id=blankCheckbox value=option1 aria-label="Checkbox without label text"> </label> </div> <div class=radio> <label> <input type=radio name=blankRadio id=blankRadio1 value=option1 aria-label="Radio button without label text"> </label> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"blankCheckbox"</span> <span class=na>value=</span><span class=s>"option1"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"radio"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>name=</span><span class=s>"blankRadio"</span> <span class=na>id=</span><span class=s>"blankRadio1"</span> <span class=na>value=</span><span class=s>"option1"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h3>Selects</h3> <p>Note that many native select menus—namely in Safari and Chrome—have rounded corners that cannot be modified via <code>border-radius</code> properties.</p> <div class=bs-example data-example-ids=select-form-control> <form> <select class=form-control> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;select</span> <span class=na>class=</span><span class=s>"form-control"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;option&gt;</span>1<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>2<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>3<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>4<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>5<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;/select&gt;</span></code></pre></figure> <p>For <code>&lt;select&gt;</code> controls with the <code>multiple</code> attribute, multiple options are shown by default.</p> <div class=bs-example data-example-ids=select-multiple-form-control> <form> <select multiple class=form-control> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;select</span> <span class=na>multiple</span> <span class=na>class=</span><span class=s>"form-control"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;option&gt;</span>1<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>2<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>3<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>4<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;option&gt;</span>5<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;/select&gt;</span></code></pre></figure>
+			<h2 id=forms-controls-static>Static control</h2> <p>When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p> <div class=bs-example data-example-id=horizontal-static-form-control> <form class=form-horizontal> <div class=form-group> <label class="col-sm-2 control-label">Email</label> <div class=col-sm-10> <p class=form-control-static><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="c3a6aea2aaaf83a6bba2aeb3afa6eda0acae">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></p> </div> </div> <div class=form-group> <label for=inputPassword class="col-sm-2 control-label">Password</label> <div class=col-sm-10> <input type=password class=form-control id=inputPassword placeholder=Password> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-horizontal"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span><span class=nt>&gt;</span>Email<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"form-control-static"</span><span class=nt>&gt;</span><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="187d75797174587d60797568747d367b7775">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script><span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"inputPassword"</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span><span class=nt>&gt;</span>Password<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"password"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputPassword"</span> <span class=na>placeholder=</span><span class=s>"Password"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <div class=bs-example data-example-id=inline-static-form-control> <form class=form-inline> <div class=form-group> <label class=sr-only>Email</label> <p class=form-control-static><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="294c44484045694c51484459454c074a4644">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></p> </div> <div class=form-group> <label for=inputPassword2 class=sr-only>Password</label> <input type=password class=form-control id=inputPassword2 placeholder=Password> </div> <button type=submit class="btn btn-default">Confirm identity</button> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>Email<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"form-control-static"</span><span class=nt>&gt;</span><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="51343c30383d113429303c213d347f323e3c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script><span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"inputPassword2"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>Password<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"password"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputPassword2"</span> <span class=na>placeholder=</span><span class=s>"Password"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Confirm identity<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure>
+			<h2 id=forms-control-focus>Focus state</h2> <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p> <div class=bs-example> <form> <input class=form-control id=focusedInput value="Demonstrative focus state"> </form> </div> <div class="bs-callout bs-callout-info" id=callout-focus-demo> <h4>Demo <code>:focus</code> state</h4> <p>The above example input uses custom styles in our documentation to demonstrate the <code>:focus</code> state on a <code>.form-control</code>.</p> </div>
+			<h2 id=forms-control-disabled>Disabled state</h2> <p>Add the <code>disabled</code> boolean attribute on an input to prevent user interactions. Disabled inputs appear lighter and add a <code>not-allowed</code> cursor.</p> <div class=bs-example data-example-id=text-form-control-disabled> <form> <input class=form-control id=disabledInput placeholder="Disabled input here…" disabled> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"disabledInput"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>placeholder=</span><span class=s>"Disabled input here..."</span> <span class=na>disabled</span><span class=nt>&gt;</span></code></pre></figure> <h3 id=forms-disabled-fieldsets>Disabled fieldsets</h3> <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p> <div class="bs-callout bs-callout-warning" id=callout-fieldset-disabled-pointer-events> <h4>Caveat about link functionality of <code>&lt;a&gt;</code></h4> <p>By default, browsers will treat all native form controls (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;button&gt;</code> elements) inside a <code>&lt;fieldset disabled&gt;</code> as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes <code>&lt;a ... class="btn btn-*"&gt;</code> elements, these will only be given a style of <code>pointer-events: none</code>. As noted in the section about <a href=#buttons-disabled>disabled state for buttons</a> (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.</p> </div> <div class="bs-callout bs-callout-danger" id=callout-fieldset-disabled-ie> <h4>Cross-browser compatibility</h4> <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p> </div> <div class=bs-example data-example-id=disabled-fieldset> <form> <fieldset disabled> <div class=form-group> <label for=disabledTextInput>Disabled input</label> <input id=disabledTextInput class=form-control placeholder="Disabled input"> </div> <div class=form-group> <label for=disabledSelect>Disabled select menu</label> <select id=disabledSelect class=form-control> <option>Disabled select</option> </select> </div> <div class=checkbox> <label> <input type=checkbox> Can't check this </label> </div> <button type=submit class="btn btn-primary">Submit</button> </fieldset> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form&gt;</span>
+			<span class=nt>&lt;fieldset</span> <span class=na>disabled</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"disabledTextInput"</span><span class=nt>&gt;</span>Disabled input<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>id=</span><span class=s>"disabledTextInput"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Disabled input"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"disabledSelect"</span><span class=nt>&gt;</span>Disabled select menu<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;select</span> <span class=na>id=</span><span class=s>"disabledSelect"</span> <span class=na>class=</span><span class=s>"form-control"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;option&gt;</span>Disabled select<span class=nt>&lt;/option&gt;</span>
+			<span class=nt>&lt;/select&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span> Can't check this
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span><span class=nt>&gt;</span>Submit<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/fieldset&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure>
+			<h2 id=forms-control-readonly>Readonly state</h2> <p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.</p> <div class=bs-example data-example-id=readonly-text-form-control> <form> <input class=form-control placeholder="Readonly input here…" readonly> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>placeholder=</span><span class=s>"Readonly input here…"</span> <span class=na>readonly</span><span class=nt>&gt;</span></code></pre></figure>
+			<h2 id=forms-help-text>Help text</h2> <p>Block level help text for form controls.</p> <div class="bs-callout bs-callout-info" id=callout-help-text-accessibility> <h4>Associating help text with form controls</h4> <p>Help text should be explicitly associated with the form control it relates to using the <code>aria-describedby</code> attribute. This will ensure that assistive technologies – such as screen readers – will announce this help text when the user focuses or enters the control.</p> </div> <div class=bs-example data-example-id=simple-help-text> <form> <div class=form-group> <label for=inputHelpBlock>Input with help text</label> <input id=inputHelpBlock class=form-control aria-describedby=helpBlock> </div> <span class=help-block id=helpBlock>A block of help text that breaks onto a new line and may extend beyond one line.</span> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"sr-only"</span> <span class=na>for=</span><span class=s>"inputHelpBlock"</span><span class=nt>&gt;</span>Input with help text<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>id=</span><span class=s>"inputHelpBlock"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-describedby=</span><span class=s>"helpBlock"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"helpBlock"</span> <span class=na>class=</span><span class=s>"help-block"</span><span class=nt>&gt;</span>A block of help text that breaks onto a new line and may extend beyond one line.<span class=nt>&lt;/span&gt;</span></code></pre></figure> </div>
+			<h2 id=forms-control-validation>Validation states</h2> <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p> <div class="bs-callout bs-callout-warning" id=callout-form-validation-state-accessibility> <h4>Conveying validation state to assistive technologies and colorblind users</h4> <p>Using these validation styles to denote the state of a form control only provides a visual, color-based indication, which will not be conveyed to users of assistive technologies - such as screen readers - or to colorblind users.</p> <p>Ensure that an alternative indication of state is also provided. For instance, you can include a hint about state in the form control's <code>&lt;label&gt;</code> text itself (as is the case in the following code example), include a <a href=../components/#glyphicons>Glyphicon</a> (with appropriate alternative text using the <code>.sr-only</code> class - see the <a href=../components/#glyphicons-examples>Glyphicon examples</a>), or by providing an additional <a href=#forms-help-text>help text</a> block. Specifically for assistive technologies, invalid form controls can also be assigned an <code>aria-invalid="true"</code> attribute.</p> </div> <div class=bs-example data-example-id=form-validation-states> <form> <div class="form-group has-success"> <label class=control-label for=inputSuccess1>Input with success</label> <input class=form-control id=inputSuccess1 aria-describedby=helpBlock2> <span class=help-block id=helpBlock2>A block of help text that breaks onto a new line and may extend beyond one line.</span> </div> <div class="form-group has-warning"> <label class=control-label for=inputWarning1>Input with warning</label> <input class=form-control id=inputWarning1> </div> <div class="form-group has-error"> <label class=control-label for=inputError1>Input with error</label> <input class=form-control id=inputError1> </div> <div class=has-success> <div class=checkbox> <label> <input type=checkbox id=checkboxSuccess value=option1> Checkbox with success </label> </div> </div> <div class=has-warning> <div class=checkbox> <label> <input type=checkbox id=checkboxWarning value=option1> Checkbox with warning </label> </div> </div> <div class=has-error> <div class=checkbox> <label> <input type=checkbox id=checkboxError value=option1> Checkbox with error </label> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputSuccess1"</span><span class=nt>&gt;</span>Input with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputSuccess1"</span> <span class=na>aria-describedby=</span><span class=s>"helpBlock2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"helpBlock2"</span> <span class=na>class=</span><span class=s>"help-block"</span><span class=nt>&gt;</span>A block of help text that breaks onto a new line and may extend beyond one line.<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-warning"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputWarning1"</span><span class=nt>&gt;</span>Input with warning<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputWarning1"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-error"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputError1"</span><span class=nt>&gt;</span>Input with error<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputError1"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"has-success"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"checkboxSuccess"</span> <span class=na>value=</span><span class=s>"option1"</span><span class=nt>&gt;</span>
+			Checkbox with success
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"has-warning"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"checkboxWarning"</span> <span class=na>value=</span><span class=s>"option1"</span><span class=nt>&gt;</span>
+			Checkbox with warning
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"has-error"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"checkbox"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>id=</span><span class=s>"checkboxError"</span> <span class=na>value=</span><span class=s>"option1"</span><span class=nt>&gt;</span>
+			Checkbox with error
+			<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h3>With optional icons</h3> <p>You can also add optional feedback icons with the addition of <code>.has-feedback</code> and the right icon.</p> <p><strong class=text-danger>Feedback icons only work with textual <code>&lt;input class="form-control"&gt;</code> elements.</strong></p> <div class="bs-callout bs-callout-warning" id=callout-has-feedback-icon-positioning> <h4>Icons, labels, and input groups</h4> <p>Manual positioning of feedback icons is required for inputs without a label and for <a href=../components#input-groups>input groups</a> with an add-on on the right. You are strongly encouraged to provide labels for all inputs for accessibility reasons. If you wish to prevent labels from being displayed, hide them with the <code>.sr-only</code> class. If you must do without labels, adjust the <code>top</code> value of the feedback icon. For input groups, adjust the <code>right</code> value to an appropriate pixel value depending on the width of your addon.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-has-feedback-icon-accessibility> <h4>Conveying the icon's meaning to assistive technologies</h4> <p>To ensure that assistive technologies – such as screen readers – correctly convey the meaning of an icon, additional hidden text should be included with the <code>.sr-only</code> class and explicitly associated with the form control it relates to using <code>aria-describedby</code>. Alternatively, ensure that the meaning (for instance, the fact that there is a warning for a particular text entry field) is conveyed in some other form, such as changing the text of the actual <code>&lt;label&gt;</code> associated with the form control.</p> <p>Although the following examples already mention the validation state of their respective form controls in the <code>&lt;label&gt;</code> text itself, the above technique (using <code>.sr-only</code> text and <code>aria-describedby</code>) has been included for illustrative purposes.</p> </div> <div class=bs-example data-example-id=form-validation-states-with-icons> <form> <div class="form-group has-success has-feedback"> <label class=control-label for=inputSuccess2>Input with success</label> <input class=form-control id=inputSuccess2 aria-describedby=inputSuccess2Status> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputSuccess2Status>(success)</span> </div> <div class="form-group has-warning has-feedback"> <label class=control-label for=inputWarning2>Input with warning</label> <input class=form-control id=inputWarning2 aria-describedby=inputWarning2Status> <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputWarning2Status>(warning)</span> </div> <div class="form-group has-error has-feedback"> <label class=control-label for=inputError2>Input with error</label> <input class=form-control id=inputError2 aria-describedby=inputError2Status> <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputError2Status>(error)</span> </div> <div class="form-group has-success has-feedback"> <label class=control-label for=inputGroupSuccess1>Input group with success</label> <div class=input-group> <span class=input-group-addon>@</span> <input class=form-control id=inputGroupSuccess1 aria-describedby=inputGroupSuccess1Status> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputGroupSuccess1Status>(success)</span> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputSuccess2"</span><span class=nt>&gt;</span>Input with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputSuccess2"</span> <span class=na>aria-describedby=</span><span class=s>"inputSuccess2Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputSuccess2Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-warning has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputWarning2"</span><span class=nt>&gt;</span>Input with warning<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputWarning2"</span> <span class=na>aria-describedby=</span><span class=s>"inputWarning2Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-warning-sign form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputWarning2Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(warning)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-error has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputError2"</span><span class=nt>&gt;</span>Input with error<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputError2"</span> <span class=na>aria-describedby=</span><span class=s>"inputError2Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-remove form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputError2Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(error)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputGroupSuccess1"</span><span class=nt>&gt;</span>Input group with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputGroupSuccess1"</span> <span class=na>aria-describedby=</span><span class=s>"inputGroupSuccess1Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputGroupSuccess1Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h4>Optional icons in horizontal and inline forms</h4> <div class=bs-example data-example-id=horizontal-form-validation-state-with-icon> <form class=form-horizontal> <div class="form-group has-success has-feedback"> <label class="control-label col-sm-3" for=inputSuccess3>Input with success</label> <div class=col-sm-9> <input class=form-control id=inputSuccess3 aria-describedby=inputSuccess3Status> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputSuccess3Status>(success)</span> </div> </div> <div class="form-group has-success has-feedback"> <label class="control-label col-sm-3" for=inputGroupSuccess2>Input group with success</label> <div class=col-sm-9> <div class=input-group> <span class=input-group-addon>@</span> <input class=form-control id=inputGroupSuccess2 aria-describedby=inputGroupSuccess2Status> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputGroupSuccess2Status>(success)</span> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-horizontal"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label col-sm-3"</span> <span class=na>for=</span><span class=s>"inputSuccess3"</span><span class=nt>&gt;</span>Input with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-9"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputSuccess3"</span> <span class=na>aria-describedby=</span><span class=s>"inputSuccess3Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputSuccess3Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label col-sm-3"</span> <span class=na>for=</span><span class=s>"inputGroupSuccess2"</span><span class=nt>&gt;</span>Input group with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-9"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputGroupSuccess2"</span> <span class=na>aria-describedby=</span><span class=s>"inputGroupSuccess2Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputGroupSuccess2Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <div class=bs-example data-example-id=inline-form-validation-state-with-icon> <form class=form-inline> <div class="form-group has-success has-feedback"> <label class=control-label for=inputSuccess4>Input with success</label> <input class=form-control id=inputSuccess4 aria-describedby=inputSuccess4Status> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputSuccess4Status>(success)</span> </div> </form> <br> <form class=form-inline> <div class="form-group has-success has-feedback"> <label class=control-label for=inputGroupSuccess3>Input group with success</label> <div class=input-group> <span class=input-group-addon>@</span> <input class=form-control id=inputGroupSuccess3 aria-describedby=inputGroupSuccess3Status> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputGroupSuccess3Status>(success)</span> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputSuccess4"</span><span class=nt>&gt;</span>Input with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputSuccess4"</span> <span class=na>aria-describedby=</span><span class=s>"inputSuccess4Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputSuccess4Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span>
+			<span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-inline"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label"</span> <span class=na>for=</span><span class=s>"inputGroupSuccess3"</span><span class=nt>&gt;</span>Input group with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputGroupSuccess3"</span> <span class=na>aria-describedby=</span><span class=s>"inputGroupSuccess3Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputGroupSuccess3Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <h4>Optional icons with hidden <code>.sr-only</code> labels</h4> <p>If you use the <code>.sr-only</code> class to hide a form control's <code>&lt;label&gt;</code> (rather than using other labelling options, such as the <code>aria-label</code> attribute), Bootstrap will automatically adjust the position of the icon once it's been added.</p> <div class=bs-example data-example-id=form-validation-state-with-icon-without-label> <div class="form-group has-success has-feedback"> <label class="sr-only control-label" for=inputSuccess5>Hidden label</label> <input class=form-control id=inputSuccess5 aria-describedby=inputSuccess5Status> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputSuccess5Status>(success)</span> </div> <div class="form-group has-success has-feedback"> <label class="sr-only control-label" for=inputGroupSuccess4>Input group with success</label> <div class=input-group> <span class=input-group-addon>@</span> <input class=form-control id=inputGroupSuccess4 aria-describedby=inputGroupSuccess4Status> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden=true></span> <span class=sr-only id=inputGroupSuccess4Status>(success)</span> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label sr-only"</span> <span class=na>for=</span><span class=s>"inputSuccess5"</span><span class=nt>&gt;</span>Hidden label<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputSuccess5"</span> <span class=na>aria-describedby=</span><span class=s>"inputSuccess5Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputSuccess5Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group has-success has-feedback"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"control-label sr-only"</span> <span class=na>for=</span><span class=s>"inputGroupSuccess4"</span><span class=nt>&gt;</span>Input group with success<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"inputGroupSuccess4"</span> <span class=na>aria-describedby=</span><span class=s>"inputGroupSuccess4Status"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"glyphicon glyphicon-ok form-control-feedback"</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>id=</span><span class=s>"inputGroupSuccess4Status"</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>(success)<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=forms-control-sizes>Control sizing</h2> <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p> <h3>Height sizing</h3> <p>Create taller or shorter form controls that match button sizes.</p> <div class="bs-example bs-example-control-sizing" data-example-id=form-control-height-sizes> <form> <div class=controls> <input class="form-control input-lg" placeholder=.input-lg> <input class=form-control placeholder="Default input"> <input class="form-control input-sm" placeholder=.input-sm> <select class="form-control input-lg"> <option value="">.input-lg</option> </select> <select class=form-control> <option value="">Default select</option> </select> <select class="form-control input-sm"> <option value="">.input-sm</option> </select> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control input-lg"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>placeholder=</span><span class=s>".input-lg"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>placeholder=</span><span class=s>"Default input"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control input-sm"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>placeholder=</span><span class=s>".input-sm"</span><span class=nt>&gt;</span>
+
+			<span class=nt>&lt;select</span> <span class=na>class=</span><span class=s>"form-control input-lg"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/select&gt;</span>
+			<span class=nt>&lt;select</span> <span class=na>class=</span><span class=s>"form-control"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/select&gt;</span>
+			<span class=nt>&lt;select</span> <span class=na>class=</span><span class=s>"form-control input-sm"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/select&gt;</span></code></pre></figure> <h3>Horizontal form group sizes</h3> <p>Quickly size labels and form controls within <code>.form-horizontal</code> by adding <code>.form-group-lg</code> or <code>.form-group-sm</code>.</p> <div class=bs-example data-example-id=form-group-height-sizes> <form class=form-horizontal> <div class="form-group form-group-lg"> <label class="col-sm-2 control-label" for=formGroupInputLarge>Large label</label> <div class=col-sm-10> <input class=form-control id=formGroupInputLarge placeholder="Large input"> </div> </div> <div class="form-group form-group-sm"> <label class="col-sm-2 control-label" for=formGroupInputSmall>Small label</label> <div class=col-sm-10> <input class=form-control id=formGroupInputSmall placeholder="Small input"> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;form</span> <span class=na>class=</span><span class=s>"form-horizontal"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group form-group-lg"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span> <span class=na>for=</span><span class=s>"formGroupInputLarge"</span><span class=nt>&gt;</span>Large label<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>id=</span><span class=s>"formGroupInputLarge"</span> <span class=na>placeholder=</span><span class=s>"Large input"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"form-group form-group-sm"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;label</span> <span class=na>class=</span><span class=s>"col-sm-2 control-label"</span> <span class=na>for=</span><span class=s>"formGroupInputSmall"</span><span class=nt>&gt;</span>Small label<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-10"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>id=</span><span class=s>"formGroupInputSmall"</span> <span class=na>placeholder=</span><span class=s>"Small input"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/form&gt;</span></code></pre></figure> <h3>Column sizing</h3> <p>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</p> <div class=bs-example data-example-id=form-control-column-sizing> <form> <div class=row> <div class=col-xs-2> <input class=form-control placeholder=.col-xs-2> </div> <div class=col-xs-3> <input class=form-control placeholder=.col-xs-3> </div> <div class=col-xs-4> <input class=form-control placeholder=.col-xs-4> </div> </div> </form> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>".col-xs-2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-3"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>".col-xs-3"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-4"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>".col-xs-4"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+
+
+			<h1 class=page-header id=buttons>Buttons</h1>
+			<h2 id=buttons-tags>Button tags</h2> <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p> <form class=bs-example data-example-id=btn-tags> <a href=# class="btn btn-default" role=button>Link</a> <button class="btn btn-default" type=submit>Button</button> <input class="btn btn-default" type=button value=Input> <input class="btn btn-default" type=submit value=Submit> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;a</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Link<span class=nt>&lt;/a&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>type=</span><span class=s>"submit"</span><span class=nt>&gt;</span>Button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>value=</span><span class=s>"Input"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>type=</span><span class=s>"submit"</span> <span class=na>value=</span><span class=s>"Submit"</span><span class=nt>&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-warning" id=callout-buttons-context-usage> <h4>Context-specific usage</h4> <p>While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-buttons-anchor-accessibility> <h4>Links acting as buttons</h4> <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-buttons-ff-height> <h4>Cross-browser rendering</h4> <p>As a best practice, <strong>we highly recommend using the <code>&lt;button&gt;</code> element whenever possible</strong> to ensure matching cross-browser rendering.</p> <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a bug in Firefox &lt;30</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p> </div>
+			<h2 id=buttons-options>Options</h2> <p>Use any of the available button classes to quickly create a styled button.</p> <div class=bs-example data-example-id=btn-variants> <button type=button class="btn btn-default">Default</button> <button type=button class="btn btn-primary">Primary</button> <button type=button class="btn btn-success">Success</button> <button type=button class="btn btn-info">Info</button> <button type=button class="btn btn-warning">Warning</button> <button type=button class="btn btn-danger">Danger</button> <button type=button class="btn btn-link">Link</button> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Standard button --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Default<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span><span class=nt>&gt;</span>Primary<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Indicates a successful or positive action --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-success"</span><span class=nt>&gt;</span>Success<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Contextual button for informational alert messages --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-info"</span><span class=nt>&gt;</span>Info<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Indicates caution should be taken with this action --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-warning"</span><span class=nt>&gt;</span>Warning<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-danger"</span><span class=nt>&gt;</span>Danger<span class=nt>&lt;/button&gt;</span>
+
+			<span class=c>&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-link"</span><span class=nt>&gt;</span>Link<span class=nt>&lt;/button&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-warning" id=callout-buttons-color-accessibility> <h4>Conveying meaning to assistive technologies</h4> <p>Using color to add meaning to a button only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text of the button), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p> </div>
+			<h2 id=buttons-sizes>Sizes</h2> <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p> <div class=bs-example data-example-id=btn-sizes> <p> <button type=button class="btn btn-primary btn-lg">Large button</button> <button type=button class="btn btn-default btn-lg">Large button</button> </p> <p> <button type=button class="btn btn-primary">Default button</button> <button type=button class="btn btn-default">Default button</button> </p> <p> <button type=button class="btn btn-primary btn-sm">Small button</button> <button type=button class="btn btn-default btn-sm">Small button</button> </p> <p> <button type=button class="btn btn-primary btn-xs">Extra small button</button> <button type=button class="btn btn-default btn-xs">Extra small button</button> </p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg"</span><span class=nt>&gt;</span>Large button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg"</span><span class=nt>&gt;</span>Large button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;p&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span><span class=nt>&gt;</span>Default button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Default button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;p&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-sm"</span><span class=nt>&gt;</span>Small button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-sm"</span><span class=nt>&gt;</span>Small button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/p&gt;</span>
+			<span class=nt>&lt;p&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-xs"</span><span class=nt>&gt;</span>Extra small button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-xs"</span><span class=nt>&gt;</span>Extra small button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/p&gt;</span></code></pre></figure> <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p> <div class=bs-example data-example-id=block-btns> <div class="well center-block" style=max-width:400px> <button type=button class="btn btn-primary btn-lg btn-block">Block level button</button> <button type=button class="btn btn-default btn-lg btn-block">Block level button</button> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg btn-block"</span><span class=nt>&gt;</span>Block level button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg btn-block"</span><span class=nt>&gt;</span>Block level button<span class=nt>&lt;/button&gt;</span></code></pre></figure>
+			<h2 id=buttons-active>Active state</h2> <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the active state programmatically.</p> <h3>Button element</h3> <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p> <p class=bs-example data-example-id=active-button-btns> <button type=button class="btn btn-primary btn-lg active">Primary button</button> <button type=button class="btn btn-default btn-lg active">Button</button> </p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg active"</span><span class=nt>&gt;</span>Primary button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg active"</span><span class=nt>&gt;</span>Button<span class=nt>&lt;/button&gt;</span></code></pre></figure> <h3>Anchor element</h3> <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p> <p class=bs-example data-example-id=active-anchor-btns> <a href=# class="btn btn-primary btn-lg active" role=button>Primary link</a> <a href=# class="btn btn-default btn-lg active" role=button>Link</a> </p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg active"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Primary link<span class=nt>&lt;/a&gt;</span>
+			<span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg active"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Link<span class=nt>&lt;/a&gt;</span></code></pre></figure>
+			<h2 id=buttons-disabled>Disabled state</h2> <p>Make buttons look unclickable by fading them back with <code>opacity</code>.</p> <h3>Button element</h3> <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p> <p class=bs-example data-example-id=disabled-button-btns> <button type=button class="btn btn-primary btn-lg" disabled>Primary button</button> <button type=button class="btn btn-default btn-lg" disabled>Button</button> </p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-lg btn-primary"</span> <span class=na>disabled=</span><span class=s>"disabled"</span><span class=nt>&gt;</span>Primary button<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg"</span> <span class=na>disabled=</span><span class=s>"disabled"</span><span class=nt>&gt;</span>Button<span class=nt>&lt;/button&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-danger" id=callout-buttons-ie-disabled> <h4>Cross-browser compatibility</h4> <p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p> </div> <h3>Anchor element</h3> <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p> <p class=bs-example data-example-id=disabled-anchor-btns> <a href=# class="btn btn-primary btn-lg disabled" role=button>Primary link</a> <a href=# class="btn btn-default btn-lg disabled" role=button>Link</a> </p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg disabled"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Primary link<span class=nt>&lt;/a&gt;</span>
+			<span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg disabled"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Link<span class=nt>&lt;/a&gt;</span></code></pre></figure> <p> We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. </p> <div class="bs-callout bs-callout-warning" id=callout-buttons-disabled-anchor> <h4>Link functionality caveat</h4> <p>This class uses <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a&gt;</code>s, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. In addition, even in browsers that do support <code>pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, use custom JavaScript to disable such links.</p></div>
+
+
+			<h1 class=page-header id=dropdowns>Dropdowns</h1>
+			<p class=lead>Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href=../javascript/#dropdowns>dropdown JavaScript plugin</a>.</p>
+			<h2 id=dropdowns-example>Example</h2> <p>Wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then add the menu's HTML.</p> <div class=bs-example data-example-id=static-dropdown> <div class="dropdown clearfix"> <button class="btn btn-default dropdown-toggle" type=button id=dropdownMenu1 data-toggle=dropdown aria-haspopup=true aria-expanded=true> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=dropdownMenu1> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"dropdown"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>id=</span><span class=s>"dropdownMenu1"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"true"</span><span class=nt>&gt;</span>
+			Dropdown
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span> <span class=na>aria-labelledby=</span><span class=s>"dropdownMenu1"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>Dropdown menus can be changed to expand upwards (instead of downwards) by adding <code>.dropup</code> to the parent.</p> <div class=bs-example data-example-id=static-dropup> <div class="dropup clearfix"> <button class="btn btn-default dropdown-toggle" type=button id=dropdownMenu2 data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropup <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=dropdownMenu2> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"dropup"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>id=</span><span class=s>"dropdownMenu2"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Dropup
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span> <span class=na>aria-labelledby=</span><span class=s>"dropdownMenu2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=dropdowns-alignment>Alignment</h2> <p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code>.dropdown-menu-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.</p> <div class="bs-callout bs-callout-warning" id=callout-dropdown-positioning> <h4>May require additional positioning</h4> <p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain <code>overflow</code> properties or appear out of bounds of the viewport. Address these issues on your own as they arise.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-dropdown-pull-right> <h4>Deprecated <code>.pull-right</code> alignment</h4> <p>As of v3.1.0, we've deprecated <code>.pull-right</code> on dropdown menus. To right-align a menu, use <code>.dropdown-menu-right</code>. Right-aligned nav components in the navbar use a mixin version of this class to automatically align the menu. To override it, use <code>.dropdown-menu-left</code>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu dropdown-menu-right"</span> <span class=na>aria-labelledby=</span><span class=s>"dLabel"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
+			<h2 id=dropdowns-headers>Headers</h2> <p>Add a header to label sections of actions in any dropdown menu.</p> <div class=bs-example> <div class="dropdown clearfix"> <button class="btn btn-default dropdown-toggle" type=button id=dropdownMenu3 data-toggle=dropdown aria-haspopup=true aria-expanded=true> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=dropdownMenu3> <li class=dropdown-header>Dropdown header</li> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li class=dropdown-header>Dropdown header</li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span> <span class=na>aria-labelledby=</span><span class=s>"dropdownMenu3"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"dropdown-header"</span><span class=nt>&gt;</span>Dropdown header<span class=nt>&lt;/li&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
+			<h2 id=dropdowns-divider>Divider</h2> <p>Add a divider to separate series of links in a dropdown menu.</p> <div class=bs-example> <div class="dropdown clearfix"> <button class="btn btn-default dropdown-toggle" type=button id=dropdownMenuDivider data-toggle=dropdown aria-haspopup=true aria-expanded=true> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=dropdownMenuDivider> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span> <span class=na>aria-labelledby=</span><span class=s>"dropdownMenuDivider"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
+			<h2 id=dropdowns-disabled>Disabled menu items</h2> <p>Add <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown to disable the link.</p> <div class=bs-example> <div class="dropdown clearfix"> <button class="btn btn-default dropdown-toggle" type=button id=dropdownMenu4 data-toggle=dropdown aria-haspopup=true aria-expanded=true> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=dropdownMenu4> <li><a href=#>Regular link</a></li> <li class=disabled><a href=#>Disabled link</a></li> <li><a href=#>Another link</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span> <span class=na>aria-labelledby=</span><span class=s>"dropdownMenu4"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Regular link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"disabled"</span><span class=nt>&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Disabled link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
+
+
+			<h1 class=page-header id=btn-groups>Button groups</h1>
+			<p class=lead>Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with <a href=../javascript/#buttons>our buttons plugin</a>.</p> <div class="bs-callout bs-callout-warning" id=callout-btn-group-tooltips> <h4>Tooltips &amp; popovers in button groups require special setting</h4> <p>When using tooltips or popovers on elements within a <code>.btn-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p> </div> <div class="bs-callout bs-callout-warning" id=callout-btn-group-accessibility> <h4>Ensure correct <code>role</code> and provide a label</h4> <p>In order for assistive technologies – such as screen readers – to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.</p> <p>One exception are groups which only contain a single control (for instance the <a href=#btn-groups-justified>justified button groups</a> with <code>&lt;button&gt;</code> elements) or a dropdown.</p> <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.</p> </div>
+			<h2 id=btn-groups-single>Basic example</h2> <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p> <div class=bs-example data-example-id=simple-button-group> <div class=btn-group role=group aria-label="Basic example"> <button type=button class="btn btn-default">Left</button> <button type=button class="btn btn-default">Middle</button> <button type=button class="btn btn-default">Right</button> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Left<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Middle<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Right<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-groups-toolbar>Button toolbar</h2> <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</p> <div class=bs-example data-example-id=simple-button-toolbar> <div class=btn-toolbar role=toolbar aria-label="Toolbar with button groups"> <div class=btn-group role=group aria-label="First group"> <button type=button class="btn btn-default">1</button> <button type=button class="btn btn-default">2</button> <button type=button class="btn btn-default">3</button> <button type=button class="btn btn-default">4</button> </div> <div class=btn-group role=group aria-label="Second group"> <button type=button class="btn btn-default">5</button> <button type=button class="btn btn-default">6</button> <button type=button class="btn btn-default">7</button> </div> <div class=btn-group role=group aria-label="Third group"> <button type=button class="btn btn-default">8</button> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-toolbar"</span> <span class=na>role=</span><span class=s>"toolbar"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-groups-sizing>Sizing</h2> <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including when nesting multiple groups.</p> <div class=bs-example data-example-id=button-group-sizing> <div class="btn-group btn-group-lg" role=group aria-label="Large button group"> <button type=button class="btn btn-default">Left</button> <button type=button class="btn btn-default">Middle</button> <button type=button class="btn btn-default">Right</button> </div> <br> <div class=btn-group role=group aria-label="Default button group"> <button type=button class="btn btn-default">Left</button> <button type=button class="btn btn-default">Middle</button> <button type=button class="btn btn-default">Right</button> </div> <br> <div class="btn-group btn-group-sm" role=group aria-label="Small button group"> <button type=button class="btn btn-default">Left</button> <button type=button class="btn btn-default">Middle</button> <button type=button class="btn btn-default">Right</button> </div> <br> <div class="btn-group btn-group-xs" role=group aria-label="Extra-small button group"> <button type=button class="btn btn-default">Left</button> <button type=button class="btn btn-default">Middle</button> <button type=button class="btn btn-default">Right</button> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group btn-group-lg"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group btn-group-sm"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group btn-group-xs"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-groups-nested>Nesting</h2> <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p> <div class=bs-example data-example-id=button-group-nesting> <div class=btn-group role=group aria-label="Button group with nested dropdown"> <button type=button class="btn btn-default">1</button> <button type=button class="btn btn-default">2</button> <div class=btn-group role=group> <button id=btnGroupDrop1 type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=btnGroupDrop1> <li><a href=#>Dropdown link</a></li> <li><a href=#>Dropdown link</a></li> </ul> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>1<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>2<span class=nt>&lt;/button&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Dropdown
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Dropdown link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Dropdown link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-groups-vertical>Vertical variation</h2> <p>Make a set of buttons appear vertically stacked rather than horizontally. <strong class=text-danger>Split button dropdowns are not supported here.</strong></p> <div class=bs-example data-example-id=vertical-button-group> <div class=btn-group-vertical role=group aria-label="Vertical button group"> <button type=button class="btn btn-default">Button</button> <button type=button class="btn btn-default">Button</button> <div class=btn-group role=group> <button id=btnGroupVerticalDrop1 type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=btnGroupVerticalDrop1> <li><a href=#>Dropdown link</a></li> <li><a href=#>Dropdown link</a></li> </ul> </div> <button type=button class="btn btn-default">Button</button> <button type=button class="btn btn-default">Button</button> <div class=btn-group role=group> <button id=btnGroupVerticalDrop2 type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=btnGroupVerticalDrop2> <li><a href=#>Dropdown link</a></li> <li><a href=#>Dropdown link</a></li> </ul> </div> <div class=btn-group role=group> <button id=btnGroupVerticalDrop3 type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=btnGroupVerticalDrop3> <li><a href=#>Dropdown link</a></li> <li><a href=#>Dropdown link</a></li> </ul> </div> <div class=btn-group role=group> <button id=btnGroupVerticalDrop4 type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </button> <ul class=dropdown-menu aria-labelledby=btnGroupVerticalDrop4> <li><a href=#>Dropdown link</a></li> <li><a href=#>Dropdown link</a></li> </ul> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group-vertical"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-groups-justified>Justified button groups</h2> <p>Make a group of buttons stretch at equal sizes to span the entire width of its parent. Also works with button dropdowns within the button group.</p> <div class="bs-callout bs-callout-warning" id=callout-btn-group-justified-dbl-border> <h4>Handling borders</h4> <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to Bootstrap, you may wish to remove or re-color the borders.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-btn-group-ie8-border> <h4>IE8 and borders</h4> <p>Internet Explorer 8 doesn't render borders on buttons in a justified button group, whether it's on <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements. To get around that, wrap each button in another <code>.btn-group</code>.</p> <p>See <a href=https://github.com/twbs/bootstrap/issues/12476>#12476</a> for more information.</p> </div> <h4>With <code>&lt;a&gt;</code> elements</h4> <p>Just wrap a series of <code>.btn</code>s in <code>.btn-group.btn-group-justified</code>.</p> <div class=bs-example data-example-id=simple-justified-button-group> <div class="btn-group btn-group-justified" role=group aria-label="Justified button group"> <a href=# class="btn btn-default" role=button>Left</a> <a href=# class="btn btn-default" role=button>Middle</a> <a href=# class="btn btn-default" role=button>Right</a> </div> <br> <div class="btn-group btn-group-justified" role=group aria-label="Justified button group with nested dropdown"> <a href=# class="btn btn-default" role=button>Left</a> <a href=# class="btn btn-default" role=button>Middle</a> <div class=btn-group role=group> <a href=# class="btn btn-default dropdown-toggle" data-toggle=dropdown role=button aria-haspopup=true aria-expanded=false> Dropdown <span class=caret></span> </a> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group btn-group-justified"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-warning" id=callout-btn-group-anchor-btn> <h4>Links acting as buttons</h4> <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p> </div> <h4>With <code>&lt;button&gt;</code> elements</h4> <p>To use justified button groups with <code>&lt;button&gt;</code> elements, <strong class=text-danger>you must wrap each button in a button group</strong>. Most browsers don't properly apply our CSS for justification to <code>&lt;button&gt;</code> elements, but since we support button dropdowns, we can work around that.</p> <div class=bs-example data-example-id=button-tag-button-group-justified> <div class="btn-group btn-group-justified" role=group aria-label="Justified button group"> <div class=btn-group role=group> <button type=button class="btn btn-default">Left</button> </div> <div class=btn-group role=group> <button type=button class="btn btn-default">Middle</button> </div> <div class=btn-group role=group> <button type=button class="btn btn-default">Right</button> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group btn-group-justified"</span> <span class=na>role=</span><span class=s>"group"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Left<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Middle<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span> <span class=na>role=</span><span class=s>"group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Right<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+
+
+			<h1 class=page-header id=btn-dropdowns>Button dropdowns</h1>
+			<p class=lead>Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.</p> <div class="bs-callout bs-callout-danger" id=callout-btndropdown-dependency> <h4>Plugin dependency</h4> <p>Button dropdowns require the <a href=../javascript/#dropdowns>dropdown plugin</a> to be included in your version of Bootstrap.</p> </div>
+			<h2 id=btn-dropdowns-single>Single button dropdowns</h2> <p>Turn a button into a dropdown toggle with some basic markup changes.</p> <div class=bs-example data-example-id=single-button-dropdown> <div class=btn-group> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Default <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-primary dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Primary <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-success dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Success <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-info dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Info <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-warning dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Warning <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-danger dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Danger <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Single button --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Action <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-dropdowns-split>Split button dropdowns</h2> <p>Similarly, create split button dropdowns with the same markup changes, only with a separate button.</p> <div class=bs-example data-example-id=split-button-dropdown> <div class=btn-group> <button type=button class="btn btn-default">Default</button> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-primary">Primary</button> <button type=button class="btn btn-primary dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-success">Success</button> <button type=button class="btn btn-success dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-info">Info</button> <button type=button class="btn btn-info dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-warning">Warning</button> <button type=button class="btn btn-warning dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class=btn-group> <button type=button class="btn btn-danger">Danger</button> <button type=button class="btn btn-danger dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Split button --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-danger"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-danger dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>Toggle Dropdown<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-dropdowns-sizing>Sizing</h2> <p>Button dropdowns work with buttons of all sizes.</p> <div class=bs-example data-example-id=button-dropdown-sizing> <div class=btn-toolbar role=toolbar> <div class=btn-group> <button class="btn btn-default btn-lg dropdown-toggle" type=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Large button <span class=caret></span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <div class=btn-toolbar role=toolbar> <div class=btn-group> <button class="btn btn-default btn-sm dropdown-toggle" type=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Small button <span class=caret></span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> <div class=btn-toolbar role=toolbar> <div class=btn-group> <button class="btn btn-default btn-xs dropdown-toggle" type=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Extra small button <span class=caret></span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Large button group --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default btn-lg dropdown-toggle"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Large button <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=c>&lt;!-- Small button group --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default btn-sm dropdown-toggle"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Small button <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=c>&lt;!-- Extra small button group --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default btn-xs dropdown-toggle"</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			Extra small button <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			...
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=btn-dropdowns-dropup>Dropup variation</h2> <p>Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent.</p> <div class=bs-example data-example-id=button-dropdown-dropup> <div class=btn-toolbar role=toolbar> <div class="btn-group dropup"> <button type=button class="btn btn-default">Dropup</button> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <div class="btn-group dropup"> <button type=button class="btn btn-primary">Right dropup</button> <button type=button class="btn btn-primary dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class="dropdown-menu dropdown-menu-right"> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"btn-group dropup"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span><span class=nt>&gt;</span>Dropup<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>Toggle Dropdown<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			<span class=c>&lt;!-- Dropdown menu links --&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+
+
+			<h1 class=page-header id=input-groups>Input groups</h1>
+			<p class=lead>Extend form controls by adding text or buttons before, after, or on both sides of any text-based <code>&lt;input&gt;</code>. Use <code>.input-group</code> with an <code>.input-group-addon</code> or <code>.input-group-btn</code> to prepend or append elements to a single <code>.form-control</code>.</p> <div class="bs-callout bs-callout-danger" id=callout-inputgroup-text-input-only> <h4>Textual <code>&lt;input&gt;</code>s only</h4> <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p> <p>Avoid using <code>&lt;textarea&gt;</code> elements here as their <code>rows</code> attribute will not be respected in some cases.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-inputgroup-container-body> <h4>Tooltips &amp; popovers in input groups require special setting</h4> <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p> </div> <div class="bs-callout bs-callout-warning" id=callout-inputgroup-dont-mix> <h4>Don't mix with other components</h4> <p>Do not mix form groups or grid column classes directly with input groups. Instead, nest the input group inside of the form group or grid-related element.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-inputgroup-form-labels> <h4>Always add labels</h4> <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.</p> <p>The exact technique to be used (visible <code>&lt;label&gt;</code> elements, <code>&lt;label&gt;</code> elements hidden using the <code>.sr-only</code> class, or use of the <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code>, <code>title</code> or <code>placeholder</code> attribute) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches.</p> </div>
+			<h2 id=input-groups-basic>Basic example</h2> <p>Place one add-on or button on either side of an input. You may also place one on both sides of an input.</p> <p><strong class=text-danger>We do not support multiple add-ons (<code>.input-group-addon</code> or <code>.input-group-btn</code>) on a single side.</strong></p> <p><strong class=text-danger>We do not support multiple form-controls in a single input group.</strong></p> <form class="bs-example bs-example-form" data-example-id=simple-input-groups> <div class=input-group> <span class=input-group-addon id=basic-addon1>@</span> <input class=form-control placeholder=Username aria-describedby=basic-addon1> </div> <br> <div class=input-group> <input class=form-control placeholder="Recipient's username" aria-describedby=basic-addon2> <span class=input-group-addon id=basic-addon2>@example.com</span> </div> <br> <div class=input-group> <span class=input-group-addon>$</span> <input class=form-control aria-label="Amount (to the nearest dollar)"> <span class=input-group-addon>.00</span> </div> <br> <label for=basic-url>Your vanity URL</label> <div class=input-group> <span class=input-group-addon id=basic-addon3>https://example.com/users/</span> <input class=form-control id=basic-url aria-describedby=basic-addon3> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"basic-addon1"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Username"</span> <span class=na>aria-describedby=</span><span class=s>"basic-addon1"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Recipient's username"</span> <span class=na>aria-describedby=</span><span class=s>"basic-addon2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"basic-addon2"</span><span class=nt>&gt;</span>@example.com<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>$<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"Amount (to the nearest dollar)"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>.00<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;label</span> <span class=na>for=</span><span class=s>"basic-url"</span><span class=nt>&gt;</span>Your vanity URL<span class=nt>&lt;/label&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"basic-addon3"</span><span class=nt>&gt;</span>https://example.com/users/<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>id=</span><span class=s>"basic-url"</span> <span class=na>aria-describedby=</span><span class=s>"basic-addon3"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=input-groups-sizing>Sizing</h2> <p>Add the relative form sizing classes to the <code>.input-group</code> itself and contents within will automatically resize—no need for repeating the form control size classes on each element.</p> <form class="bs-example bs-example-form" data-example-id=input-group-sizing> <div class="input-group input-group-lg"> <span class=input-group-addon id=sizing-addon1>@</span> <input class=form-control placeholder=Username aria-describedby=sizing-addon1> </div> <br> <div class=input-group> <span class=input-group-addon id=sizing-addon2>@</span> <input class=form-control placeholder=Username aria-describedby=sizing-addon2> </div> <br> <div class="input-group input-group-sm"> <span class=input-group-addon id=sizing-addon3>@</span> <input class=form-control placeholder=Username aria-describedby=sizing-addon3> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group input-group-lg"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"sizing-addon1"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Username"</span> <span class=na>aria-describedby=</span><span class=s>"sizing-addon1"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"sizing-addon2"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Username"</span> <span class=na>aria-describedby=</span><span class=s>"sizing-addon2"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group input-group-sm"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span> <span class=na>id=</span><span class=s>"sizing-addon3"</span><span class=nt>&gt;</span>@<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Username"</span> <span class=na>aria-describedby=</span><span class=s>"sizing-addon3"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=input-groups-checkboxes-radios>Checkboxes and radio addons</h2> <p>Place any checkbox or radio option within an input group's addon instead of text.</p> <form class="bs-example bs-example-form" data-example-id=input-group-with-checkbox-radio> <div class=row> <div class=col-lg-6> <div class=input-group> <span class=input-group-addon> <input type=checkbox aria-label="Checkbox for following text input"> </span> <input class=form-control aria-label="Text input with checkbox"> </div> </div> <div class=col-lg-6> <div class=input-group> <span class=input-group-addon> <input type=radio aria-label="Radio button for following text input"> </span> <input class=form-control aria-label="Text input with radio button"> </div> </div> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"checkbox"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-addon"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"radio"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.row --&gt;</span></code></pre></figure>
+			<h2 id=input-groups-buttons>Button addons</h2> <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p> <form class="bs-example bs-example-form" data-example-id=input-group-with-button> <div class=row> <div class=col-lg-6> <div class=input-group> <span class=input-group-btn> <button class="btn btn-default" type=button>Go!</button> </span> <input class=form-control placeholder="Search for..."> </div> </div> <div class=col-lg-6> <div class=input-group> <input class=form-control placeholder="Search for..."> <span class=input-group-btn> <button class="btn btn-default" type=button>Go!</button> </span> </div> </div> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>type=</span><span class=s>"button"</span><span class=nt>&gt;</span>Go!<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Search for..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>placeholder=</span><span class=s>"Search for..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>type=</span><span class=s>"button"</span><span class=nt>&gt;</span>Go!<span class=nt>&lt;/button&gt;</span>
+			<span class=nt>&lt;/span&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.row --&gt;</span></code></pre></figure>
+			<h2 id=input-groups-buttons-dropdowns>Buttons with dropdowns</h2> <form class="bs-example bs-example-form" data-example-id=input-group-dropdowns> <div class=row> <div class=col-lg-6> <div class=input-group> <div class=input-group-btn> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Action <span class=caret></span></button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <input class=form-control aria-label="Text input with dropdown button"> </div> </div> <div class=col-lg-6> <div class=input-group> <input class=form-control aria-label="Text input with dropdown button"> <div class=input-group-btn> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>Action <span class=caret></span></button> <ul class="dropdown-menu dropdown-menu-right"> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> </div> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>Action <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /btn-group --&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-lg-6"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"btn btn-default dropdown-toggle"</span> <span class=na>data-toggle=</span><span class=s>"dropdown"</span> <span class=na>aria-haspopup=</span><span class=s>"true"</span> <span class=na>aria-expanded=</span><span class=s>"false"</span><span class=nt>&gt;</span>Action <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;&lt;/button&gt;</span>
+			<span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"dropdown-menu dropdown-menu-right"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Another action<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Something else here<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"separator"</span> <span class=na>class=</span><span class=s>"divider"</span><span class=nt>&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;li&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Separated link<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
+			<span class=nt>&lt;/ul&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /btn-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /input-group --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.col-lg-6 --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span><span class=c>&lt;!-- /.row --&gt;</span></code></pre></figure>
+			<h2 id=input-groups-buttons-segmented>Segmented buttons</h2> <form class="bs-example bs-example-form" data-example-id=input-group-segmented-buttons> <div class=row> <div class=col-lg-6> <div class=input-group> <div class=input-group-btn> <button type=button class="btn btn-default">Action</button> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class=dropdown-menu> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> <input class=form-control aria-label="Text input with segmented button dropdown"> </div> </div> <div class=col-lg-6> <div class=input-group> <input class=form-control aria-label="Text input with segmented button dropdown"> <div class=input-group-btn> <button type=button class="btn btn-default">Action</button> <button type=button class="btn btn-default dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false> <span class=caret></span> <span class=sr-only>Toggle Dropdown</span> </button> <ul class="dropdown-menu dropdown-menu-right"> <li><a href=#>Action</a></li> <li><a href=#>Another action</a></li> <li><a href=#>Something else here</a></li> <li role=separator class=divider></li> <li><a href=#>Separated link</a></li> </ul> </div> </div> </div> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=c>&lt;!-- Button and dropdown menu --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=c>&lt;!-- Button and dropdown menu --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+			<h2 id=input-groups-buttons-multiple>Multiple buttons</h2> <p>While you can only have one add-on per side, you can have multiple buttons inside a single <code>.input-group-btn</code>.</p> <form class="bs-example bs-example-form" data-example-id=input-group-multiple-buttons> <div class=row> <div class=col-lg-6> <div class=input-group> <div class=input-group-btn> <button type=button class="btn btn-default" aria-label=Bold><span class="glyphicon glyphicon-bold"></span></button> <button type=button class="btn btn-default" aria-label=Italic><span class="glyphicon glyphicon-italic"></span></button> </div> <input class=form-control aria-label="Text input with multiple buttons"> </div> </div> <div class=col-lg-6> <div class=input-group> <input class=form-control aria-label="Text input with multiple buttons"> <div class=input-group-btn> <button type=button class="btn btn-default" aria-label=Help><span class="glyphicon glyphicon-question-sign"></span></button> <button type=button class="btn btn-default">Action</button> </div> </div> </div> </div> </form> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=c>&lt;!-- Buttons --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group"</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"text"</span> <span class=na>class=</span><span class=s>"form-control"</span> <span class=na>aria-label=</span><span class=s>"..."</span><span class=nt>&gt;</span>
+			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"input-group-btn"</span><span class=nt>&gt;</span>
+			<span class=c>&lt;!-- Buttons --&gt;</span>
+			<span class=nt>&lt;/div&gt;</span>
+			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+
+
+        </div><!--/right-->
+         <!--left-->
+      <div class="col-md-3" id="leftCol" >
+      <nav class="bs-docs-sidebar affix">
+        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
+        	<li><a href="#forms">Forms</a>
+				<ul class="nav">
+					<li><a href="#">OC standard</a></li>
+          			<li><a href="#">Bootstrap 3.3</a>
+          				<ul class="nav">
+							<li class="col-xs-offset-1"><a href="#forms-example">Basic example</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-inline">Inline form</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-horizontal">Horizontal form</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-controls">Supported controls</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-controls-static">Static control</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-control-focus">Focus state</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-control-disabled">Disabled state</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-control-readonly">Readonly state</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-help-text">Help text</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-control-validation">Validation states</a></li>
+							<li class="col-xs-offset-1"><a href="#forms-control-sizes">Control sizing</a></li>
+						</ul>
+					</li>
+				</ul>
+          </li>
+        	<li>
+          		<a href="#buttons">Buttons</a>
+          		<ul class="nav">
+          			<li><a href="#">OC standard</a></li>
+          			<li><a href="#">Bootstrap 3.3</a>
+          				<ul class="nav">
+			          		<li class="col-xs-offset-1"><a href="#buttons-tags">Button tags</a></li>
+			          		<li class="col-xs-offset-1"><a href="#buttons-options">Options</a></li>
+			          		<li class="col-xs-offset-1"><a href="#button-sizes">Sizes</a></li>
+			          		<li class="col-xs-offset-1"><a href="#buttons-active">Active state</a></li>
+			          		<li class="col-xs-offset-1"><a href="#buttons-disabled">Disabled state</a></li>
+			          	</ul>
+			        </li>
+	          	</ul>
+         	</li>
+          	<li><a href="#dropdowns">Dropdowns</a>
+				<ul class="nav">
+					<li><a href="#">OC standard</a></li>
+          			<li><a href="#">Bootstrap 3.3</a>
+          				<ul class="nav">
+							<li class="col-xs-offset-1"><a href="#dropdowns-example">Example</a></li>
+							<li class="col-xs-offset-1"><a href="#dropdowns-alignment">Alignment</a></li>
+							<li class="col-xs-offset-1"><a href="#dropdowns-headers">Headers</a></li>
+							<li class="col-xs-offset-1"><a href="#dropdowns-divider">Divider</a></li>
+							<li class="col-xs-offset-1"><a href="#dropdowns-disabled">Disabled menu items</a></li>
+						</ul>
+					</li>
+				</ul>
+          </li>
+          <li><a href="#btn-groups">Button groups</a>
+          	<ul class="nav">
+          		<li><a href="#">OC standard</a></li>
+          		<li><a href="#">Bootstrap 3.3</a>
+          			<ul class="nav">
+						<li class="col-xs-offset-1"><a href="#btn-groups-single">Basic example</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-groups-toolbar">Button toolbar</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-groups-sizing">Sizing</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-groups-nested">Nesting</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-groups-vertical">Vertical variation</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-groups-justified">Justified button groups</a></li>
+					</ul>
+				</li>
+			</ul>
+          </li>
+          <li><a href="#btn-dropdowns">Button dropdowns</a>
+          	<ul class="nav">
+          		<li><a href="#">OC standard</a></li>
+          		<li><a href="#">Bootstrap 3.3</a>
+          			<ul class="nav">
+						<li class="col-xs-offset-1"><a href="#btn-dropdowns-single">Single button dropdowns</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-dropdowns-split">Split button dropdowns</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-dropdowns-sizing">Sizing</a></li>
+						<li class="col-xs-offset-1"><a href="#btn-dropdowns-dropup">Dropup variation</a></li>
+					</ul>
+				</li>
+			</ul>
+          </li>
+          <li><a href="#input-groups">Input groups</a>
+          	<ul class="nav">
+          		<li><a href="#">OC standard</a></li>
+          		<li><a href="#">Bootstrap 3.3</a>
+          			<ul class="nav">
+						<li class="col-xs-offset-1"><a href="#input-groups-basic">Basic example</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-sizing">Sizing</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-checkboxes-radios">Checkboxes and radio addons</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-buttons">Button addons</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-buttons-dropdowns">Buttons with dropdowns</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-buttons-segmented">Segmented buttons</a></li>
+						<li class="col-xs-offset-1"><a href="#input-groups-buttons-multiple">Multiple buttons</a></li>
+					</ul>
+				</li>
+			</ul>
+          </li>
+        </ul>
+        </nav>
+				<!--/left-->
+			</div><!--/row-->
+	</div><!--/container-->
+</div><!-- /.content-wrap -->
+
+
+<footer>
+	<div class="container copyright text-center">
+		&copy; 2001 &mdash; 2016&nbsp;&nbsp;
+		<a href="http://www.opuscapita.com/">
+			<img src="../../img/oc-logo-rgb.svg" style="height: 1.2em;">
+		</a>
+	</div>
+
+	<!--
+	<div class="visible-xs visible-sm">
+		&nbsp;<br>&nbsp;<br>&nbsp;<br>
+	</div>
+	-->
+
+</footer>
+
+</section><!-- /content -->
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+$(document).ready(function() {
+$('.nav-toggle').click(function() {
+$('.nav-toggle').toggleClass('active');
+$('.sidebar').toggleClass('active');
+});
+
+$('#sidebar').affix({
+offset: {
+	top: 235
+}
+});
+
+/* activate scrollspy menu */
+var $body   = $(document.body);
+var navHeight = $('.navbar').outerHeight(true) + 10;
+
+$body.scrollspy({
+target: '#leftCol',
+offset: navHeight
+});
+
+/* smooth scrolling sections */
+$('a[href*=#]:not([href=#])').click(function() {
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+			$('html,body').animate({
+				scrollTop: target.offset().top - 50
+			}, 1000);
+			return false;
+		}
+	}
+});
+});
+</script>
+
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ################################################ -->
+
+
+<!--main-->

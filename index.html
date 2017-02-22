@@ -1,1 +1,385 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>OCUI Guideline</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/ocui-bootstrap-bundle-0.1.2.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="affix.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+
+		<section class="sidebar">
+
+			<nav class="navbar navbar-default">
+				<div class="nav-background"></div>
+				<div class="navbar-header hidden-sm">
+					<a class="navbar-brand visible-lg" href="#">
+						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
+					</a>
+				</div>
+
+
+				<ul class="nav navbar-nav">
+					<li class="active dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Introduction
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">OCUI Overview</a></li>
+							<li><a href="styleguide.html">Styleguide</a></li>
+							<li><a href="get-started.html">Get Started</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+					<li>
+						<a href="layout.html">Layout</a>
+					</li>
+					<li>
+						<a href="patterns.html">Patterns</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Components
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="nav.html">Navigation</a></li>
+							<li><a href="forms.html">Forms</a></li>
+							<li><a href="list-groups.html">List Groups</a></li>
+							<li><a href="tables.html">Tables</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+<!--					<li>
+						<a href="templates.html">Template Library</a>
+					</li>-->
+					<li>
+						<a href="grammar-and-copy.html">Grammar &amp; Copy</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							React.js
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="react-v2.html">React.js Introduction</a>
+							</li>
+							<li>
+								<a href="react-bootstrap.html">React-Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">React Components</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content">
+			<div class="applogo visible-md visible-sm visible-xs">
+				<a class="applogo visible-md visible-sm visible-xs" href="#">
+					<img src="../../img/oc-logo-rgb.svg">
+				</a>
+				<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+			</div>
+
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+
+
+				      <!--right-->
+				      <div class="col-md-9">
+				        <h1 id="sec0">OCUI v0.1.2 UI Framework Guidelines</h1>
+				        <p class="lead">
+				          OpusCapita uses an extended version of Twitter Bootstrap 3.3 for web-based HTML5 user interfaces.
+									This guide describes all Bootstrap components, OCUI extensions, and their correct, standardized usage.
+									It also contains a large number of HTML templates for reference and UI testing.
+									OCUI is fully responsive, supporting large to extra small screens, even if not all implemented views take advantage of Bootstrap's responsive mechanics.
+				        </p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<h2>Form-Driven UI</h2>
+										<p>
+											OCUI covers the needs of OpusCapita HTML5-based applications today. Almost all functionality is delivered with the CRUD-paradigm in mind. Applications are structured as a feature set, each feature including a way to access it's relevant objects, access meaning basic and specific CRUD functionality.
+											That results in form driven user interfaces, with search, result, filter, select and finally CRUD workflow within any given function. Cross-functional workflows are realized using wizards or, more commonly, with cross links displayed as primary or secondary form-submit options, wich act as calls-to-action on a given view.
+										</p>
+									</div>
+									<div class="col-md-6">
+										<h2>Strict Component Set</h2>
+										<p>
+											OCUI is a strict component set, maintained by a conservative authority within OpusCapita. This is highly relevant for change and add requests regarding components and functionality. It is prudent to weigh the pain of expanding the component set heavier than the gain of new features.
+										</p>
+									</div>
+								</div>
+
+								<h2>Updating and Extending the Component Set</h2>
+								<p>
+									Before accepting a new component, qualify the request by the following checks:
+								</p>
+								<ol>
+									<li>Is there ANY way to get to a functionally acceptable solution using the current component set?</li>
+									<li>Can we deliver a comparable result with the current component set?</li>
+									<li>Will the requested component be used in more than one or two views?</li>
+									<li>Does it replace currently used components, and requires widespread updates to views, in order to guarantee UI consistency?</li>
+									<li>Does the proposed component fit within the design and coding rules and practices of the component set?</li>
+								</ol>
+								<p>
+									Then, weigh the results against the potential gain.
+									Most component changes are applied within bi-annual major UI-updates, that are necessitated by the changed functionality and featureset of the common browsers and platforms.
+								</p>
+
+								<h2>Updating the Bootstrap Core</h2>
+								<p>
+									UI Frameworks don't require frequent updates. They don't contain security sensitive code. Browser requirements and quirks change at a glacial and very diffuse pace. It is important to note that OCUI cannot automatically update the contained core Bootstrap. However, it does not need to. Please always weight the gain and the cost of updating against each other.
+								</p>
+
+								<h2>Advantages of a Bootstrap Based UI Framework</h2>
+								<div class="row">
+									<div class="col-md-6">
+										<ul>
+											<li>Standardized UI components</li>
+											<li>Responsive webdesign out of the box</li>
+											<li>Solid, widely supported CSS</li>
+											<li>Semantically correct markup</li>
+											<li>Consistent code, meaningful UI</li>
+											<li>Rapid prototyping with complete HTML mockups</li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<ul>
+											<li>High development speed</li>
+											<li>Cross browser tested standard</li>
+											<li>LESS stylesheets with centralized layout variables for easy customizing</li>
+											<li>A cornucopia of plugins and extensions</li>
+											<li>Awesome support</li>
+										</ul>
+									</div>
+								</div>
+
+				     		    <h2>Advantages of ReactJS</h2>
+				        		<div class="row">
+				          			<div class="col-md-6">
+				            			<ul>
+				              				<li>Readable HTML-like syntax</li>
+				              				<li>Comprehensible performance</li>
+				              				<li>Renders on client and server side</li>
+				              				<li>Components are reusable</li>
+				              				<li>strongly enforcing UI</li>
+				            			</ul>
+				          			</div>
+				          			<div class="col-md-6">
+				            			<ul>
+				              				<li>Use any backend/ framework you'd like</li>
+				              				<li>Easy to test</li>
+				              				<li>Optimizes browser performance</li>
+				              				<li>Relies on a Virtual DOM</li>
+				              				<li>Out-of-the-box developer tools</li>
+				            			</ul>
+				          			</div>
+				        		</div>
+
+				        		<h2>Advantages of React-Bootstrap</h2>
+				        		<div class="row">
+				          			<div class="col-md-6">
+				            			<ul>
+				              				<li>React can be used with Bootstrap's JS</li>
+				              				<li>Creates consistency in UI</li>
+				              				<li>Consists of almost 50 basic components</li>
+				            			</ul>
+				          			</div>
+				          			<div class="col-md-6">
+				            			<ul>
+				              				<li>Doesn't rely on a specific version</li>
+				              				<li>Reduces amount of boilerplate code</li>
+				            			</ul>
+				          			</div>
+				        		</div>
+
+								<h2>Plugins</h2>
+								<div class="row">
+									<div class="col-md-6">
+										<h4>jQuery</h4>
+										<ul>
+											<li>jQuery UI</li>
+											<li>jqGrid</li>
+											<li>jQuery-File-Upload
+												https://github.com/blueimp/jQuery-File-Upload</li>
+											<li>Is there a Plug-In for DnD?</li>
+											<li>jQuery.tipsy (Tooltip.js)
+												http://onehackoranother.com/projects/jquery/tipsy/</li>
+										</ul>
+
+										<h4>Twitter Bootstrap</h4>
+										<ul>
+											<li>	bootstrap-switch
+													https://github.com/Bttstrp/bootstrap-switch</li>
+											<li>	Datepicker
+													https://bootstrap-datepicker.readthedocs.io/en/latest/</li>
+											<li>	Color Picker</li>
+										</ul>
+
+									</div>
+									<div class="col-md-6">
+										<h4>CSS</h4>
+										<ul>
+											<li>Normalize.css (part of Bootstrap)</li>
+										</ul>
+
+										<h4>JS Plug-Ins, which are part of Bootstrap</h4>
+										<ul>
+											<li>ScrollSpy.js</li>
+											<li>Transition.js</li>
+											<li>Button.js</li>
+											<li>Collapse.js</li>
+											<li>Affix.js</li>
+										</ul>
+									</div>
+								</div>
+
+								<h2>Problem Areas</h2>
+								<ul>
+									<li>Tables are not responsive. This can be solved with JavaScript, but has not been developed yet. No usable plugins exist.</li>
+									<li>LESS Variable propagation is sub-optimal. This is a fix-job.</li>
+									<li>Print layout is non-existent. This is a fix-job.</li>
+									<li>Updating major versions of bootstrap can not be automated, and requires a FULL unit test, and potentially costly fixes. There is no good solution for this, and it is considered cost-of-business.
+								</ul>
+
+								<h2>Table of Contents</h2>
+								<div class="row">
+									<div class="col-md-6">
+										<ul>
+											<li><b>Layout</b><br>Bootstrap grid system, responsive layout mechanics.</li>
+											<li><b>Navigation</b><br>Nav types and usage</li>
+											<li><b>Forms</b><br>The complete guide to OCUI forms</li>
+											<li><b>List Groups</b><br>Displaying hierarchical data</li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<ul>
+											<li><b>Tables</b><br>How to render tabular data</li>
+											<li><b>Icons</b><br>Embellishments, visual hooks and abbreviations</li>
+											<li><b>ReactJS</b><br>A short introduction to ReactJS</li>
+											<li><b>React-Bootstrap</b><br>Which react components to use as standard</li>
+										</ul>
+									</div>
+								</div>
+
+				        <h2>Disclaimer</h2>
+				        <p>
+				          This guide is not even close to being finished, please refer to Martin Hallmann, Charleen Germakowsky Maarit Mannonen or Mika V&auml;is&auml;nen for all inquiries and feedback. Thank you.
+				        </p>
+
+				      </div><!--/right-->
+				       <!--left-->
+							 <!--
+				      <div class="col-md-3" id="leftCol" >
+				      <nav class="bs-docs-sidebar affix">
+				        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
+				          <li><a href="#sec0">Section 0</a></li>
+				          <li><a href="#sec1">Section 1</a></li>
+				          <li><a href="#sec2">Section 2</a></li>
+				          <li><a href="#sec3">Section 3</a></li>
+				          <li><a href="#sec4">Section 4</a></li>
+				        </ul>
+				        </nav>
+				      </div>-->
+							<!--/left-->
+				  	</div><!--/row-->
+				</div><!--/container-->
+			</div><!-- /.content-wrap -->
+
+
+			<footer>
+				<div class="container copyright text-center">
+					&copy; 2001 &mdash; 2016&nbsp;&nbsp;
+					<a href="http://www.opuscapita.com/">
+						<img src="../../img/oc-logo-rgb.svg" style="height: 1.2em;">
+					</a>
+				</div>
+
+				<!--
+				<div class="visible-xs visible-sm">
+					&nbsp;<br>&nbsp;<br>&nbsp;<br>
+				</div>
+				-->
+
+			</footer>
+
+		</section><!-- /content -->
+	</body>
+
+<script type="text/javascript" charset="utf-8">
+
+	$(document).ready(function() {
+		$('.nav-toggle').click(function() {
+			$('.nav-toggle').toggleClass('active');
+			$('.sidebar').toggleClass('active');
+		});
+
+		$('#sidebar').affix({
+		  offset: {
+		    top: 235
+		  }
+		});
+
+		/* activate scrollspy menu */
+		var $body   = $(document.body);
+		var navHeight = $('.navbar').outerHeight(true) + 10;
+
+		$body.scrollspy({
+		  target: '#leftCol',
+		  offset: navHeight
+		});
+
+		/* smooth scrolling sections */
+		$('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top - 50
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		});
+	});
+</script>
+
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ################################################ -->
+
+
+<!--main-->

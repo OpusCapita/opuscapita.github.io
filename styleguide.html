@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>OCUI Guideline</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/ocui-bootstrap-bundle-0.1.2.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="affix.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+
+		<section class="sidebar">
+
+			<nav class="navbar navbar-default">
+				<div class="nav-background"></div>
+				<div class="navbar-header hidden-sm">
+					<a class="navbar-brand visible-lg" href="#">
+						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
+					</a>
+				</div>
+
+
+				<ul class="nav navbar-nav">
+					<li class="active dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Introduction
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">OCUI Overview</a></li>
+							<li><a href="styleguide.html">Styleguide</a></li>
+							<li><a href="get-started.html">Get Started</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+					<li>
+						<a href="layout.html">Layout</a>
+					</li>
+					<li>
+						<a href="patterns.html">Patterns</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Components
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="nav.html">Navigation</a></li>
+							<li><a href="forms.html">Forms</a></li>
+							<li><a href="list-groups.html">List Groups</a></li>
+							<li><a href="tables.html">Tables</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+<!--					<li>
+						<a href="templates.html">Template Library</a>
+					</li>-->
+					<li>
+						<a href="grammar-and-copy.html">Grammar &amp; Copy</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							React.js
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="react-v2.html">React.js Introduction</a>
+							</li>
+							<li>
+								<a href="react-bootstrap.html">React-Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">React Components</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content">
+			<div class="applogo visible-md visible-sm visible-xs">
+				<a class="applogo visible-md visible-sm visible-xs" href="#">
+					<img src="../../img/oc-logo-rgb.svg">
+				</a>
+				<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+			</div>
+
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+			      <!--right-->
+			      <div class="col-md-9">
+
+			        <h1 id="sec0">OCUI Styleguide</h1>
+			        <p class="lead">
+			          OCUI is based on Bootstrap, and uses Bootstrap's color model, with a custom set of display safe colors. OCUI uses three different icon sets and a custom web font, Lato.
+								If your application can not easily be built with OCUI, this guide will give you all the necessary information to align your design with OCUI.
+			        </p>
+
+							<h2>Color styling</h2>
+							<p class="lead">...</p>
+							<div class="bs-callout bs-callout-info">
+								<h4>Display-Safe Colors Work Great With Uncalibrated Displays</h4>
+								<p>Web-safe colors are a thing of the pre-2010 past, when low fidelity displays rendered websites in less than 24 bit color. We use a limited subset of the 256<sup>3</sup>, #000000 - #FFFFFF CSS2.1 colorset, namely the 16<sup>3</sup> #000 - #FFF colorset, defined as well in CSS 2.1.
+								The main problem with colors we face today, is that the subtle nuances that look great on a properly calibrated display are lost on most of the devices our customers use. A smaller palette, with wider steps between its color values solves that issue quite sufficiently.
+								<br><br>16 color values per primary color does not seem like a lot, but for UI purposes, it is a lot more than we need. Here are the reasons we stick to this palette:</p>
+								<ul>
+									<li>Ease of use in development</li>
+									<li>Acceptable representation across a wide set of different displays, hue and contrast settings</li>
+								</ul>
+							</div>
+							<h3>OCUI Color Set
+								<div class="control-bar text-right pull-right">
+									<button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target=".color-collapse" aria-expanded="false" aria-controls="collapseExample">
+									Usage
+									</button>
+								</div>
+							</h3>
+
+							<div class="row">
+							  <div class="col-md-4">
+									<h4>Cloud</h4>
+									<div class="collapse color-collapse">
+										<p>The Cloud color group is used to render the fine details of the UI.</p>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+									<h4>Petrol</h4>
+									<div class="collapse color-collapse">
+										<p>The Petrol color group is used for the Sidebar/Application Menu, active ListItems and Hyperlinks.</p>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+									<h4>Mandarin</h4>
+									<div class="collapse color-collapse">
+										<p>The Mandarin color group is reserved for the calls-to-action. In the OpusCapita-styled OCUI Colorset, this color group corresponds with the the corporate color. When rebranding to a customer's CI, make sure that their corporate color matches UX requirements and decide accordingly.</p>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+							</div><!-- /row -->
+							<div class="row">
+								<div class="col-md-12">
+									<a href="#" class="thumbnail" style="color: #333;">
+										<div style="background: #fff; height: 70px; padding: 1em;">
+											#fff<br>
+											<small>rgba(255, 255, 255, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li><code>document</code> background</li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+								</div>
+							</div><!-- /row -->
+							<div class="row">
+							  <div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #333;">
+										<div style="background: #eee; height: 70px; padding: 1em;">
+											#eee<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #034;">
+										<div style="background: #6bb; height: 70px; padding: 1em;">
+											#6bb<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #840;">
+										<div style="background: #eb7; height: 70px; padding: 1em;">
+											#eb7<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+							</div><!-- /row -->
+							<div class="row">
+							  <div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #333;">
+										<div style="background: #ccc; height: 150px; padding: 1em;">
+											#ccc<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #067; height: 150px; padding: 1em;">
+											#067<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #e70; height: 150px; padding: 1em;">
+											#e70<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li><code>.btn-primary</code> background color</li>
+											<li>Sidebar Menu Item Highlight Border color</li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+							</div><!-- /row -->
+							<div class="row">
+							  <div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #333;">
+										<div style="background: #aaa; height: 70px; padding: 1em;">
+											#aaa<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #034; height: 70px; padding: 1em;">
+											#034<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li>Sidebar background</li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+								<div class="col-md-4">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #840; height: 70px; padding: 1em;">
+											#840<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+							  </div>
+							</div><!-- /row -->
+							<div class="row">
+							  <div class="col-md-2">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #999; height: 70px; padding: 1em;">
+											#999<br>
+											<small><small>rgba(0, 0, 0, 1)</small></small>
+										</div>
+									</a>
+							  </div>
+								<div class="col-md-2">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #666; height: 70px; padding: 1em;">
+											#666<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-2">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #045; height: 70px; padding: 1em;">
+											#045<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-2">
+							    <a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #023; height: 70px; padding: 1em;">
+											#023<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+							  </div>
+								<div class="col-md-4">
+							  </div>
+							</div><!-- /row -->
+							<div class="row collapse color-collapse">
+								<div class="col-md-4">
+									<h5>Usage</h5>
+									<ul>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<br>
+								</div>
+								<div class="col-md-4">
+									<h5>Usage</h5>
+									<ul>
+										<li><b>#045:</b> Sidebar Menu Vertical Dividers</li>
+										<li><b>#023:</b> Sidebar Menu Item Background Highlight</li>
+										<li></li>
+										<li></li>
+									</ul>
+									<br>
+								</div>
+							</div><!-- /collapse -->
+
+							<div class="row">
+								<div class="col-md-4">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #333; height: 70px; padding: 1em;">
+											#333<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+								</div>
+							</div><!-- /row -->
+							<div class="row">
+								<div class="col-md-12">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #000; height: 70px; padding: 1em;">
+											#000<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+									<div class="collapse color-collapse">
+										<h5>Usage</h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<br>
+									</div><!-- /collapse -->
+								</div>
+							</div><!-- /row -->
+
+							<h3>Bootstrap Status Colors</h3>
+							<p class="lead">
+								Bootstrap recognizes four element statuses, info, success, warning and danger. These are not supposed to seamlessly fit into the interface.
+								Rather, they are meant to disrupt and call to attention. We've transformed the original Bootstrap color values into web-safe colors, and modified the originally orange warning color to a yellow hue, in order to avoid conflict with the mandarin color group.
+							</p>
+
+							<div class="row">
+								<div class="col-md-3">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #5bd; height: 100px; padding: 1em;">
+											<b>Info</b><br>
+											#5bd<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #5b5; height: 100px; padding: 1em;">
+											<b>Success</b><br>
+											#5b5<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #ea3; height: 100px; padding: 1em;">
+											<b>Warning</b><br>
+											#ea3<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="thumbnail" style="color: #fff;">
+										<div style="background: #d54; height: 100px; padding: 1em;">
+											<b>Danger</b><br>
+											#d54<br>
+											<small>rgba(0, 0, 0, 1)</small>
+										</div>
+									</a>
+								</div>
+							</div><!-- /row -->
+
+							<div class="bs-callout bs-callout-info">
+								<h4>Fully Tested and Designed for Color Vision Deficiency</h4>
+								<p>Up to 0,4% of all female users and up to 8% of all male users have color vision deficiencies, ranging from mild cases to full achromatomaly. Our colorset was tested for all known types of color vision deficiency with overall very good results. Exception is full achromatomaly, a deficiency that allows users to only see greyscale with distorted contrast and severe blurring. We accept this as a trade-off, fully expecting those users to have enabled accessibility features on their devices anyway, as there is no good way to design for achromatomaly without losing accessibility for everyone who is not afflicted.</p>
+								<p>It is important to note that for every user with color vision deficiency, the experience of our applications will be different from that of a non afflicted user. The design goal is to provide a colorset that gives good contrast, emphasis and differentiation, even if the desired hues are distorted. This was fully achieved.</p>
+							</div>
+
+							<h2>Lato Font Face</h2>
+							<p class="lead">
+								<img src="img/lato-showing.jpg" style="width: 50%; float: right; margin: 0 0 1em 1em;">
+								OCUI uses the open source font face Lato, by Łukasz Dziedzic. Lato comes in 9 cuts, each one in normal and italic style. Using this typeface allows us to render minimalistic, beautiful user interfaces with all the detail and finesse that a good typeface provides.
+								<br><br>The CSS font stack degrades Lato to Helvetica, Arial, Sans-Serif, providing full font support on every HTML-capable device.
+							</p>
+
+							<div class="bs-example">
+								<h1><b>H1</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h1>
+								<h2><b>H2</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h2>
+								<h3><b>h3</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h3>
+								<h4><b>H4</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h4>
+								<h5><b>H5</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h5>
+								<h6><b>H6</b> Page <i>Heading</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup></h6>
+								<p class="lead">P.lead with <code>code</code> <b>bold</b> <i>italic</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup> text.</p>
+								<p>P with <code>code</code> <b>bold</b> <i>italic</i> <small>Small</small> <sub>Sub</sub> <sup>Sup</sup> text.</p>
+								<ul>
+									<li>UL with</li>
+									<li>three different
+										<ul>
+											<li>weirdly fitting</li>
+										</ul>
+									</li>
+									<li>items listed</li>
+								</ul>
+								<ol>
+									<li>OL with</li>
+									<li>three different
+										<ul>
+											<li>equally strange</li>
+										</ul>
+									</li>
+									<li>items listed</li>
+								</ol>
+							</div>
+
+
+							<h2>Icon Sets</h2>
+
+							<h2>Key UI Element Styling</h2>
+
+						</div><!-- /col -->
+			  	</div><!--/row-->
+				</div><!--/container-->
+			</div><!-- /.content-wrap -->
+
+
+			<footer>
+				<div class="container copyright text-center">
+					&copy; 2001 &mdash; 2016&nbsp;&nbsp;
+					<a href="http://www.opuscapita.com/">
+						<img src="../../img/oc-logo-rgb.svg" style="height: 1.2em;">
+					</a>
+				</div>
+
+				<!--
+				<div class="visible-xs visible-sm">
+					&nbsp;<br>&nbsp;<br>&nbsp;<br>
+				</div>
+				-->
+
+			</footer>
+
+		</section><!-- /content -->
+	</body>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+	$(document).ready(function() {
+		$('.nav-toggle').click(function() {
+			$('.nav-toggle').toggleClass('active');
+			$('.sidebar').toggleClass('active');
+		});
+
+		$('#sidebar').affix({
+		  offset: {
+		    top: 235
+		  }
+		});
+
+		/* activate scrollspy menu */
+		var $body   = $(document.body);
+		var navHeight = $('.navbar').outerHeight(true) + 10;
+
+		$body.scrollspy({
+		  target: '#leftCol',
+		  offset: navHeight
+		});
+
+		/* smooth scrolling sections */
+		$('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top - 50
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		});
+	});
+</script>
+
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ################################################ -->
+
+
+<!--main-->

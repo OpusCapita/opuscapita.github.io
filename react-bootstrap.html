@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>OCUI Guideline</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/ocui-bootstrap-bundle-0.1.2.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="affix.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+
+		<section class="sidebar">
+
+			<nav class="navbar navbar-default">
+				<div class="nav-background"></div>
+				<div class="navbar-header hidden-sm">
+					<a class="navbar-brand visible-lg" href="#">
+						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
+					</a>
+				</div>
+
+
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Introduction
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">OCUI Overview</a></li>
+							<li><a href="styleguide.html">Styleguide</a></li>
+							<li><a href="get-started.html">Get Started</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+					<li>
+						<a href="layout.html">Layout</a>
+					</li>
+					<li>
+						<a href="patterns.html">Patterns</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Components
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="nav.html">Navigation</a></li>
+							<li><a href="forms.html">Forms</a></li>
+							<li><a href="list-groups.html">List Groups</a></li>
+							<li><a href="tables.html">Tables</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+<!--					<li>
+						<a href="templates.html">Template Library</a>
+					</li>-->
+					<li>
+						<a href="grammar-and-copy.html">Grammar &amp; Copy</a>
+					</li>
+					<li class="active dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							React.js
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="react-v2.html">React.js Introduction</a>
+							</li>
+							<li>
+								<a href="react-bootstrap.html">React-Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">React Components</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content">
+			<div class="applogo visible-md visible-sm visible-xs">
+				<a class="applogo visible-md visible-sm visible-xs" href="#">
+					<img src="../../img/oc-logo-rgb.svg">
+				</a>
+				<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+			</div>
+
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+
+
+				      <!--right-->
+				      <div class="col-md-9">
+
+
+
+
+
+
+
+
+		<div id="container">
+		</div><!--/container-->
+
+		<script type="text/jsx">
+			var ControlLabel = ReactBootstrap.ControlLabel;
+			var FormGroup = ReactBootstrap.FormGroup;
+			var FormControl = ReactBootstrap.FormControl;
+			var formControlsSelect = ReactBootstrap.formControlsSelect;
+			var formControlsSelectMultiple = ReactBootstrap.formControlsSelectMultiple;
+			var Nav = ReactBootstrap.Nav;
+			var Table = ReactBootstrap.Table;
+			var Well = ReactBootstrap.Well;
+			var Glyphicon = ReactBootstrap.Glyphicon;
+			var Row = ReactBootstrap.Row;
+			var TabPane = ReactBootstrap.TabPane;
+			var TabbedArea = ReactBootstrap.TabbedArea;
+			var Navbar = ReactBootstrap.Navbar;
+			var Form = ReactBootstrap.Form;
+			var Col = ReactBootstrap.Col;
+			var Badge = ReactBootstrap.Badge;
+			var NavItem = ReactBootstrap.NavItem;
+			var Grid = ReactBootstrap.Grid;
+			var NavDropdown = ReactBootstrap.NavDropdown;
+			var MenuItem = ReactBootstrap.MenuItem;
+			var Panel = ReactBootstrap.Panel;
+			var SplitButton = ReactBootstrap.SplitButton;
+			var Accordion = ReactBootstrap.Accordion;
+			var ButtonGroup = ReactBootstrap.ButtonGroup;
+			var Button = ReactBootstrap.Button, Input = ReactBootstrap.Input;
+			var ButtonToolbar = ReactBootstrap.ButtonToolbar;
+			var Modal = ReactBootstrap.Modal;
+			var DropdownButton = ReactBootstrap.DropdownButton;
+			var Dropdown = ReactBootstrap.Dropdown;
+			var OverlayTrigger = ReactBootstrap.OverlayTrigger;
+			var ListGroup = ReactBootstrap.ListGroup,ListGroupItem = ReactBootstrap.ListGroupItem;
+
+			class Container extends React.Component {
+				render() {
+					return(
+						<Row>
+							<Col md={9}>
+        						<h1 className="page-header" id="intro">What is React-Bootstrap?</h1>
+        						<p className="lead">React-Bootstrap is a library, which collects reusable React components that are designed to work with Bootstrap CSS classes. React-Bootstrap enables us to create consistency and lets us use common UI elements. It has the same structure as the original Bootstrap, but it’s rebuilt for ReactJS. Bootstap uses its own JavaScript which may confict with React rendering of Virtual DOM. That’s because Bootstrap uses jQuery, which mutates the DOM directly.</p>
+
+								<ButtonContent/>
+								<OverlaysContent/>
+								<NavContent/>
+        					</Col>
+        					<Col md={3} id="leftCol">
+        						<nav className="bs-docs-sidebar affix">
+        							<ul className="nav nav-stacked bs-docs-sidenav" id="sidebar">
+        								<li><a href="#intro">Introduction</a></li>
+        								<li><a href="#buttons">Examples</a></li>
+        								<li><a href="#overlays">How to use</a></li>
+        								<li><a href="#nav">List of Components</a></li>
+        							</ul>
+        						</nav>
+        					</Col>
+						</Row>
+					);
+				}
+			};
+
+			class ButtonContent extends React.Component {
+				render() {
+					return(
+						<div id="buttons">
+						<h1 className="page-header" >Example Components</h1>
+						<div>
+							<h2>Buttons</h2>
+							<p>Use any of the available button style types to quickly create a styled button. Just modify the</p>
+							<div>
+								<div className="bs-example">
+										<ButtonToolbar>
+										    <Button>Default</Button>
+										    <Button bsStyle="primary">Primary</Button>
+										    <Button bsStyle="success">Success</Button>
+										    <Button bsStyle="info">Info</Button>
+										    <Button bsStyle="warning">Warning</Button>
+										    <Button bsStyle="danger">Danger</Button>
+										    <Button bsStyle="link">Link</Button>
+										</ButtonToolbar>
+									<ShowHide />
+								</div>
+							</div>
+							<h3>Single button dropdowns</h3>
+							<p>Create a dropdown button with the <code >&lt;DropdownButton/&gt;</code> component.</p>
+							<div>
+								<div className="bs-example">
+									<ButtonToolbar>{BUTTONS.map(renderDropdownButton)}</ButtonToolbar>
+									<ShowHide4 />
+								</div>
+							</div>
+							<h3>Split button dropdowns</h3>
+							<p>Similarly, create split button dropdowns with the <code >&lt;SplitButton/&gt;</code> component.</p>
+							<div>
+								<div className="bs-example">
+									<ButtonToolbar>{BUTTONS.map(renderDropdownButtons)}</ButtonToolbar>
+									<ShowHide5 />
+								</div>
+							</div>
+							<h2>Sizes</h2>
+							<p>Fancy larger or smaller buttons? Add <code>bsSize=&quot;large&quot;</code>,<code>bsSize=&quot;small&quot;</code>, or<code>bsSize=&quot;xsmall&quot;</code> for additional sizes.</p>
+							<div>
+								<div className="bs-example">
+									<div>
+										<ButtonToolbar>
+										<Button bsStyle="primary" bsSize="large">Large button</Button>
+										<Button bsSize="large">Large button</Button>
+										</ButtonToolbar>
+										<br/>
+										<ButtonToolbar>
+										<Button bsStyle="primary">Default button</Button>
+										<Button>Default button</Button>
+										</ButtonToolbar>
+										<br/>
+										<ButtonToolbar>
+										<Button bsStyle="primary" bsSize="small">Small button</Button>
+										<Button bsSize="small">Small button</Button>
+										</ButtonToolbar>
+										<br/>
+										<ButtonToolbar>
+										<Button bsStyle="primary" bsSize="xsmall">Extra small button</Button>
+										<Button bsSize="xsmall">Extra small button</Button>
+										</ButtonToolbar>
+									</div>
+									<ShowHide1 />
+								</div>
+							</div>
+
+							<h2>Button tags</h2>
+							<p>The DOM element tag is choosen automatically for you based on the props you supply. Passing a <code>href</code> will result in the button using a<br/> <code>&lt;a /&gt;</code> element otherwise a <code>&lt;button /&gt;</code> element will be used.</p>
+							<div>
+								<div className="bs-example">
+									<div>
+										<ButtonToolbar>
+											<Button href="#">Link</Button>
+											<Button>Button</Button>
+										</ButtonToolbar>
+									</div>
+									<ShowHide6 />
+								</div>
+							</div>
+
+							<h2>Button loading state</h2>
+							<p>When activating an asynchronous action from a button it is a good UX pattern to give the user feedback as to the loading state, this can easily be done by updating your <code>&lt;Button /&gt;</code>’s props from a state change like below.</p>
+							<div>
+								<div className="bs-example">
+									<div>
+										<LoadingButton/>
+									</div>
+									<ShowHide7 />
+								</div>
+							</div>
+							<BtnGroups/>
+						</div>
+						</div>
+					);
+				}
+			};
+
+			var Child = React.createClass({
+  				render() {
+    				return (<ButtonExample/>);
+  				}
+			});
+
+
+			var ShowHide = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+      				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+  				}
+			});
+
+			var ShowHide1 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample1 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+			var ShowHide3 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample3 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+
+			var ShowHide4 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample4 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+			var ShowHide5 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample5 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+			var ShowHide6 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample6 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+			var ShowHide7 = React.createClass({
+  				getInitialState: function () {
+   					return { childVisible: false };
+  				},
+
+  				render() {
+    				return(
+      					<div>
+        					<Button bsStyle="link" onClick={this.onClick} style={{marginLeft:"90%"}}>show code</Button>
+        					<br/>
+        					{
+          						this.state.childVisible
+            					? <ButtonExample7 />
+            					: null
+        					}
+      					</div>
+    				)
+  				},
+
+  				onClick() {
+    				this.setState({childVisible: !this.state.childVisible});
+
+  				}
+			});
+
+
+			class ButtonExample extends React.Component {
+				render() {
+					return(
+						<code>
+							const buttonsInstance = (<br/>
+								&nbsp;&nbsp;&nbsp;&lt;ButtonToolbar&gt;<br/>
+							    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;Button&gt;Default &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="primary"&gt;Primary &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="success"&gt;Success &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="info"&gt;Info &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="warning" &gt; Warning &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="danger"&gt;Danger &lt;/Button&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;Button bsStyle="link" &gt; Link &lt;/Button&gt;<br/>
+					    		&nbsp;&nbsp;&nbsp;&lt;/ButtonToolbar&gt;<br/>
+							);<br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample4 extends React.Component {
+				render() {
+					return(
+						<code>
+							const BUTTONS = &#91;'Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger', 'Link'&#93;;<br/><br/>
+
+							&nbsp;&nbsp;&nbsp;function renderDropdownButton&#40;title, i&#41; &#123;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &#40;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DropdownButton bsStyle=&#123;title.toLowerCase&#40;&#41;&#125; title=&#123;title&#125; key=&#123;i&#125; id=&#123;`dropdown-basic-$&#123;i&#125;`&#125;&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="1"&gt;Action&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="2"&gt;Another action&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="3" active&gt;Active Item&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem divider /&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="4"&gt;Separated link&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DropdownButton&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br/>
+							&nbsp;&nbsp;&nbsp;&#125;<br/>
+							const buttonsInstance = (<br/>
+  							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;&#123;BUTTONS.map(renderDropdownButton)&#125;&lt;/ButtonToolbar&gt;<br/>
+							);<br/><br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);<br/>
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample5 extends React.Component {
+				render() {
+					return(
+						<code>
+							const BUTTONS = &#91;'Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger', 'Link'&#93;;<br/><br/>
+
+							&nbsp;&nbsp;&nbsp;function renderDropdownButton&#40;title, i&#41; &#123;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &#40;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SpliButton bsStyle=&#123;title.toLowerCase&#40;&#41;&#125; title=&#123;title&#125; key=&#123;i&#125; id=&#123;`dropdown-basic-$&#123;i&#125;`&#125;&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="1"&gt;Action&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="2"&gt;Another action&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="3" active&gt;Active Item&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem divider /&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MenuItem eventKey="4"&gt;Separated link&lt;/MenuItem&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/SplitButton&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br/>
+							&nbsp;&nbsp;&nbsp;&#125;<br/>
+							const buttonsInstance = (<br/>
+  							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;&#123;BUTTONS.map(renderDropdownButton)&#125;&lt;/ButtonToolbar&gt;<br/>
+							);<br/><br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);<br/>
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample6 extends React.Component {
+				render() {
+					return(
+						<code>
+							const buttonsInstance = (<br/>
+    						&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button href="#"&gt;Link&lt;/Button&gt;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button&gt;Button&lt;/Button&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;	&lt;/ButtonToolbar&gt;<br/>
+  							);<br/><br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample7 extends React.Component {
+				render() {
+					return(
+						<code>
+							const LoadingButton = React.createClass(&#123;<br/>
+  							&nbsp;&nbsp;&nbsp;	getInitialState&#40;&#41; &#123;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		return &#123;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			isLoading: false<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	    &#125;;<br/>
+  							&nbsp;&nbsp;&nbsp;	&#125;,<br/><br/>
+
+  							&nbsp;&nbsp;&nbsp;	render&#40;&#41; &#123;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		let isLoading = this.state.isLoading;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		return &#40;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;Button<br/>
+        					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				bsStyle="primary"<br/>
+        					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				disabled=&#123;isLoading&#125;<br/>
+        					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				onClick=&#123;!isLoading ? this.handleClick : null&#125;&gt;<br/>
+        					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				&#123;isLoading ? 'Loading...' : 'Loading state'&#125;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;/Button&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		);<br/>
+  							&nbsp;&nbsp;&nbsp;	&#125;,<br/><br/>
+
+  							&nbsp;&nbsp;&nbsp;	handleClick&#40;&#41; &#123;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		this.setState&#40;&#123;isLoading: true&#125;&#41;;<br/>
+
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    	setTimeout&#40;&#40;&#41; =&gt; &#123;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			this.setState(&#123;isLoading: false&#125;&#41;;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&#125;, 2000&#41;;<br/>
+  							&nbsp;&nbsp;&nbsp;	&#125;<br/>
+							&#125;&#41;;<br/><br/>
+
+							ReactDOM.render(&lt;LoadingButton /&gt;, mountNode);
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample1 extends React.Component {
+				render() {
+					return(
+						<code>
+							const buttonsInstance = (<br/><br/>
+							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsStyle="primary" bsSize="large"&gt;Large button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsSize="large"&gt;Large button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;/ButtonToolbar&gt;<br/>
+								<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsStyle="primary"&gt;Default button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button&gt;Default button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;/ButtonToolbar&gt;<br/>
+								<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsStyle="primary" bsSize="small"&gt;Small button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsSize="small"&gt;Small button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;/ButtonToolbar&gt;<br/>
+								<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;ButtonToolbar&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsStyle="primary" bsSize="xsmall"&gt;Extra small button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;Button bsSize="xsmall"&gt;Extra small button&lt;/Button&gt;<br/>
+							&nbsp;&nbsp;&nbsp;	&lt;/ButtonToolbar&gt;<br/>
+							);<br/><br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);
+						</code>
+					);
+				}
+			};
+
+			class ButtonExample3 extends React.Component {
+				render() {
+					return(
+						<code>
+							const buttonsInstance = (<br/><br/>
+							&nbsp;&nbsp;&nbsp;	&lt;ButtonGroup&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;Button&lt;1&lt;/Button&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;Button&lt;2&lt;/Button&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;DropdownButton title="Dropdown" id="bg-nested-dropdown"&gt;<br/>
+      						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				&lt;MenuItem eventKey="1"&gt;Dropdown link&lt;/MenuItem&gt;<br/>
+     						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				&lt;MenuItem eventKey="2"&gt;Dropdown link&lt;/MenuItem&gt;<br/>
+    						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;/DropdownButton&gt;<br/>
+  							&nbsp;&nbsp;&nbsp;		&lt;/ButtonGroup&gt;<br/>
+							);<br/><br/>
+
+							ReactDOM.render(buttonsInstance, mountNode);
+						</code>
+					);
+				}
+			};
+
+
+
+			const LoadingButton = React.createClass({
+				getInitialState() {
+    				return {
+      					isLoading: false
+    				};
+  				},
+
+  				render() {
+    				let isLoading = this.state.isLoading;
+    				return (
+      					<Button
+        					bsStyle="primary"
+        					disabled={isLoading}
+        					onClick={!isLoading ? this.handleClick : null}>
+        					{isLoading ? 'Loading...' : 'Loading state'}
+      					</Button>
+    				);
+				},
+
+				handleClick() {
+    				this.setState({isLoading: true});
+
+				    setTimeout(() => {
+      					this.setState({isLoading: false});
+    				}, 2000);
+  				}
+			});
+
+			class OverlaysContent extends React.Component {
+				render() {
+					return(
+						<div>
+							<h1>How to use React-Bootstrap</h1>
+							<p>React-Bootstrap is open source and available on GitHub. You can install it via npm:</p>
+							<figure class="highlight">
+								<pre>
+									<code>
+										$ npm install react-bootstrap --save
+									</code>
+								</pre>
+							</figure>
+							<p>If you install React-Bootstrap using npm, you can import individual components from React-Bootstrap rather than the entire library. You have to define the components that you use like this:</p>
+							<figure class="highlight">
+								<pre>
+									<code>
+										var ButtonGroup = ReactBootstrap.ButtonGroup;
+									</code>
+								</pre>
+							</figure>
+						</div>
+					);
+				}
+			};
+
+			class NavContent extends React.Component {
+				render() {
+					return(
+						<div>
+							<h1>List of Components</h1>
+							<p>This is a list of all available React-Bootstrap components. Most of them can be extended by properties, please take a look at <a href="https://react-bootstrap.github.io/components.html">this page</a> for further information.</p>
+							<Row>
+								<Col sm={4}>
+									<ul>
+										<li><a href="https://react-bootstrap.github.io/components.html#panels">&lt;Accordion/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#alerts">&lt;Alert/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#badges">&lt;Badge/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#buttons">&lt;Button/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#btn-groups">&lt;ButtonGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#buttons">&lt;ButtonToolbar/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#carousels">&lt;Carousel/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms">&lt;Checkbox/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#page-layout">&lt;Col/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#page-layout">&lt;ControlLabel/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#buttons">&lt;DropdownButton/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#page-layout">&lt;FieldGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms">&lt;Form/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms">&lt;FormControl/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms">&lt;FormGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#misc">&lt;Glyphicon/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#page-layout">&lt;Grid/&gt;</a></li>
+									</ul>
+								</Col>
+								<Col sm={4}>
+									<ul>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms">&lt;HelpBlock/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#media-content">&lt;Image/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms-input-groups">&lt;InputGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#jumbotron">&lt;Jumbotron/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#labels">&lt;Label/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#listgroup">&lt;ListGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#listgroup">&lt;ListGroupItem/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#media-content">&lt;Media/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#menu-items">&lt;MenuItem/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#modals">&lt;Modal/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#navigation">&lt;Nav/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#navigation">&lt;Navbar/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#navigation">&lt;NavDropdown/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#navigation">&lt;NavItem/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#overlays">&lt;OverlayTrigger/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#page-header">&lt;PageHeader/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#pager">&lt;Pager/&gt;</a></li>
+									</ul>
+								</Col>
+								<Col sm={4}>
+									<ul>
+										<li><a href="https://react-bootstrap.github.io/components.html#pagination">&lt;Pagination/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#panels">&lt;Panel/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#panels">&lt;PanelGroup/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#popovers">&lt;Popover/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#progress">&lt;ProgressBar/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#forms-validation">&lt;Radio/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#responsive-embed">&lt;ResponsiveEmbed/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#grid">&lt;Row/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#btn-dropdowns">&lt;SplitButton/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#tabs">&lt;Tab/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#tabs">&lt;Tabs/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#tables">&lt;Table/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#media-content">&lt;Thumbnail/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#tooltips">&lt;Tooltip/&gt;</a></li>
+										<li><a href="https://react-bootstrap.github.io/components.html#wells">&lt;Well/&gt;</a></li>
+									</ul>
+								</Col>
+							</Row>
+						</div>
+					);
+				}
+			};
+
+			class BtnGroups extends React.Component {
+				render() {
+					return(
+						<div>
+							<h2 id="btnGroups">Button groups</h2>
+							<h3>Nesting</h3>
+							<p>You can place other button types within the <code>&lt;ButtonGroup /&lt;</code> like <code>&lt;DropdownButton /&gt;</code>s.</p>
+							<div>
+								<div className="bs-example">
+									<ButtonGroup>
+								    	<Button>1</Button>
+								    	<Button>2</Button>
+								    	<DropdownButton title="Dropdown" id="bg-nested-dropdown">
+								     		<MenuItem eventKey="1">Dropdown link</MenuItem>
+								     		<MenuItem eventKey="2">Dropdown link</MenuItem>
+								    	</DropdownButton>
+								  	</ButtonGroup>
+								  	<ShowHide3 />
+								</div>
+							</div>
+						</div>
+					);
+				}
+			};
+
+			const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger', 'Link'];
+
+			function renderDropdownButton(title, i) {
+			  return (
+			    <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
+			      <MenuItem eventKey="1">Action</MenuItem>
+			      <MenuItem eventKey="2">Another action</MenuItem>
+			      <MenuItem eventKey="3" active>Active Item</MenuItem>
+			      <MenuItem divider />
+			      <MenuItem eventKey="4">Separated link</MenuItem>
+			    </DropdownButton>
+			  );
+			}
+
+			function renderDropdownButtons(title, i) {
+			  return (
+			    <SplitButton bsStyle={title.toLowerCase()} title={title} key={i} id={`split-button-basic-${i}`}>
+			      <MenuItem eventKey="1">Action</MenuItem>
+			      <MenuItem eventKey="2">Another action</MenuItem>
+			      <MenuItem eventKey="3">Something else here</MenuItem>
+			      <MenuItem divider />
+			      <MenuItem eventKey="4">Separated link</MenuItem>
+			    </SplitButton>
+			  );
+			}
+
+
+			class Footer extends React.Component {
+				render() {
+					return(
+						<footer>
+							<div className="container copyright text-center">
+								&copy; 2000 &mdash; 2016&nbsp;
+								<a href="http://www.opuscapita.com/">Opuscapita Oy</a>
+							</div>
+						</footer>
+					);
+				}
+			};
+
+			ReactDOM.render(
+				<div>
+					<Container />
+				</div>, document.getElementById("container")
+			);
+		</script>
+
+		<script type="text/javascript">
+ 			$(document).ready(function(){/* activate sidebar */
+			$('#sidebar').affix({
+  				offset: {
+    			top: 235
+  				}
+			});
+
+			/* activate scrollspy menu */
+			var $body   = $(document.body);
+			var navHeight = $('.navbar').outerHeight(true) + 10;
+
+			$body.scrollspy({
+			  target: '#leftCol',
+			  offset: navHeight
+			});
+
+				/* smooth scrolling sections */
+				$('a[href*=#]:not([href=#])').click(function() {
+				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				    	var target = $(this.hash);
+				    	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				    	if (target.length) {
+				        	$('html,body').animate({
+				        		scrollTop: target.offset().top - 50
+				        	}, 1000);
+				        	return false;
+				    	}
+				    }
+				});
+			});
+		</script>
+
+		<script type="text/javascript">
+
+    		function toggle_visibility(id) {
+        		var e = document.getElementById(id);
+        		if(e.style.display == 'block')
+            	e.style.display = 'none';
+        		else
+            	e.style.display = 'block';
+    		}
+
+		</script>
+
+
+		<!--left-->
+		<!--
+		<div class="col-md-3" id="leftCol" >
+		<nav class="bs-docs-sidebar affix">
+		 <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
+		   <li><a href="#sec0">Section 0</a></li>
+		   <li><a href="#sec1">Section 1</a></li>
+		   <li><a href="#sec2">Section 2</a></li>
+		   <li><a href="#sec3">Section 3</a></li>
+		   <li><a href="#sec4">Section 4</a></li>
+		 </ul>
+		 </nav>
+		</div>-->
+		<!--/left-->
+		</div><!--/row-->
+		</div><!--/container-->
+		</div><!-- /.content-wrap -->
+
+
+		<footer>
+		<div class="container copyright text-center">
+		&copy; 2001 &mdash; 2016&nbsp;&nbsp;
+		<a href="http://www.opuscapita.com/">
+		<img src="../../img/oc-logo-rgb.svg" style="height: 1.2em;">
+		</a>
+		</div>
+
+		<!--
+		<div class="visible-xs visible-sm">
+		&nbsp;<br>&nbsp;<br>&nbsp;<br>
+		</div>
+		-->
+
+		</footer>
+
+		</section><!-- /content -->
+		</body>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+
+		$(document).ready(function() {
+		$('.nav-toggle').click(function() {
+		$('.nav-toggle').toggleClass('active');
+		$('.sidebar').toggleClass('active');
+		});
+
+		$('#sidebar').affix({
+		offset: {
+		top: 235
+		}
+		});
+
+		/* activate scrollspy menu */
+		var $body   = $(document.body);
+		var navHeight = $('.navbar').outerHeight(true) + 10;
+
+		$body.scrollspy({
+		target: '#leftCol',
+		offset: navHeight
+		});
+
+		/* smooth scrolling sections */
+		$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+		$('html,body').animate({
+		scrollTop: target.offset().top - 50
+		}, 1000);
+		return false;
+		}
+		}
+		});
+		});
+		</script>
+
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+		</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- ################################################ -->
+
+
+		<!--main-->
+
+
+
+
+	</body>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
+
+		<script src="../OCUI-React/react.min.js"></script>
+		<script src="../OCUI-React/jquery.min.js"></script>
+		<script src="../OCUI-React/react-dom.js"></script>
+		<script src="../OCUI-React/react-bootstrap.js"></script>
+</html>

@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>OCUI Guideline</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/ocui-bootstrap-bundle-0.1.2.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="affix.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+
+		<section class="sidebar">
+
+			<nav class="navbar navbar-default">
+				<div class="nav-background"></div>
+				<div class="navbar-header hidden-sm">
+					<a class="navbar-brand visible-lg" href="#">
+						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
+					</a>
+				</div>
+
+
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Introduction
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">OCUI Overview</a></li>
+							<li><a href="styleguide.html">Styleguide</a></li>
+							<li><a href="get-started.html">Get Started</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+					<li>
+						<a href="layout.html">Layout</a>
+					</li>
+					<li class="active">
+						<a href="patterns.html">Patterns</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Components
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="nav.html">Navigation</a></li>
+							<li><a href="forms.html">Forms</a></li>
+							<li><a href="list-groups.html">List Groups</a></li>
+							<li><a href="tables.html">Tables</a></li>
+						</ul>
+					</li><!-- /dropdown -->
+<!--					<li>
+						<a href="templates.html">Template Library</a>
+					</li>-->
+					<li>
+						<a href="grammar-and-copy.html">Grammar &amp; Copy</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							React.js
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="react-v2.html">React.js Introduction</a>
+							</li>
+							<li>
+								<a href="react-bootstrap.html">React-Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">React Components</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content">
+			<div class="applogo visible-md visible-sm visible-xs">
+				<a class="applogo visible-md visible-sm visible-xs" href="#">
+					<img src="../../img/oc-logo-rgb.svg">
+				</a>
+				<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+			</div>
+
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+
+
+				      <!--right-->
+				      <div class="col-md-9">
+				        <h1 id="sec0">Patterns</h1>
+				        <p class="lead">
+									Patterns are large, self-contained parts of the layout, that fulfill a singular purpose.
+								</p>
+
+								<h2>Application Menu</h2>
+								<p class="lead">
+									The application menu is rendered as a vertical sidebar on the left border of the viewport. It is fully responsive, and breaks down to a phone-sized fullscreen menu that is toggled via a hamburger icon located on the page heading and as a floater on the bottom center of the viewport.
+
+									The application menu contains L1 and L2 menu nodes, and provides access to the entire suite of installed applications. That requires a consistent menu population within all applications of any given suite.
+
+									User menu to be decided.
+								</p>
+								<br>
+								<div class="bs-example" style="overflow: auto;">
+
+									<section class="sidebar">
+
+										<nav class="navbar navbar-default">
+											<div class="nav-background"></div>
+											<div class="navbar-header hidden-sm">
+									      		<a class="navbar-brand visible-lg" href="#">
+													<img src="../../img/oc-logo-white.svg" style="height: 1.4em;">
+												</a>
+									    	</div>
+											<ul class="nav navbar-nav">
+								        		<li class="dropdown">
+								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+														<span class="oci oci-store"></span>
+														Shop
+													</a>
+								         			<ul class="dropdown-menu">
+														<li><a href="#">Search</a></li>
+														<li><a href="#">External Shops</a></li>
+														<li><a href="#">Suppliers &amp; Contracts</a></li>
+								          			</ul>
+								        		</li><!-- /dropdown -->
+
+								        		<li class="dropdown">
+								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+														<span class="oci oci-bell"></span>
+														Request <span class="badge">2</span></a>
+								          			<ul class="dropdown-menu">
+														<li><a href="#">Requisitions</a></li>
+														<li><a href="#">Requisition Approval <span class="badge">2</span></a></li>
+														<li><a href="#">Requisition Import</a></li>
+								          			</ul>
+								        		</li><!-- /dropdown -->
+								       			<li class="dropdown">
+								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: -5px !important;">
+														<span class="oci oci-analyze"></span>
+														Analyze
+													</a>
+								          			<ul class="dropdown-menu">
+														<li class="dropdown-header">Spend Analysis</li>
+														<li><a href="#">Estimate Spend Volume</a></li>
+														<li role="separator" class="divider"></li>
+														<li class="dropdown-header">Report</li>
+														<li><a href="#">Requisition Status</a></li>
+														<li><a href="#">Supplier Turnover</a></li>
+														<li><a href="#">Open Deliveries</a></li>
+														<li><a href="#">Report of Searches</a></li>
+														<li><a href="#">Product and Price Analysis</a></li>
+														<li><a href="#">Product Reviews and Ratings Analysis</a></li>
+														<li><a href="#">Generate Reports</a></li>
+														<li role="separator" class="divider"></li>
+														<li class="dropdown-header">Budgets</li>
+														<li><a href="#">List Budgets</a></li>
+														<li><a href="#">Book Budgets</a></li>
+														<li role="separator" class="divider"></li>
+														<li class="dropdown-header">Benchmarks</li>
+														<li><a href="#">Requisitions</a></li>
+														<li><a href="#">Purchase Orders</a></li>
+														<li><a href="#">Spend Volume</a></li>
+														<li><a href="#">Workflow Statistics</a></li>
+								          			</ul>
+								        		</li><!-- /dropdown -->
+											</ul>
+
+								        		</li><!-- /dropdown -->
+								      		</ul><!-- /navbar-nav-->
+										</nav><!-- /navbar -->
+										<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
+									</section><!-- /sidebar -->
+
+
+
+								</div><!-- /example -->
+
+								<h2>Search / Search Bar</h2>
+								<p class="lead">
+									Search bars are rendered as a single input <em>Simple Search</em> or as a <em>Multiple Field Search</em>.
+									A Simple Search can be combined with an <em>Extended Search</em>, which is a collapsible <em>Multiple Field Search</em>.
+									Search bars can be augmented with several javascript driven controls, i.e. autocomplete or keyword tagging.
+									It is important not to restyle search bars, as their appearance and layout is required to be uniformous everywhere.
+								</p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<h3>Simple Search</h3>
+										<p>
+											The Simple Search utilizes a XXX component, and expands into an extended search in an X-column grid. Extended Searches require a .form-submit at the bottom which reproduces the function of the main search button
+
+											Can be extended with autocomplete, erase input field, group and compatibility restrictions, tags.
+											Requires a search button, which always contains a magnifying glass icon and may contain the string <code>Search</code>.
+										</p>
+									</div><!--/col-->
+									<div class="col-md-6">
+										<h3>Extended Search</h3>
+										<p>
+											..
+										</p>
+									</div><!--/col-->
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<h3>Inline Search</h3>
+										<p>
+											The Inline Search utilizes a XXX component.
+
+											Can be extended with autocomplete, erase input field, group and compatibility restrictions, tags.
+											Requires a search button, which always only contains a magnifying glass icon.
+										</p>
+									</div><!--/col-->
+									<div class="col-md-6">
+										<h3>Multi Field Search</h3>
+										<p>
+											The Multi Field Search is the standard search pattern for all CRUD search result pages.
+											It is always located right below the view header, and comes without its own heading.
+											That makes sense because it is a control that directly relates to the topic of the page header.
+
+											Multi Field Searches give access to a set of business objects that can be edited in the scope of the parent function.
+											They are rendered as a column grid of form fields, with a form-submit at the bottom.
+
+											The search Results of a Multi Field Search are always rendered as the next pattern, without intermediate layout elements.
+										</p>
+									</div><!--/col-->
+								</div><!--/row-->
+								<br>
+
+								<div class="bs-example bs-example-type">
+
+									<section class="search simple-search">
+										<form class="search-bar form-inline form-group-justify">
+											<div class="form-group">
+												<div class="btn-group">
+													<button data-toggle="dropdown" class="btn btn-default btn-lg dropdown-toggle btn-2rows hidden-xs" type="button">
+														<span class="button-label">
+															<small>Search in</small>
+															<br><b id="selectedCategoryLabel">All Groups</b>
+														</span>
+														<span class="caret"></span>
+													</button>
+													<button data-toggle="dropdown" class="btn btn-default btn-lg dropdown-toggle hidden-sm hidden-md hidden-lg" type="button" data-toggle="dropdown">
+														<span class="glyphicon glyphicon-folder-open"></span>
+													</button>
+													<ul class="dropdown-menu dropdown-menu-wide width-lg" role="menu">
+														<li><a href="#"><b>All Groups</b></a></li>
+														<li class="divider"></li>
+														<li><a href="#">Level 1 ClassGrps</a></li>
+														<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+														<li><a href="#">Information, communication and media technology</a></li>
+														<li><a href="#">Packing material</a></li>
+														<li><a href="#">Tool</a></li>
+														<li><a href="#">Construction technology</a></li>
+														<li><a href="#">Machine element, fixing, mounting</a></li>
+														<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+														<li><a href="#">Service</a></li>
+														<li class="divider"></li>
+														<li class="text-right"><button class="btn btn-primary">Browse Categories&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button></li>
+													</ul>
+												</div><!-- /btn-group -->
+											</div><!-- /form-group -->
+											<div class="form-group justify has-overlay">
+												<label for="q" class="sr-only">Search Catalog for</label>
+												<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+												<input type="text" placeholder="Search for ..." value="" autocomplete="off" name="q" class="form-control input-lg ui-autocomplete-input" style="width:100%;" maxlength="200" id="q">
+												<button class="btn btn-link btn-overlay btn-lg dropdown-toggle" type="button">
+													<span class="button-label">
+														<small>
+															<i class="fa fa-angle-left" aria-hidden="true"></i><i class="fa fa-angle-left hidden-sm hidden-md hidden-lg" aria-hidden="true"></i><span class="hidden-xs">&nbsp;&nbsp;</span><span class="hidden-xs hidden-sm">Search </span><span class="hidden-xs">Results</span></b>
+														</small>
+													</span>
+												</button>
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-search"></span><span class="hidden-xs hidden-sm"> Search</span></button>
+												<button class="btn btn-link btn-lg dropdown-toggle btn-2rows hidden-xs hidden-sm" type="button" data-toggle="collapse" href="#extended-search">
+													<span class="button-label">
+														Extended
+														<br>Search
+													</span>
+													<span class="caret"></span>
+												</button>
+												<button class="btn btn-link btn-lg dropdown-toggle hidden-md hidden-lg" type="button" data-toggle="collapse" href="#extended-search">
+													<i class="fa fa-angle-down" aria-hidden="true"></i>
+												</button>
+											</div><!-- /form-group -->
+										</form>
+
+										<form class="form-horizontal extended-search collapse" id="extended-search">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="control-label col-xs-4">
+															<select class="form-control">
+																<option>All of these words</option>
+																<option>Exact phrase</option>
+																<option>At least one of these words</option>
+															</select>
+														</label>
+														<div class="col-xs-8">
+															<input type="text" class="form-control">
+														</div>
+													</div><!-- /form-group -->
+													<div class="form-group">
+														<label class="control-label col-xs-4">Without these words</label>
+														<div class="col-xs-8">
+															<input type="text" class="form-control">
+														</div>
+													</div><!-- /form-group -->
+													<div class="form-group">
+														<label class="control-label col-sm-4 hide-xs"></label>
+														<div class="col-sm-4">
+															<label class="btn btn-default btn-block oc-check">
+																<input type="checkbox"> Fuzzy Search
+															</label>
+															<span class="label label-info">Search for partial words</span>
+														</div>
+														<div class="col-sm-4">
+															<label class="btn btn-default btn-block oc-check">
+																<input type="checkbox"> Preferred
+															</label>
+														</div>
+													</div><!-- /form-group -->
+												</div><!-- /col -->
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="control-label col-xs-4">
+															<select class="form-control">
+																<option>Product ID</option>
+																<option>EAN</option>
+																<option>Manufacturer Product ID</option>
+																<option>Customer Product ID</option>
+															</select>
+														</label>
+														<div class="col-xs-8">
+															<input type="text" class="form-control">
+														</div>
+													</div><!-- /form-group -->
+													<div class="form-group">
+														<label class="control-label col-xs-4">Manufacturer</label>
+														<div class="col-xs-8">
+															<input type="text" class="form-control">
+														</div>
+													</div><!-- /form-group -->
+													<div class="form-group">
+														<label class="control-label col-xs-4">Supplier</label>
+														<div class="col-xs-8">
+															<div class="input-group">
+																<input type="text" class="form-control">
+																<span class="input-group-btn">
+																	<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+																</span>
+															</div><!-- /input-group -->
+														</div>
+													</div><!-- /form-group -->
+
+												</div><!-- /col -->
+											</div><!-- /row -->
+											<div class="form-submit text-right">
+												<button class="btn btn-link btn-lg">Clear</button>
+												<button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-search"></span> Search</button>
+											</div>
+
+										</form>
+									</section>
+
+
+								</div><!--/bs-example-->
+
+								<div class=bs-example>
+
+									<h2>Form Heading</h2>
+									<form class="form-horizontal">
+										<div class="row">
+											<div class="col-md-4">
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+											</div>
+											<div class="col-md-4">
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+											</div>
+											<div class="col-md-4">
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+												<div class="form-group">
+													<label class="col-sm-3 control-label">Label</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" placeholder="Placeholder">
+													</div>
+												</div><!-- /form-group -->
+
+											</div>
+										</div>
+									</form>
+									<div class="form-submit text-right">
+										<input type="submit" class="btn btn-link" value="Cancel" name="submit">
+										<input type="submit" class="btn btn-default" value="Action" name="submit">
+										<input type="submit" class="btn btn-default" value="Action" name="submit">
+										<input type="submit" class="btn btn-primary" value="Primary Action" name="submit" id="submit">
+									</div>
+								</div>
+
+								<div class="bs-callout bs-callout-danger">
+									<h4>Search Don'ts:</h4>
+									<ul>
+										<li>Don't scale searchbar up or down</li>
+										<li>Don't prevent responsive behaviour</li>
+										<li>Don't switch button classes</li>
+										<li>Don't use non-standard icons/labels for buttons</li>
+									</ul>
+								</div>
+
+
+
+
+									<h2>Search Results</h2>
+									<p>
+										Result lists are rendered as tabular data, with a special case in OPC, showing product lists. Search result lists are an integral part of the OCUI User Experience, allowing access to the business objects that require handling. Result lists require a corrensponding search bar preceding the list in the same layout, but are NOT a child node of the search bar.
+									  Result lists are constructed from tables, populated by business objects, filter and sorting tools, pagination and mass operations. They can also contain a form-submit, if the primary goal of the view is to process part of the search result list.
+
+									  Filters and Categories
+									  Filtering, sorting and category drill in functionality can be used in conjunction with the search bar, allowing the user to narrow results to a good result size with consecutive searches and filtering. This functionality is called Drill-in-Search.
+									</p>
+
+
+									<h2>CRUD Editor / Business Object Editor</h2>
+									<p>...</p>
+
+
+								<h2>Form Section</h2>
+								<p>is documented</p>
+
+								<h3>Nested Forms</h3>
+								<p>
+									Nested forms require a constraining parent. A prime example is a form based editor that renders a result list populated with on-view editable nodes, which allows for an expanding nested form that allows Search-and-Entry functionality for complex data types.
+								</p>
+
+
+										<h2>Page Header / BO Heading</h2>
+
+											<p class="lead">
+												Each Page/View has a <code>&lt;h1&gt;</code> heading, which may be extended by form elements, labels, callouts, static text or pictures. There are notable exceptions to that rule, listed below. If you want to build a view without a header, please consult a UX Designer.
+											</p>
+											<h3></h3>
+											<div class="bs-callout bs-callout-info">
+												<h4>Exceptions: These Views Don't Require a Page Header</h4>
+												<div class="row">
+													<div class="col-md-4">
+														<ul>
+															<h5>OPC</h5>
+															<li>
+																Search<br>
+																<code>opc/search</code>
+															</li>
+															<li>
+																Free Text Order<br>
+																<code>opc/productDetails/show?productKey=Freetext_Freetext</code>
+															</li>
+															<li>
+																Customer Service CMS Page<br>
+																<code>opc/cms/opcSupport/service</code>
+															</li>
+															<li>
+																Contact CMS Page<br>
+																<code>opc/cms/opcSupport/contact</code>
+															</li>
+															<li>
+																External Shops<br>
+																<code>opc/externalShops/index</code>
+															</li>
+															<li>
+																Shopping Cart<br>
+																<code>opc/shoppingCart</code>
+															</li>
+														</ul>
+													</div><!--/col-->
+													<div class="col-md-4">
+													</div><!--/col-->
+													<div class="col-md-4">
+													</div><!--/col-->
+												</div><!--/row-->
+											</div><!--/bs-callout-->
+
+											<div class="bs-example bs-example-type">
+												<section class="header">
+													<h1>
+														Page Header
+													</h1>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														Page Header
+													</h1>
+													<ul class="nav nav-tabs">
+														<li class="active">
+															<a href="#" data-toggle="tab"><h4>Browse External Shops</h4></a>
+														</li>
+														<li>
+															<a href="#" data-toggle="tab"><h4>Search Externally</h4></a>
+														</li>
+														<li>
+															<a href="#" data-toggle="tab"><h4>Background Search</h4></a>
+														</li>
+								    			</ul>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														Page Header <small>Object Identifier</small>
+													</h1>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														<span class="label label-primary label-square">Status</span>
+														Page Header
+														<small>Object Identifier</small>
+													</h1>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+
+													<h1>
+														<span class="label label-primary label-square">Ordered</span> Page Header <small>OFSR000001</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Purchase Orders</button>
+															<div class="btn-group">
+																<button class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
+																<button class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+															</div>
+														</div><!-- /form-submit -->
+													</h1>
+
+													<div class="lead">
+														<dl class="label label-default">
+															<dt>Created on</dt>
+															<dd>10/05/2016 4:29:05 AM</dd>
+														</dl>
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+													</div><!-- /lead -->
+
+													<div class="form-submit">
+														<div class="btn-group pull-right">
+															<button class="btn btn-default"><span class="glyphicon glyphicon-time"></span> History</button>
+														</div>
+													</div><!-- /form-submit -->
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														Page Header <small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+														</div><!-- /form-submit -->
+													</h1>
+
+													<div class="bs-callout bs-callout-info">
+														<h4>This is what it's about</h4>
+														<p>This is some sort of information about what's happening or what's to be done here.</p>
+													</div>
+
+
+
+													<div class="form-submit">
+														<div class="btn-group pull-left">
+															<button class="btn btn-default"><span class="glyphicon glyphicon-time"></span> History</button>
+														</div>
+														<div class="btn-group pull-right">
+															<button class="btn btn-link"> Cancel</button>
+															<button class="btn btn-default"> Save</button>
+															<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>  Edit</button>
+														</div>
+													</div><!-- /form-submit -->
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														<span class="label label-primary label-square">Status</span>
+														Page Header
+														<small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<button class="btn btn-primary" >
+																<span class="glyphicon glyphicon-pencil"></span>
+															</button>
+														</div><!-- /form-submit -->
+													</h1>
+													<div class="lead">
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+													</div><!-- /lead -->
+
+													<div class="bs-callout bs-callout-info">
+														<h4>This is what it's about</h4>
+														<p>This is some sort of information about what's happening or what's to be done here.</p>
+													</div>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														<span class="label label-primary label-square">Status</span>
+														Page Header
+														<small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+															<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+														</div><!-- /form-submit -->
+													</h1>
+													<div class="lead">
+														<dl class="label label-default">
+															<dt>Attribute</dt>
+															<dd>Value</dd>
+														</dl>
+													</div><!-- /lead -->
+
+													<div class="bs-callout bs-callout-info">
+														<h4>This is what it's about</h4>
+														<p>This is some sort of information about what's happening or what's to be done here.</p>
+													</div>
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+
+													<h1>
+														<span class="label label-primary label-square">Status</span> Page Header <small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<div class="btn-group">
+																<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+																<button class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+															</div>
+														</div><!-- /form-submit -->
+													</h1>
+
+													<form class="form-horizontal form-condensed">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+														</div><!--/row-->
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+														</div><!--/row-->
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+															<div class="col-md-3">
+																<div class="form-group">
+																  <label class="col-sm-4 control-label">Attribute</label>
+																  <div class="col-sm-8">
+																    <p class="form-control-static">Value</p>
+																  </div>
+																</div><!--/form-group-->
+															</div><!--/col-->
+														</div><!--/row-->
+													</form>
+
+													<div class="bs-callout bs-callout-danger">
+														<h4>This is what it's about</h4>
+														<p>This is some sort of information about what's happening or what's to be done here.</p>
+													</div>
+
+													<div class="form-submit">
+														<div class="btn-group pull-left">
+															<button class="btn btn-default"><span class="glyphicon glyphicon-paperclip"></span> Attachments</button>
+														</div>
+														<div class="btn-group pull-right">
+															<button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New Entry</button>
+															<button class="btn btn-default"><span class="glyphicon glyphicon-time"></span> History</button>
+														</div>
+													</div><!-- /form-submit -->
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														Page Header <small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<button class="btn btn-link"><span class="fa fa-angle-left"></span>&nbsp;&nbsp;Search Results</button>
+															<div class="btn-group">
+																<button class="btn btn-default"><span class="fa fa-angle-left"></span>&nbsp;&nbsp;Prev</button>
+																<button class="btn btn-default">Next&nbsp;&nbsp;<span class="fa fa-angle-right"></span></button>
+															</div>
+														</div><!-- /form-submit -->
+													</h1>
+
+
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header">
+													<h1>
+														Page Header <small>Object Identifier</small>
+														<div class="control-bar text-right pull-right">
+															<div class="btn-group">
+																<button class="btn btn-default">Add</button>
+																<button class="btn btn-default dropdown">Import <span class="glyphicon glyphicon-triangle-bottom"></span></button>
+																<button class="btn btn-default">Dashboard</button>
+															</div>
+														</div><!-- /form-submit -->
+													</h1>
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header header-pim-product">
+													<h1>
+														<div class="control-bar pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<button class="btn btn-default"><i class="fa fa-eye" aria-hidden="true"></i></button>
+
+															<div class="btn-group">
+																<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+																	Product <span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu dropdown-menu-right" role="menu">
+																	<li><a href="#">Show Assets</a></li>
+																	<li><a href="#">Show Terms</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">Delete Product</a></li>
+																	<li><a href="#">Duplicate Product</a></li>
+																	<li class="divider"></li>
+																	<li class="dropdown-header">Export</li>
+																	<li><a href="#">XML/BMECat2005</a></li>
+																	<li><a href="#">XML/SolrML</a></li>
+																	<li><a href="#">PDF/Products</a></li>
+																	<li><a href="#">CSV/ProductsAndPrices</a></li>
+																	<li><a href="#">JSON/Products</a></li>
+																	<li><a href="#">JSON/PUBLICPRODUCT</a></li>
+																	<li><a href="#">EXCEL/Products</a></li>
+																</ul>
+															</div><!--/btn-group-->
+														</div><!-- /control-bar -->
+
+														<div class="thumb">
+															<img src="../../img/pim.prod-thumb.png" class="img-responsive">
+														</div>
+														<div class="product">
+															Apple iPad3 128GB Wifi/3G
+															<div class="control-bar">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+																		Workflow <span class="caret"></span>
+																	</button>
+																	<ul class="dropdown-menu dropdown-menu-right" role="menu">
+																		<li><a href="#">..</a></li>
+																	</ul>
+																</div>
+															</div><!--/control-bar-->
+															<small>
+																<br><code class="id">5658741</code>
+																<br><span class="label label-success">Confirmed</span>
+															</small>
+														</div>
+													</h1>
+												</section><!-- /.header -->
+
+											</div><!--/bs-example-->
+											<div class="bs-example bs-example-type">
+
+												<section class="header header-pim-product">
+													<h1>
+														<div class="control-bar pull-right">
+															<button class="btn btn-link"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Back to Search Results</button>
+															<button class="btn btn-default"><i class="fa fa-eye" aria-hidden="true"></i></button>
+
+															<div class="btn-group">
+																<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+																	Product <span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu dropdown-menu-right" role="menu">
+																	<li><a href="#">Show Assets</a></li>
+																	<li><a href="#">Show Terms</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">Delete Product</a></li>
+																	<li><a href="#">Duplicate Product</a></li>
+																	<li class="divider"></li>
+																	<li class="dropdown-header">Export</li>
+																	<li><a href="#">XML/BMECat2005</a></li>
+																	<li><a href="#">XML/SolrML</a></li>
+																	<li><a href="#">PDF/Products</a></li>
+																	<li><a href="#">CSV/ProductsAndPrices</a></li>
+																	<li><a href="#">JSON/Products</a></li>
+																	<li><a href="#">JSON/PUBLICPRODUCT</a></li>
+																	<li><a href="#">EXCEL/Products</a></li>
+																</ul>
+															</div><!--/btn-group-->
+														</div><!-- /control-bar -->
+
+														<div class="thumb">
+														</div>
+														<div class="product">
+															Apple iPad3 128GB Wifi/3G
+															<div class="control-bar">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+																		Workflow <span class="caret"></span>
+																	</button>
+																	<ul class="dropdown-menu dropdown-menu-right" role="menu">
+																		<li><a href="#">..</a></li>
+																	</ul>
+																</div>
+															</div><!--/control-bar-->
+															<small>
+																<br><code class="id">5658741</code>
+																<br><span class="label label-success">Confirmed</span>
+															</small>
+														</div>
+													</h1>
+												</section><!-- /.header -->
+
+							        </div><!--/bs-example-->
+
+
+
+
+											<h2>Footer</h2>
+											<p>
+												The footer contains the OpusCapita logo, a shorthand copyright notice and a two-line version info.
+											  Each view, except Popups and Modals requires a footer. The footer is located at the bottom of the viewport if the layout is shorter than the viewport. If the layout exceeds the height of the viewport, the footer is found at the bottom of the scrollable content area.
+											</p>
+
+
+									<h2>Mapping Editor</h2>
+									<p>..</p>
+
+
+
+
+								<h2>Dashboard</h2>
+								<p>..</p>
+
+
+
+								<h2>Full Width / Fullscreen Wrapper</h2>
+								<p>..</p>
+
+
+
+			        </div><!--/right-->
+			         <!--left-->
+			      <div class="col-md-3" id="leftCol" >
+			      <nav class="bs-docs-sidebar affix">
+			        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
+			        	<li>
+			          		<a href="#sec0">Grid system</a>
+			          		<ul class="nav">
+			          			<li><a href="#grid-intro-oc">OC standard</a></li>
+			          			<li><a href="#">Bootstrap 3.3</a>
+			          				<ul class="nav">
+						          		<li class="col-xs-offset-1"><a href="#grid-intro">Introduction</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-media-queries">Media queries</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-options">Grid options</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-example-fluid">Ex: Fluid container</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-example-wrapping">Ex: Column wrapping</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-responsive-resets">Responsive column resets</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-offsetting">Offsetting columns</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-nesting">Nesting columns</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-column-ordering">Column ordering</a></li>
+						          		<li class="col-xs-offset-1"><a href="#grid-less">Less mixins and variables</a></li>
+						          	</ul>
+						        </li>
+				          	</ul>
+			         	</li>
+			          	<li><a href="#type">Typography</a>
+			          		<ul class="nav">
+			          			<li><a href="#">OC standard</a></li>
+			          			<li><a href="#">Bootstrap 3.3</a>
+			          				<ul class="nav">
+										<li class="col-xs-offset-1"><a href="#type-headings">Headings</a></li>
+										<li class="col-xs-offset-1"><a href="#type-body-copy">Body copy</a></li>
+										<li class="col-xs-offset-1"><a href="#type-inline-text">Inline text elements</a></li>
+										<li class="col-xs-offset-1"><a href="#type-alignmentent">Alignment classes</a></li>
+										<li class="col-xs-offset-1"><a href="#type-transformation">Transformation classes</a></li>
+										<li class="col-xs-offset-1"><a href="#type-abreviation">Abbreviations</a></li>
+										<li class="col-xs-offset-1"><a href="#type-addresses">Addresses</a></li>
+										<li class="col-xs-offset-1"><a href="#type-blockquotes">Blockquotes</a></li>
+										<li class="col-xs-offset-1"><a href="#type-lists">Lists</a></li>
+									</ul>
+			          			</li>
+			          		</ul>
+			          </li>
+			          <li><a href="#page-header">Page header</a></li>
+			          <li><a href="#code">Code</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#code-inline">Inline</a></li>
+					          		<li class="col-xs-offset-1"><a href="#code-user-input">User input</a></li>
+					          		<li class="col-xs-offset-1"><a href="#code-block">Basic block</a></li>
+					          		<li class="col-xs-offset-1"><a href="#code-variables">Variables</a></li>
+					          		<li class="col-xs-offset-1"><a href="#code-sample-output">Sample output</a></li>
+					          	</ul>
+					        </li>
+				         </ul>
+			          </li>
+			          <li><a href="#images">Images</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#images-responsive">Responsive images</a></li>
+					          		<li class="col-xs-offset-1"><a href="#images-shapes">Images shapes</a></li>
+					          	</ul>
+					        </li>
+				         </ul>
+			          </li>
+			          <li><a href="#helper-classes">Helper classes</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-colors">Contextual colors</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-close">Close icon</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-carets">Carets</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-floats">Quick floats</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-center">Center content blocks</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-clearfix">Clearfix</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-show-hide">Showing and hiding content</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li>
+					          		<li class="col-xs-offset-1"><a href="#helper-classes-image-replacement">Image replacement</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+			          </li>
+			          <li><a href="#responsive-utilities">Responsive utilities</a></li>
+			          <li><a href="#jumbotron">Jumbotron</a></li>
+			          <li><a href="#labels">Labels</a></li>
+			          <li><a href="#badges">Badges</a></li>
+			          <li><a href="#thumbnails">Thumbnails</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#thumbnails-default">Default example</a></li>
+					          		<li class="col-xs-offset-1"><a href="#thumbnails-custom-content">Custom content</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+			          </li>
+			          <li><a href="#images">Callouts</a></li>
+			          <li><a href="#alerts">Alerts</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#alerts-examples">Alerts examples</a></li>
+					          		<li class="col-xs-offset-1"><a href="#alerts-dismissible">Dismissible alerts</a></li>
+					          		<li class="col-xs-offset-1"><a href="#alerts-links">Links in alerts</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+			          </li>
+			          <li><a href="#progress">Progress bars</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#progress-basic">Basic example</a></li>
+					          		<li class="col-xs-offset-1"><a href="#progress-label">With label</a></li>
+					          		<li class="col-xs-offset-1"><a href="#progress-alternatives">Contextual alternatives</a></li>
+					          		<li class="col-xs-offset-1"><a href="#progress-striped">Striped</a></li>
+					          		<li class="col-xs-offset-1"><a href="#progress-animated">Animated</a></li>
+					          		<li class="col-xs-offset-1"><a href="#progress-stacked">Stacked</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+				      </li>
+			          <li><a href="#media">Media object</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#media-default">Default media</a></li>
+					          		<li class="col-xs-offset-1"><a href="#media-list">Media list</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+			          </li>
+			          <li><a href="#responsive-embed">Responsive embed</a></li>
+			          <li><a href="#wells">Wells</a></li>
+			          <li><a href="#panels">Panels</a>
+			          	<ul class="nav">
+			          		<li><a href="#">OC standard</a></li>
+			          		<li><a href="#">Bootstrap 3.3</a>
+			          			<ul class="nav">
+					          		<li class="col-xs-offset-1"><a href="#panels-basic">Basic example</a></li>
+					          		<li class="col-xs-offset-1"><a href="#panels-heading">Panel with heading</a></li>
+					          		<li class="col-xs-offset-1"><a href="#panels-footer">Panel with footer</a></li>
+					          		<li class="col-xs-offset-1"><a href="#panels-alternatives">Contextual alternatives</a></li>
+					          		<li class="col-xs-offset-1"><a href="#panels-tables">Panel with tables</a></li>
+					          		<li class="col-xs-offset-1"><a href="#panels-list-group">Panel with list groups</a></li>
+					          	</ul>
+					        </li>
+				        </ul>
+			          </li>
+			        </ul>
+			        </nav>
+
+
+
+				      </div><!--/right-->
+				  	</div><!--/row-->
+
+
+
+
+
+				</div><!--/container-->
+			</div><!-- /.content-wrap -->
+
+
+			<footer>
+				<div class="container copyright text-center">
+					&copy; 2001 &mdash; 2016&nbsp;&nbsp;
+					<a href="http://www.opuscapita.com/">
+						<img src="../../img/oc-logo-rgb.svg" style="height: 1.2em;">
+					</a>
+				</div>
+
+				<!--
+				<div class="visible-xs visible-sm">
+					&nbsp;<br>&nbsp;<br>&nbsp;<br>
+				</div>
+				-->
+
+			</footer>
+
+		</section><!-- /content -->
+	</body>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+	$(document).ready(function() {
+		$('.nav-toggle').click(function() {
+			$('.nav-toggle').toggleClass('active');
+			$('.sidebar').toggleClass('active');
+		});
+
+		$('#sidebar').affix({
+		  offset: {
+		    top: 235
+		  }
+		});
+
+		/* activate scrollspy menu */
+		var $body   = $(document.body);
+		var navHeight = $('.navbar').outerHeight(true) + 10;
+
+		$body.scrollspy({
+		  target: '#leftCol',
+		  offset: navHeight
+		});
+
+		/* smooth scrolling sections */
+		$('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top - 50
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		});
+	});
+</script>
+
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="affix.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ################################################ -->
+
+
+<!--main-->
