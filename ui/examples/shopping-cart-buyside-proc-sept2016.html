@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside (Procurement Mode) Shopping Cart 09-2016</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Local stylesheet -->
+		<link rel="stylesheet" href="../css/jcatalog-bootstrap-bundle.css" type="text/css" title="no title" charset="utf-8">
+		<!-- This ressource is replaced on most machines by bundle.less.css
+			 stylesheet.css is included for jcatalog users who can not access bundle.less.css
+	    -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+			<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="../img/oc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Catalog <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Search</a></li>
+								<li><a href="#">Categories</a></li>
+								<li><a href="#">External Shops</a></li>
+								<li><a href="#">Quick Entry</a></li>
+								<li><a href="#">Suppliers</a></li>
+								<li><a href="#">Contracts</a></li>
+								<li><a href="#">Product Suggestion</a></li>
+								<li><a href="#">Quick Quote</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Requests <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Requisitions</li>
+								<li><a href="#">Requisition Status</a></li>
+								<li><a href="#">Order Process Overview</a></li>
+								<li><a href="#">Cart Import</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Approval</li>
+								<li><a href="#">Approve Requisition</a></li>
+								<li><a href="#">Overview of Approved Requisitions</a></li>
+								<li><a href="#">Show all Approvals</a></li>
+								<li><a href="#">Delegation</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Purchase Order <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Purchase Orders</li>
+								<li><a href="#">Purchase Order Status</a></li>
+								<li><a href="#">Cancel Purchase Order</a></li>
+								<li><a href="#">PO Confirmation</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Deliveries</li>
+								<li><a href="#">Goods Receipt</a></li>
+								<li><a href="#">Auto Goods Receipt</a></li>
+								<li><a href="#">Delivery Note</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Invoices <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Invoice Administration</li>
+								<li><a href="#">Create Invoice / Credit Note</a></li>
+								<li><a href="#">Edit Invoice / Credit Note</a></li>
+								<li><a href="#">Invoice Verification</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Quick Quote</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<span class="badge">7</span>
+							</a>
+							<ul class="dropdown-menu">
+								*preview cart here*
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Martin Hallmann <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">User Details</a></li>
+								<li><a href="#">Language</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Shopping Lists</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Help</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Analysis</a></li>
+								<li><a href="#">Change customer assignment</a></li>
+								<li><a href="#">System Administration</a></li>
+								<li><a href="#">Customer Administration</a></li>
+								<li><a href="#">Setup</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- /main nav -->
+
+		<div class="container">
+
+
+			<!-- Searchbar -->
+			<form class="search-bar form-inline" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="searchClassGrpSelectInst1">Select Category</label>
+					<div class="btn-group" id="searchClassGrpSelectInst1">
+						<button type="button" class="btn btn-default btn-lg dropdown-toggle btn-2rows" data-toggle="dropdown">
+							<small>Search in</small><br><b>Category</b> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-wide" role="menu">
+							<li><a href="#">Search in all Categories</a></li>
+							<li class="wide">
+								<div class="row">
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Machine, device (for special applications)</a></li>
+											<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+											<li><a href="#">Information, communication and media technology</a></li>
+											<li><a href="#">Packing material</a></li>
+											<li><a href="#">Tool</a></li>
+											<li><a href="#">Construction technology</a></li>
+											<li><a href="#">Machine element, fixing, mounting</a></li>
+											<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+											<li><a href="#">Service</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Energy, extraction product, secondary raw materials and residues</a></li>
+											<li><a href="#">Electric engineering, automation, process control engineering</a></li>
+											<li><a href="#">Automotive technology</a></li>
+											<li><a href="#">Home economics, Home technolology</a></li>
+											<li><a href="#">Auxiliary supply, additive, formulation</a></li>
+											<li><a href="#">Polymers</a></li>
+											<li><a href="#">Laboratory material, Labatory technology</a></li>
+											<li><a href="#">Installation (complete)</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Medicine, medical technology, life sience</a></li>
+											<li><a href="#">Semifinished products,materials</a></li>
+											<li><a href="#">Machine, apparatus</a></li>
+											<li><a href="#">Industrial piping</a></li>
+											<li><a href="#">Inorganic Chemicals</a></li>
+											<li><a href="#">Organic Chemicals</a></li>
+											<li><a href="#">Occupational safety, accident prevention</a></li>
+											<li><a href="#">Marketing</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li><a href="#" class="text-right"><b>Browse Categories <span class="glyphicon glyphicon-forward"></span></b></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form-group" style="width: 67%;">
+					<label class="sr-only" for="searchInputInst1">Search Catalog for</label>
+					<input type="search" class="form-control input-lg" id="searchInputInst1" placeholder="Search for..">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchSubmitButtonInst1">Submit Search Query</label>
+					<button type="button" class="btn btn-primary btn-lg" id="searchSubmitButtonInst1"><span class="glyphicon glyphicon-search"></span> Search</button>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchExtendedSearchButtonInst1">Use Extendend Search</label>
+					<button type="button" class="btn btn-link no-right-padding" id="searchExtendedSearchButtonInst1">Extended Search</button>
+				</div>
+			</form>
+		<br>
+
+		<div class="form-horizontal">
+			<div class="row">
+				<div class="col-md-12">
+					<nav role="navigation" class="navbar navbar-default navbar-sm"><!-- controls for shopping cart -->
+						<div class="navbar-form">
+							<div class="btn-group" data-toggle="buttons">
+		            <label class="btn tick btn-default  ">
+		              <input type="hidden" name="_isMultipleResponsesAllowed"><input type="checkbox" name="isMultipleResponsesAllowed" id="isMultipleResponsesAllowed">
+		              Service Order
+		            </label>
+					    </div>
+							<div class="btn-group pull-right">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span> Update User Profile</button>
+								<button class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span> Copy Attributes</button>
+								<button class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> Import Cart</button>
+								<button class="btn btn-default"><span class="glyphicon glyphicon-download"></span> Export Cart</button>
+							</div>
+						</div><!-- /navbar-form -->
+					</nav>
+				</div><!-- /col-md-12 -->
+			</div><!-- /row -->
+		</div><!-- /form-horizontal -->
+
+		<style>
+			.percentage-value {
+				position: relative;
+			}
+
+			.percentage-value:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				display: block;
+				height: 4px;
+				top: 50%;
+				margin-top: -2px;
+				background: #6BB;
+
+			}
+
+			.percentage-value .value {
+				position: absolute;
+				display: block;
+				height: 4px;
+				top: 50%;
+				margin-top: -2px;
+				background: #034;
+			}
+
+			.percentage-value .value.danger {
+				background: #d2322d;
+			}
+
+			.percentage-value .badge.expense {
+				position: relative;
+				background: #034;
+				font-size: 1.6em;
+				padding: .5em .5em;
+				/*border-radius: 99em;*/
+			}
+
+			.percentage-value .badge.expense.danger {
+				background: #d2322d;
+			}
+
+			.percentage-value .badge.expense span {
+				color: #6bb;
+				font-size: .6em;
+			}
+
+			.percentage-value .badge.expense.danger span {
+				color: #ff9f9c;
+			}
+
+			.percentage-value .badge.total {
+				position: absolute;
+				background: #6bb;
+				font-size: 1.6em;
+				color: #fff;
+				right: 0;
+				padding: .5em .5em;
+			}
+
+			.percentage-value .badge small {
+				font-size: .6em;
+				display: block;
+				margin: .2em 0 .4em;
+			}
+
+			.percentage-value .badge.total span {
+				font-size: .6em;
+			}
+
+		</style>
+		<div class="bs-callout bs-callout-info">
+			<h4>Expense Balance for Company Issued Equipment</h4>
+			<p>You are about to spend 5 Pkt. of your current budget. </p>
+			<div class="percentage-value">
+				<span class="value" style="width: 8%;"></span>
+				<span class="badge total"><small>Budget:</small>60 <span>Pkt.</span></span>
+				<span class="badge expense"><small>Total:</small>5<span>/60 Pkt.</span></span>
+			</div>
+		</div>
+
+		<div class="bs-callout bs-callout-warning">
+			<h4>Expense Balance for Company Issued Equipment</h4>
+			<p>You are about to overdraw your current budget by 25 Pkt. </p>
+			<div class="percentage-value">
+				<span class="value danger" style="width: 100%;"></span>
+				<span class="badge total"><small>Budget:</small>60 <span>Pkt.</span></span>
+				<span class="badge expense danger"><small>Total:</small>85<span>/60 Pkt.</span></span>
+			</div>
+		</div>
+
+		<div class="form-horizontal">
+		  <div class="row">
+		    <div class="col-md-6">
+		      <input type="text" name="salesOrderName" value="Cart(2016-09-08)" class="form-control input-lg" maxlength="255" id="salesOrderName" placeholder="Order Name">
+		    </div><!-- /col-md-x -->
+				<div class="col-md-6">
+					<textarea class="form-control input-lg" name="orderText" id="orderText" placeholder="Message for supplier"></textarea>
+				</div><!-- /col-md-x -->
+			</div><!-- /row -->
+		</div><!-- /form-horizontal -->
+
+		<hr>
+
+		<form action="/dev-proc/opc/shoppingCart/index" method="post" name="shoppingForm" id="shoppingForm">
+			<div id="headerForm">
+				<div class="form-horizontal">
+		  		<div class="row">
+		    		<div class="col-md-3">
+							<div id="deliveryAddress">
+		  					<h4>Delivery Address
+									<div class="btn-group pull-right">
+										<button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+									</div>
+								</h4>
+	  						<span id="deliveryAddressUpdate"></span>
+								<p>
+									Musterkunde<br>
+									Musterstrasse<br>
+      						64546&nbsp;/&nbsp;Musterstadt<br>
+        					Germany&nbsp;/&nbsp;
+								</p>
+							</div>
+							<input type="hidden" name="deliveryAddressSN" value="" id="deliveryAddressSN">
+
+		    		</div><!-- /col-md-x -->
+						<div class="col-md-3">
+							<div id="deliveryAddress">
+		  					<h4>Invoice Address
+									<div class="btn-group pull-right">
+										<button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+									</div>
+								</h4>
+	  						<span id="deliveryAddressUpdate"></span>
+								<p>
+									Musterkunde<br>
+									Musterstrasse<br>
+      						64546&nbsp;/&nbsp;Musterstadt<br>
+        					Germany&nbsp;/&nbsp;
+								</p>
+							</div>
+							<input type="hidden" name="deliveryAddressSN" value="" id="deliveryAddressSN">
+		    		</div><!-- /col-md-x -->
+						<div class="col-md-2">
+							<div id="deliveryAddress">
+		  					<h4>Recipient
+									<div class="btn-group pull-right">
+										<button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+									</div>
+								</h4>
+	  						<span id="deliveryAddressUpdate"></span>
+								<p>
+									Frank Fuller<br>
+									OC West Wing<br>
+									Technical Support<br>
+									5<br>
+									511<br>
+								</p>
+							</div>
+							<input type="hidden" name="deliveryAddressSN" value="" id="deliveryAddressSN">
+		    		</div><!-- /col-md-x -->
+						<div class="col-md-4">
+			        <div id="accountDetailsBlock">
+								<h4>Accounting Details
+									<div class="btn-group pull-right">
+										<button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+									</div>
+								</h4>
+								<div class="table-responsive">
+									<table class="resultTable table">
+										<thead>
+											<tr>
+												<th><nobr>Type</nobr></th>
+												<th>Cost Object</th>
+												<th>%</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Cost Center</td>
+												<td>Marketing<br><span class="label label-default">537456</span></td>
+												<td>50%</td>
+											</tr>
+											<tr>
+												<td>Cost Center</td>
+												<td>Produktion<br><span class="label label-default">447685</span></td>
+												<td>50%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+			        </div><!-- /#accountDetailsBlock -->
+			      </div><!-- /col-md-x -->
+					</div><!-- /row -->
+				</div><!-- /form-horizontal -->
+			</div><!-- /#headerForm -->
+
+<br>
+
+		<div class="form-horizontal">
+
+
+
+		      <div id="itemsForm">
+		<input type="hidden" id="pageRefreshUrl" value="/dev-proc/opc/shoppingCart/show">
+
+		<div style="position: relative">
+
+
+
+			<nav role="navigation" class="navbar navbar-default navbar-sm"><!-- controls for shopping cart -->
+			  <div class="navbar-form pull-left">
+
+			          <div class="btn-group">
+
+			              <label class="btn btn-primary elementActionForSelectedItemsMarker">
+			                <input type="checkbox" checked="false" value="all" class="product-list-select-all" style="margin: 0; top:1px; position: relative;">
+			                All
+			              </label>
+
+	                <button type="button" class="btn btn-default" onclick="disableDoubleClick(this);
+	                addSelectedToCompare('/dev-proc/opc/compare/addProductToCompare',
+	                    '/dev-proc/opc/compare/getComparisonProductsCount', prepareDataForCompare());">
+	                  <span>
+	                    Compare
+	                  </span>
+	                </button>
+									<button type="button" class="btn btn-default">Duplicate</button>
+									<button type="button" class="btn btn-default">Add to List</button>
+
+			          </div>
+
+
+
+
+
+			  </div>
+
+			  <div class="navbar-form pull-right">
+
+			      <button class="btn btn-link" type="submit" formaction="deleteSelectedItems" onclick="return confirm('Do you really want to delete the selected items?')">
+			        <span class="glyphicon glyphicon-trash"></span>
+			        Empty Cart</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="btn-group">
+
+							<button class="btn btn-default">Create Shopping List</button>
+							<button class="btn btn-default">Create RfQ</button>
+
+			    		<button class="btn btn-primary submitButton" type="submit" formaction="order" onclick="if (checkWeceemMessages()) {
+			              return false;
+			            } else return showWaitMessage(5);">
+
+			        	Proceed to Checkout
+
+			    		</button>
+			  </div>
+			</nav>
+
+
+
+
+		    <div class="progress" style="height: 8px; display: none; position: absolute; bottom: 0px; margin-bottom: -10px; width: 100%;">
+		        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 0%; transition: none;"></div>
+		    </div>
+		</div>
+		<input type="hidden" id="id" name="id" value="15">
+		<input type="hidden" id="salesOrderId" name="salesOrderId" value="C160001500">
+		<input type="hidden" id="backUrl" name="backUrl" value="">
+		<input type="hidden" id="hasShoppingCartErrors" name="hasShoppingCartErrors" value="false">
+
+		<div class="table-responsive" id="items">
+
+
+
+
+		<table class="table search-results shopping-cart table-vertical-align-top">
+		  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    <tr id="lap001_910-002143" class="cart-item ">
+
+		      <input type="hidden" name="productKey" value="lap001_910-002143" id="productKey">
+		      <input type="hidden" name="salesOrderItemKey" value="25" id="salesOrderItemKey">
+		      <input type="hidden" name="shortDesc" value="Logitech M325" id="shortDesc">
+		      <td class="select" style="height: auto;">
+
+
+		            <label for="selectItem_25" class="checkbox">
+		              <input id="selectItem_25" name="selectItem" class="checkbox" type="checkbox" value="25">
+		            </label>
+
+
+
+		      </td>
+		      <td class="product-image" style="height: auto;">
+
+
+
+
+		              <a href="/dev-proc/opc/shoppingCart/productDetails/25" class="product-detail-link product-image">
+		                <img src="http://test.jcatalog.com/dev-proc/opc/workarea/suppliers/hard001/documents/notebooks/910-002143.jpg?timestamp=1473300433000" class="img-responsive">
+		              </a>
+
+
+
+		      </td>
+		      <td class="product-shortdesc product-desc" style="height: auto;">
+
+
+
+		            <a href="/dev-proc/opc/shoppingCart/productDetails/25" class="product-detail-link">
+		              <h4 style="margin-top:3px;">
+		                Logitech M325
+		                <br>
+		                <small>
+
+		                    Hardware AG (hard001)
+
+
+		                </small>
+		              </h4>
+		            </a>
+
+
+		        <dl>
+		          <dt>Product ID</dt><dd>
+		          910-002143</dd><br>
+		        </dl><br>
+
+
+
+		          <span class="label label-default">Delivery due: 09/08/2016</span>
+
+
+		      </td>
+		      <td class="product-price" style="height: auto;">
+		        <table class="price">
+		          <tbody>
+
+
+
+		          <tr>
+		            <td style="height: auto;">
+		              <script type="text/javascript">
+		                jQuery(document).ready(function () {
+		                  createSelectTextInputContentOnFocusEventHandler(jQuery(document.getElementById("quantity25")));
+		                });
+		              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h4>
+
+
+
+		      <a href="javascript: void(0);" id="priceInfoPopupLink_lap001_910-002143" class="unlockable" title="Price Info" onclick="window.open('/dev-proc/opc/priceInfo/show?quantityInputId=quantity25&amp;productKey=lap001_910-002143', 'PriceInfo', 'menubar=no, status=no, resizable=yes, scrollbars=yes, height=400, width=1000').focus(); return false;">
+
+
+
+
+
+		      22.89&nbsp;EUR
+
+
+		    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      </a>
+
+
+		</h4>
+
+
+
+		            </td>
+		            <td class="form" style="height: auto;">
+		              <div class="add-to-cart-container pull-left">
+
+		                  <div class="input-group add-to-cart clearfix pull-left">
+		                    <input type="text" id="quantity25" name="quantity25" value="1" maxlength="10" class="form-control input-sm">
+		                    <span class="input-group-addon input-uom">
+		                      piece
+		                    </span>
+		                  </div>
+
+		              </div>
+		            </td>
+		            <td style="height: auto;">
+		              <!-- Total Price -->
+		              <h4 class="price position-price text-nowrap">
+
+		                22.89&nbsp;EUR
+		              </h4>
+
+
+		            </td>
+		          </tr>
+		          </tbody>
+		        </table>
+
+
+
+
+
+						<hr style="margin-bottom: 7px;margin-top: 2px;">
+						<table class="table-dl pull-right full-width">
+						  <tbody>
+								<tr>
+									<td class="dt">
+										<a href="#">GL account / tax:</a>
+									</td>
+									<td class="dd">
+										25468975 / <span class="label label-default">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Recipient:</a>
+									</td>
+									<td class="dd">
+										View details
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Accounting details:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-danger">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Order text:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Delivery address:</a>
+									</td>
+									<td class="dd">
+										Musterkunde
+									</td>
+									<td class="dt">
+										<a href="#">Attachment:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+						  </tbody>
+						</table>
+
+
+
+
+		      </td>
+		      <td class="product-delete" style="height: auto;">
+
+
+
+
+
+
+		            <span class="pull-right">
+		              <button class="btn btn-default btn-sm" type="submit" formaction="deleteItem" id="25" onclick="return confirmDeleteItem('25', 'false');">
+		                <span class="glyphicon glyphicon-trash"></span>
+		              </button>
+		            </span>
+
+
+		      </td>
+		    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    <tr id="lap001_920-003056" class="cart-item ">
+
+		      <input type="hidden" name="productKey" value="lap001_920-003056" id="productKey">
+		      <input type="hidden" name="salesOrderItemKey" value="24" id="salesOrderItemKey">
+		      <input type="hidden" name="shortDesc" value="Logitech K360" id="shortDesc">
+		      <td class="select" style="height: auto;">
+
+
+		            <label for="selectItem_24" class="checkbox">
+		              <input id="selectItem_24" name="selectItem" class="checkbox" type="checkbox" value="24">
+		            </label>
+
+
+
+		      </td>
+		      <td class="product-image" style="height: auto;">
+
+
+
+
+		              <a href="/dev-proc/opc/shoppingCart/productDetails/24" class="product-detail-link product-image">
+		                <img src="http://test.jcatalog.com/dev-proc/opc/workarea/suppliers/hard001/documents/notebooks/920-003056.jpg?timestamp=1473300433000" class="img-responsive">
+		              </a>
+
+
+
+		      </td>
+		      <td class="product-shortdesc product-desc" style="height: auto;">
+
+
+
+		            <a href="/dev-proc/opc/shoppingCart/productDetails/24" class="product-detail-link">
+		              <h4 style="margin-top:3px;">
+		                Logitech K360
+		                <br>
+		                <small>
+
+		                    Hardware AG (hard001)
+
+
+		                </small>
+		              </h4>
+		            </a>
+
+
+		        <dl>
+		          <dt>Product ID</dt><dd>
+		          920-003056</dd><br>
+		        </dl><br>
+
+
+
+		          <span class="label label-default">Delivery due: 09/08/2016</span>
+
+
+		      </td>
+		      <td class="product-price" style="height: auto;">
+		        <table class="price">
+		          <tbody>
+
+
+
+		          <tr>
+		            <td style="height: auto;">
+		              <script type="text/javascript">
+		                jQuery(document).ready(function () {
+		                  createSelectTextInputContentOnFocusEventHandler(jQuery(document.getElementById("quantity24")));
+		                });
+		              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h4>
+
+
+
+		      <a href="javascript: void(0);" id="priceInfoPopupLink_lap001_920-003056" class="unlockable" title="Price Info" onclick="window.open('/dev-proc/opc/priceInfo/show?quantityInputId=quantity24&amp;productKey=lap001_920-003056', 'PriceInfo', 'menubar=no, status=no, resizable=yes, scrollbars=yes, height=400, width=1000').focus(); return false;">
+
+
+
+
+
+		      27.16&nbsp;EUR
+
+
+		    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      </a>
+
+
+		</h4>
+
+
+
+		            </td>
+		            <td class="form" style="height: auto;">
+		              <div class="add-to-cart-container pull-left">
+
+		                  <div class="input-group add-to-cart clearfix pull-left">
+		                    <input type="text" id="quantity24" name="quantity24" value="1" maxlength="10" class="form-control input-sm">
+		                    <span class="input-group-addon input-uom">
+		                      piece
+		                    </span>
+		                  </div>
+
+		              </div>
+		            </td>
+		            <td style="height: auto;">
+		              <!-- Total Price -->
+		              <h4 class="price position-price text-nowrap">
+
+		                27.16&nbsp;EUR
+		              </h4>
+
+
+		            </td>
+		          </tr>
+		          </tbody>
+		        </table>
+
+
+
+
+						<hr style="margin-bottom: 7px;margin-top: 2px;">
+						<table class="table-dl pull-right full-width">
+						  <tbody>
+								<tr>
+									<td class="dt">
+										<a href="#">GL account / tax:</a>
+									</td>
+									<td class="dd">
+										25468975 / <span class="label label-default">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Recipient:</a>
+									</td>
+									<td class="dd">
+										View details
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Accounting details:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-danger">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Order text:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Delivery address:</a>
+									</td>
+									<td class="dd">
+										Musterkunde
+									</td>
+									<td class="dt">
+										<a href="#">Attachment:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+						  </tbody>
+						</table>
+
+
+
+		      </td>
+		      <td class="product-delete" style="height: auto;">
+
+
+
+
+
+
+		            <span class="pull-right">
+		              <button class="btn btn-default btn-sm" type="submit" formaction="deleteItem" id="24" onclick="return confirmDeleteItem('24', 'false');">
+		                <span class="glyphicon glyphicon-trash"></span>
+		              </button>
+		            </span>
+
+
+		      </td>
+		    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    <tr id="lap001_X53SV-SO951V" class="cart-item ">
+
+		      <input type="hidden" name="productKey" value="lap001_X53SV-SO951V" id="productKey">
+		      <input type="hidden" name="salesOrderItemKey" value="18" id="salesOrderItemKey">
+		      <input type="hidden" name="shortDesc" value="Asus X53SV-SO951V" id="shortDesc">
+		      <td class="select" style="height: auto;">
+
+
+		            <label for="selectItem_18" class="checkbox">
+		              <input id="selectItem_18" name="selectItem" class="checkbox" type="checkbox" value="18">
+		            </label>
+
+
+
+		      </td>
+		      <td class="product-image" style="height: auto;">
+
+
+
+
+		              <a href="/dev-proc/opc/shoppingCart/productDetails/18" class="product-detail-link product-image">
+		                <img src="http://test.jcatalog.com/dev-proc/opc/workarea/suppliers/hard001/documents/notebooks/X53SV-SO951V.jpg?timestamp=1473300433000" class="img-responsive">
+		              </a>
+
+
+
+		      </td>
+		      <td class="product-shortdesc product-desc" style="height: auto;">
+
+
+
+		            <a href="/dev-proc/opc/shoppingCart/productDetails/18" class="product-detail-link">
+		              <h4 style="margin-top:3px;">
+		                Asus X53SV-SO951V
+		                <br>
+		                <small>
+
+		                    Hardware AG (hard001)
+
+
+		                </small>
+		              </h4>
+		            </a>
+
+
+		        <dl>
+		          <dt>Product ID</dt><dd>
+		          X53SV-SO951V</dd><br>
+		        </dl><br>
+
+
+
+		          <span class="label label-default">Delivery due: 09/08/2016</span>
+
+
+		      </td>
+		      <td class="product-price" style="height: auto;">
+		        <table class="price">
+		          <tbody>
+
+
+
+		          <tr>
+		            <td style="height: auto;">
+		              <script type="text/javascript">
+		                jQuery(document).ready(function () {
+		                  createSelectTextInputContentOnFocusEventHandler(jQuery(document.getElementById("quantity18")));
+		                });
+		              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h4>
+
+
+
+		      <a href="javascript: void(0);" id="priceInfoPopupLink_lap001_X53SV-SO951V" class="unlockable" title="Price Info" onclick="window.open('/dev-proc/opc/priceInfo/show?quantityInputId=quantity18&amp;productKey=lap001_X53SV-SO951V', 'PriceInfo', 'menubar=no, status=no, resizable=yes, scrollbars=yes, height=400, width=1000').focus(); return false;">
+
+
+
+
+
+		      599.00&nbsp;EUR
+
+
+		    <br>
+
+
+
+
+
+
+
+
+
+
+
+		      <small><span class="label label-default">Tiered Price</span></small>
+
+
+
+
+
+
+		      </a>
+
+
+		</h4>
+
+
+
+		            </td>
+		            <td class="form" style="height: auto;">
+		              <div class="add-to-cart-container pull-left">
+
+		                  <div class="input-group add-to-cart clearfix pull-left">
+		                    <input type="text" id="quantity18" name="quantity18" value="1" maxlength="10" class="form-control input-sm">
+		                    <span class="input-group-addon input-uom">
+		                      piece
+		                    </span>
+		                  </div>
+
+		              </div>
+		            </td>
+		            <td style="height: auto;">
+		              <!-- Total Price -->
+		              <h4 class="price position-price text-nowrap">
+
+		                599.00&nbsp;EUR
+		              </h4>
+
+
+		            </td>
+		          </tr>
+		          </tbody>
+		        </table>
+
+
+
+
+
+						<hr style="margin-bottom: 7px;margin-top: 2px;">
+						<table class="table-dl pull-right full-width">
+						  <tbody>
+								<tr>
+									<td class="dt">
+										<a href="#">GL account / tax:</a>
+									</td>
+									<td class="dd">
+										25468975 / <span class="label label-default">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Recipient:</a>
+									</td>
+									<td class="dd">
+										View details
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Accounting details:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-danger">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Order text:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Delivery address:</a>
+									</td>
+									<td class="dd">
+										Musterkunde
+									</td>
+									<td class="dt">
+										<a href="#">Attachment:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+						  </tbody>
+						</table>
+
+
+
+
+		      </td>
+		      <td class="product-delete" style="height: auto;">
+
+
+
+
+
+
+		            <span class="pull-right">
+		              <button class="btn btn-default btn-sm" type="submit" formaction="deleteItem" id="18" onclick="return confirmDeleteItem('18', 'true');">
+		                <span class="glyphicon glyphicon-trash"></span>
+		              </button>
+		            </span>
+
+
+		      </td>
+		    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    <tr id="lap001_910-001246" class="kit-item ">
+
+		      <input type="hidden" name="productKey" value="lap001_910-001246" id="productKey">
+		      <input type="hidden" name="salesOrderItemKey" value="19" id="salesOrderItemKey">
+		      <input type="hidden" name="shortDesc" value="USB Mouse" id="shortDesc">
+		      <td class="select" style="height: auto;">
+
+
+
+
+		      </td>
+		      <td class="product-image" style="height: auto;">
+
+
+
+
+		              <a href="/dev-proc/opc/shoppingCart/productDetails/19" class="product-detail-link product-image">
+		                <img src="http://test.jcatalog.com/dev-proc/opc/workarea/suppliers/hard001/documents/notebooks/910-001246.jpg?timestamp=1473300433000" class="img-responsive">
+		              </a>
+
+
+
+		      </td>
+		      <td class="configurationChildItemPaddingColumn product-desc" style="height: auto;">
+
+
+
+		            <a href="/dev-proc/opc/shoppingCart/productDetails/19" class="product-detail-link">
+		              <h4 style="margin-top:3px;">
+		                USB Mouse
+		                <br>
+		                <small>
+
+		                    Hardware AG (hard001)
+
+
+		                </small>
+		              </h4>
+		            </a>
+
+
+		        <dl>
+		          <dt>Product ID</dt><dd>
+		          910-001246</dd><br>
+		        </dl><br>
+
+
+
+		          <span class="label label-default">Delivery due: 09/08/2016</span>
+
+
+		      </td>
+		      <td class="product-price" style="height: auto;">
+		        <table class="price">
+		          <tbody>
+
+
+
+		          <tr>
+		            <td style="height: auto;">
+		              <script type="text/javascript">
+		                jQuery(document).ready(function () {
+		                  createSelectTextInputContentOnFocusEventHandler(jQuery(document.getElementById("quantity19")));
+		                });
+		              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h4>
+
+
+
+		      <a href="javascript: void(0);" id="priceInfoPopupLink_lap001_910-001246" class="unlockable" title="Price Info" onclick="window.open('/dev-proc/opc/priceInfo/show?quantityInputId=&amp;productKey=lap001_910-001246', 'PriceInfo', 'menubar=no, status=no, resizable=yes, scrollbars=yes, height=400, width=1000').focus(); return false;">
+
+
+
+
+
+		      6.10&nbsp;EUR
+
+
+		    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      </a>
+
+
+		</h4>
+
+
+
+		            </td>
+		            <td class="form" style="height: auto;">
+		              <div class="add-to-cart-container pull-left">
+
+		                  <div class="input-group add-to-cart clearfix pull-left">
+		                    <input type="text" id="quantity19" name="quantity19" value="1" class="form-control input-sm" maxlength="10" readonly="readonly">
+		                    <span class="input-group-addon input-uom">
+		                      piece
+		                    </span>
+		                  </div>
+
+		              </div>
+		            </td>
+		            <td style="height: auto;">
+		              <!-- Total Price -->
+		              <h4 class="price position-price text-nowrap">
+
+		                6.10&nbsp;EUR
+		              </h4>
+
+
+		            </td>
+		          </tr>
+		          </tbody>
+		        </table>
+
+
+
+
+						<hr style="margin-bottom: 7px;margin-top: 2px;">
+						<table class="table-dl pull-right full-width">
+						  <tbody>
+								<tr>
+									<td class="dt">
+										<a href="#">GL account / tax:</a>
+									</td>
+									<td class="dd">
+										25468975 / <span class="label label-default">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Recipient:</a>
+									</td>
+									<td class="dd">
+										View details
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Accounting details:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-danger">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Order text:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Delivery address:</a>
+									</td>
+									<td class="dd">
+										Musterkunde
+									</td>
+									<td class="dt">
+										<a href="#">Attachment:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+						  </tbody>
+						</table>
+
+
+
+		      </td>
+		      <td class="product-delete" style="height: auto;">
+
+		      </td>
+		    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    <tr id="lap001_JK-0300DE" class="kit-item ">
+
+		      <input type="hidden" name="productKey" value="lap001_JK-0300DE" id="productKey">
+		      <input type="hidden" name="salesOrderItemKey" value="20" id="salesOrderItemKey">
+		      <input type="hidden" name="shortDesc" value="Keyboard" id="shortDesc">
+		      <td class="select" style="height: auto;">
+
+
+
+
+		      </td>
+		      <td class="product-image" style="height: auto;">
+
+
+
+
+		              <a href="/dev-proc/opc/shoppingCart/productDetails/20" class="product-detail-link product-image">
+		                <img src="http://test.jcatalog.com/dev-proc/opc/workarea/suppliers/hard001/documents/notebooks/JK-0300DE.jpg?timestamp=1473300433000" class="img-responsive">
+		              </a>
+
+
+
+		      </td>
+		      <td class="configurationChildItemPaddingColumn product-desc" style="height: auto;">
+
+
+
+		            <a href="/dev-proc/opc/shoppingCart/productDetails/20" class="product-detail-link">
+		              <h4 style="margin-top:3px;">
+		                Keyboard
+		                <br>
+		                <small>
+
+		                    Hardware AG (hard001)
+
+
+		                </small>
+		              </h4>
+		            </a>
+
+
+		        <dl>
+		          <dt>Product ID</dt><dd>
+		          JK-0300DE</dd><br>
+		        </dl><br>
+
+
+
+		          <span class="label label-default">Delivery due: 09/08/2016</span>
+
+
+		      </td>
+		      <td class="product-price" style="height: auto;">
+		        <table class="price">
+		          <tbody>
+
+
+
+		          <tr>
+		            <td style="height: auto;">
+		              <script type="text/javascript">
+		                jQuery(document).ready(function () {
+		                  createSelectTextInputContentOnFocusEventHandler(jQuery(document.getElementById("quantity20")));
+		                });
+		              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h4>
+
+
+
+		      <a href="javascript: void(0);" id="priceInfoPopupLink_lap001_JK-0300DE" class="unlockable" title="Price Info" onclick="window.open('/dev-proc/opc/priceInfo/show?quantityInputId=&amp;productKey=lap001_JK-0300DE', 'PriceInfo', 'menubar=no, status=no, resizable=yes, scrollbars=yes, height=400, width=1000').focus(); return false;">
+
+
+
+
+
+		      34.45&nbsp;EUR
+
+
+		    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      </a>
+
+
+		</h4>
+
+
+
+		            </td>
+		            <td class="form" style="height: auto;">
+		              <div class="add-to-cart-container pull-left">
+
+		                  <div class="input-group add-to-cart clearfix pull-left">
+		                    <input type="text" id="quantity20" name="quantity20" value="1" class="form-control input-sm" maxlength="10" readonly="readonly">
+		                    <span class="input-group-addon input-uom">
+		                      piece
+		                    </span>
+		                  </div>
+
+		              </div>
+		            </td>
+		            <td style="height: auto;">
+		              <!-- Total Price -->
+		              <h4 class="price position-price text-nowrap">
+
+		                34.45&nbsp;EUR
+		              </h4>
+
+
+		            </td>
+		          </tr>
+		          </tbody>
+		        </table>
+
+
+
+
+						<hr style="margin-bottom: 7px;margin-top: 2px;">
+						<table class="table-dl pull-right full-width">
+						  <tbody>
+								<tr>
+									<td class="dt">
+										<a href="#">GL account / tax:</a>
+									</td>
+									<td class="dd">
+										25468975 / <span class="label label-default">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Recipient:</a>
+									</td>
+									<td class="dd">
+										View details
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Accounting details:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-danger">Undefined</span>
+									</td>
+									<td class="dt">
+										<a href="#">Order text:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="dt">
+										<a href="#">Delivery address:</a>
+									</td>
+									<td class="dd">
+										Musterkunde
+									</td>
+									<td class="dt">
+										<a href="#">Attachment:</a>
+									</td>
+									<td class="dd">
+										<span class="label label-default">Undefined</span>
+									</td>
+								</tr>
+						  </tbody>
+						</table>
+
+
+
+		      </td>
+		      <td class="product-delete" style="height: auto;">
+
+		      </td>
+		    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+		  <tr class="total">
+		    <td class="text-right" colspan="4" style="height: auto;">
+		      <h3 style="color:#333;font-weight: 500;">
+		        <small style="color:#333;">Total price:</small>
+
+
+		        689.60
+		        EUR
+		      </h3>
+		    </td>
+		    <td style="height: auto;">
+
+
+		          <h3>
+		            <button class="btn btn-default btn-sm" formaction="updateCart" id="updateCart" type="submit" title="UpdateCart">
+		              <span class="glyphicon glyphicon-refresh"></span>
+		            </button>
+		          </h3>
+
+
+		    </td>
+		  </tr>
+		  </tbody>
+		</table>
+
+		<script>
+		  jQuery(document).ready(function() {
+		    jQuery('.product-list-select-all').off("click").prop('checked', false);
+		    createHandler4SelectAllAction('.product-list-select-all', 'td.select input:checkbox');
+		  });
+		</script>
+		</div>
+		<input type="hidden" id="itemId" name="itemId" value="">
+
+		<nav role="navigation" class="navbar navbar-default navbar-sm"><!-- controls for shopping cart -->
+		  <div class="navbar-form pull-left">
+
+		          <div class="btn-group">
+
+		              <label class="btn btn-primary elementActionForSelectedItemsMarker">
+		                <input type="checkbox" checked="false" value="all" class="product-list-select-all" style="margin: 0; top:1px; position: relative;">
+		                All
+		              </label>
+
+                <button type="button" class="btn btn-default" onclick="disableDoubleClick(this);
+                addSelectedToCompare('/dev-proc/opc/compare/addProductToCompare',
+                    '/dev-proc/opc/compare/getComparisonProductsCount', prepareDataForCompare());">
+                  <span>
+                    Compare
+                  </span>
+                </button>
+								<button type="button" class="btn btn-default">Duplicate</button>
+								<button type="button" class="btn btn-default">Add to List</button>
+
+		          </div>
+
+
+
+
+
+		  </div>
+
+		  <div class="navbar-form pull-right">
+
+		      <button class="btn btn-link" type="submit" formaction="deleteSelectedItems" onclick="return confirm('Do you really want to delete the selected items?')">
+		        <span class="glyphicon glyphicon-trash"></span>
+		        Empty Cart</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="btn-group">
+
+						<button class="btn btn-default">Create Shopping List</button>
+						<button class="btn btn-default">Create RfQ</button>
+
+		    		<button class="btn btn-primary submitButton" type="submit" formaction="order" onclick="if (checkWeceemMessages()) {
+		              return false;
+		            } else return showWaitMessage(5);">
+
+		        	Proceed to Checkout
+
+		    		</button>
+		  </div>
+		</nav>
+
+		<div class="form-horizontal">
+			<div class="row">
+		    <div class="col-md-6 col-md-offset-6">
+		      <h4>Attachments
+						<div class="btn-group pull-right">
+							<button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+						</div>
+					</h4>
+		      <div id="documents">
+		  			<table class="table table-condensed">
+							<tbody>
+								<tr>
+					        <td>
+					          <a href="/dev-proc/opc/workarea/customers/jcat001/documents/salesOrder/C160001500/data-sheet-product-invoicing-de-2015-10-v3.pdf?download=true" target="_blank">
+					            data-sheet-product-invoicing-de-2015-10-v3.pdf
+					          </a>
+					        </td>
+					        <td align="right">
+					            <small><span class="label label-success">Relevant Document</span></small>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          <a href="/dev-proc/opc/workarea/customers/jcat001/documents/salesOrder/C160001500/calibra_anleitung_gesamt.pdf?download=true" target="_blank">
+					            calibra_anleitung_gesamt.pdf
+					          </a>
+					        </td>
+					        <td align="right">
+					            <small><span class="label label-success">Relevant Document</span></small>
+					        </td>
+						    </tr>
+		  				</tbody>
+						</table>
+		      </div>
+		    </div>
+			</div>
+		</div>
+
+
+
+		<script>
+		    (function($) {
+		        $(document).ready(function() {
+		            $('.chooseActionButtonMarker').click(function () {
+		                if (jQuery("input[name=selectItem]").is(":checked")) {
+		                    $(".singleSelectionElementMarker").removeClass("disabled");
+		                } else {
+		                    $(".singleSelectionElementMarker").addClass("disabled");
+		                }
+		            });
+		        });
+		    })(jQuery);
+		</script></div>
+		    </form>
+		  </div>
+
+		<!-- #### Modals ########################################################## -->
+
+		<div class="modal fade" id="orderTextModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Order Text</h4>
+		      </div>
+		      <div class="modal-body">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<textarea style="resize: vertical; max-height: 400px; min-height: 100px; width: 535px;"></textarea>
+				  	</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="modal fade" id="orderAttachmentsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Attached Files</h4>
+		      </div>
+		      <div class="modal-body">
+				<form role="form">
+				  <div class="form-group">
+				    <label for="exampleInputFile">File input</label>
+				    <input type="file" id="exampleInputFile">
+				    <p class="help-block">Upload a local file as attachment to your shopping cart.</p>
+				  </div>
+				<hr>
+				  <button type="submit" class="btn btn-default">Add another file</button>
+				</form>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- #### /Modals ########################################################## -->
+
+
+	</div> <!-- /container -->
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jcatalog-bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

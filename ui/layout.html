@@ -19,7 +19,7 @@
 			<nav class="navbar navbar-default">
 				<div class="nav-background"></div>
 				<div class="navbar-header hidden-sm">
-					<a class="navbar-brand visible-lg" href="#">
+					<a href="index.html" class="navbar-brand visible-lg" href="#">
 						<img src="img/oc-logo-white.svg" style="height: 1.4em;">
 					</a>
 				</div>
@@ -47,6 +47,7 @@
 							Components
 						</a>
 						<ul class="dropdown-menu">
+							<li><a href="basics.html">Basics</a></li>
 							<li><a href="nav.html">Navigation</a></li>
 							<li><a href="forms.html">Forms</a></li>
 							<li><a href="list-groups.html">List Groups</a></li>
@@ -71,7 +72,7 @@
 								<a href="react-bootstrap.html">React-Bootstrap</a>
 							</li>
 							<li>
-								<a href="#">React Components</a>
+								<a href="#" style="text-decoration: strikethrough">React Components</a>
 							</li>
 						</ul>
 					</li><!-- /dropdown -->
@@ -94,6 +95,28 @@
 
 				      <!--right-->
 				      <div class="col-md-9">
+							<style>
+								iframe.scale {
+									display: block;
+									margin: 0 auto;
+									width: 1200px;
+									height: 1000px;
+									box-sizing: border-box;
+									backface-visibility: hidden;
+									border: 0;
+									-ms-zoom: 0.25;
+									-moz-transform: scale(0.4);
+									-moz-transform-origin: 0 0;
+									-o-transform: scale(0.4);
+									-o-transform-origin: 0 0;
+									-webkit-transform: scale(0.4);
+									-webkit-transform-origin: 0 0;
+									overflow: scroll;
+									}
+							</style>
+
+
+
 				        <h1 id="sec0">Views &amp; Layout</h1>
 				        <p class="lead">
 									Layout describes how Patterns, like the Main Menu, Headers, Footers and Content are arranged on the view.
@@ -101,19 +124,31 @@
 								</p>
 
 								<h2>View With Vertical Menu</h2>
+								<div class="row">
+									<div class="col-sm-12">
+											<a href="examples/sdp.supplier-quote.v4.html" target="_blank" style="margin: 1em 0 .5em 0; display: block; position: relative; width: 480px; height: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0px 2px 15px rgba(0,0,0,.25);" class="clearfix";>
+												<iframe src="examples/sdp.supplier-quote.v4.html" class="scale" allowfullscreen="true" allowtransparency="true"></iframe>
+												<div style="position: absolute; top: 0; left:0; width: 480px; height: 400px;"></div>
+											</a>
+									</div>
+								</div>
+								<br>
 								<p>
 									This is the most common view. It required changes to the bootstrap RWD scaffolding. The application menu is wrapped in a fixed position sidebar with a fixed width.
 								</p>
-								<p>
-									Reasons against a scrollable sidebar:
-								</p>
-								<ul>
-									<li>Hard constraint on amount of L1, L2 elements.
-										<br>It is not advisable to populate an application suite menu with an ever-increasing amount of applications, nor application functions.
-										<br>Don't wrap layout around bad structure. This will result in reduced UX quality.
-									<li>Sidebar with its own scrollbar is a bad solution.</li>
-									<li>Static sidebar that scrolls with the page has a gradient of accessibility for it's population of  elements. This is not a solution, it's a problem.</li>
-								</ul>
+								<div class="bs-callout bs-callout-warning">
+									<h4>
+										Reasons Against a Scrollable Sidebar:
+									</h4>
+									<ul>
+										<li>Hard constraint on amount of L1, L2 elements.
+											<br>It is not advisable to populate an application suite menu with an ever-increasing amount of applications, nor application functions.
+											<br>Don't wrap layout around bad structure. This will result in reduced UX quality.
+										<li>Sidebar with its own scrollbar is a bad solution.</li>
+										<li>Static sidebar that scrolls with the page has a gradient of accessibility for it's population of  elements. This is not a solution, it's a problem.</li>
+									</ul>
+								</div>
+
 								<p>
 									The basic layout is constructed directly within the body node. It contains two sections, .sidebar and .content. .sidebar is a wrapper for a responsive navbar with completely custom css. .content wraps a responsive applogo for small screens, a content wrapper .content-warp and the footer.
 									The CSS guarantees full RWD scaffolding, as well as a properly positioned footer. (The footer is glued to the bottom of the viewport when .content-wrap's height is smaller than the viewport. This does not use any JS.)
@@ -123,1253 +158,67 @@
 								</p>
 
 								<h3>View Without Vertical Menu</h3>
+								<div class="row">
+									<div class="col-sm-12">
+											<a href="examples/sdp.supplier-quote.v4.html" target="_blank" style="margin: 1em 0 .5em 0; display: block; position: relative; width: 480px; height: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0px 2px 15px rgba(0,0,0,.25);" class="clearfix";>
+												<iframe src="examples/sdp.supplier-quote.v4.html" class="scale" allowfullscreen="true" allowtransparency="true"></iframe>
+												<div style="position: absolute; top: 0; left:0; width: 480px; height: 400px;"></div>
+											</a>
+									</div>
+								</div>
+								<br>
 								<p>
 									This layout is a branch of the view with vertical menu, and the only discerning factor is the absence of the section.sidebar. this view does not have it's own optimized RWD breakpoints, because that would reduce the reusability of patterns between views with and without sidebar to near zero. It's a tradeoff geared towards compatibility, at the cost of whitespace.
 								</p>
 
 								<h2>Popup View</h2>
-								<p>
+								<div class="row">
+									<div class="col-sm-12">
+											<a href="examples/sdp.supplier-quote.v4.html" target="_blank" style="margin: 1em 0 .5em 0; display: block; position: relative; width: 480px; height: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0px 2px 15px rgba(0,0,0,.25);" class="clearfix";>
+												<iframe src="examples/sdp.supplier-quote.v4.html" class="scale" allowfullscreen="true" allowtransparency="true"></iframe>
+												<div style="position: absolute; top: 0; left:0; width: 480px; height: 400px;"></div>
+											</a>
+									</div>
+								</div>
+								<br>
+							<p>
 									Popups don't have an application menu, or a footer. they consist of a full-width container, and a header.
 								</p>
 
 								<h2>Modal View</h2>
+								<div class="row">
+									<div class="col-sm-12">
+											<a href="examples/sdp.supplier-quote.v4.html" target="_blank" style="margin: 1em 0 .5em 0; display: block; position: relative; width: 480px; height: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0px 2px 15px rgba(0,0,0,.25);" class="clearfix";>
+												<iframe src="examples/sdp.supplier-quote.v4.html" class="scale" allowfullscreen="true" allowtransparency="true"></iframe>
+												<div style="position: absolute; top: 0; left:0; width: 480px; height: 400px;"></div>
+											</a>
+									</div>
+								</div>
+								<br>
 								<p>
 									Modals don't have an application menu, or a footer. they consist of a full-width container, and a header.
 								</p>
 
 								<h2>eMail HTML View</h2>
+								<div class="row">
+									<div class="col-sm-12">
+											<a href="examples/sdp.supplier-quote.v4.html" target="_blank" style="margin: 1em 0 .5em 0; display: block; position: relative; width: 480px; height: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0px 2px 15px rgba(0,0,0,.25);" class="clearfix";>
+												<iframe src="examples/sdp.supplier-quote.v4.html" class="scale" allowfullscreen="true" allowtransparency="true"></iframe>
+												<div style="position: absolute; top: 0; left:0; width: 480px; height: 400px;"></div>
+											</a>
+									</div>
+								</div>
+								<br>
 								<p>
-									TBD.
+									...
 								</p>
 
-								<h1 id="sec0">Grid system</h1>
-
-						<p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</p>
-
-						<div class="bs-callout bs-callout-warning">
-							<h4>Make Sure to Always Plan a Responsive Layout
-							</h4>
-							<p>It takes a minute or two extra &ndash; not more than that. Just make sure you always make your UI responsive. It is as simple as considering how <code>.col-xx-x</code> classes break down on smaller screens.
-							</p>
-						</div>
-
-						<h2 id=grid-intro>Introduction</h2>
-						<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
-						<ul>
-							<li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
-							<li>Use rows to create horizontal groups of columns.</li> <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
-							<li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
-							<li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
-							<li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
-							<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
-							<li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
-							<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li>
-						</ul>
-						<p>Look to the examples for applying these principles to your code.</p>
-						<h2 id=grid-media-queries>Media queries</h2>
-						<p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
-						<figure class=highlight><pre><code class=language-scss data-lang=scss><span class=cm>/* Extra small devices (phones, less than 768px) */</span>
-							<span class=cm>/* No media query since this is the default in Bootstrap */</span>
-							<span class=cm>/* Small devices (tablets, 768px and up) */</span>
-							<span class=k>@media</span> <span class=p>(</span>
-							<span class=n>min-width</span><span class=o>:</span>
-							<span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span>
-							<span class=p>{</span> <span class=nc>...</span> <span class=p>}</span>
-							<span class=cm>/* Medium devices (desktops, 992px and up) */</span>
-							<span class=k>@media</span>
-							<span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span>
-							<span class=n>screen-md-min</span><span class=p>)</span>
-							<span class=p>{</span> <span class=nc>...</span>
-							<span class=p>}</span>
-							<span class=cm>/* Large devices (large desktops, 1200px and up) */</span>
-							<span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span>
-							<span class=p>{</span> <span class=nc>...</span> <span class=p>}</span></code></pre>
-						</figure>
-							<p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
-						<figure class=highlight><pre><code class=language-scss data-lang=scss>
-							<span class=k>@media</span> <span class=p>(</span><span class=n>max-width</span>
-							<span class=o>:</span> <span class=o>@</span><span class=n>screen-xs-max</span><span class=p>)</span>
-							<span class=p>{</span> <span class=nc>...</span> <span class=p>}</span>
-							<span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=nf>and</span> <span class=p>(</span><span class=n>max-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-max</span><span class=p>)</span> <span class=p>{</span> <span class=nc>...</span> <span class=p>}</span>
-							<span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-min</span><span class=p>)</span> <span class=nf>and</span> <span class=p>(</span><span class=n>max-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-max</span><span class=p>)</span> <span class=p>{</span> <span class=nc>...</span> <span class=p>}</span>
-							<span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span> <span class=p>{</span> <span class=nc>...</span> <span class=p>}</span></code></pre>
-						</figure>
-
-						<div class="bs-callout bs-callout-info">
-							<h4>A Word About Pixel Values And Viewport Sizes
-							</h4>
-							<p>The most important information is that these viewport pixel values don't necessarily correlate with the native resolution of any mobile device.
-								By setting <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;</code>, the HTML header forces Webkit/Chromium into a rendering mode which simulates (on phones) a 240x320px resolution. Scaling and antialiasing work correctly, so a much higher screen resolution means crystal clear rendering regardless.
-								This allows Bootstrap's CSS to test against a pixel width of the viewport. If we don't define the scale of the viewport, a phone is indistinguishable from a tablet, laptop or desktop screen.
-								In summary, rejoice, but don't pay too much attention to the pixel values used by Bootstrap.
-							</p>
-						</div>
-
-						<h2 id="grid-options">Grid options</h2>
-						<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
-						<div class=table-responsive> <table class="table table-bordered table-striped">
-							<thead>
-								<tr>
-									<th></th>
-									<th> Extra small devices <small>Phones (&lt;768px)</small> </th>
-									<th> Small devices <small>Tablets (&ge;768px)</small> </th>
-									<th> Medium devices <small>Desktops (&ge;992px)</small> </th>
-									<th> Large devices <small>Desktops (&ge;1200px)</small> </th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th class=text-nowrap scope=row>Grid behavior</th>
-									<td>Horizontal at all times</td>
-									<td colspan=3>Collapsed to start, horizontal above breakpoints</td>
-								</tr>
-								<tr>
-									<th class=text-nowrap scope=row>Container width</th> <td>None (auto)</td> <td>750px</td> <td>970px</td> <td>1170px</td>
-								</tr>
-								<tr> <th class=text-nowrap scope=row>Class prefix</th> <td><code>.col-xs-</code></td> <td><code>.col-sm-</code></td> <td><code>.col-md-</code></td> <td><code>.col-lg-</code></td>
-								</tr>
-								<tr> <th class=text-nowrap scope=row># of columns</th> <td colspan=4>12</td> </tr> <tr> <th class=text-nowrap scope=row>Column width</th> <td class=text-muted>Auto</td> <td>~62px</td> <td>~81px</td> <td>~97px</td>
-								</tr>
-								<tr> <th class=text-nowrap scope=row>Gutter width</th> <td colspan=4>30px (15px on each side of a column)</td> </tr> <tr> <th class=text-nowrap scope=row>Nestable</th> <td colspan=4>Yes</td>
-								</tr>
-								<tr> <th class=text-nowrap scope=row>Offsets</th> <td colspan=4>Yes</td>
-								</tr>
-								<tr> <th class=text-nowrap scope=row>Column ordering</th> <td colspan=4>Yes</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<h2 id="grid-example-basic">Example: Stacked-to-horizontal</h2>
-					<p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
-					<div class="row show-grid">
-						<div class=col-md-1>.col-md-1</div>
-						<div class=col-md-1>.col-md-1</div>
-						<div class=col-md-1>.col-md-1</div>
-						<div class=col-md-1>.col-md-1</div>
-						<div class=col-md-1>.col-md-1</div>
-						<div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> <div class=col-md-1>.col-md-1</div> </div> <div class="row show-grid"> <div class=col-md-8>.col-md-8</div> <div class=col-md-4>.col-md-4</div> </div> <div class="row show-grid"> <div class=col-md-4>.col-md-4</div> <div class=col-md-4>.col-md-4</div> <div class=col-md-4>.col-md-4</div> </div> <div class="row show-grid"> <div class=col-md-6>.col-md-6</div> <div class=col-md-6>.col-md-6</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-8"</span><span class=nt>&gt;</span>.col-md-8<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-6"</span><span class=nt>&gt;</span>.col-md-6<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-6"</span><span class=nt>&gt;</span>.col-md-6<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id="grid-example-fluid">Example: Fluid container</h2>
-			<p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container-fluid"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			    ...
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id="grid-example-mixed">Example: Mobile and desktop</h2>
-			<p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.
-			</p>
-			<div class="row show-grid">
-				<div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-			</div>
-			<div class="row show-grid">
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-			</div>
-			<div class="row show-grid">
-				<div class=col-xs-6>.col-xs-6</div> <div class=col-xs-6>.col-xs-6</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-12 col-md-8"</span><span class=nt>&gt;</span>.col-xs-12 .col-md-8<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-
-			<span class=c>&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-
-			<span class=c>&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6"</span><span class=nt>&gt;</span>.col-xs-6<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6"</span><span class=nt>&gt;</span>.col-xs-6<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=grid-example-mixed-complete>Example: Mobile, tablet, desktop</h2> <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p> <div class="row show-grid"> <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> </div> <div class="row show-grid"> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div> <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-12 col-sm-6 col-md-8"</span><span class=nt>&gt;</span>.col-xs-12 .col-sm-6 .col-md-8<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=c>&lt;!-- Optional: clear the XS cols if their content doesn't match in height --&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"clearfix visible-xs-block"</span><span class=nt>&gt;&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=grid-example-wrapping>Example: Column wrapping</h2> <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p> <div class="row show-grid"> <div class=col-xs-9>.col-xs-9</div> <div class=col-xs-4>.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div> <div class=col-xs-6>.col-xs-6<br>Subsequent columns continue along the new line.</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-9"</span><span class=nt>&gt;</span>.col-xs-9<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-4"</span><span class=nt>&gt;</span>.col-xs-4<span class=nt>&lt;br&gt;</span>Since 9 + 4 = 13 <span class=ni>&amp;gt;</span> 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6"</span><span class=nt>&gt;</span>.col-xs-6<span class=nt>&lt;br&gt;</span>Subsequent columns continue along the new line.<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=grid-responsive-resets>Responsive column resets</h2> <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href=#responsive-utilities>responsive utility classes</a>.</p> <div class="row show-grid"> <div class="col-xs-6 col-sm-3"> .col-xs-6 .col-sm-3 <br> Resize your viewport or check it out on your phone for an example. </div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div> <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-3"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-3<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-3"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-3<span class=nt>&lt;/div&gt;</span>
-
-			  <span class=c>&lt;!-- Add the extra clearfix for only the required viewport --&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"clearfix visible-xs-block"</span><span class=nt>&gt;&lt;/div&gt;</span>
-
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-3"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-3<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-3"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-3<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. See this in action in <a href=../examples/grid/ >the grid example</a>.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-5 col-md-6"</span><span class=nt>&gt;</span>.col-sm-5 .col-md-6<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0"</span><span class=nt>&gt;</span>.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-6 col-md-5 col-lg-6"</span><span class=nt>&gt;</span>.col-sm-6 .col-md-5 .col-lg-6<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0"</span><span class=nt>&gt;</span>.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=grid-offsetting>Offsetting columns</h2> <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p> <div class="row show-grid"> <div class=col-md-4>.col-md-4</div> <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div> </div> <div class="row show-grid"> <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div> <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div> </div> <div class="row show-grid"> <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4 col-md-offset-4"</span><span class=nt>&gt;</span>.col-md-4 .col-md-offset-4<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-3 col-md-offset-3"</span><span class=nt>&gt;</span>.col-md-3 .col-md-offset-3<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-3 col-md-offset-3"</span><span class=nt>&gt;</span>.col-md-3 .col-md-offset-3<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-6 col-md-offset-3"</span><span class=nt>&gt;</span>.col-md-6 .col-md-offset-3<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>You can also override offsets from lower grid tiers with <code>.col-*-offset-0</code> classes.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=grid-nesting>Nesting columns</h2> <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-sm-*</code> columns within an existing <code>.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p> <div class="row show-grid"> <div class=col-sm-9> Level 1: .col-sm-9 <div class="row show-grid"> <div class="col-xs-8 col-sm-6"> Level 2: .col-xs-8 .col-sm-6 </div> <div class="col-xs-4 col-sm-6"> Level 2: .col-xs-4 .col-sm-6 </div> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-9"</span><span class=nt>&gt;</span>
-			    Level 1: .col-sm-9
-			    <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-8 col-sm-6"</span><span class=nt>&gt;</span>
-			        Level 2: .col-xs-8 .col-sm-6
-			      <span class=nt>&lt;/div&gt;</span>
-			      <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-4 col-sm-6"</span><span class=nt>&gt;</span>
-			        Level 2: .col-xs-4 .col-sm-6
-			      <span class=nt>&lt;/div&gt;</span>
-			    <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=grid-column-ordering>Column ordering</h2> <p>Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.</p> <div class="row show-grid"> <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div> <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-9 col-md-push-3"</span><span class=nt>&gt;</span>.col-md-9 .col-md-push-3<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-3 col-md-pull-9"</span><span class=nt>&gt;</span>.col-md-3 .col-md-pull-9<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=grid-less>Less mixins and variables</h2> <p>In addition to <a href=#grid-example-basic>prebuilt grid classes</a> for fast layouts, Bootstrap includes Less variables and mixins for quickly generating your own simple, semantic layouts.</p> <h3>Variables</h3> <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=k>@grid-columns</span><span class=nd>:</span>              <span class=nt>12</span><span class=p>;</span>
-			<span class=k>@grid-gutter-width</span><span class=nd>:</span>         <span class=nt>30px</span><span class=p>;</span>
-			<span class=k>@grid-float-breakpoint</span><span class=nd>:</span>     <span class=nt>768px</span><span class=p>;</span></code></pre></figure> <h3>Mixins</h3> <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Creates a wrapper for a series of columns
-			</span><span class=err>.</span><span class=na>make-row</span><span class=err>(@</span><span class=na>gutter</span><span class=p>:</span> <span class=o>@</span><span class=n>grid-gutter-width</span><span class=p>)</span> <span class=p>{</span>
-			  <span class=c1>// Then clear the floated columns
-			</span>  <span class=nc>.clearfix</span><span class=o>()</span><span class=p>;</span>
-
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>margin-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>-2</span><span class=p>);</span>
-			    <span class=nl>margin-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>-2</span><span class=p>);</span>
-			  <span class=p>}</span>
-
-			  <span class=c1>// Negative margin nested rows out to align the content of columns
-			</span>  <span class=nc>.row</span> <span class=p>{</span>
-			    <span class=nl>margin-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>-2</span><span class=p>);</span>
-			    <span class=nl>margin-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>-2</span><span class=p>);</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the extra small columns
-			</span><span class=nc>.make-xs-column</span><span class=o>(@</span><span class=nt>columns</span><span class=p>;</span> <span class=k>@gutter</span><span class=nd>:</span> <span class=o>@</span><span class=nt>grid-gutter-width</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=nl>position</span><span class=p>:</span> <span class=nb>relative</span><span class=p>;</span>
-			  <span class=c1>// Prevent columns from collapsing when empty
-			</span>  <span class=nl>min-height</span><span class=p>:</span> <span class=m>1px</span><span class=p>;</span>
-			  <span class=c1>// Inner gutter via padding
-			</span>  <span class=nl>padding-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-			  <span class=nl>padding-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-
-			  <span class=c1>// Calculate width based on number of columns available
-			</span>  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>grid-float-breakpoint</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>float</span><span class=p>:</span> <span class=nb>left</span><span class=p>;</span>
-			    <span class=nl>width</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the small columns
-			</span><span class=nc>.make-sm-column</span><span class=o>(@</span><span class=nt>columns</span><span class=p>;</span> <span class=k>@gutter</span><span class=nd>:</span> <span class=o>@</span><span class=nt>grid-gutter-width</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=nl>position</span><span class=p>:</span> <span class=nb>relative</span><span class=p>;</span>
-			  <span class=c1>// Prevent columns from collapsing when empty
-			</span>  <span class=nl>min-height</span><span class=p>:</span> <span class=m>1px</span><span class=p>;</span>
-			  <span class=c1>// Inner gutter via padding
-			</span>  <span class=nl>padding-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-			  <span class=nl>padding-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-
-			  <span class=c1>// Calculate width based on number of columns available
-			</span>  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>float</span><span class=p>:</span> <span class=nb>left</span><span class=p>;</span>
-			    <span class=nl>width</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the small column offsets
-			</span><span class=nc>.make-sm-column-offset</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>margin-left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-sm-column-push</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-sm-column-pull</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-sm-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>right</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the medium columns
-			</span><span class=nc>.make-md-column</span><span class=o>(@</span><span class=nt>columns</span><span class=p>;</span> <span class=k>@gutter</span><span class=nd>:</span> <span class=o>@</span><span class=nt>grid-gutter-width</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=nl>position</span><span class=p>:</span> <span class=nb>relative</span><span class=p>;</span>
-			  <span class=c1>// Prevent columns from collapsing when empty
-			</span>  <span class=nl>min-height</span><span class=p>:</span> <span class=m>1px</span><span class=p>;</span>
-			  <span class=c1>// Inner gutter via padding
-			</span>  <span class=nl>padding-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-			  <span class=nl>padding-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-
-			  <span class=c1>// Calculate width based on number of columns available
-			</span>  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>float</span><span class=p>:</span> <span class=nb>left</span><span class=p>;</span>
-			    <span class=nl>width</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the medium column offsets
-			</span><span class=nc>.make-md-column-offset</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>margin-left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-md-column-push</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-md-column-pull</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-md-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>right</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the large columns
-			</span><span class=nc>.make-lg-column</span><span class=o>(@</span><span class=nt>columns</span><span class=p>;</span> <span class=k>@gutter</span><span class=nd>:</span> <span class=o>@</span><span class=nt>grid-gutter-width</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=nl>position</span><span class=p>:</span> <span class=nb>relative</span><span class=p>;</span>
-			  <span class=c1>// Prevent columns from collapsing when empty
-			</span>  <span class=nl>min-height</span><span class=p>:</span> <span class=m>1px</span><span class=p>;</span>
-			  <span class=c1>// Inner gutter via padding
-			</span>  <span class=nl>padding-left</span><span class=p>:</span>  <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-			  <span class=nl>padding-right</span><span class=p>:</span> <span class=p>(</span><span class=o>@</span><span class=n>gutter</span> <span class=o>/</span> <span class=m>2</span><span class=p>);</span>
-
-			  <span class=c1>// Calculate width based on number of columns available
-			</span>  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>float</span><span class=p>:</span> <span class=nb>left</span><span class=p>;</span>
-			    <span class=nl>width</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Generate the large column offsets
-			</span><span class=nc>.make-lg-column-offset</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>margin-left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-lg-column-push</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>left</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-			<span class=nc>.make-lg-column-pull</span><span class=o>(@</span><span class=nt>columns</span><span class=o>)</span> <span class=p>{</span>
-			  <span class=k>@media</span> <span class=p>(</span><span class=n>min-width</span><span class=o>:</span> <span class=o>@</span><span class=n>screen-lg-min</span><span class=p>)</span> <span class=p>{</span>
-			    <span class=nl>right</span><span class=p>:</span> <span class=nf>percentage</span><span class=p>((</span><span class=o>@</span><span class=n>columns</span> <span class=o>/</span> <span class=o>@</span><span class=n>grid-columns</span><span class=p>));</span>
-			  <span class=p>}</span>
-			<span class=p>}</span></code></pre></figure> <h3>Example usage</h3> <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
-					<figure class=highlight><pre><code class=language-scss data-lang=scss><span class=nc>.wrapper</span> <span class=p>{</span>
-						<span class=nc>.make-row</span><span class=o>()</span><span class=p>;</span>
-						<span class=p>}</span>
-						<span class=nc>.content-main</span> <span class=p>{</span>
-			  			<span class=nc>.make-lg-column</span><span class=o>(</span><span class=nt>8</span><span class=o>)</span><span class=p>;</span>
-						<span class=p>}</span>
-						<span class=nc>.content-secondary</span> <span class=p>{</span>
-			  			<span class=nc>.make-lg-column</span><span class=o>(</span><span class=nt>3</span><span class=o>)</span><span class=p>;</span>
-			  			<span class=nc>.make-lg-column-offset</span><span class=o>(</span><span class=nt>1</span><span class=o>)</span><span class=p>;</span>
-						<span class=p>}</span></code></pre>
-					</figure>
-					<figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"wrapper"</span><span class=nt>&gt;</span>
-			  			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"content-main"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			  			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"content-secondary"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-						<span class=nt>&lt;/div&gt;</span></code></pre>
-					</figure>
-
-			        <h1 class="page-header" id="type">Typography</h1>
-			        <h2 id=type-headings>Headings</h2>
-			        <p>
-			        	All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
-			        </p>
-			        <div class="bs-example bs-example-type" data-example-id=simple-headings>
-			        	<table class=table>
-			        		<tbody> <tr> <td><h1>h1. Bootstrap heading</h1></td> <td class=type-info>Semibold 36px</td> </tr> <tr> <td><h2>h2. Bootstrap heading</h2></td> <td class=type-info>Semibold 30px</td> </tr> <tr> <td><h3>h3. Bootstrap heading</h3></td> <td class=type-info>Semibold 24px</td> </tr> <tr> <td><h4>h4. Bootstrap heading</h4></td> <td class=type-info>Semibold 18px</td> </tr> <tr> <td><h5>h5. Bootstrap heading</h5></td> <td class=type-info>Semibold 14px</td> </tr> <tr> <td><h6>h6. Bootstrap heading</h6></td> <td class=type-info>Semibold 12px</td> </tr> </tbody>
-			        	</table>
-			        </div>
-			        <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;h1&gt;</span>h1. Bootstrap heading<span class=nt>&lt;/h1&gt;</span>
-						<span class=nt>&lt;h2&gt;</span>h2. Bootstrap heading<span class=nt>&lt;/h2&gt;</span>
-						<span class=nt>&lt;h3&gt;</span>h3. Bootstrap heading<span class=nt>&lt;/h3&gt;</span>
-						<span class=nt>&lt;h4&gt;</span>h4. Bootstrap heading<span class=nt>&lt;/h4&gt;</span>
-						<span class=nt>&lt;h5&gt;</span>h5. Bootstrap heading<span class=nt>&lt;/h5&gt;</span>
-						<span class=nt>&lt;h6&gt;</span>h6. Bootstrap heading<span class=nt>&lt;/h6&gt;</span></code></pre>
-					</figure>
-					<p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
-					<div class="bs-example bs-example-type" data-example-id=small-headings>
-						<table class=table> <tbody> <tr> <td><h1>h1. Bootstrap heading <small>Secondary text</small></h1></td> </tr> <tr> <td><h2>h2. Bootstrap heading <small>Secondary text</small></h2></td> </tr> <tr> <td><h3>h3. Bootstrap heading <small>Secondary text</small></h3></td> </tr> <tr> <td><h4>h4. Bootstrap heading <small>Secondary text</small></h4></td> </tr> <tr> <td><h5>h5. Bootstrap heading <small>Secondary text</small></h5></td> </tr> <tr> <td><h6>h6. Bootstrap heading <small>Secondary text</small></h6></td> </tr> </tbody> </table> </div>
-						<figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;h1&gt;</span>h1. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h1&gt;</span>
-							<span class=nt>&lt;h2&gt;</span>h2. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h2&gt;</span>
-							<span class=nt>&lt;h3&gt;</span>h3. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h3&gt;</span>
-							<span class=nt>&lt;h4&gt;</span>h4. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h4&gt;</span>
-							<span class=nt>&lt;h5&gt;</span>h5. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h5&gt;</span>
-							<span class=nt>&lt;h6&gt;</span>h6. Bootstrap heading <span class=nt>&lt;small&gt;</span>Secondary text<span class=nt>&lt;/small&gt;&lt;/h6&gt;</span></code></pre>
-						</figure>
-						<h2 id=type-body-copy>Body copy</h2>
-						<p>
-							Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default).</p> <div class=bs-example data-example-id=body-copy> <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p> <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p&gt;</span>...<span class=nt>&lt;/p&gt;</span></code></pre></figure> <h3>Lead body copy</h3> <p>Make a paragraph stand out by adding <code>.lead</code>.</p> <div class=bs-example data-example-id=lead-copy> <p class=lead>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"lead"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span></code></pre></figure> <h3>Built with Less</h3> <p>The typographic scale is based on two Less variables in <strong>variables.less</strong>: <code>@font-size-base</code> and <code>@line-height-base</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.
-						</p>
-						<h2 id=type-inline-text>Inline text elements</h2>
-						<h3>Marked text</h3>
-						<p>
-							For highlighting a run of text due to its relevance in another context, use the <code>&lt;mark&gt;</code> tag.
-						</p>
-						<div class=bs-example data-example-id=simple-mark>
-							<p>You can use the mark tag to <mark>highlight</mark> text.</p>
-						</div>
-						<figure class=highlight><pre><code class=language-html data-lang=html>You can use the mark tag to <span class=nt>&lt;mark&gt;</span>highlight<span class=nt>&lt;/mark&gt;</span> text.</code></pre></figure>
-						<h3>Deleted text</h3>
-						<p>For indicating blocks of text that have been deleted use the <code>&lt;del&gt;</code> tag.</p>
-						<div class=bs-example data-example-id=simple-del>
-							<p><del>This line of text is meant to be treated as deleted text.</del></p>
-						</div>
-						<figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class=nt>&lt;/del&gt;</span></code></pre></figure> <h3>Strikethrough text</h3> <p>For indicating blocks of text that are no longer relevant use the <code>&lt;s&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-s> <p><s>This line of text is meant to be treated as no longer accurate.</s></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class=nt>&lt;/s&gt;</span></code></pre></figure> <h3>Inserted text</h3> <p>For indicating additions to the document use the <code>&lt;ins&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-ins> <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class=nt>&lt;/ins&gt;</span></code></pre></figure> <h3>Underlined text</h3> <p>To underline text use the <code>&lt;u&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-u> <p><u>This line of text will render as underlined</u></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;u&gt;</span>This line of text will render as underlined<span class=nt>&lt;/u&gt;</span></code></pre></figure> <p>Make use of HTML's default emphasis tags with lightweight styles.</p> <h3>Small text</h3> <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 85% the size of the parent. Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p> <p>You may alternatively use an inline element with <code>.small</code> in place of any <code>&lt;small&gt;</code>.</p> <div class=bs-example data-example-id=simple-small> <p><small>This line of text is meant to be treated as fine print.</small></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class=nt>&lt;/small&gt;</span></code></pre></figure> <h3>Bold</h3> <p>For emphasizing a snippet of text with a heavier font-weight.</p> <div class=bs-example data-example-id=simple-strong> <p>The following snippet of text is <strong>rendered as bold text</strong>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;strong&gt;</span>rendered as bold text<span class=nt>&lt;/strong&gt;</span></code></pre></figure> <h3>Italics</h3> <p>For emphasizing a snippet of text with italics.</p> <div class=bs-example data-example-id=simple-em> <p>The following snippet of text is <em>rendered as italicized text</em>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;em&gt;</span>rendered as italicized text<span class=nt>&lt;/em&gt;</span></code></pre></figure>
-						<div class="bs-callout bs-callout-info" id=callout-type-b-i-elems>
-							<h4>Alternate elements</h4> <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
-						</div>
-						<h2 id=type-alignment>Alignment classes</h2> <p>Easily realign text to components with text alignment classes.</p> <div class=bs-example data-example-id=text-alignment> <p class=text-left>Left aligned text.</p> <p class=text-center>Center aligned text.</p> <p class=text-right>Right aligned text.</p> <p class=text-justify>Justified text.</p> <p class=text-nowrap>No wrap text.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-left"</span><span class=nt>&gt;</span>Left aligned text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-center"</span><span class=nt>&gt;</span>Center aligned text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-right"</span><span class=nt>&gt;</span>Right aligned text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-justify"</span><span class=nt>&gt;</span>Justified text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-nowrap"</span><span class=nt>&gt;</span>No wrap text.<span class=nt>&lt;/p&gt;</span></code></pre></figure>
-						<h2 id=type-transformation>Transformation classes</h2> <p>Transform text in components with text capitalization classes.</p> <div class=bs-example data-example-id=text-capitalization> <p class=text-lowercase>Lowercased text.</p> <p class=text-uppercase>Uppercased text.</p> <p class=text-capitalize>Capitalized text.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-lowercase"</span><span class=nt>&gt;</span>Lowercased text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-uppercase"</span><span class=nt>&gt;</span>Uppercased text.<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-capitalize"</span><span class=nt>&gt;</span>Capitalized text.<span class=nt>&lt;/p&gt;</span></code></pre></figure>
-						<h2 id=type-abbreviations>Abbreviations</h2> <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p> <h3>Basic abbreviation</h3> <div class=bs-example data-example-id=simple-abbr> <p>An abbreviation of the word attribute is <abbr title=attribute>attr</abbr>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;abbr</span> <span class=na>title=</span><span class=s>"attribute"</span><span class=nt>&gt;</span>attr<span class=nt>&lt;/abbr&gt;</span></code></pre></figure> <h3>Initialism</h3> <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p> <div class=bs-example data-example-id=simple-initialism> <p><abbr title="HyperText Markup Language" class=initialism>HTML</abbr> is the best thing since sliced bread.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;abbr</span> <span class=na>title=</span><span class=s>"HyperText Markup Language"</span> <span class=na>class=</span><span class=s>"initialism"</span><span class=nt>&gt;</span>HTML<span class=nt>&lt;/abbr&gt;</span></code></pre></figure>
-						<h2 id=type-addresses>Addresses</h2> <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p> <div class=bs-example data-example-id=simple-address> <address> <strong>Twitter, Inc.</strong><br> 1355 Market Street, Suite 900<br> San Francisco, CA 94103<br> <abbr title=Phone>P:</abbr> (123) 456-7890 </address> <address> <strong>Full Name</strong><br> <a href=/cdn-cgi/l/email-protection#785b>first.last@example.com</a> </address> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;address&gt;</span>
-			  <span class=nt>&lt;strong&gt;</span>Twitter, Inc.<span class=nt>&lt;/strong&gt;&lt;br&gt;</span>
-			  1355 Market Street, Suite 900<span class=nt>&lt;br&gt;</span>
-			  San Francisco, CA 94103<span class=nt>&lt;br&gt;</span>
-			  <span class=nt>&lt;abbr</span> <span class=na>title=</span><span class=s>"Phone"</span><span class=nt>&gt;</span>P:<span class=nt>&lt;/abbr&gt;</span> (123) 456-7890
-			<span class=nt>&lt;/address&gt;</span>
-
-			<span class=nt>&lt;address&gt;</span>
-			  <span class=nt>&lt;strong&gt;</span>Full Name<span class=nt>&lt;/strong&gt;&lt;br&gt;</span>
-			  <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"mailto:#"</span><span class=nt>&gt;</span><span class="__cf_email__" data-cfemail="c7a1aeb5b4b3e9aba6b4b387a2bfa6aab7aba2e9a4a8aa">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script><span class=nt>&lt;/a&gt;</span>
-			<span class=nt>&lt;/address&gt;</span></code></pre></figure>
-			  <!---->
-
-				<hr>
-				<h1 class=page-header id=page-header>OC Page header</h1>
-				<p>Each Page/View has a <code>&lt;h1&gt;</code> heading, which may be extended by form elements, .html'; return false;">, callouts, static text or pictures
-			  </p>
-				<h3>Exempt from this rule are the following pages/views:</h3>
-				<div class="row">
-					<div class="col-md-4">
-						<h4>OPC</h4>
-						<ul>
-							<li>
-								<h5>Page Title</h5>
-								<code>/opc/pageUrl/</code>
-							</li>
-							<li>
-								<h5>Page Title</h5>
-								<code>/opc/pageUrl/</code>
-							</li>
-							<li>
-								<h5>Page Title</h5>
-								<code>/opc/pageUrl/</code>
-							</li>
-							<li>
-								<h5>Page Title</h5>
-								<code>/opc/pageUrl/</code>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<h4>CMP</h4>
-						<p>All CMP Pages</p>
-
-					</div>
-					<div class="col-md-4">
-						<h4>???</h4>
-						<p>All ??? Pages</p>
-					</div>
-				</div>
-
-				<h3>Examples</h3>
-
-				<div class=bs-example>
-					<h1>
-						RfQ Item&nbsp;<small>Temp Labour</small>
-						<div class="pull-right">
-							<div class="btn-group">
-								<a href="#" class="btn btn-link">Back to RfQ</a>
-						    <a href="javascript:void(0);" class="btn btn-default disabled"><span class="fa fa-chevron-left"></span></a>
-						    <a href="#" class="btn btn-default"><span class="fa fa-chevron-right"></span></a>
-							</div>
-				    </div>
-					</h1>
-				</div>
-
-
-
-				<div class="bs-example">
-
-					<h1>
-						Requisition
-						<small>Cart(22-11-2015)</small>
-						<span class="pull-right"><small>&euro; 1,423.75</small></span>
-					</h1>
-					<div class="lead">
-						<dl class="label label-default">
-							<dt>ID</dt>
-							<dd>C160001100</dd>
-						</dl>
-						<span class="label label-success">Approved</span>
-					</div>
-					<div class="lead">
-						<dl class="label label-default">
-							<dt>Requested by</dt>
-							<dd>opc/opc, 0 days ago</dd>
-						</dl>
-						<dl class="label label-default">
-							<dt>Created on</dt>
-							<dd>08/22/2016 &ndash; 14:51h</dd>
-						</dl>
-					</div>
-
-					<nav role="navigation" class="navbar navbar-default navbar-sm">
-				    <div class="pull-left">
-				      <div class="btn-group">
-				      	<a href="#" class="btn btn-sm btn-default">
-				        	<span class="fa fa-history"></span>&nbsp;Approval History
-				        </a>
-								<a class="btn btn-sm btn-default" href="#">
-				        	<span class="fa fa-print"></span>&nbsp;Print
-				        </a>
-				        <a class="btn btn-sm btn-default" href="#">
-									<span class="fa fa-files-o"></span>&nbsp;Duplicate
-								</a>
-				      </div>
-				    </div>
-				    <div class="pull-right">
-				      <div class="group-btn">
-				          <a href="#" class="btn btn-sm btn-default">
-				            <span class="fa fa-history"></span>&nbsp;Show History
-				          </a>
-				      </div>
-				    </div>
-					</nav>
-
-				</div>
-
-
-
-
-			        <hr>
-			        <h1 class=page-header id=page-header>BS 3.3 Page header</h1>
-			        <p>A simple shell for an <code>h1</code> to appropriately space out and segment sections of content on a page. It can utilize the <code>h1</code>'s default <code>small</code> element, as well as most other components (with additional styles).</p> <div class=bs-example data-example-id=simple-page-header> <div class=page-header> <h1>Example page header <small>Subtext for header</small></h1> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"page-header"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;h1&gt;</span>Example page header <span class=nt>&lt;small&gt;</span>Subtext for header<span class=nt>&lt;/small&gt;&lt;/h1&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			        <h1 class=page-header id=code>Code</h1>
-			        <h2 id=code-inline>Inline</h2>
-			        <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-			        <div class=bs-example data-example-id=inline-code> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
-			        <figure class=highlight><pre><code class=language-html data-lang=html>For example, <span class=nt>&lt;code&gt;</span>
-			        	<span class=ni>&amp;lt;</span>section<span class=ni>&amp;gt;</span><span class=nt>&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
-			        </figure>
-
-			        <div style="border-radius: 4px 4px 0 0; border-color:#a94442; " class="bs-example-danger panel panel-danger" data-example-id=inline-code> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
-			        <figure class="highlight alert alert-danger " style="border-radius: 0 0 4px 4px;border-color:#a94442;"><pre><code class="language-html" data-lang=html>For example, <span class=nt>&lt;code&gt;</span>
-			        	<span class=ni>&amp;lt;</span>section<span class=ni>&amp;gt;</span><span class="nt text-danger">&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
-			        </figure>
-
-			        <div style="border-radius: 4px 4px 0 0; border-color:#5cb85c; " class="bs-example-success panel panel-success" data-example-id=inline-code> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
-			        <figure class="highlight alert alert-success " style="border-radius: 0 0 4px 4px;border-color:#5cb85c;"><pre><code class="language-html" data-lang=html>For example, <span class=nt>&lt;code&gt;</span>
-			        	<span class=ni>&amp;lt;</span>section<span class=ni>&amp;gt;</span><span class="nt text-danger">&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
-			        </figure>
-
-			        <div style="border-radius: 4px 4px 0 0; border-color:#f0ad4e; " class="bs-example-warning panel panel-warning" data-example-id=inline-code> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
-			        <figure class="highlight alert alert-warning " style="border-radius: 0 0 4px 4px;border-color:#f0ad4e;"><pre><code class="language-html" data-lang=html>For example, <span class=nt>&lt;code&gt;</span>
-			        	<span class=ni>&amp;lt;</span>section<span class=ni>&amp;gt;</span><span class="nt text-danger">&lt;/code&gt;</span> should be wrapped as inline.</code></pre>
-			        </figure>
-
-
-
-			        <h2 id=code-user-input>User input</h2>
-			        <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p> <div class=bs-example data-example-id=simple-kbd> To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> </div>
-			        <figure class=highlight>
-			        	<pre><code class=language-html data-lang=html>To switch directories, type <span class=nt>&lt;kbd&gt;</span>cd<span class=nt>&lt;/kbd&gt;</span> followed by the name of the directory.
-			        	<span class=nt>&lt;br&gt;</span>
-						To edit settings, press <span class=nt>&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span class=nt>&lt;/kbd&gt;</span> + <span class=nt>&lt;kbd&gt;</span>,<span class=nt>&lt;/kbd&gt;&lt;/kbd&gt;</span></code></pre>
-					</figure>
-					<h2 id=code-block>Basic block</h2> <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p> <div class=bs-example data-example-id=simple-pre> <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;pre&gt;</span><span class=ni>&amp;lt;</span>p<span class=ni>&amp;gt;</span>Sample text here...<span class=ni>&amp;lt;</span>/p<span class=ni>&amp;gt;</span><span class=nt>&lt;/pre&gt;</span></code></pre></figure> <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
-					<h2 id=code-variables>Variables</h2> <p>For indicating variables use the <code>&lt;var&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-var> <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;var&gt;</span>y<span class=nt>&lt;/var&gt;</span> = <span class=nt>&lt;var&gt;</span>m<span class=nt>&lt;/var&gt;&lt;var&gt;</span>x<span class=nt>&lt;/var&gt;</span> + <span class=nt>&lt;var&gt;</span>b<span class=nt>&lt;/var&gt;</span></code></pre></figure>
-					<h2 id=code-sample-output>Sample output</h2> <p>For indicating blocks sample output from a program use the <code>&lt;samp&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-samp> <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class=nt>&lt;/samp&gt;</span></code></pre></figure>
-
-			        <hr>
-
-			        <h1 class=page-header id=images>Images</h1>
-			        <h2 id=images-responsive>Responsive images</h2>
-			        <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code>, <code>height: auto;</code> and <code>display: block;</code> to the image so that it scales nicely to the parent element.</p> <p>To center images which use the <code>.img-responsive</code> class, use <code>.center-block</code> instead of <code>.text-center</code>. <a href=../css/#helper-classes-center>See the helper classes section</a> for more details about <code>.center-block</code> usage.</p> <div class="bs-callout bs-callout-warning" id=callout-images-ie-svg> <h4>SVG images and IE 8-10</h4> <p>In Internet Explorer 8-10, SVG images with <code>.img-responsive</code> are disproportionately sized. To fix this, add <code>width: 100% \9;</code> where necessary. Bootstrap doesn't apply this automatically as it causes complications to other image formats.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>class=</span><span class=s>"img-responsive"</span> <span class=na>alt=</span><span class=s>"Responsive image"</span><span class=nt>&gt;</span></code></pre></figure>
-			        <h2 id=images-shapes>Image shapes</h2>
-			        <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
-			        <div class="bs-callout bs-callout-danger" id=callout-images-ie-rounded-corners>
-			        	<h4>Cross-browser compatibility</h4>
-			        	<p>Keep in mind that Internet Explorer 8 lacks support for rounded corners.</p>
-			        </div>
-			        <div class="bs-example bs-example-images" data-example-id=image-shapes>
-			        	<img alt="A generic square placeholder image with rounded corners" data-src=holder.js/140x140 class=img-rounded> <img alt="A generic square placeholder image where only the portion within the circle circumscribed about said square is visible" data-src=holder.js/140x140 class=img-circle> <img alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" data-src=holder.js/140x140 class=img-thumbnail>
-			        </div>
-			        <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span> <span class=na>class=</span><span class=s>"img-rounded"</span><span class=nt>&gt;</span>
-						<span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span> <span class=na>class=</span><span class=s>"img-circle"</span><span class=nt>&gt;</span>
-						<span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span>
-						<span class=na>class=</span><span class=s>"img-thumbnail"</span><span class=nt>&gt;</span></code></pre>
-					</figure>
-
-					<h1 class=page-header id=jumbotron>Jumbotron</h1> <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p> <div class=bs-example data-example-id=simple-jumbotron> <div class=jumbotron> <h1>Hello, world!</h1> <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> <p><a href=# class="btn btn-primary btn-lg" role=button>Learn more</a></p> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"jumbotron"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;h1&gt;</span>Hello, world!<span class=nt>&lt;/h1&gt;</span>
-			  <span class=nt>&lt;p&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			  <span class=nt>&lt;p&gt;&lt;a</span> <span class=na>class=</span><span class=s>"btn btn-primary btn-lg"</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Learn more<span class=nt>&lt;/a&gt;&lt;/p&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>To make the jumbotron full width, and without rounded corners, place it outside all <code>.container</code>s and instead add a <code>.container</code> within.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"jumbotron"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container"</span><span class=nt>&gt;</span>
-			    ...
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-
-					<h1 class=page-header id=helper-classes>Helper classes</h1> <h3 id=helper-classes-colors>Contextual colors</h3> <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p> <div class=bs-example data-example-id=contextual-colors-helpers> <p class=text-muted>Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p> <p class=text-primary>Nullam id dolor id nibh ultricies vehicula ut id elit.</p> <p class=text-success>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> <p class=text-info>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> <p class=text-warning>Etiam porta sem malesuada magna mollis euismod.</p> <p class=text-danger>Donec ullamcorper nulla non metus auctor fringilla.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-muted"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-primary"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-success"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-info"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-warning"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"text-danger"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-info" id=callout-helper-context-color-specificity> <h4>Dealing with specificity</h4> <p>Sometimes emphasis classes cannot be applied due to the specificity of another selector. In most cases, a sufficient workaround is to wrap your text in a <code>&lt;span&gt;</code> with the class.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-helper-context-color-accessibility> <h4>Conveying meaning to assistive technologies</h4> <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the contextual colors are only used to reinforce meaning that is already present in the text/markup), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p> </div> <h3 id=helper-classes-backgrounds>Contextual backgrounds</h3> <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p> <div class="bs-example bs-example-bg-classes" data-example-id=contextual-backgrounds-helpers> <p class=bg-primary>Nullam id dolor id nibh ultricies vehicula ut id elit.</p> <p class=bg-success>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> <p class=bg-info>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> <p class=bg-warning>Etiam porta sem malesuada magna mollis euismod.</p> <p class=bg-danger>Donec ullamcorper nulla non metus auctor fringilla.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"bg-primary"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"bg-success"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"bg-info"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"bg-warning"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			<span class=nt>&lt;p</span> <span class=na>class=</span><span class=s>"bg-danger"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/p&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-info" id=callout-helper-bg-specificity> <h4>Dealing with specificity</h4> <p>Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p> </div> <div class="bs-callout bs-callout-warning" id=callout-helper-bg-accessibility> <h4>Conveying meaning to assistive technologies</h4> <p>As with <a href=#helper-classes-colors>contextual colors</a>, ensure that any meaning conveyed through color is also conveyed in a format that is not purely presentational.</p> </div> <h3 id=helper-classes-close>Close icon</h3> <p>Use the generic close icon for dismissing content like modals and alerts.</p> <div class=bs-example data-example-id=close-icon> <p><button type=button class=close aria-label=Close><span aria-hidden=true>&times;</span></button></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"close"</span> <span class=na>aria-label=</span><span class=s>"Close"</span><span class=nt>&gt;&lt;span</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;</span><span class=ni>&amp;times;</span><span class=nt>&lt;/span&gt;&lt;/button&gt;</span></code></pre></figure> <h3 id=helper-classes-carets>Carets</h3> <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href=../components/#btn-dropdowns-dropup>dropup menus</a>.</p> <div class=bs-example data-example-id=caret> <span class=caret></span> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"caret"</span><span class=nt>&gt;&lt;/span&gt;</span></code></pre></figure> <h3 id=helper-classes-floats>Quick floats</h3> <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"pull-left"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"pull-right"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Classes
-			</span><span class=nc>.pull-left</span> <span class=p>{</span>
-			  <span class=nl>float</span><span class=p>:</span> <span class=nb>left</span> <span class=o>!</span><span class=n>important</span><span class=p>;</span>
-			<span class=p>}</span>
-			<span class=nc>.pull-right</span> <span class=p>{</span>
-			  <span class=nl>float</span><span class=p>:</span> <span class=nb>right</span> <span class=o>!</span><span class=n>important</span><span class=p>;</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Usage as mixins
-			</span><span class=nc>.element</span> <span class=p>{</span>
-			  <span class=nc>.pull-left</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span>
-			<span class=nc>.another-element</span> <span class=p>{</span>
-			  <span class=nc>.pull-right</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure> <div class="bs-callout bs-callout-warning" id=callout-helper-pull-navbar> <h4>Not for use in navbars</h4> <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href=../components/#navbar-component-alignment>See the navbar docs</a> for details.</p> </div> <h3 id=helper-classes-center>Center content blocks</h3> <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"center-block"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Class
-			</span><span class=nc>.center-block</span> <span class=p>{</span>
-			  <span class=nl>display</span><span class=p>:</span> <span class=nb>block</span><span class=p>;</span>
-			  <span class=nl>margin-left</span><span class=p>:</span> <span class=nb>auto</span><span class=p>;</span>
-			  <span class=nl>margin-right</span><span class=p>:</span> <span class=nb>auto</span><span class=p>;</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Usage as a mixin
-			</span><span class=nc>.element</span> <span class=p>{</span>
-			  <span class=nc>.center-block</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure> <h3 id=helper-classes-clearfix>Clearfix</h3> <p>Easily clear <code>float</code>s by adding <code>.clearfix</code> <strong>to the parent element</strong>. Utilizes <a href=http://nicolasgallagher.com/micro-clearfix-hack/ >the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Usage as a class --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"clearfix"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Mixin itself
-			</span><span class=nc>.clearfix</span><span class=o>()</span> <span class=p>{</span>
-			  <span class=k>&amp;</span><span class=nd>:before</span><span class=o>,</span>
-			  <span class=k>&amp;</span><span class=nd>:after</span> <span class=p>{</span>
-			    <span class=nl>content</span><span class=p>:</span> <span class=s2>" "</span><span class=p>;</span>
-			    <span class=nl>display</span><span class=p>:</span> <span class=n>table</span><span class=p>;</span>
-			  <span class=p>}</span>
-			  <span class=k>&amp;</span><span class=nd>:after</span> <span class=p>{</span>
-			    <span class=nl>clear</span><span class=p>:</span> <span class=nb>both</span><span class=p>;</span>
-			  <span class=p>}</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Usage as a mixin
-			</span><span class=nc>.element</span> <span class=p>{</span>
-			  <span class=nc>.clearfix</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure> <h3 id=helper-classes-show-hide>Showing and hiding content</h3> <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href=#helper-classes-floats>quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p> <p><code>.hide</code> is available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p> <p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"show"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"hidden"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Classes
-			</span><span class=nc>.show</span> <span class=p>{</span>
-			  <span class=nl>display</span><span class=p>:</span> <span class=nb>block</span> <span class=o>!</span><span class=n>important</span><span class=p>;</span>
-			<span class=p>}</span>
-			<span class=nc>.hidden</span> <span class=p>{</span>
-			  <span class=nl>display</span><span class=p>:</span> <span class=nb>none</span> <span class=o>!</span><span class=n>important</span><span class=p>;</span>
-			<span class=p>}</span>
-			<span class=nc>.invisible</span> <span class=p>{</span>
-			  <span class=nl>visibility</span><span class=p>:</span> <span class=nb>hidden</span><span class=p>;</span>
-			<span class=p>}</span>
-
-			<span class=c1>// Usage as mixins
-			</span><span class=nc>.element</span> <span class=p>{</span>
-			  <span class=nc>.show</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span>
-			<span class=nc>.another-element</span> <span class=p>{</span>
-			  <span class=nc>.hidden</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure> <h3 id=helper-classes-screen-readers>Screen reader and keyboard navigation content</h3> <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Combine <code>.sr-only</code> with <code>.sr-only-focusable</code> to show the element again when it's focused (e.g. by a keyboard-only user). Necessary for following <a href=../getting-started/#accessibility>accessibility best practices</a>. Can also be used as mixins.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;a</span> <span class=na>class=</span><span class=s>"sr-only sr-only-focusable"</span> <span class=na>href=</span><span class=s>"#content"</span><span class=nt>&gt;</span>Skip to main content<span class=nt>&lt;/a&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Usage as a mixin
-			</span><span class=nc>.skip-navigation</span> <span class=p>{</span>
-			  <span class=nc>.sr-only</span><span class=o>()</span><span class=p>;</span>
-			  <span class=nc>.sr-only-focusable</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure> <h3 id=helper-classes-image-replacement>Image replacement</h3> <p>Utilize the <code>.text-hide</code> class or mixin to help replace an element's text content with a background image.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;h1</span> <span class=na>class=</span><span class=s>"text-hide"</span><span class=nt>&gt;</span>Custom heading<span class=nt>&lt;/h1&gt;</span></code></pre></figure> <figure class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// Usage as a mixin
-			</span><span class=nc>.heading</span> <span class=p>{</span>
-			  <span class=nc>.text-hide</span><span class=o>()</span><span class=p>;</span>
-			<span class=p>}</span></code></pre></figure>
-
-
-					<h1 class=page-header id=responsive-utilities>Responsive utilities</h1> <p class=lead>For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p> <p>Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.</p> <h2 id=responsive-utilities-classes>Available classes</h2> <p>Use a single or combination of the available classes for toggling content across viewport breakpoints.</p> <div class=table-responsive> <table class="table table-bordered table-striped responsive-utilities"> <thead> <tr> <th></th> <th> Extra small devices <small>Phones (&lt;768px)</small> </th> <th> Small devices <small>Tablets (&ge;768px)</small> </th> <th> Medium devices <small>Desktops (&ge;992px)</small> </th> <th> Large devices <small>Desktops (&ge;1200px)</small> </th> </tr> </thead> <tbody> <tr> <th scope=row><code>.visible-xs-*</code></th> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> </tr> <tr> <th scope=row><code>.visible-sm-*</code></th> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> </tr> <tr> <th scope=row><code>.visible-md-*</code></th> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> </tr> <tr> <th scope=row><code>.visible-lg-*</code></th> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> </tr> </tbody> <tbody> <tr> <th scope=row><code>.hidden-xs</code></th> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> </tr> <tr> <th scope=row><code>.hidden-sm</code></th> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> </tr> <tr> <th scope=row><code>.hidden-md</code></th> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> </tr> <tr> <th scope=row><code>.hidden-lg</code></th> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> </tr> </tbody> </table> </div> <p>As of v3.2.0, the <code>.visible-*-*</code> classes for each breakpoint come in three variations, one for each CSS <code>display</code> property value listed below.</p> <div class=table-responsive> <table class="table table-bordered table-striped"> <thead> <tr> <th>Group of classes</th> <th>CSS <code>display</code></th> </tr> </thead> <tbody> <tr> <th scope=row><code>.visible-*-block</code></th> <td><code>display: block;</code></td> </tr> <tr> <th scope=row><code>.visible-*-inline</code></th> <td><code>display: inline;</code></td> </tr> <tr> <th scope=row><code>.visible-*-inline-block</code></th> <td><code>display: inline-block;</code></td> </tr> </tbody> </table> </div> <p>So, for extra small (<code>xs</code>) screens for example, the available <code>.visible-*-*</code> classes are: <code>.visible-xs-block</code>, <code>.visible-xs-inline</code>, and <code>.visible-xs-inline-block</code>.</p> <p>The classes <code>.visible-xs</code>, <code>.visible-sm</code>, <code>.visible-md</code>, and <code>.visible-lg</code> also exist, but are <strong>deprecated as of v3.2.0</strong>. They are approximately equivalent to <code>.visible-*-block</code>, except with additional special cases for toggling <code>&lt;table&gt;</code>-related elements.</p> <h2 id=responsive-utilities-print>Print classes</h2> <p>Similar to the regular responsive classes, use these for toggling content for print.</p> <div class=table-responsive> <table class="table table-bordered table-striped responsive-utilities"> <thead> <tr> <th>Classes</th> <th>Browser</th> <th>Print</th> </tr> </thead> <tbody> <tr> <th scope=row> <code>.visible-print-block</code><br> <code>.visible-print-inline</code><br> <code>.visible-print-inline-block</code> </th> <td class=is-hidden>Hidden</td> <td class=is-visible>Visible</td> </tr> <tr> <th scope=row><code>.hidden-print</code></th> <td class=is-visible>Visible</td> <td class=is-hidden>Hidden</td> </tr> </tbody> </table> </div> <p>The class <code>.visible-print</code> also exists but is <strong>deprecated</strong> as of v3.2.0. It is approximately equivalent to <code>.visible-print-block</code>, except with additional special cases for <code>&lt;table&gt;</code>-related elements.</p> <h2 id=responsive-utilities-tests>Test cases</h2> <p>Resize your browser or load on different devices to test the responsive utility classes.</p> <h3>Visible on...</h3> <p>Green checkmarks indicate the element <strong>is visible</strong> in your current viewport.</p> <div class="row responsive-utilities-test visible-on"> <div class="col-xs-6 col-sm-3"> <span class=hidden-xs>Extra small</span> <span class=visible-xs-block>&#10004; Visible on x-small</span> </div> <div class="col-xs-6 col-sm-3"> <span class=hidden-sm>Small</span> <span class=visible-sm-block>&#10004; Visible on small</span> </div> <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-3"> <span class=hidden-md>Medium</span> <span class=visible-md-block>&#10004; Visible on medium</span> </div> <div class="col-xs-6 col-sm-3"> <span class=hidden-lg>Large</span> <span class=visible-lg-block>&#10004; Visible on large</span> </div> </div> <div class="row responsive-utilities-test visible-on"> <div class=col-xs-6> <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block">&#10004; Visible on x-small and small</span> </div> <div class=col-xs-6> <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block">&#10004; Visible on medium and large</span> </div> <div class="clearfix visible-xs-block"></div> <div class=col-xs-6> <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block">&#10004; Visible on x-small and medium</span> </div> <div class=col-xs-6> <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block">&#10004; Visible on small and large</span> </div> <div class="clearfix visible-xs-block"></div> <div class=col-xs-6> <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block">&#10004; Visible on x-small and large</span> </div> <div class=col-xs-6> <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block">&#10004; Visible on small and medium</span> </div> </div> <h3>Hidden on...</h3> <p>Here, green checkmarks also indicate the element <strong>is hidden</strong> in your current viewport.</p> <div class="row responsive-utilities-test hidden-on"> <div class="col-xs-6 col-sm-3"> <span class=hidden-xs>Extra small</span> <span class=visible-xs-block>&#10004; Hidden on x-small</span> </div> <div class="col-xs-6 col-sm-3"> <span class=hidden-sm>Small</span> <span class=visible-sm-block>&#10004; Hidden on small</span> </div> <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-3"> <span class=hidden-md>Medium</span> <span class=visible-md-block>&#10004; Hidden on medium</span> </div> <div class="col-xs-6 col-sm-3"> <span class=hidden-lg>Large</span> <span class=visible-lg-block>&#10004; Hidden on large</span> </div> </div> <div class="row responsive-utilities-test hidden-on"> <div class=col-xs-6> <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block">&#10004; Hidden on x-small and small</span> </div> <div class=col-xs-6> <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block">&#10004; Hidden on medium and large</span> </div> <div class="clearfix visible-xs-block"></div> <div class=col-xs-6> <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block">&#10004; Hidden on x-small and medium</span> </div> <div class=col-xs-6> <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block">&#10004; Hidden on small and large</span> </div> <div class="clearfix visible-xs-block"></div> <div class=col-xs-6> <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block">&#10004; Hidden on x-small and large</span> </div> <div class=col-xs-6> <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block">&#10004; Hidden on small and medium</span> </div></div>
-
-
-					<h1 class=page-header id=labels>Labels</h1>
-					<h2>Example</h2>
-					<div class=bs-example data-example-id=labels-in-headings>
-						<h1>Example heading <span class="label label-default">New</span></h1>
-						<h2>Example heading <span class="label label-default">New</span></h2>
-						<h3>Example heading <span class="label label-default">New</span></h3>
-						<h4>Example heading <span class="label label-default">New</span></h4>
-						<h5>Example heading <span class="label label-default">New</span></h5>
-						<h6>Example heading <span class="label label-default">New</span></h6>
-					</div>
-					<figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;h3&gt;</span>Example heading <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-default"</span><span class=nt>&gt;</span>New<span class=nt>&lt;/span&gt;&lt;/h3&gt;</span></code></pre>
-					</figure>
-					<h2>Available variations</h2>
-					<p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
-					<div class=bs-example data-example-id=label-variants>
-						<span class="label label-default">Default</span> <span class="label label-primary">Primary</span> <span class="label label-success">Success</span> <span class="label label-info">Info</span> <span class="label label-warning">Warning</span> <span class="label label-danger">Danger</span>
-					</div>
-					<figure class=highlight>
-						<pre><code class=language-html data-lang=html><span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-default"</span><span class=nt>&gt;</span>Default<span class=nt>&lt;/span&gt;</span>
-						<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-primary"</span><span class=nt>&gt;</span>Primary<span class=nt>&lt;/span&gt;</span>
-						<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-success"</span><span class=nt>&gt;</span>Success<span class=nt>&lt;/span&gt;</span>
-						<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-info"</span><span class=nt>&gt;</span>Info<span class=nt>&lt;/span&gt;</span>
-						<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-warning"</span><span class=nt>&gt;</span>Warning<span class=nt>&lt;/span&gt;</span>
-						<span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"label label-danger"</span><span class=nt>&gt;</span>Danger<span class=nt>&lt;/span&gt;</span></code></pre>
-					</figure>
-					<div class="bs-callout bs-callout-info" id=callout-labels-inline-block> <h4>Have tons of labels?</h4> <p>Rendering problems can arise when you have dozens of inline labels within a narrow container, each containing its own <code>inline-block</code> element (like an icon). The way around this is setting <code>display: inline-block;</code>. For context and an example, <a href=https://github.com/twbs/bootstrap/issues/13219>see #13219</a>.</p>
-					</div>
-
-					<h2>DL Labels</h2>
-					<p class="lead">
-						  Labels can be constructed from <code>&lt;DL&gt;</code> elements. These labels consist of at least two strings, each wrapped in its own element: attrib <code>&lt;dt&gt;</code> and value <code>&lt;dd&gt;</code>.
-						  A single <code><b>dl</b>.label</code> can contain multiple <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements in every possible combination.
-					</p>
-					<div class="bs-example">
-						<dl class="label label-default">
-							<dt>ID</dt>
-							<dd>A99999</dd>
-						</dl>
-						<dl class="label label-default">
-							<dd>29</dd>
-							<dt>days left</dt>
-						</dl>
-						<dl class="label label-default">
-							<dt>Valid from</dt>
-							<dd>29/11/2016</dd>
-							<dt>to</dt>
-							<dd>5/1/2017</dd>
-						</dl>
-						<br><br>
-						<dl class="label label-info">
-							<dd>3:16</dd>
-							<dt>hours left</dt>
-						</dl>
-						<dl class="label label-warning">
-							<dd>35</dd>
-							<dt>minutes left</dt>
-						</dl>
-						<dl class="label label-danger">
-							<dd>23</dd>
-							<dt>minutes overdue</dt>
-						</dl>
-						<dl class="label label-success">
-							<dd>927</dd>
-							<dt>products created</dt>
-						</dl>
-
-
-
-					</div>
-
-
-					<h1 class=page-header id=badges>Badges</h1>
-					<p class=lead>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
-					<div class=bs-example data-example-id=simple-badges>
-						<a href=#>Inbox <span class=badge>42</span></a> <br><br> <button class="btn btn-primary" type=button> Messages <span class=badge>4</span> </button>
-					</div>
-					<figure class=highlight>
-						<pre><code class=language-html data-lang=html><span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Inbox <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"badge"</span><span class=nt>&gt;</span>42<span class=nt>&lt;/span&gt;&lt;/a&gt;</span>
-			<span class=nt>&lt;button</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span> <span class=na>type=</span><span class=s>"button"</span><span class=nt>&gt;</span>
-			  Messages <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"badge"</span><span class=nt>&gt;</span>4<span class=nt>&lt;/span&gt;</span>
-			<span class=nt>&lt;/button&gt;</span></code></pre>
-					</figure>
-					<h4>Self collapsing</h4> <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
-					<div class="bs-callout bs-callout-danger" id=callout-badges-ie8-empty>
-						<h4>Cross-browser compatibility</h4>
-						<p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p>
-					</div>
-					<h4>Adapts to active nav states</h4> <p>Built-in styles are included for placing badges in active states in pill navigations.</p> <div class=bs-example data-example-id=badges-in-pills> <ul class="nav nav-pills" role=tablist> <li role=presentation class=active><a href=#>Home <span class=badge>42</span></a></li> <li role=presentation><a href=#>Profile</a></li> <li role=presentation><a href=#>Messages <span class=badge>3</span></a></li> </ul> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"nav nav-pills"</span> <span class=na>role=</span><span class=s>"tablist"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"presentation"</span> <span class=na>class=</span><span class=s>"active"</span><span class=nt>&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Home <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"badge"</span><span class=nt>&gt;</span>42<span class=nt>&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-			  <span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"presentation"</span><span class=nt>&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Profile<span class=nt>&lt;/a&gt;&lt;/li&gt;</span>
-			  <span class=nt>&lt;li</span> <span class=na>role=</span><span class=s>"presentation"</span><span class=nt>&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>Messages <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"badge"</span><span class=nt>&gt;</span>3<span class=nt>&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
-
-					<h1 class=page-header id=thumbnails>Thumbnails</h1>
-					<p class=lead>Extend Bootstrap's <a href=../css/#grid>grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p> <p>If you're looking for Pinterest-like presentation of thumbnails of varying heights and/or widths, you'll need to use a third-party plugin such as <a href=http://masonry.desandro.com>Masonry</a>, <a href=http://isotope.metafizzy.co>Isotope</a>, or <a href=http://salvattore.com>Salvattore</a>.</p>
-					<h2 id=thumbnails-default>Default example</h2> <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p> <div class=bs-example data-example-id=simple-thumbnails> <div class=row> <div class="col-md-3 col-xs-6"> <a href=# class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x180> </a> </div> <div class="col-md-3 col-xs-6"> <a href=# class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x180> </a> </div> <div class="col-md-3 col-xs-6"> <a href=# class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x180> </a> </div> <div class="col-md-3 col-xs-6"> <a href=# class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x180> </a> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-3"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"thumbnail"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;/a&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  ...
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-			<h2 id=thumbnails-custom-content>Custom content</h2> <p>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</p> <div class=bs-example data-example-id=thumbnails-with-custom-content> <div class=row> <div class="col-sm-6 col-md-4"> <div class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x200> <div class=caption> <h3>Thumbnail label</h3> <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> <p><a href=# class="btn btn-primary" role=button>Button</a> <a href=# class="btn btn-default" role=button>Button</a></p> </div> </div> </div> <div class="col-sm-6 col-md-4"> <div class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x200> <div class=caption> <h3>Thumbnail label</h3> <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> <p><a href=# class="btn btn-primary" role=button>Button</a> <a href=# class="btn btn-default" role=button>Button</a></p> </div> </div> </div> <div class="col-sm-6 col-md-4"> <div class=thumbnail> <img alt="Generic placeholder thumbnail" data-src=holder.js/100%x200> <div class=caption> <h3>Thumbnail label</h3> <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> <p><a href=# class="btn btn-primary" role=button>Button</a> <a href=# class="btn btn-default" role=button>Button</a></p> </div> </div> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-sm-6 col-md-4"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"thumbnail"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;img</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"caption"</span><span class=nt>&gt;</span>
-			        <span class=nt>&lt;h3&gt;</span>Thumbnail label<span class=nt>&lt;/h3&gt;</span>
-			        <span class=nt>&lt;p&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			        <span class=nt>&lt;p&gt;&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-primary"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Button<span class=nt>&lt;/a&gt;</span> <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"btn btn-default"</span> <span class=na>role=</span><span class=s>"button"</span><span class=nt>&gt;</span>Button<span class=nt>&lt;/a&gt;&lt;/p&gt;</span>
-			      <span class=nt>&lt;/div&gt;</span>
-			    <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			<h1 class="page-header" id="callouts">Callouts</h1>
-			<p class="lead">
-				Callouts (as used in the Bootstrap documentation) are used instead of the standard alerts.
-				Each callout must contain a headline <code>&lt;h4&gt;</code> and at least one content element, default is <code>&lt;p&gt;</code>.
-			</p>
-			<div class="bs-example">
-				<div class="bs-callout bs-callout-info">
-					<h4>Info Callout</h4>
-					<p>Use this to explain to the user what is happening, or how to use a complex interface.</p>
-				</div>
-				<div class="bs-callout bs-callout-warning">
-					<h4>Warning Callout</h4>
-					<p>Warn the user of something that is <b>about to happen</b>.</p>
-				</div>
-				<div class="bs-callout bs-callout-danger">
-					<h4>Danger Callout</h4>
-					<p>Warn the user of something that <b>has happened</b>.</p>
-				</div>
-			</div>
-
-
-
-			<h1 class=page-header id=alerts>Alerts</h1> <p class=lead>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p> <h2 id=alerts-examples>Examples</h2> <p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p> <div class="bs-callout bs-callout-info" id=callout-alerts-no-default> <h4>No default class</h4> <p>Alerts don't have default classes, only base and modifier classes. A default gray alert doesn't make too much sense, so you're required to specify a type via contextual class. Choose from success, info, warning, or danger.</p> </div> <div class=bs-example data-example-id=simple-alerts> <div class="alert alert-success" role=alert> <strong>Well done!</strong> You successfully read this important alert message. </div> <div class="alert alert-info" role=alert> <strong>Heads up!</strong> This alert needs your attention, but it's not super important. </div> <div class="alert alert-warning" role=alert> <strong>Warning!</strong> Better check yourself, you're not looking too good. </div> <div class="alert alert-danger" role=alert> <strong>Oh snap!</strong> Change a few things up and try submitting again. </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-success"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-info"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-warning"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-danger"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=alerts-dismissible>Dismissible alerts</h2> <p>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p> <div class="bs-callout bs-callout-info" id=callout-alerts-dismiss-plugin> <h4>Requires JavaScript alert plugin</h4> <p>For fully functioning, dismissible alerts, you must use the <a href=../javascript/#alerts>alerts JavaScript plugin</a>.</p> </div> <div class=bs-example data-example-id=dismissible-alert-css> <div class="alert alert-warning alert-dismissible" role=alert> <button type=button class=close data-dismiss=alert aria-label=Close><span aria-hidden=true>&times;</span></button> <strong>Warning!</strong> Better check yourself, you're not looking too good. </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-warning alert-dismissible"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;button</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>class=</span><span class=s>"close"</span> <span class=na>data-dismiss=</span><span class=s>"alert"</span> <span class=na>aria-label=</span><span class=s>"Close"</span><span class=nt>&gt;&lt;span</span> <span class=na>aria-hidden=</span><span class=s>"true"</span><span class=nt>&gt;</span><span class=ni>&amp;times;</span><span class=nt>&lt;/span&gt;&lt;/button&gt;</span>
-			  <span class=nt>&lt;strong&gt;</span>Warning!<span class=nt>&lt;/strong&gt;</span> Better check yourself, you're not looking too good.
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-warning" id=callout-alerts-dismiss-use-button> <h4>Ensure proper behavior across all devices</h4> <p>Be sure to use the <code>&lt;button&gt;</code> element with the <code>data-dismiss="alert"</code> data attribute.</p> </div> <h2 id=alerts-links>Links in alerts</h2> <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p> <div class=bs-example data-example-id=alerts-with-links> <div class="alert alert-success" role=alert> <strong>Well done!</strong> You successfully read <a href=# class=alert-link>this important alert message</a>. </div> <div class="alert alert-info" role=alert> <strong>Heads up!</strong> This <a href=# class=alert-link>alert needs your attention</a>, but it's not super important. </div> <div class="alert alert-warning" role=alert> <strong>Warning!</strong> Better check yourself, you're <a href=# class=alert-link>not looking too good</a>. </div> <div class="alert alert-danger" role=alert> <strong>Oh snap!</strong> <a href=# class=alert-link>Change a few things up</a> and try submitting again. </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-success"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"alert-link"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/a&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-info"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"alert-link"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/a&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-warning"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"alert-link"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/a&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"alert alert-danger"</span> <span class=na>role=</span><span class=s>"alert"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span> <span class=na>class=</span><span class=s>"alert-link"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/a&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			<h1 class=page-header id=progress>Progress bars</h1> <p class=lead>Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.</p> <div class="bs-callout bs-callout-danger" id=callout-progress-animation-css3> <h4>Cross-browser compatibility</h4> <p>Progress bars use CSS3 transitions and animations to achieve some of their effects. These features are not supported in Internet Explorer 9 and below or older versions of Firefox. Opera 12 does not support animations.</p> </div> <div class="bs-callout bs-callout-info"> <h4 id=callout-progress-csp>Content Security Policy (CSP) compatibility</h4> <p>If your website has a <a href=https://developer.mozilla.org/en-US/docs/Web/Security/CSP>Content Security Policy (CSP)</a> which doesn't allow <code>style-src 'unsafe-inline'</code>, then you won't be able to use inline <code>style</code> attributes to set progress bar widths as shown in our examples below. Alternative methods for setting the widths that are compatible with strict CSPs include using a little custom JavaScript (that sets <code>element.style.width</code>) or using custom CSS classes.</p> </div> <h2 id=progress-basic>Basic example</h2> <p>Default progress bar.</p> <div class=bs-example data-example-id=simple-progress-bar> <div class=progress> <div class=progress-bar role=progressbar aria-valuenow=60 aria-valuemin=0 aria-valuemax=100 style=width:60%> <span class=sr-only>60% Complete</span> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"60"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 60%;"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>60% Complete<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=progress-label>With label</h2> <p>Remove the <code>&lt;span&gt;</code> with <code>.sr-only</code> class from within the progress bar to show a visible percentage.</p> <div class=bs-example data-example-id=progress-bar-with-label> <div class=progress> <div class=progress-bar role=progressbar aria-valuenow=60 aria-valuemin=0 aria-valuemax=100 style=width:60%> 60% </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"60"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 60%;"</span><span class=nt>&gt;</span>
-			    60%
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>To ensure that the label text remains legible even for low percentages, consider adding a <code>min-width</code> to the progress bar.</p> <div class=bs-example data-example-id=progress-bar-at-low-percentage> <div class=progress> <div class=progress-bar role=progressbar aria-valuenow=0 aria-valuemin=0 aria-valuemax=100 style=min-width:2em> 0% </div> </div> <div class=progress> <div class=progress-bar role=progressbar aria-valuenow=2 aria-valuemin=0 aria-valuemax=100 style=min-width:2em;width:2%> 2% </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"0"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"min-width: 2em;"</span><span class=nt>&gt;</span>
-			    0%
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"2"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"min-width: 2em; width: 2%;"</span><span class=nt>&gt;</span>
-			    2%
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=progress-alternatives>Contextual alternatives</h2> <p>Progress bars use some of the same button and alert classes for consistent styles.</p> <div class=bs-example data-example-id=contextual-progress-bar> <div class=progress> <div class="progress-bar progress-bar-success" role=progressbar aria-valuenow=40 aria-valuemin=0 aria-valuemax=100 style=width:40%> <span class=sr-only>40% Complete (success)</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-info" role=progressbar aria-valuenow=20 aria-valuemin=0 aria-valuemax=100 style=width:20%> <span class=sr-only>20% Complete</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-warning" role=progressbar aria-valuenow=60 aria-valuemin=0 aria-valuemax=100 style=width:60%> <span class=sr-only>60% Complete (warning)</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-danger" role=progressbar aria-valuenow=80 aria-valuemin=0 aria-valuemax=100 style=width:80%> <span class=sr-only>80% Complete (danger)</span> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-success"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"40"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 40%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>40% Complete (success)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-info"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"20"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 20%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>20% Complete<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-warning"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"60"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 60%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>60% Complete (warning)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-danger"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"80"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 80%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>80% Complete (danger)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=progress-striped>Striped</h2> <p>Uses a gradient to create a striped effect. Not available in IE9 and below.</p> <div class=bs-example data-example-id=striped-progress-bar> <div class=progress> <div class="progress-bar progress-bar-success progress-bar-striped" role=progressbar aria-valuenow=40 aria-valuemin=0 aria-valuemax=100 style=width:40%> <span class=sr-only>40% Complete (success)</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-info progress-bar-striped" role=progressbar aria-valuenow=20 aria-valuemin=0 aria-valuemax=100 style=width:20%> <span class=sr-only>20% Complete</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-warning progress-bar-striped" role=progressbar aria-valuenow=60 aria-valuemin=0 aria-valuemax=100 style=width:60%> <span class=sr-only>60% Complete (warning)</span> </div> </div> <div class=progress> <div class="progress-bar progress-bar-danger progress-bar-striped" role=progressbar aria-valuenow=80 aria-valuemin=0 aria-valuemax=100 style=width:80%> <span class=sr-only>80% Complete (danger)</span> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-success progress-bar-striped"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"40"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 40%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>40% Complete (success)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-info progress-bar-striped"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"20"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 20%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>20% Complete<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-warning progress-bar-striped"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"60"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 60%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>60% Complete (warning)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-danger progress-bar-striped"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"80"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 80%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>80% Complete (danger)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=progress-animated>Animated</h2> <p>Add <code>.active</code> to <code>.progress-bar-striped</code> to animate the stripes right to left. Not available in IE9 and below.</p> <div class=bs-example data-example-id=animated-progress-bar> <div class=progress> <div class="progress-bar progress-bar-striped" role=progressbar aria-valuenow=45 aria-valuemin=0 aria-valuemax=100 style=width:45%><span class=sr-only>45% Complete</span></div> </div> <button type=button class="btn btn-default bs-docs-activate-animated-progressbar" data-toggle=button aria-pressed=false autocomplete=off>Toggle animation</button> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-striped active"</span> <span class=na>role=</span><span class=s>"progressbar"</span> <span class=na>aria-valuenow=</span><span class=s>"45"</span> <span class=na>aria-valuemin=</span><span class=s>"0"</span> <span class=na>aria-valuemax=</span><span class=s>"100"</span> <span class=na>style=</span><span class=s>"width: 45%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>45% Complete<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=progress-stacked>Stacked</h2> <p>Place multiple bars into the same <code>.progress</code> to stack them.</p> <div class=bs-example data-example-id=stacked-progress-bar> <div class=progress> <div class="progress-bar progress-bar-success" style=width:35%> <span class=sr-only>35% Complete (success)</span> </div> <div class="progress-bar progress-bar-warning progress-bar-striped" style=width:20%> <span class=sr-only>20% Complete (warning)</span> </div> <div class="progress-bar progress-bar-danger" style=width:10%> <span class=sr-only>10% Complete (danger)</span> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-success"</span> <span class=na>style=</span><span class=s>"width: 35%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>35% Complete (success)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-warning progress-bar-striped"</span> <span class=na>style=</span><span class=s>"width: 20%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>20% Complete (warning)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"progress-bar progress-bar-danger"</span> <span class=na>style=</span><span class=s>"width: 10%"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;span</span> <span class=na>class=</span><span class=s>"sr-only"</span><span class=nt>&gt;</span>10% Complete (danger)<span class=nt>&lt;/span&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			<h1 class=page-header id=media>Media object</h1> <p class=lead>Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content.</p> <h2 id=media-default>Default media</h2> <p>The default media displays a media object (images, video, audio) to the left or right of a content block.</p> <div class=bs-example data-example-id=default-media> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div> </div> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div> </div> </div> </div> <div class=media> <div class=media-body> <h4 class=media-heading>Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div> <div class=media-right> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> </div> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div> <div class=media-right> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-left"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;img</span> <span class=na>class=</span><span class=s>"media-object"</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;/a&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-body"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;h4</span> <span class=na>class=</span><span class=s>"media-heading"</span><span class=nt>&gt;</span>Media heading<span class=nt>&lt;/h4&gt;</span>
-			    ...
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>The classes <code>.pull-left</code> and <code>.pull-right</code> also exist and were previously used as part of the media component, but are deprecated for that use as of v3.3.0. They are approximately equivalent to <code>.media-left</code> and <code>.media-right</code>, except that <code>.media-right</code> should be placed after the <code>.media-body</code> in the html.</p> <h2 id=media-alignment>Media alignment</h2> <p>The images or other media can be aligned top, middle, or bottom. The default is top aligned.</p> <div class=bs-example data-example-id=media-alignment> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Top aligned media</h4> <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p> <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> </div> </div> <div class=media> <div class="media-left media-middle"> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Middle aligned media</h4> <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p> <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> </div> </div> <div class=media> <div class="media-left media-bottom"> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Bottom aligned media</h4> <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p> <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-left media-middle"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;img</span> <span class=na>class=</span><span class=s>"media-object"</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;/a&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-body"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;h4</span> <span class=na>class=</span><span class=s>"media-heading"</span><span class=nt>&gt;</span>Middle aligned media<span class=nt>&lt;/h4&gt;</span>
-			    ...
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=media-list>Media list</h2> <p>With a bit of extra markup, you can use media inside list (useful for comment threads or articles lists).</p> <div class=bs-example data-example-id=media-list> <ul class=media-list> <li class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Media heading</h4> <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div> </div> </div> </div> <div class=media> <div class=media-left> <a href=#> <img alt="Generic placeholder image" class=media-object data-src=holder.js/64x64> </a> </div> <div class=media-body> <h4 class=media-heading>Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div> </div> </div> </li> </ul> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"media-list"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"media"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-left"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;a</span> <span class=na>href=</span><span class=s>"#"</span><span class=nt>&gt;</span>
-			        <span class=nt>&lt;img</span> <span class=na>class=</span><span class=s>"media-object"</span> <span class=na>src=</span><span class=s>"..."</span> <span class=na>alt=</span><span class=s>"..."</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;/a&gt;</span>
-			    <span class=nt>&lt;/div&gt;</span>
-			    <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"media-body"</span><span class=nt>&gt;</span>
-			      <span class=nt>&lt;h4</span> <span class=na>class=</span><span class=s>"media-heading"</span><span class=nt>&gt;</span>Media heading<span class=nt>&lt;/h4&gt;</span>
-			      ...
-			    <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;/li&gt;</span>
-			<span class=nt>&lt;/ul&gt;</span></code></pre></figure>
-
-			<h1 class=page-header id=responsive-embed>Responsive embed</h1>
-				<p>Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p> <p>Rules are directly applied to <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;object&gt;</code> elements; optionally use an explicit descendant class <code>.embed-responsive-item</code> when you want to match the styling for other attributes.</p> <p><strong>Pro-Tip!</strong> You don't need to include <code>frameborder="0"</code> in your <code>&lt;iframe&gt;</code>s as we override that for you.</p>
-				<div class=bs-example data-example-id=responsive-embed-16by9-iframe-youtube>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class=embed-responsive-item src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- 16:9 aspect ratio --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"embed-responsive embed-responsive-16by9"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;iframe</span> <span class=na>class=</span><span class=s>"embed-responsive-item"</span> <span class=na>src=</span><span class=s>"..."</span><span class=nt>&gt;&lt;/iframe&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-
-			<span class=c>&lt;!-- 4:3 aspect ratio --&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"embed-responsive embed-responsive-4by3"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;iframe</span> <span class=na>class=</span><span class=s>"embed-responsive-item"</span> <span class=na>src=</span><span class=s>"..."</span><span class=nt>&gt;&lt;/iframe&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			 <h1 class=page-header id=wells>Wells</h1> <h2>Default well</h2> <p>Use the well as a simple effect on an element to give it an inset effect.</p> <div class=bs-example data-example-id=default-well> <div class=well> Look, I'm in a well! </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"well"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2>Optional classes</h2> <p>Control padding and rounded corners with two optional modifier classes.</p> <div class=bs-example data-example-id=large-well> <div class="well well-lg"> Look, I'm in a large well! </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"well well-lg"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <div class=bs-example data-example-id=small-well> <div class="well well-sm"> Look, I'm in a small well! </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"well well-sm"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure>
-
-			<h1 class=page-header id=panels>Panels</h1> <p class=lead>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p> <h2 id=panels-basic>Basic example</h2> <p>By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p> <div class=bs-example data-example-id=simple-panel> <div class="panel panel-default"> <div class=panel-body> Basic panel example </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    Basic panel example
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=panels-heading>Panel with heading</h2> <p>Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a <code>.panel-title</code> class to add a pre-styled heading. However, the font sizes of <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> are overridden by <code>.panel-heading</code>.</p> <p>For proper link coloring, be sure to place links in headings within <code>.panel-title</code>.</p> <div class=bs-example data-example-id=panel-with-heading> <div class="panel panel-default"> <div class=panel-heading>Panel heading without title</div> <div class=panel-body> Panel content </div> </div> <div class="panel panel-default"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-heading"</span><span class=nt>&gt;</span>Panel heading without title<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    Panel content
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span>
-
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-heading"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;h3</span> <span class=na>class=</span><span class=s>"panel-title"</span><span class=nt>&gt;</span>Panel title<span class=nt>&lt;/h3&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    Panel content
-			  <span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=panels-footer>Panel with footer</h2> <p>Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers <strong>do not</strong> inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p> <div class=bs-example data-example-id=panel-with-footer> <div class="panel panel-default"> <div class=panel-body> Panel content </div> <div class=panel-footer>Panel footer</div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    Panel content
-			  <span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-footer"</span><span class=nt>&gt;</span>Panel footer<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=panels-alternatives>Contextual alternatives</h2> <p>Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p> <div class=bs-example data-example-id=contextual-panels> <div class="panel panel-primary"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> <div class="panel panel-success"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> <div class="panel panel-info"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> <div class="panel panel-warning"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> <div class="panel panel-danger"> <div class=panel-heading> <h3 class=panel-title>Panel title</h3> </div> <div class=panel-body> Panel content </div> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-primary"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-success"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-info"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-warning"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span>
-			<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-danger"</span><span class=nt>&gt;</span>...<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=panels-tables>With tables</h2> <p>Add any non-bordered <code>.table</code> within a panel for a seamless design. If there is a <code>.panel-body</code>, we add an extra border to the top of the table for separation.</p> <div class=bs-example data-example-id=table-within-panel> <div class="panel panel-default"> <div class=panel-heading>Panel heading</div> <div class=panel-body> <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> </div> <table class=table> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead> <tbody> <tr> <th scope=row>1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope=row>2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope=row>3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody> </table> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=c>&lt;!-- Default panel contents --&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-heading"</span><span class=nt>&gt;</span>Panel heading<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;p&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-
-			  <span class=c>&lt;!-- Table --&gt;</span>
-			  <span class=nt>&lt;table</span> <span class=na>class=</span><span class=s>"table"</span><span class=nt>&gt;</span>
-			    ...
-			  <span class=nt>&lt;/table&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>If there is no panel body, the component moves from panel header to table without interruption.</p> <div class=bs-example data-example-id=panel-without-body-with-table> <div class="panel panel-default"> <div class=panel-heading>Panel heading</div> <table class=table> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead> <tbody> <tr> <th scope=row>1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope=row>2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope=row>3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody> </table> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=c>&lt;!-- Default panel contents --&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-heading"</span><span class=nt>&gt;</span>Panel heading<span class=nt>&lt;/div&gt;</span>
-
-			  <span class=c>&lt;!-- Table --&gt;</span>
-			  <span class=nt>&lt;table</span> <span class=na>class=</span><span class=s>"table"</span><span class=nt>&gt;</span>
-			    ...
-			  <span class=nt>&lt;/table&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=panels-list-group>With list groups</h2> <p>Easily include full-width <a href=#list-group>list groups</a> within any panel.</p> <div class=bs-example data-example-id=panel-with-list-group> <div class="panel panel-default"> <div class=panel-heading>Panel heading</div> <div class=panel-body> <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> </div> <ul class=list-group> <li class=list-group-item>Cras justo odio</li> <li class=list-group-item>Dapibus ac facilisis in</li> <li class=list-group-item>Morbi leo risus</li> <li class=list-group-item>Porta ac consectetur ac</li> <li class=list-group-item>Vestibulum at eros</li> </ul> </div> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel panel-default"</span><span class=nt>&gt;</span>
-			  <span class=c>&lt;!-- Default panel contents --&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-heading"</span><span class=nt>&gt;</span>Panel heading<span class=nt>&lt;/div&gt;</span>
-			  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"panel-body"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;p&gt;</span>...<span class=nt>&lt;/p&gt;</span>
-			  <span class=nt>&lt;/div&gt;</span>
-
-			  <span class=c>&lt;!-- List group --&gt;</span>
-			  <span class=nt>&lt;ul</span> <span class=na>class=</span><span class=s>"list-group"</span><span class=nt>&gt;</span>
-			    <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"list-group-item"</span><span class=nt>&gt;</span>Cras justo odio<span class=nt>&lt;/li&gt;</span>
-			    <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"list-group-item"</span><span class=nt>&gt;</span>Dapibus ac facilisis in<span class=nt>&lt;/li&gt;</span>
-			    <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"list-group-item"</span><span class=nt>&gt;</span>Morbi leo risus<span class=nt>&lt;/li&gt;</span>
-			    <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"list-group-item"</span><span class=nt>&gt;</span>Porta ac consectetur ac<span class=nt>&lt;/li&gt;</span>
-			    <span class=nt>&lt;li</span> <span class=na>class=</span><span class=s>"list-group-item"</span><span class=nt>&gt;</span>Vestibulum at eros<span class=nt>&lt;/li&gt;</span>
-			  <span class=nt>&lt;/ul&gt;</span>
-			<span class=nt>&lt;/div&gt;</span></code></pre></figure>
 
 
 			        </div><!--/right-->
 			         <!--left-->
 			      <div class="col-md-3" id="leftCol" >
-			      <nav class="bs-docs-sidebar affix">
-			        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
-			        	<li>
-			          		<a href="#sec0">Grid system</a>
-			          		<ul class="nav">
-			          			<li><a href="#grid-intro-oc">OC standard</a></li>
-			          			<li><a href="#">Bootstrap 3.3</a>
-			          				<ul class="nav">
-						          		<li class="col-xs-offset-1"><a href="#grid-intro">Introduction</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-media-queries">Media queries</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-options">Grid options</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-fluid">Ex: Fluid container</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-wrapping">Ex: Column wrapping</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-responsive-resets">Responsive column resets</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-offsetting">Offsetting columns</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-nesting">Nesting columns</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-column-ordering">Column ordering</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-less">Less mixins and variables</a></li>
-						          	</ul>
-						        </li>
-				          	</ul>
-			         	</li>
-			          	<li><a href="#type">Typography</a>
-			          		<ul class="nav">
-			          			<li><a href="#">OC standard</a></li>
-			          			<li><a href="#">Bootstrap 3.3</a>
-			          				<ul class="nav">
-										<li class="col-xs-offset-1"><a href="#type-headings">Headings</a></li>
-										<li class="col-xs-offset-1"><a href="#type-body-copy">Body copy</a></li>
-										<li class="col-xs-offset-1"><a href="#type-inline-text">Inline text elements</a></li>
-										<li class="col-xs-offset-1"><a href="#type-alignmentent">Alignment classes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-transformation">Transformation classes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-abreviation">Abbreviations</a></li>
-										<li class="col-xs-offset-1"><a href="#type-addresses">Addresses</a></li>
-										<li class="col-xs-offset-1"><a href="#type-blockquotes">Blockquotes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-lists">Lists</a></li>
-									</ul>
-			          			</li>
-			          		</ul>
-			          </li>
-			          <li><a href="#page-header">Page header</a></li>
-			          <li><a href="#code">Code</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#code-inline">Inline</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-user-input">User input</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-block">Basic block</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-variables">Variables</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-sample-output">Sample output</a></li>
-					          	</ul>
-					        </li>
-				         </ul>
-			          </li>
-			          <li><a href="#images">Images</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#images-responsive">Responsive images</a></li>
-					          		<li class="col-xs-offset-1"><a href="#images-shapes">Images shapes</a></li>
-					          	</ul>
-					        </li>
-				         </ul>
-			          </li>
-			          <li><a href="#helper-classes">Helper classes</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-colors">Contextual colors</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-close">Close icon</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-carets">Carets</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-floats">Quick floats</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-center">Center content blocks</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-clearfix">Clearfix</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-show-hide">Showing and hiding content</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-image-replacement">Image replacement</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#responsive-utilities">Responsive utilities</a></li>
-			          <li><a href="#jumbotron">Jumbotron</a></li>
-			          <li><a href="#labels">Labels</a></li>
-			          <li><a href="#badges">Badges</a></li>
-			          <li><a href="#thumbnails">Thumbnails</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#thumbnails-default">Default example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#thumbnails-custom-content">Custom content</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#images">Callouts</a></li>
-			          <li><a href="#alerts">Alerts</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#alerts-examples">Alerts examples</a></li>
-					          		<li class="col-xs-offset-1"><a href="#alerts-dismissible">Dismissible alerts</a></li>
-					          		<li class="col-xs-offset-1"><a href="#alerts-links">Links in alerts</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#progress">Progress bars</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#progress-basic">Basic example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-label">With label</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-alternatives">Contextual alternatives</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-striped">Striped</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-animated">Animated</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-stacked">Stacked</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-				      </li>
-			          <li><a href="#media">Media object</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#media-default">Default media</a></li>
-					          		<li class="col-xs-offset-1"><a href="#media-list">Media list</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#responsive-embed">Responsive embed</a></li>
-			          <li><a href="#wells">Wells</a></li>
-			          <li><a href="#panels">Panels</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#panels-basic">Basic example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-heading">Panel with heading</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-footer">Panel with footer</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-alternatives">Contextual alternatives</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-tables">Panel with tables</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-list-group">Panel with list groups</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			        </ul>
-			        </nav>
+
 
 
 

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mapping Editor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Local stylesheet -->
+		<link rel="stylesheet" href="../css/jcatalog-bootstrap-bundle.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<!-- This ressource is replaced on most machines by bundle.less.css
+			 stylesheet.css is included for jcatalog users who can not access bundle.less.css
+	    -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+
+		<style>
+		.btn-group-wizard {
+		    border: 1px solid #ccc;
+				margin-bottom: 2em;
+		}
+
+		.btn-group-wizard .btn-wizard {
+		    padding-top: 15px;
+		    border: 0;
+		    border-left: 1px solid #ccc;
+		    text-align: left;
+		    border-top: 5px solid transparent;
+		    border-bottom: 5px solid transparent;
+		}
+
+		.btn-group-wizard .btn-wizard:first-child {
+		    border-left: 0;
+		}
+
+		.btn-group-wizard .btn-wizard.active {
+		    /*background: #f9f9f9;*/
+		    box-shadow: none;
+		    color: #333;
+		    border-bottom: 5px solid #2e6b99;
+		}
+
+		.btn-group-wizard .btn-wizard .badge {
+		    background: transparent;
+		    color: #000;
+		    font-size: 2em;
+		    font-weight: normal;
+		/*  border: 1px solid #ccc;
+		*/  vertical-align: middle;
+		    margin-right: .25em;
+		    float: left;
+		    margin-top: -6px;
+
+		}
+
+
+		.dropzoneContainer{
+    position: relative;
+    top:10px;
+   background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: auto;
+    height: auto;
+    padding: 100px 54px;
+    text-align: center;
+    cursor:pointer;
+		margin-bottom: 2em;
+	}
+
+		.form-group select.form-control.form-mapping {
+			overflow: auto;
+			padding: 5px;
+		}
+
+		.form-group select.form-control.form-mapping option {
+			padding: 10px 5px;
+			background: transparent;
+			border-bottom: 1px solid #eee;
+		}
+
+		.list-group-item {
+			padding-right: 0px !important;
+			background: transparent !important;
+		}
+
+		.list-group-item.selected {
+			background: rgba(46, 153, 47, 0.1) !important;
+		}
+
+		.list-group-item.selected .badge {
+			background: #fff;
+			color: #2e6b99;
+		}
+
+		.list-group-item .badge .warning {
+			color: #c00;
+		}
+
+		.list-group-item.selected .label.label-default {
+			background: rgba(46, 153, 47, 0.2) !important;
+		}
+
+
+		.list-group-item > .pull-right > .glyphicon {
+			margin-right: 4px !important;
+		}
+
+
+		.list-group-item:hover {
+			background: #eee;
+		}
+
+
+		.list-group-item.active,
+		.list-group-item.active:hover {
+			background: #2e6b99 !important;
+			color: #fff !important;
+			text-shadow: none !important;
+		}
+
+		.list-group-item.active a,
+		.list-group-item.active .btn,
+		.list-group-item.active span {
+			color: #fff;
+		}
+
+		.list-group-item.active .label.label-default,
+		.list-group-item.active:hover .label.label-default {
+			background: #fff !important;
+			color: #2e6b99 !important;
+		}
+
+		.list-group.mapping-editor {
+			height: 400px;
+			overflow: auto;
+			overflow-x: hidden;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 0px;
+
+		}
+
+		.input-group + .list-group {
+			margin-top: 12px;
+		}
+
+		.list-group-optgroup {
+			color: #999;
+			font-weight: bold;
+		}
+
+		.list-group-optgroup span {
+			background: #fff;
+			padding: 0 10px;
+			z-index: 2;
+		}
+
+		.list-group-optgroup:before {
+			background: #ccc;
+			height: 1px;
+			top: 50%;
+			left: -5px;
+			right: -5px;
+			display: block;
+			content: "";
+			position: absolute;
+			z-index: -1;
+		}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+			<div class="navbar-header pull-left">
+				<a class="navbar-brand" href="#">
+					<img src="../img/oc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+				</a>
+				<div class="navbar-popover collapse" id="main-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Classification</a></li>
+						<li><a href="#">Attribute</a></li>
+						<li><a href="#">Attribute Section</a></li>
+						<li><a href="#">Attribute Value List</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CSV Import <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Import</li>
+								<li><a href="#">Execute Import</a></li>
+								<li><a href="#">Mapping Editor</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Edit</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Validate</li>
+								<li><a href="#">Execute Business Rules</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Export</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="navbar-header pull-right">
+
+				<ul class="nav navbar-nav navbar-no-collapse navbar-right">
+					<li>
+						<button type="button" class="btn btn-default visible-sm visible-xs" data-toggle="collapse" data-target="#main-menu">
+							Menu
+						</button>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle icon-nav-item visible-sm visible-xs" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-user"></span>
+							<b class="caret hidden-sm hidden-xs"></b>
+						</a>
+						<a href="#" class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">
+							Martin Hallmann <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header visible-sm visible-xs">Martin Hallmann</li>
+							<li><a href="#">User Details</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Language</li>
+							<li><a href="#"><b>DE</b> Deutsch</a></li>
+							<li><a href="#"><b>EN</b> English</a></li>
+							<li><a href="#"><b>FR</b> Francais</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Help</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-cog"></span>
+							<b class="caret hidden-sm hidden-xs"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">System Administration</a></li>
+							<li><a href="#">Setup</a></li>
+						</ul>
+					</li>
+				</ul>
+
+
+			</div>
+
+		</div><!-- /main nav -->
+		<div class="container">
+
+			<div class="btn-group btn-group-justified btn-group-wizard">
+				<div class="btn btn-wizard">
+					<span class="badge">1</span>
+					<span>Upload</span>
+				</div>
+				<div class="btn btn-wizard">
+					<span class="badge">2</span>
+					<span>Preview</span>
+				</div>
+				<div class="btn btn-wizard active">
+					<span class="badge">3</span>
+					<span>Map</span>
+				</div>
+				<div class="btn btn-wizard">
+					<span class="badge">4</span>
+					<span>Import</span>
+				</div>
+			</div>
+
+
+			<form class="form-horizontal">
+ 				<div class="row">
+					<div class="col-md-4">
+
+						<div class="form-group">
+							<label class="col-sm-4 control-label">Mapping Name</label>
+							<div class="col-sm-8">
+	          		<input type="text" class="form-control">
+			        </div>
+						</div><!-- /form-group -->
+
+					</div>
+					<div class="col-md-4">
+
+						<div class="form-group">
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default">
+							    <input type="checkbox" autocomplete="off"> Hide Mapped Columns
+							  </label>
+							</div>
+						</div><!-- /form-group -->
+
+					</div>
+
+
+ 				</div><!-- /row -->
+				<hr>
+
+
+ 				<div class="row">
+					<div class="col-md-4">
+
+						<h4>Input File Columns
+							<div class="pull-right">
+								<button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-question-sign"></span></button>
+							</div>
+						</h4>
+
+
+						<div class="list-group list-group-sm mapping-editor">
+							<a href="#" class="list-group-item selected"><!-- classgrp -->
+								Product No
+								<div class="pull-right btn-group">
+									<span class="pull-right glyphicon glyphicon-check"></span>
+								</div>
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item active"><!-- classgrp -->
+								Product Name
+
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item"><!-- classgrp -->
+								ColumnName
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item selected"><!-- classgrp -->
+								ColumnName
+								<div class="pull-right btn-group">
+									<span class="pull-right glyphicon glyphicon-check"></span>
+								</div>
+							</a><!-- /classgrp -->
+						</div><!-- /.list-group -->
+
+
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Filter Columns">
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+						<br>
+
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-default">Default Value</button>
+							</span>
+							<input type="text" class="form-control" placeholder="">
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+							</span>
+						</div>
+
+					</div><!-- /.col-md-3 -->
+					<div class="col-md-1">
+						<h4>&nbsp;</h4>
+						<div class="form-group">
+							<div class="col-sm-12" style="height: 34px;">
+							</div>
+						</div>
+
+						<button type="button" class="btn btn-primary btn-block">Map <span class="glyphicon glyphicon-chevron-right"></span></button>
+						<button type="button" class="btn btn-default btn-block">Auto<br>Add</button>
+
+					</div><!-- /.col-md-1 -->
+					<div class="col-md-3">
+
+						<h4>Assignment in PIM
+						</h4>
+
+						<div class="list-group list-group-sm mapping-editor">
+							<a href="#" class="list-group-item selected list-indent-1 active">
+								product
+								<span class="pull-right badge">1/<span class="warning">3</span></span>
+							</a>
+							<span class="list-group-item list-group-optgroup">
+								<span>attributeValues</span>
+							</span>
+							<a href="#" class="list-group-item list-indent-2 selected">
+								attributeValues()
+								<span class="pull-right badge">2/2</span>
+							</a>
+							<span class="list-group-item list-group-optgroup">
+								<span>OptGroupName</span>
+							</span>
+							<a href="#" class="list-group-item list-indent-2 selected">
+								tableName()
+								<span class="pull-right badge">4/<span class="warning">2</span></span>
+							</a>
+						</div><!-- /.list-group -->
+
+						<div class="input-group">
+							<select class="form-control">
+								<option>Add..</option>
+								<option>classificationGroupAssociations</option>
+							</select>
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+							</span>
+							<span class="input-group-btn">
+								<button class="btn btn-link"><span class="glyphicon glyphicon-trash"></span></button>
+							</span>
+						</div>
+
+
+
+					</div><!-- /.col-md-4 -->
+					<div class="col-md-4">
+
+
+						<h4>&nbsp;
+							<div class="pull-right">
+								<button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-question-sign"></span></button>
+							</div>
+						</h4>
+
+						<div class="list-group list-group-sm mapping-editor">
+							<a href="#" class="list-group-item"><!-- classgrp -->
+								PropertyName
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item selected"><!-- classgrp -->
+								<b>PropertyName</b> <span class="label label-default">Required</span>
+								<div class="pull-right btn-group">
+									<span class="pull-right glyphicon glyphicon-check"></span>
+								</div>
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item active"><!-- classgrp -->
+								<b>PropertyName</b>  <span class="label label-default">Required</span>
+							</a><!-- /classgrp -->
+							<a href="#" class="list-group-item"><!-- classgrp -->
+								PropertyName
+							</a><!-- /classgrp -->
+
+
+
+						</div><!-- /.list-group -->
+					</div><!-- /.col-md-4 -->
+
+ 				</div><!-- /row -->
+
+				<br><br>
+
+				<div class="table-box">
+					<div class="table-responsive">
+						<table id="1" class="table">
+							<thead>
+								<tr>
+									<th style="width: 1px;">Index</th>
+									<th>Imported column</th>
+									<th>Transformation</th>
+									<th>Property Name</th>
+									<th>Property Description</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><!-- item -->
+									<td>
+										0
+									</td>
+									<td>
+										ColumnName
+									</td>
+									<td>
+										<button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+										<span class="label label-default">2 active</span>
+									</td>
+									<td>
+										product.productId
+									</td>
+									<td>
+										productId
+									</td>
+									<td class="text-right">
+										<button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+									</td>
+								</tr><!-- /item -->
+							</tbody>
+						</table>
+					</div>
+
+					<div class="form-submit text-right">
+						<button class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
+						<button class="btn btn-primary">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+					</div>
+
+
+				</div><!-- /.container -->
+
+
+
+
+		</div><!-- /.container -->
+
+
+
+		<footer>
+			<div class="container copyright text-center">&copy; 2001 &mdash; 2015 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+		</footer>
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="/../js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/docs.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8"></script>
+</html>
