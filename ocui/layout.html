@@ -41,57 +41,55 @@
         </nav>
         <main class="oc-main">
             <div class="oc-title">
-                <h1>Introduction<h1>
+                <h1>Layout<h1>
             </div>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2>Who is this guide for?</h2>
+                        <h2>Header</h2>
                         <p>
-                            Please note that this guideline is to be followed with new products and for existing or
-                            rebranded products common sense should be used in which level following of this guideline makes sense.
+                            Header is optional in desktop and mandatory in mobile.
                         </p>
 
-                        <h2>Why is this guide important?</h2>
+                        <h2>Search</h2>
+                        <h3>Global</h3>
                         <p>
-                            This document explains the high level principles for the user interface decisions,
-                            but also acts as a practical guide when extending the services and building new features.
+                            Located at the top of the page.
+                        </p>
+                        <h3>Component</h3>
+                        <p>
+                            It is important not to restyle search bars,as their appearance and layout is required to be uniformous everywhere: </br>
+                            use common component [not implemented yet].
                         </p>
 
-                        <h2>Implementations</h2>
-                        <h3>New</h3>
-                        <p>New and still under development implementations follow guidelines defined in this document.</p>
-                        <h3>3rd party and rebranding</h3>
+                        <h2>Content</h2>
+                        <p>Main content has margin and scrolls vertically by default.</p>
+
+                        <h2>Footer</h2>
                         <p>
-                            On minimum 3rd party implementations can rebrand by changing logo, colors and typography.
+                            Footer is optional. The footer contains the OpusCapita logo, a shorthand copyright notice and a two-line version info. </br>
+                            The footer is located at the bottom of the viewport if the layout is shorter than the viewport. </br>
+                            If the layout exceeds the height of the viewport, the footer is found at the bottom of the scrollable content area.
                         </p>
 
-                        <strong>Mandatory</strong>
-                        <ul>
-                            <li>Use the brand colors in your layouts.</li>
-                            <li>Show the OpusCapita logo.</li>
-                            <li>Use the logo and its background color as presented in this guide.</li>
-                            <li>Use OpusCapita favicon.</li>
-                            <li>Use the correct typography (Lato Sans).</li>
-                            <li>Use the footer as shown in this document.</li>
-                            <li>Pay attention to margins and avoid crowded looks.</li>
-                        </ul>
-
-                        <strong>Recommended</strong>
-                        <ul>
-                            <li>Use recommended relative font sizes.</li>
-                            <li>Build new icons according the guidelines.</li>
-                            <li>Use the common button style.</li>
-                        </ul>
-
-                        <strong>Can be adjusted</strong>
-                        <ul>
-                            <li>Layout of the content area elements can vary.</li>
-                            <li>You may use traditional input fields in case recommended option is not available.</li>
-                        </ul>
-
-                        <h3>Existing</h3>
-                        <p>Apply 3rd party fully and parts from new wherever possible with reasonable effort.</p>
+                        <h2>Navigation</h2>
+                        <h3>Menu</h3>
+                        <p>
+                            The application menu is rendered as a vertical sidebar on the left border of the viewport. </br>
+                            The application menu levels are kept to as few as possible and provide access to the entire suite of installed applications.
+                        </p>
+                        <h4>Keyboard support and accessibility</h4>
+                        <p>
+                            Items in menu that take user to different view must be anchors: links can be opened in different page and it can be copied to clipboard.
+                        </p>
+                         <h4>Desktop</h4>
+                        <p>
+                            Menu is shown always.
+                        </p>
+                         <h4>Mobile</h4>
+                        <p>
+                            Menu that is toggled via a hamburger icon located on the page heading.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>OpusCapita</title>
+    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link href="styles/app.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="oc-container">
+        <nav class="navbar navbar-default oc-nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="padding: 0"><img src="images/logo-orange.svg" height="40" /></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="components.html">Components</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <main class="oc-main">
+            <div class="oc-title">
+                <h1>Introduction<h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <section>
+                            <h2>CSS</h2>
+                            <p>
+                                OpusCapita user interface uses an extended version of
+                                <a href="http://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Twitter Bootstrap 3.3</a>
+                                for web-based HTML5 user interfaces. </br>
+                                This guide describes all OpusCapita user interface extensions, and their correct, standardized usage.
+                            </p>
+                         </section>
+
+                        <section>
+                            <h2>Components</h2>
+                            <p>
+                                Before implementing a new component go through following checklist:
+                            </p>
+                            <ol>
+                                <li>Is there an existing common component. If comparable component is found then it could be extended?</li>
+                                <li>Is there an available open source component that is already use?</li>
+                                <li>Is there an available open source component that is not yet in use?</li>
+                                <li>Can the component with given features be combosed from above?</li>
+                            </ol>
+                            <p>
+                               If none of the above criteria is met then implement a new component. </br>
+                               Add the component to the common component library if it can be used elsewhere as well.
+                            </p>
+                         </section>
+
+                        <section>
+                            <h2>Buttons</h2>
+                            <div>Enabled</div>
+                            <p class="btn-toolbar">
+                                <button type="button" class="btn btn-default">Default</button>
+                                <button type="button" class="btn btn-primary">Primary</button>
+                            </p>
+
+                            <div>Disabled</div>
+                            <p class="btn-toolbar">
+                                <button type="button" class="btn btn-default" disabled>Default</button>
+                                <button type="button" class="btn btn-primary" disabled>Primary</button>
+                            </p>
+
+                            <h3>Guidelines for buttons</h3>
+                            <ul>
+                                <li>
+                                    Width of the button varies according to its text label, but it has minimum values for that.
+                                </li>
+                                <li>
+                                    Button does not have both icon and textual label.
+                                </li>
+                                <li>
+                                    Disabled button is used when the button is not yet active, but will change to active later, </br>
+                                    e.g. when the user has filled in some information. </br>
+                                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
+                                    and a click displays a tooltip reason why it is not usable at the moment.
+                                </li>
+                                <li>
+                                    A button can have the focus in case it is not disabled. </br>
+                                    If a button has keyboard focus, pressing the Enter key raises the Click event.
+                                </li>
+                                <li>
+                                    As a general rule for pop-ups and dialogs: </br>
+                                    the first button is the one that takes the action forward: </br>
+                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the above is its counterpart, </br>
+                                    the "cancelling" button, such as Cancel or Back.
+                                </li>
+                                <li>If the button is used to open e.g. a dialog it has three dots at the end of the text.</li>
+                            </ul>
+                         </section>
+
+
+
+                        <section>
+                            <h2>Typography</h2>
+                            <table class="table">
+                            <tbody>
+                                <tr>
+                                <td class="oc-font-light">Font-weight 300 light text</td>
+                                </tr>
+                                <tr>
+                                <td class="oc-font-normal">Font-weight 400 normal text</td>
+                                </tr>
+                                <tr>
+                                <td class="oc-font-bold">Font-weight 700 bold text</td>
+                                </tr>
+                                <tr>
+                                <td><h1>h1. Heading <small>Secondary text</small></h1></td>
+                                </tr>
+                                <tr>
+                                <td><h2>h2. Heading <small>Secondary text</small></h2></td>
+                                </tr>
+                                <tr>
+                                <td><h3>h3. Heading <small>Secondary text</small></h3></td>
+                                </tr>
+                                <tr>
+                                <td><h4>h4. Heading <small>Secondary text</small></h4></td>
+                                </tr>
+                                <tr>
+                                <td><h5>h5. Heading <small>Secondary text</small></h5></td>
+                                </tr>
+                                <tr>
+                                <td><h6>h6. Heading <small>Secondary text</small></h6></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
