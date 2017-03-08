@@ -58,6 +58,10 @@ html, body {
   padding: 1rem;
 }
 
+.oc-title h1 {
+    margin: 0;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
