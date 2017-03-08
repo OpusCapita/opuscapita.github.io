@@ -51,7 +51,7 @@ html, body {
 
 .oc-title {
   background-color: #67707C;
-  min-height: 100px;
+  height: 100px;
   color: #FFFFFF;
   display: flex;
   align-items: center;
