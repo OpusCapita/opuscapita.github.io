@@ -10,6 +10,13 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link href="styles/app.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+    <style>
+        @media screen and (min-width: 768px) {
+            #oc-column-library {
+                width: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="oc-container">
@@ -46,8 +53,115 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2>React</h2>
-                        <p>OpusCapita user interface uses <a href="https://facebook.github.io/react/" rel="noopener noreferrer" target="_blank">React</a>.</p>
+                        <h2>Technology stack</h2>
+                        <p>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th id="oc-column-library"><div>Library</div></th>
+                                    <th><div>Description</div></th>
+                                    <!--<th><div>License</div></th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/mzabriskie/axios" rel="nofollow noopener noreferrer">Axios</a></td>
+                                    <td>Promise based HTTP client</td>
+                                    <!--<td><a href="https://github.com/mzabriskie/axios/blob/master/LICENSE" class="external-link" rel="nofollow noopener noreferrer">Matt Zabriskie</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://babeljs.io/" rel="nofollow noopener noreferrer">Babel</a></td>
+                                    <td>JavaScript compiler</td>
+                                    <!--<td>MIT</td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://facebook.github.io/immutable-js/" rel="nofollow noopener noreferrer">Immutable</a></td>
+                                    <td>Immutable collections for JavaScript</td>
+                                    <!--<td><a href="https://github.com/facebook/immutable-js/blob/master/LICENSE" rel="nofollow noopener noreferrer">BSD</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/noraesae/perfect-scrollbar" rel="nofollow noopener noreferrer">Perfect Scrollbar</a></td>
+                                    <td>Aesthetically better scrollbars</td>
+                                    <!--<td><a href="https://github.com/noraesae/perfect-scrollbar/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://facebook.github.io/react/" rel="nofollow noopener noreferrer">React</a></td>
+                                    <td>Library for building user interface</td>
+                                    <!--<td><a href="https://github.com/facebook/react/blob/master/LICENSE" rel="nofollow noopener noreferrer">BSD</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://react-bootstrap.github.io/" rel="nofollow noopener noreferrer">React Bootstrap</a></td>
+                                    <td>JavaScript parts of Bootstrap with React components</td>
+                                    <!--<td><a href="https://github.com/react-bootstrap/react-bootstrap/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="http://react-day-picker.js.org/" rel="nofollow noopener noreferrer">React Date Picker</a></td>
+                                    <td>Date picker component for React</td>
+                                    <!--<td><a href="https://github.com/gpbl/react-day-picker/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/yahoo/react-intl" rel="nofollow noopener noreferrer">React Intl</a></td>
+                                    <td>Internationalization library for React</td>
+                                    <!--<td><a href="https://github.com/yahoo/react-intl/blob/master/LICENSE.md" rel="nofollow noopener noreferrer">Yahoo Inc.</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://www.npmjs.com/package/react-perfect-scrollbar" rel="nofollow noopener noreferrer">React Perfect Scrollbar</a></td>
+                                    <td>React component wrapper for Perfect Scrollbar</td>
+                                    <!--<td><a href="https://github.com/goldenyz/react-perfect-scrollbar/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                   <td><a target="_blank" href="https://github.com/reactjs/react-redux" rel="nofollow noopener noreferrer">React Redux</a></td>
+                                    <td>React binding to Redux</td>
+                                    <!--<td><a href="https://github.com/reactjs/react-redux/blob/master/LICENSE.md" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/reactjs/react-router-redux" rel="nofollow noopener noreferrer">React Redux Router</a></td>
+                                    <td>React bindings to between Redux and Router</td>
+                                    <!--<td><a href="https://github.com/reactjs/react-router-redux/blob/master/LICENSE" rel="nofollow noopener noreferrer">James Long</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/reactjs/react-router" rel="nofollow noopener noreferrer">React Router</a></td>
+                                    <td>Routing library for React</td>
+                                    <!--<td><a href="https://github.com/reactjs/react-router/blob/master/LICENSE.md" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://jedwatson.github.io/react-select/" rel="nofollow noopener noreferrer">React Select</a></td>
+                                    <td>Versatile select component for React: with autocomplete</td>
+                                    <!--<td><a href="https://github.com/JedWatson/react-select/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/balloob/react-sidebar" class="external-link" rel="nofollow noopener noreferrer">React Sidebar</a></td>
+                                    <td>Sidebar component for React</td>
+                                    <!--<td><a href="https://github.com/balloob/react-sidebar/blob/master/LICENSE" class="external-link" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/STRML/react-grid-layout" class="external-link" rel="nofollow noopener noreferrer">React-Grid-Layout</a></td>
+                                    <td>Grid layouting library</td>
+                                    <!--<td><a href="https://github.com/STRML/react-grid-layout/blob/master/LICENSE" class="external-link" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="http://recharts.org" class="external-link" rel="nofollow noopener noreferrer">Recharts</a></td>
+                                    <td>Charting library for React</td>
+                                    <!--<td><a href="https://github.com/recharts/recharts/blob/master/LICENSE" class="external-link" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="http://redux.js.org/docs/introduction/" class="external-link" rel="nofollow noopener noreferrer">Redux</a></td>
+                                    <td>State handling</td>
+                                    <!--<td>MIT</td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://github.com/gaearon/redux-thunk" class="external-link" rel="nofollow noopener noreferrer">Redux Thunk</a></td>
+                                    <td>Redux Middleware for Async actions</td>
+                                    <!--<td><a href="https://github.com/gaearon/redux-thunk/blob/master/LICENSE.md" class="external-link" rel="nofollow noopener noreferrer">MIT</a></td>-->
+                                </tr>
+                                <tr>
+                                    <td><a target="_blank" href="https://webpack.github.io/" class="external-link" rel="nofollow noopener noreferrer">Webpack</a></td>
+                                    <td>Module bundling</td>
+                                    <!--<td>Open Source</td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                        </p>
                     </div>
                 </div>
             </div>
