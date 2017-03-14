@@ -10,8 +10,12 @@ a {
   text-decoration: none;
 }
 
-a:visited, a:hover, a:active {
+a:visited, a:active {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .oc-container {
@@ -30,12 +34,15 @@ a:visited, a:hover, a:active {
 .oc-links {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
 .oc-link {
+  margin-bottom: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
+  text-align: center;
 }
 
 .oc-logo {
@@ -46,10 +53,18 @@ a:visited, a:hover, a:active {
   .oc-logo {
     height: 200px;
   }
+
+  a {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .oc-logo {
     height: 150px;
+  }
+
+  a {
+    font-size: 1.2rem;
   }
 }
