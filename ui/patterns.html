@@ -183,7 +183,7 @@
 									Patterns are large, self-contained parts of the layout, that fulfill a singular purpose.
 								</p>
 
-								<h2>Application Menu</h2>
+								<h2 id="sec01">Application Menu</h2>
 								<p class="lead">
 									The application menu is rendered as a vertical sidebar on the left border of the viewport. It is fully responsive, and breaks down to a phone-sized fullscreen menu that is toggled via a hamburger icon located on the page heading and as a floater on the bottom center of the viewport.
 
@@ -192,82 +192,121 @@
 									User menu to be decided.
 								</p>
 								<br>
-								<div class="bs-example" style="overflow: auto;">
+								<div class="bs-example" >
 
-									<section class="sidebar">
+									
 
-										<nav class="navbar navbar-default">
-											<div class="nav-background"></div>
-											<div class="navbar-header hidden-sm">
-									      		<a class="navbar-brand visible-lg" href="#">
-													<img src="img/oc-logo-white.svg" style="height: 1.4em;">
-												</a>
-									    	</div>
-											<ul class="nav navbar-nav">
-								        		<li class="dropdown">
-								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-														<span class="oci oci-store"></span>
-														Shop
+									<div class="main-content">
+										<nav class="navbar user-info-navbar "  role="navigation" >
+			
+											<!-- Left links for user info navbar -->
+											<ul class="user-info-menu left-links list-inline list-unstyled">
+										
+												<li class="dropdown hover-line language-switcher">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+														<img src="assets/images/flags/flag-uk.png" alt="flag-uk" />
+														English
 													</a>
-								         			<ul class="dropdown-menu">
-														<li><a href="#">Search</a></li>
-														<li><a href="#">External Shops</a></li>
-														<li><a href="#">Suppliers &amp; Contracts</a></li>
-								          			</ul>
-								        		</li><!-- /dropdown -->
-
-								        		<li class="dropdown">
-								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-														<span class="oci oci-bell"></span>
-														Request <span class="badge">2</span></a>
-								          			<ul class="dropdown-menu">
-														<li><a href="#">Requisitions</a></li>
-														<li><a href="#">Requisition Approval <span class="badge">2</span></a></li>
-														<li><a href="#">Requisition Import</a></li>
-								          			</ul>
-								        		</li><!-- /dropdown -->
-								       			<li class="dropdown">
-								          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: -5px !important;">
-														<span class="oci oci-analyze"></span>
-														Analyze
-													</a>
-								          			<ul class="dropdown-menu">
-														<li class="dropdown-header">Spend Analysis</li>
-														<li><a href="#">Estimate Spend Volume</a></li>
-														<li role="separator" class="divider"></li>
-														<li class="dropdown-header">Report</li>
-														<li><a href="#">Requisition Status</a></li>
-														<li><a href="#">Supplier Turnover</a></li>
-														<li><a href="#">Open Deliveries</a></li>
-														<li><a href="#">Report of Searches</a></li>
-														<li><a href="#">Product and Price Analysis</a></li>
-														<li><a href="#">Product Reviews and Ratings Analysis</a></li>
-														<li><a href="#">Generate Reports</a></li>
-														<li role="separator" class="divider"></li>
-														<li class="dropdown-header">Budgets</li>
-														<li><a href="#">List Budgets</a></li>
-														<li><a href="#">Book Budgets</a></li>
-														<li role="separator" class="divider"></li>
-														<li class="dropdown-header">Benchmarks</li>
-														<li><a href="#">Requisitions</a></li>
-														<li><a href="#">Purchase Orders</a></li>
-														<li><a href="#">Spend Volume</a></li>
-														<li><a href="#">Workflow Statistics</a></li>
-								          			</ul>
-								        		</li><!-- /dropdown -->
+										
+													<ul class="dropdown-menu languages">
+														<li class="active">
+															<a href="#">
+																<img src="assets/images/flags/flag-uk.png" alt="flag-uk" />
+																English
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="assets/images/flags/flag-de.png" alt="flag-de" />
+																Deutsch
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="assets/images/flags/flag-fr.png" alt="flag-fr" />
+																Fran&ccedil;ais
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="assets/images/flags/flag-br.png" alt="flag-br" />
+																Portugu&ecirc;s
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="assets/images/flags/flag-es.png" alt="flag-es" />
+																Espa&ntilde;ol
+															</a>
+														</li>
+													</ul>
+												</li>
+										
 											</ul>
-
-								        		</li><!-- /dropdown -->
-								      		</ul><!-- /navbar-nav-->
-										</nav><!-- /navbar -->
-										<a href="#" class="nav-toggle visible-xs"><span class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></a>
-									</section><!-- /sidebar -->
+										
+										
+											<!-- Right links for user info navbar -->
+											<ul class="user-info-menu right-links list-inline list-unstyled">
+														<li class="search-form">
+										
+													<form name="userinfo_search_form" method="get" action="extra-search.html">
+														<input type="text" name="s" class="form-control search-field" placeholder="Type to search..." />
+										
+														<button type="submit" class="btn btn-link">
+															<i class="glyphicon glyphicon-search"></i>
+														</button>
+													</form>
+										
+												</li>
+										
+												<li class="dropdown user-profile">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 0; margin:0 25px 0 20px;">
+														<img src="assets/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+														<span>
+															User Name
+															<i class="fa-angle-down"></i>
+														</span>
+													</a>
+										
+													<ul class="dropdown-menu user-profile-menu list-unstyled" style="margin-top: -7%;">
+														<li>
+															<a href="#settings">
+																Settings
+															</a>
+														</li>
+														<li>
+															<a href="#profile">
+																Profile
+															</a>
+														</li>
+														<li>
+															<a href="#help">
+																Help
+															</a>
+														</li>
+														<li class="last">
+															<a href="#">
+																Logout
+															</a>
+														</li>
+													</ul>
+												</li>
+										
+											</ul>
+										
+										</nav>
+												
+										<div class="content-wrap">
+											<div class="container">
+											</div>
+										</div>
+									</div>
 
 
 
 								</div><!-- /example -->
 
-								<h2>Search / Search Bar</h2>
+								<h2 id="sec02">Search / Search Bar</h2>
 								<p class="lead">
 									Search bars are rendered as a single input <em>Simple Search</em> or as a <em>Multiple Field Search</em>.
 									A Simple Search can be combined with an <em>Extended Search</em>, which is a collapsible <em>Multiple Field Search</em>.
@@ -277,7 +316,7 @@
 
 								<div class="row">
 									<div class="col-md-6">
-										<h3>Simple Search</h3>
+										<h3 id="sec021">Simple Search</h3>
 										<p>
 											The Simple Search utilizes a XXX component, and expands into an extended search in an X-column grid. Extended Searches require a .form-submit at the bottom which reproduces the function of the main search button
 
@@ -286,7 +325,7 @@
 										</p>
 									</div><!--/col-->
 									<div class="col-md-6">
-										<h3>Extended Search</h3>
+										<h3 id="sec022">Extended Search</h3>
 										<p>
 											..
 										</p>
@@ -294,7 +333,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-6">
-										<h3>Inline Search</h3>
+										<h3 id="sec023">Inline Search</h3>
 										<p>
 											The Inline Search utilizes a XXX component.
 
@@ -303,7 +342,7 @@
 										</p>
 									</div><!--/col-->
 									<div class="col-md-6">
-										<h3>Multi Field Search</h3>
+										<h3 id="sec024">Multi Field Search</h3>
 										<p>
 											The Multi Field Search is the standard search pattern for all CRUD search result pages.
 											It is always located right below the view header, and comes without its own heading.
@@ -538,7 +577,7 @@
 
 
 
-									<h2>Search Results</h2>
+									<h2 id="sec03">Search Results</h2>
 									<p>
 										Result lists are rendered as tabular data, with a special case in OPC, showing product lists. Search result lists are an integral part of the OCUI User Experience, allowing access to the business objects that require handling. Result lists require a corrensponding search bar preceding the list in the same layout, but are NOT a child node of the search bar.
 									  Result lists are constructed from tables, populated by business objects, filter and sorting tools, pagination and mass operations. They can also contain a form-submit, if the primary goal of the view is to process part of the search result list.
@@ -548,20 +587,20 @@
 									</p>
 
 
-									<h2>CRUD Editor / Business Object Editor</h2>
+									<h2 id="sec04">CRUD Editor / Business Object Editor</h2>
 									<p>...</p>
 
 
-								<h2>Form Section</h2>
+								<h2 id="sec05">Form Section</h2>
 								<p>is documented</p>
 
-								<h3>Nested Forms</h3>
+								<h3 id="sec051">Nested Forms</h3>
 								<p>
 									Nested forms require a constraining parent. A prime example is a form based editor that renders a result list populated with on-view editable nodes, which allows for an expanding nested form that allows Search-and-Entry functionality for complex data types.
 								</p>
 
 
-										<h2>Page Header / BO Heading</h2>
+										<h2 id="sec06">Page Header / BO Heading</h2>
 
 											<p class="lead">
 												Each Page/View has a <code>&lt;h1&gt;</code> heading, which may be extended by form elements, labels, callouts, static text or pictures. There are notable exceptions to that rule, listed below. If you want to build a view without a header, please consult a UX Designer.
@@ -1079,197 +1118,61 @@
 
 
 
-											<h2>Footer</h2>
+											<h2 id="sec07">Footer</h2>
 											<p>
 												The footer contains the OpusCapita logo, a shorthand copyright notice and a two-line version info.
 											  Each view, except Popups and Modals requires a footer. The footer is located at the bottom of the viewport if the layout is shorter than the viewport. If the layout exceeds the height of the viewport, the footer is found at the bottom of the scrollable content area.
 											</p>
 
 
-									<h2>Mapping Editor</h2>
+									<h2 id="sec08">Mapping Editor</h2>
 									<p>..</p>
 
 
 
 
-								<h2>Dashboard</h2>
+								<h2 id="sec09">Dashboard</h2>
 								<p>..</p>
 
 
 
-								<h2>Full Width / Fullscreen Wrapper</h2>
+								<h2 id="sec10">Full Width / Fullscreen Wrapper</h2>
 								<p>..</p>
 
 
 
-			        </div><!--/right-->
+			       		</div>
 			         <!--left-->
-			      <div class="col-md-3" id="leftCol" >
-			      <nav class="bs-docs-sidebar affix">
-			        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
-			        	<li>
-			          		<a href="#sec0">Grid system</a>
-			          		<ul class="nav">
-			          			<li><a href="#grid-intro-oc">OC standard</a></li>
-			          			<li><a href="#">Bootstrap 3.3</a>
-			          				<ul class="nav">
-						          		<li class="col-xs-offset-1"><a href="#grid-intro">Introduction</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-media-queries">Media queries</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-options">Grid options</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-fluid">Ex: Fluid container</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-example-wrapping">Ex: Column wrapping</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-responsive-resets">Responsive column resets</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-offsetting">Offsetting columns</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-nesting">Nesting columns</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-column-ordering">Column ordering</a></li>
-						          		<li class="col-xs-offset-1"><a href="#grid-less">Less mixins and variables</a></li>
-						          	</ul>
-						        </li>
-				          	</ul>
-			         	</li>
-			          	<li><a href="#type">Typography</a>
-			          		<ul class="nav">
-			          			<li><a href="#">OC standard</a></li>
-			          			<li><a href="#">Bootstrap 3.3</a>
-			          				<ul class="nav">
-										<li class="col-xs-offset-1"><a href="#type-headings">Headings</a></li>
-										<li class="col-xs-offset-1"><a href="#type-body-copy">Body copy</a></li>
-										<li class="col-xs-offset-1"><a href="#type-inline-text">Inline text elements</a></li>
-										<li class="col-xs-offset-1"><a href="#type-alignmentent">Alignment classes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-transformation">Transformation classes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-abreviation">Abbreviations</a></li>
-										<li class="col-xs-offset-1"><a href="#type-addresses">Addresses</a></li>
-										<li class="col-xs-offset-1"><a href="#type-blockquotes">Blockquotes</a></li>
-										<li class="col-xs-offset-1"><a href="#type-lists">Lists</a></li>
-									</ul>
-			          			</li>
-			          		</ul>
-			          </li>
-			          <li><a href="#page-header">Page header</a></li>
-			          <li><a href="#code">Code</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#code-inline">Inline</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-user-input">User input</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-block">Basic block</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-variables">Variables</a></li>
-					          		<li class="col-xs-offset-1"><a href="#code-sample-output">Sample output</a></li>
-					          	</ul>
-					        </li>
-				         </ul>
-			          </li>
-			          <li><a href="#images">Images</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#images-responsive">Responsive images</a></li>
-					          		<li class="col-xs-offset-1"><a href="#images-shapes">Images shapes</a></li>
-					          	</ul>
-					        </li>
-				         </ul>
-			          </li>
-			          <li><a href="#helper-classes">Helper classes</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-colors">Contextual colors</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-close">Close icon</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-carets">Carets</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-floats">Quick floats</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-center">Center content blocks</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-clearfix">Clearfix</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-show-hide">Showing and hiding content</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li>
-					          		<li class="col-xs-offset-1"><a href="#helper-classes-image-replacement">Image replacement</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#responsive-utilities">Responsive utilities</a></li>
-			          <li><a href="#jumbotron">Jumbotron</a></li>
-			          <li><a href="#labels">Labels</a></li>
-			          <li><a href="#badges">Badges</a></li>
-			          <li><a href="#thumbnails">Thumbnails</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#thumbnails-default">Default example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#thumbnails-custom-content">Custom content</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#images">Callouts</a></li>
-			          <li><a href="#alerts">Alerts</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#alerts-examples">Alerts examples</a></li>
-					          		<li class="col-xs-offset-1"><a href="#alerts-dismissible">Dismissible alerts</a></li>
-					          		<li class="col-xs-offset-1"><a href="#alerts-links">Links in alerts</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#progress">Progress bars</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#progress-basic">Basic example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-label">With label</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-alternatives">Contextual alternatives</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-striped">Striped</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-animated">Animated</a></li>
-					          		<li class="col-xs-offset-1"><a href="#progress-stacked">Stacked</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-				      </li>
-			          <li><a href="#media">Media object</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#media-default">Default media</a></li>
-					          		<li class="col-xs-offset-1"><a href="#media-list">Media list</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			          <li><a href="#responsive-embed">Responsive embed</a></li>
-			          <li><a href="#wells">Wells</a></li>
-			          <li><a href="#panels">Panels</a>
-			          	<ul class="nav">
-			          		<li><a href="#">OC standard</a></li>
-			          		<li><a href="#">Bootstrap 3.3</a>
-			          			<ul class="nav">
-					          		<li class="col-xs-offset-1"><a href="#panels-basic">Basic example</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-heading">Panel with heading</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-footer">Panel with footer</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-alternatives">Contextual alternatives</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-tables">Panel with tables</a></li>
-					          		<li class="col-xs-offset-1"><a href="#panels-list-group">Panel with list groups</a></li>
-					          	</ul>
-					        </li>
-				        </ul>
-			          </li>
-			        </ul>
-			        </nav>
+			        	<div class="col-md-3" id="leftCol" >
+			     		 	<nav class="bs-docs-sidebar affix">
+						        <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
+						         	<li><a href="#sec01">Application Menu</a></li>
+				          			<li><a href="#sec02">Search/ Search Bar</a>
+				          				<ul class="nav">
+							          		<li class="col-xs-offset-1"><a href="#sec021">Simple Search</a></li>
+							          		<li class="col-xs-offset-1"><a href="#sec022">Extended Search</a></li>
+							          		<li class="col-xs-offset-1"><a href="#sec023">Inline Search</a></li>
+							          		<li class="col-xs-offset-1"><a href="#sec024">Multi Field Search</a></li>
+						          		</ul>
+				          			</li>
+						         	<li><a href="#sec03">Search Result</a></li>
+				          			<li><a href="#sec04">CRUD Editor</a></li>
+				          			<li><a href="#sec05">Form Section</a>
+				          				<ul class="nav">
+				          					<li class="col-xs-offset-1"><a href="#sec051">Nested Forms</a></li>
+				          				</ul>
+				          			</li>
+				          			<li><a href="#sec06">Page Header</a></li>
+				          			<li><a href="#sec07">Footer</a></li>
+				          			<li><a href="#sec08">Mapping Editor</a></li>
+				          			<li><a href="#sec09">Dashboard</a></li>
+				          			<li><a href="#sec10">Full Width</a></li>
+					        	</ul>
+			        		</nav>
 
 
 
-				      </div><!--/right-->
+				    	</div><!--/right-->
 				  	</div><!--/row-->
 
 

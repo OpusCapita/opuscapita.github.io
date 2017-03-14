@@ -180,19 +180,19 @@
 				      <div class="col-md-9">
 
 
-    	<h1 class=page-header id=forms>OCUI Forms</h1>
+    	<h1 class=page-header id="ocui-forms">OCUI Forms</h1>
 
-			<h2>General Rules</h2>
+			<h2 id="ocui-general-rules">General Rules</h2>
 			<p class="lead">Forms are always rendered as <code>.form-horizontal</code>. Field length is justified within the grid. Forms may contain <code>&lt;fieldset&gt;</code>, <code>&lt;hr&gt;</code> separators and intersecting <code>&lt;h2&gt;</code> &mdash; <code>&lt;h4&gt;</code>headlines, but these should be used sparingly, and only if necessary.
 			Each form always has a headline, a gridded set of fields and a <code>.form-submit</code> below the form content, with at least one submit action.</p>
 
-			<h2>Form Submit</h2>
+			<h2 id="ocui-form-submit">Form Submit</h2>
 		  <p>Each form has at least one form-submit component located at its bottom end. A redundant form-submit may be placed on top of the form if the form is either very long or may be sumbitted without change. Use wisely!</p>
 			<p>Buttons are classed and sorted by importance / likeliness of usage. Each Form has one (!) primary action/submit, and may have several secondary actions, as well as a tertiary abort / cancel action. Order is right aligned, from primary (right) to tertiary (left)</p>
 
 			<div class=bs-example>
 
-				<h2>Form Heading</h2>
+				<h2 id="ocui-form-heading">Form Heading</h2>
 				<form class="form-horizontal">
 					<div class="row">
 						<div class="col-md-4">
@@ -425,7 +425,7 @@
 			</div>
 
 			<br><br>
-			<h1>BS 3.3 Forms</h1>
+			<h1 id="bs-forms">BS 3.3 Forms</h1>
 			<h2 id=forms-example>Basic example</h2>
 			<p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
 			<div class=bs-example data-example-id=basic-forms>
@@ -1145,8 +1145,13 @@
         <ul class="nav nav-stacked bs-docs-sidenav" id="sidebar">
         	<li><a href="#forms">Forms</a>
 				<ul class="nav">
-					<li><a href="#">OC standard</a></li>
-          			<li><a href="#">Bootstrap 3.3</a>
+					<li><a href="#ocui-forms">OC standard</a>
+						<ul class="nav">
+							<li class="col-xs-offset-1"><a href="#ocui-general-rules">General Rules</a></li>
+							<li class="col-xs-offset-1"><a href="#ocui-form-submit">Form Submit</a></li>
+						</ul>
+					</li>
+          			<li><a href="#bs-forms">Bootstrap 3.3</a>
           				<ul class="nav">
 							<li class="col-xs-offset-1"><a href="#forms-example">Basic example</a></li>
 							<li class="col-xs-offset-1"><a href="#forms-inline">Inline form</a></li>
