@@ -165,6 +165,12 @@ html, body {
     border-radius: 3rem;
 }
 
+.oc-circle-small {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
 .oc-color-info {
     display: -webkit-box;
     display: -ms-flexbox;
