@@ -206,7 +206,7 @@ html,body{
 	padding:17px 5px;
 	border-bottom:1px solid #004455;
 	font-weight: 300;
-	font-size: 15px;
+	font-size: 1.1em;
 }
 
 .sidebar-menu .main-menu a>i{
@@ -231,19 +231,7 @@ html,body{
 	color:#fff;
 }
 
-.sidebar-menu .main-menu li.has-sub>a:before{
-	position:relative;
-	display:inline-block;
-	font-family:FontAwesome;
-	content:'\f107';
-	float:right;
-	color:#6d747a;
-	margin-left:10px;
-	-webkit-transform:rotate(-90deg);
-	-moz-transform:rotate(-90deg);-o-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg);
-	-webkit-transition:all 150ms ease-in-out;-moz-transition:all 150ms ease-in-out;-o-transition:all 150ms ease-in-out;
-	transition:all 150ms ease-in-out;
-}
+
 
 .sidebar-menu .main-menu li.has-sub.opened>a:before,.sidebar-menu .main-menu li.has-sub.expanded>a:before{
 	-webkit-transform:rotate(0deg);
@@ -477,9 +465,9 @@ footer{
 @media screen and (min-width: 1800px ){
 	footer {
 		width: auto !important;
-	display: table;
-	margin: 0 auto;
-	margin-left: 200px;
+		display: table;
+		margin: 0 auto;
+		margin-left: 200px;
 	}
 }
 
