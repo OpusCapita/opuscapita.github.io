@@ -46,9 +46,60 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
+                        <h2>Common</h2>
+                        <p>Shared components implemented in-house. These are included in the common module [INSERT LINK]</p>
+
+                        <!--ExtendedSearch-->
+                        <section>
+                            <h3>ExtendedSearch</h3>
+                            <!--Description-->
+                            <p>
+                                Pattern for extended search repeats in applications: for example searching suppliers and contracts.
+                            </p>
+                            <p>
+                                ExtendedSearch is a composed component from label, <a href="#searchBar">Searchbar</a> and <a href="https://react-bootstrap.github.io/components.html#modals" rel="noopener noreferrer" target="_blank">Modal</a> from react-bootstrap.
+                            </p>
+                            <p>
+                                Domain specific content i.e. label and component for modal is provided by the using application.
+                            </p>
+                        </section>
+
+                        <!--Searchbar-->
+                        <section>
+                            <h3 id="searchBar">Searchbar</h3>
+                            <p></p>
+                            <!--Description-->
+                            <p>
+                                #NEEDED
+                            </p>
+                            <p>
+                                Searchbar is a component that contains an input element, e.g. either text or select, and a button for invoking the search.
+                            </p>
+                            <p>
+                                Same component is used throughout the applications in order to have a consistent look and feel.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>3rd party</h2>
+                        <p>Open source components.</p>
+
+                         <!--Accordion-->
+                        <section>
+                            <h3>Accordion</h3>
+                            <!--Description-->
+                            <p>
+                              For collapsible elements use <a href="https://react-bootstrap.github.io/components.html#panels-accordion" rel="noopener noreferrer" target="_blank">accordion</a> from react-bootstrap.
+                            </p>
+                        </section>
+
                         <!--Autocomplete-->
                         <section>
-                            <h2>Autocomplete</h2>
+                            <h3>Autocomplete</h3>
                             <a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>
                             <!--Description-->
                             <p>
@@ -58,7 +109,7 @@
 
                         <!--Button-->
                         <section>
-                            <h2>Button</h2>
+                            <h3>Button</h3>
                             <p>
                                 Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">react-bootstrap</a>
                             </p>
@@ -70,16 +121,19 @@
 
                         <!--Charting-->
                         <section>
-                            <h2>Charting</h2>
+                            <h3>Charting</h3>
                             <!--Description-->
                             <p>
                                 For charting e.g. line, pie, bar etc. use <a href="http://recharts.org" rel="noopener noreferrer" target="_blank">Recharts</a>
+                            </p>
+                            <p>
+                                Usually charting is used with <a href="#searchBar">grid layouting</a> to implement reporting solutions.
                             </p>
                         </section>
 
                         <!--Color picker-->
                         <section>
-                            <h2>Color picker</h2>
+                            <h3>Color picker</h3>
                             <!--Description-->
                             <p>
                                 For color picker use <a href="https://casesandberg.github.io/react-color/" rel="noopener noreferrer" target="_blank">React Color</a>.
@@ -89,18 +143,19 @@
 
                         <!--Datagrid-->
                         <section>
-                            <h2>Datagrid</h2>
+                            <h3>Datagrid</h3>
                             <!--<a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>-->
                             <!--Description-->
                             <p>
                                 Currently using <a href="https://facebook.github.io/fixed-data-table/" rel="noopener noreferrer" target="_blank">FixedDataTable</a> with common wrapper.
-                                Wrapper provides e.g. sorting, reordering etc.
+                                Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
                             </p>
+                            <p>Document other used datagrids and use cases here as well.</p>
                         </section>
 
                         <!--Day picker-->
                         <section>
-                            <h2>Day picker</h2>
+                            <h3>Day picker</h3>
                             <p><a href="http://react-day-picker.js.org/" rel="noopener noreferrer" target="_blank">react-day-picker</a></p>
                             <!--Description-->
                             <p>
@@ -110,7 +165,7 @@
 
                         <!--Date and time picker-->
                         <section>
-                            <h2>Date and time picker</h2>
+                            <h3>Date and time picker</h3>
                             <p>
                                 #NEEDED
                             </p>
@@ -118,7 +173,7 @@
 
                         <!--Grid layouting-->
                         <section>
-                            <h2>Grid layouting</h2>
+                            <h3 id="gridLayouting">Grid layouting</h3>
                             <p>
                                 For configurable grid layouting use <a href="https://github.com/STRML/react-grid-layout" rel="noopener noreferrer" target="_blank">React-Grid-Layout</a>.
                                 This is different than Bootstrap column layout and useful e.g. for dashboard implementations.
@@ -127,7 +182,7 @@
 
                          <!--Scrollbar-->
                         <section>
-                            <h2>Scrollbar</h2>
+                            <h3>Scrollbar</h3>
                             <p>
                                 For replacing browser specific scrollbar use <a href="https://www.npmjs.com/package/react-perfect-scrollbar" rel="noopener noreferrer" target="_blank">React Perfect Scrollbar</a>.
                             </p>
@@ -136,23 +191,22 @@
                             </p>
                         </section>
 
-                         <!--Searchbar-->
-                        <section>
-                            <h2>Searchbar</h2>
-                            <p></p>
-                            <!--Description-->
-                            <p>
-                                #NEEDED
-                            </p>
-                        </section>
-
                         <!--Sidebar-->
                         <section>
-                            <h2>Sidebar</h2>
+                            <h3>Sidebar</h3>
                             <p>
                                 For sidebar use <a href="https://github.com/balloob/react-sidebar" rel="noopener noreferrer" target="_blank">React Sidebar</a>.
                                 This can be used for example context sensitive help.
                             </p>
+                        </section>
+
+                        <!--Tree-->
+                        <section>
+                            <h3>Tree</h3>
+                            <p>
+                                #NEEDED
+                            </p>
+                            <p>Tree is needed in various applications.</p>
                         </section>
                     </div>
                 </div>
