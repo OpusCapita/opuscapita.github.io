@@ -45,41 +45,59 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <h2>Common</h2>
-                        <p>Shared components implemented in-house. These are included in the common module [INSERT LINK]</p>
+		    <div class="col-xs-12">
+		      <h2>Common</h2>
+		      <p>Shared components implemented in-house.</p>
+		      <hr />
 
-                        <!--ExtendedSearch-->
-                        <section>
-                            <h3>ExtendedSearch</h3>
-                            <!--Description-->
-                            <p>
-                                Pattern for extended search repeats in applications: for example searching suppliers and contracts.
-                            </p>
-                            <p>
-                                ExtendedSearch is a composed component from label, <a href="#searchBar">Searchbar</a> and <a href="https://react-bootstrap.github.io/components.html#modals" rel="noopener noreferrer" target="_blank">Modal</a> from react-bootstrap.
-                            </p>
-                            <p>
-                                Domain specific content i.e. label and component for modal is provided by the using application.
-                            </p>
-                        </section>
-
-                        <!--Searchbar-->
-                        <section>
-                            <h3 id="searchBar">Searchbar</h3>
-                            <p></p>
-                            <!--Description-->
-                            <p>
-                                #NEEDED
-                            </p>
-                            <p>
-                                Searchbar is a component that contains an input element, e.g. either text or select, and a button for invoking the search.
-                            </p>
-                            <p>
-                                Same component is used throughout the applications in order to have a consistent look and feel.
-                            </p>
-                        </section>
-                    </div>
+		      <section>
+			<h3>Rich editors</h3>
+			<p>
+			  Rich-editor-like components. Based on <a href="https://draftjs.org/" target="_blank">Draft.js</a> framework for building rich text editors.</br>
+			  Provides possibility to write formatted text and output it as plain text or html.
+			</p>
+			<div>
+			  <img src="images/components/rich-editors.gif" style="max-width: 640px; height: auto; display: block;" />
+			</div>
+		      </section>
+		      <hr />
+		      <section>
+			<h3>Reference search</h3>
+			<p>
+			  React component to select reference(s) of exiting domain objects on the form.</br>
+			  Each object could be selected (usually) using auto complete (like full text search) or modal dialog.</br>
+			  That provides possibility to perform search using specific object fields/properties.</br>
+			  Support multiselection, sorting and filtering.
+			</p>
+			<p>
+			  <h5><strong>Common reference search:</strong></h5>
+			  <img src="images/components/reference-search-1.gif" style="max-width: 640px; height: auto;" />
+			</p>
+		      </section>
+		      
+		      <section>
+			<h3>Internationalization ( i18n )</h3>
+			<p>Utility components for working in pair with <a href="https://github.com/OpusCapitaBES/js-i18n" target="_blank">opuscapita-i18n</a></p>
+		      </section>
+		      
+		      <section>
+			<h3>Overlays</h3>
+			<p>Modals, utility components for dynamic elements positioning, etc.</p>
+		      </section>
+		      
+		      <section>
+			<h3>SVG utilities</h3>
+			<p>
+			  Components to work with <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a>
+			</p>
+		      </section>
+		      
+		      <section>
+			<h3>Autocompletes</h3>
+			<p>Autocomplete components with fuzzy search</p>
+		      </section>
+		    </div>
+		      
                 </div>
             </div>
             <div class="container-fluid">
@@ -111,7 +129,10 @@
                         <section>
                             <h3>Button</h3>
                             <p>
-                                Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">react-bootstrap</a>
+                              Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">react-bootstrap</a>
+			      <blockquote>
+				There is no so much sence to use / create such components like Button and Label that renders plain html using predefined css classes?
+			      </blockquote>
                             </p>
                             <!--Description-->
                             <p>
