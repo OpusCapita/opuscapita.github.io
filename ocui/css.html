@@ -67,7 +67,7 @@
                                 Before implementing a new component go through following checklist:
                             </p>
                             <ol>
-                                <li>Is there an existing common component. If comparable component is found then it could be extended?</li>
+                                <li>Is there an existing common component. If comparable component is found then check if it could be extended?</li>
                                 <li>Is there an available open source component that is already use?</li>
                                 <li>Is there an available open source component that is not yet in use?</li>
                                 <li>Can the component with given features be combosed from above?</li>
@@ -78,57 +78,7 @@
                             </p>
                          </section>
 
-                        <section>
-                            <h2>Buttons</h2>
-                            <div>Enabled</div>
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary">Primary</button>
-                                <button type="button" class="btn btn-default">Default</button>
-                            </p>
-
-                            <div>Disabled</div>
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary" disabled>Primary</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                            </p>
-
-                            <h3>Guidelines for buttons</h3>
-                            <ul>
-                                <li>
-                                    Width of the button varies according to its text label, but it has minimum values for that.
-                                </li>
-                                <li>
-                                    Button does not have both icon and textual label.
-                                </li>
-                                <li>
-                                    Disabled button is used when the button is not yet active, but will change to active later, </br>
-                                    e.g. when the user has filled in some information. </br>
-                                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
-                                    and a click displays a tooltip reason why it is not usable at the moment.
-                                </li>
-                                <li>
-                                    A button can have the focus in case it is not disabled. </br>
-                                    If a button has keyboard focus, pressing the Enter key raises the Click event.
-                                </li>
-                                <li>
-                                    As a general rule for pop-ups and dialogs: </br>
-                                    the first button is the one that takes the action forward: </br>
-                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the above is its counterpart, </br>
-                                    the "cancelling" button, such as Cancel or Back.
-                                </li>
-                                <li>If the button is used to open e.g. a dialog it has three dots at the end of the text.</li>
-                            </ul>
-
-                            <h3>Order of the primary and secondary buttons in forms.</h3>
-                            <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
-                            <p class="text-danger">Inconsistencies of the defined button order exist in current implementations.</p>
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary" disabled>Primary</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                            </p>
-                         </section>
-
+                        
 
 
                         <section>

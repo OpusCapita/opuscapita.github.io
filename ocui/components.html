@@ -109,10 +109,74 @@
 
                         <!--Button-->
                         <section>
-                            <h3>Button</h3>
+                            <h2>Buttons</h2>
                             <p>
                                 Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">react-bootstrap</a>
                             </p>
+                            
+                            <section>
+                            <div>Enabled</div>
+                            <p class="btn-toolbar">
+                                <button type="button" class="btn btn-primary">Primary</button>
+                                <button type="button" class="btn btn-default">Default</button>
+                            </p>
+
+                            <div>Disabled</div>
+                            <p class="btn-toolbar">
+                                <button type="button" class="btn btn-primary" disabled>Primary</button>
+                                <button type="button" class="btn btn-default" disabled>Default</button>
+                            </p>
+
+                            <h3>Guidelines for buttons</h3>
+                            <ul>
+                                <li>
+                                    Width of the button varies according to its text label, but it has minimum value for that.
+                                </li>
+                                <li>
+                                    Button does not have both an icon and text. Only a textual label is most used and an icon can be used in a button only for some most common meanings like "Search".
+                                </li>
+                                <li>
+                                    Disabled button is used when the button is not yet active, but will change to active later, </br>
+                                    e.g. when the user has filled in some information. </br>
+                                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
+                                    and a click displays a tooltip reason why it is not usable at the moment.
+                                </li>
+                                <li>
+                                    A button can have the focus in case it is not disabled. </br>
+                                    If a button has keyboard focus, pressing the Enter key raises the Click event.
+                                </li>
+                                <li>
+                                    As a general rule for pop-ups and dialogs: </br>
+                                    the first button is the one that takes the action forward: </br>
+                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                                    the "cancelling" button, such as Cancel or Back.
+                                </li>
+                                <li>If the button is used to open e.g. a dialog it has an ellipsis (three dots) at the end of the text.</li>
+                                <li>Buttons, also called action buttons, are used when the user is exchanging information with the system. Buttons are NOT used for navigation.</li>
+                            </ul>
+
+                            <h3>Order of the primary and secondary buttons.</h3>
+                            <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
+                              <ul>
+                                <li>
+                                    As a general rule for pop-ups and dialogs: </br>
+                                    the first button is the one that takes the action forward: </br>
+                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                                    the "cancelling" button, such as Cancel or Back.
+                                </li>
+								 <li>
+                                    If all needed buttons are having the same priority, then only secondary buttons are used.
+                                </li>                                
+                               </ul>
+                            <!-- <p class="text-danger">Inconsistencies of the defined button order exist in current implementations.</p> Do we need to mention this?-->
+                            <p class="btn-toolbar">
+                                <button type="button" class="btn btn-primary" disabled>Primary</button>
+                                <button type="button" class="btn btn-default" disabled>Default</button>
+                                <button type="button" class="btn btn-default" disabled>Default</button>
+                            </p>
+                         </section>                      
+                        
+                           
                             <!--Description-->
                             <p>
 
@@ -208,6 +272,33 @@
                             </p>
                             <p>Tree is needed in various applications.</p>
                         </section>
+                        
+                        <!--Mega menu-->
+                        <section>
+                            <h2>Mega menu</h2>
+                            <p>
+                                Mega menu is for large amount of menu items.
+                            </p>
+                            <img class="img-responsive" src="images/megamenu.png" alt="Mega menu" />
+                         </section>
+                         
+                         <!--Tooltip-->
+                        <section>
+                            <h2>Tool tip</h2>
+                            <p>
+                                Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device. 
+                                 <ul>
+								  <li>Delay for opening the tool tip should be - around 60 milliseconds - so users will not be impatient about its use.
+								  </li>
+								  <li>The duration is controlled by the time the user stays hovered over the object. </li>
+								  <li>It is recommended to use maximun 3 rows for tooltips.</li>
+								  <li>Tool tips do not include interactive elements like links or buttons.</li>
+								  <li>Do not overuse tool tips, but only when more information is needed.</li>
+								</ul> 
+                                   
+                            </p>                          
+                         </section>
+                        
                     </div>
                 </div>
             </div>
