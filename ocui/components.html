@@ -45,28 +45,70 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-            <h2>Checklist</h2>
-            <section>
-              <p>
+            <!--Info-->
+            <div class="bs-callout bs-callout-info">
+                <h4>Checklist</h4>
+                <p>
                   Before implementing a new component go through following checklist:
-              </p>
-              <ol>
-                  <li>Is there an existing common component. If comparable component is found then check if it could be extended?</li>
-                  <li>Is there an available open source component that is already used?</li>
-                  <li>Is there an available open source component that is not yet in use?</li>
-                  <li>Can the component with given features be combosed from above?</li>
-              </ol>
-              <p>
-                  If none of the above criteria is met then implement a new component. </br>
-                  Add the component to the common component library if it can be used elsewhere as well.
-              </p>
-            </section>
+                </p>
+                <ol>
+                    <li>Is there an existing common component?</li>
+                    <li>If comparable component is found then check if it could be extended?</li>
+                    <li>Is there an available open source component that is already used?</li>
+                    <li>Is there an available open source component that is not yet in use?</li>
+                    <li>Can the component with given features be combosed from above?</li>
+                </ol>
+                <p>
+                    If none of the above criteria is met then implement a new component. </br>
+                    Add the component to the common component library if it can be used elsewhere as well.
+                </p>
+            </div>
+
+            <!--Debate-->
+            <div class="bs-callout bs-callout-warning">
+              <h4>Notes</h4>
+              <dl>
+                <dt>React Components</dt>
+                <dd>Each html could be considered as a React component, but there is no so much sense to create React components for such things like Button, Label, etc. that renders plain html using predefined css classes (described in the guideline).
+                  <p><strong>Example:</strong>
+                    <a href="https://react-bootstrap.github.io/">React-Bootstrap</a> implements some bootstrap component that require JS like Modal, Tabs, Popover etc. while it also contains such components like Button, Label, Form, Table that create almost 0 value by outputting single html tag with predefined class(es).
+                  </p>
+                  <p><strong>Example:</strong>
+                    One benefit of using e.g. a Button from a library like react-bootstrap is when updating Bootstrap from version 3 to 4 having changes to classes.
+                    Properties for the Button component would remain the same and it would use different CSS classes internally and hence in an ideal situation there would be no changes required for the using application.
+                  </p>
+                  <p><strong>Decision:</strong>
+                    Simple components from other libraries are not wrapped inside own custom components, e.g. react-bootstrap Button - keep it simple.
+                    Components that require: considerable boilerplate or code that repeats are wrapped inside own components - do not repeat yourself. An example of a component that has both is grid that is wrapped inside a custom component that provides own API, properties and abstracts functionality e.g. reordering and sorting of columns.
+                  </p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Complex Components</dt>
+                <dd>Instead of having highly customizable/complex component it would better to break it into multiple simple components even if you are repeating code. One "bad" example of such "fat" component is <a href="https://github.com/JedWatson/react-select">react-select</a> that has ~70 input properties(parameters) and 626 open issues (for single component!!!)</dd>
+              </dl>
+              <dl>
+                <dt>Component(s) modules</dt>
+                <dd>As soon as it becomes clear that some component (or group of components that are related to each other logically) inside the product/project could be put in use for wider auditory it could be extracted into separate/individual module/repository.</dd>
+              </dl>
+            </div>
+            <hr/>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
             <h2>Common</h2>
             <p>Shared components implemented in-house.</p>
+
+            <!--Alerts-->
+            <section id="alerts">
+                <h3>Alerts</h3>
+                <p>
+                    Component for showing <a href="patterns.html#glyphicons" rel="noopener noreferrer" target="_self">notifications</a>
+                    to the end user.
+                </p>
+            </section>
 
             <!--Searchbar-->
             <section>
@@ -84,6 +126,7 @@
                 </p>
             </section>
 
+            <!--Rich editors-->
             <section>
               <h3>Rich editors</h3>
               <p>
@@ -141,35 +184,9 @@
                 Components to work with <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a>
               </p>
             </section>
-
-            <div class="bs-callout bs-callout-warning">
-              <h4>Notes</h4>
-              <dl>
-                <dt>React Components</dt>
-                <dd>Each html could be considered as a React component, but there is no so much sense to create React components for such things like Button, Label, etc. that renders plain html using predefined css classes (described in the guideline).
-                  <p><strong>Example:</strong>
-                    <a href="https://react-bootstrap.github.io/">React-Bootstrap</a> implements some bootstrap component that require JS like Modal, Tabs, Popover etc. while it also contains such components like Button, Label, Form, Table that create almost 0 value by outputting single html tag with predefined class(es).
-                  </p>
-                  <p><strong>Example:</strong>
-                    One benefit of using e.g. a Button from a library like react-bootstrap is when updating Bootstrap from version 3 to 4 having changes to classes.
-                    Properties for the Button component would remain the same and it would use different CSS classes internally and hence in an ideal situation there would be no changes required for the using application.
-                  </p>
-                </dd>
-              </dl>
-              <dl>
-                <dt>Complex Components</dt>
-                <dd>Instead of having highly customizable/complex component it would better to break it into multiple simple components even if you are repeating code. One "bad" example of such "fat" component is <a href="https://github.com/JedWatson/react-select">react-select</a> that has ~70 input properties(parameters) and 626 open issues (for single component!!!)</dd>
-              </dl>
-              <dl>
-                <dt>Component(s) modules</dt>
-                <dd>As soon as it becomes clear that some component (or group of components that are related to each other logically) inside the product/project could be put in use for wider auditory it could be extracted into separate/individual module/repository.</dd>
-              </dl>
-            </div>
-            <hr/>
           </div>
         </div>
-      </div>
-      <div class="container-fluid">
+
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
             <h2>3rd party</h2>
