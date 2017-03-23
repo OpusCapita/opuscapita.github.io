@@ -1,329 +1,412 @@
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <title>OpusCapita</title>
-    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<link href="styles/app.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <title>OpusCapita</title>
+  <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <link href="styles/app.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="oc-container">
-        <nav class="navbar navbar-default oc-nav">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html" style="padding: 0"><img src="images/logo-orange.svg" height="40" /></a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Introduction</a></li>
-                    <li><a href="brand.html">Brand</a></li>
-                    <li><a href="javascript.html">JavaScript</a></li>
-                    <li><a href="css.html">CSS</a></li>
-                    <li><a href="patterns.html">Patterns</a></li>
-                    <li><a href="layout.html">Layout</a></li>
-                    <li><a href="components.html">Components</a></li>
+  <div class="oc-container">
+    <nav class="navbar navbar-default oc-nav">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="padding: 0"><img src="images/logo-orange.svg" alt="OpusCapita logo" height="40" /></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="brand.html">Brand</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="patterns.html">Patterns</a></li>
+            <li><a href="layout.html">Layout</a></li>
+            <li><a href="components.html">Components</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <main class="oc-main">
+      <div class="oc-title">
+        <h1>Components</h1>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+            <!--Info-->
+            <div class="bs-callout bs-callout-info">
+                <h4>Checklist</h4>
+                <p>
+                  Before implementing a new component go through following checklist:
+                </p>
+                <ol>
+                    <li>Is there an existing common component?</li>
+                    <li>If comparable component is found then check if it could be extended?</li>
+                    <li>Is there an available open source component that is already used?</li>
+                    <li>Is there an available open source component that is not yet in use?</li>
+                    <li>Can the component with given features be combosed from above?</li>
+                </ol>
+                <p>
+                    If none of the above criteria is met then implement a new component. </br>
+                    Add the component to the common component library if it can be used elsewhere as well.
+                </p>
+            </div>
+
+            <!--Debate-->
+            <div class="bs-callout bs-callout-warning">
+              <h4>Notes</h4>
+              <dl>
+                <dt>React Components</dt>
+                <dd>Each html could be considered as a React component, but there is no so much sense to create React components for such things like Button, Label, etc. that renders plain html using predefined css classes (described in the guideline).
+                  <p><strong>Example:</strong>
+                    <a href="https://react-bootstrap.github.io/">React-Bootstrap</a> implements some bootstrap component that require JS like Modal, Tabs, Popover etc. while it also contains such components like Button, Label, Form, Table that create almost 0 value by outputting single html tag with predefined class(es).
+                  </p>
+                  <p><strong>Example:</strong>
+                    One benefit of using e.g. a Button from a library like react-bootstrap is when updating Bootstrap from version 3 to 4 having changes to classes.
+                    Properties for the Button component would remain the same and it would use different CSS classes internally and hence in an ideal situation there would be no changes required for the using application.
+                  </p>
+                  <p><strong>Decision:</strong>
+                    Simple components from other libraries are not wrapped inside own custom components, e.g. react-bootstrap Button - keep it simple.
+                    Components that require: considerable boilerplate or code that repeats are wrapped inside own components - do not repeat yourself. An example of a component that has both is grid that is wrapped inside a custom component that provides own API, properties and abstracts functionality e.g. reordering and sorting of columns.
+                  </p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Complex Components</dt>
+                <dd>Instead of having highly customizable/complex component it would better to break it into multiple simple components even if you are repeating code. One "bad" example of such "fat" component is <a href="https://github.com/JedWatson/react-select">react-select</a> that has ~70 input properties(parameters) and 626 open issues (for single component!!!)</dd>
+              </dl>
+              <dl>
+                <dt>Component(s) modules</dt>
+                <dd>As soon as it becomes clear that some component (or group of components that are related to each other logically) inside the product/project could be put in use for wider auditory it could be extracted into separate/individual module/repository.</dd>
+              </dl>
+            </div>
+            <hr/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+            <h2>Common</h2>
+            <p>Shared components implemented in-house.</p>
+
+            <!--Alerts-->
+            <section id="alerts">
+                <h3>Alerts</h3>
+                <p>
+                    Component for showing <a href="patterns.html#glyphicons" rel="noopener noreferrer" target="_self">notifications</a>
+                    to the end user.
+                </p>
+            </section>
+
+            <!--Searchbar-->
+            <section>
+                <h3 id="searchBar">Searchbar</h3>
+                <p></p>
+                <!--Description-->
+                <p>
+                    #NEEDED
+                </p>
+                <p>
+                    Searchbar is a component that contains an input element and a button for invoking the search.
+                </p>
+              <p>
+                    Same component is used throughout the applications in order to have a consistent look and feel.
+                </p>
+            </section>
+
+            <!--Rich editors-->
+            <section>
+              <h3>Rich editors</h3>
+              <p>
+                Rich-editor-like components. Based on <a href="https://draftjs.org/" target="_blank">Draft.js</a> framework for building rich text editors.</br>
+                Provides possibility to write formatted text and output it as plain text or html.
+              </p>
+              <div>
+                <img src="images/components/rich-editors.gif" class="img-responsive" alt="Rich text editor component"/>
+              </div>
+            </section>
+
+            <hr />
+
+            <section>
+              <h3>Reference search</h3>
+              <p>
+                React component to select reference(s) of exiting domain objects on the form.</br>
+                Each object could be selected (usually) using auto complete (like full text search) or modal dialog.</br>
+                That provides possibility to perform search using specific object fields/properties.</br>
+                It supports multiselection, sorting and filtering.
+              </p>
+              <p>
+                <h5><strong>Common reference search:</strong></h5>
+                <img src="images/components/reference-search-1.gif" class="img-responsive" alt="Reference search component" />
+              </p>
+              <div class="bs-callout bs-callout-info">
+                <h4>Notes</h4>
+                <dl>
+                  <dt>Common Component</dt>
+                  <dd>
+                    <p>
+                      This could be implemented as a common component where the content of the modal is domain specific provided by the consumer?
+                      </br>
+                      Similar functionality is needed in multiple applications.
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+            </section>
+
+            <section>
+              <h3>Internationalization ( i18n )</h3>
+              <p>Utility components for working in pair with <a href="https://github.com/OpusCapitaBES/js-i18n" target="_blank">opuscapita-i18n</a></p>
+              <p class="text-danger">Overlapping functionality with <a href="javascript.html#reactIntl" target="_self">react-intl</a></p>
+            </section>
+
+            <section>
+              <h3>Overlays</h3>
+              <p>Modals, utility components for dynamic elements positioning, etc.</p>
+            </section>
+
+            <section>
+              <h3>SVG utilities</h3>
+              <p>
+                Components to work with <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a>
+              </p>
+            </section>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+            <h2>3rd party</h2>
+            <p>Open source components.</p>
+
+            <!--Accordion-->
+            <section>
+              <h3>Accordion</h3>
+              <!--Description-->
+              <p>
+                For collapsible elements use <a href="https://react-bootstrap.github.io/components.html#panels-accordion" rel="noopener noreferrer" target="_blank">accordion</a> from react-bootstrap.
+              </p>
+            </section>
+
+            <!--Autocomplete-->
+            <section>
+              <h3>Autocomplete</h3>
+              <a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">React-Select</a>
+              <!--Description-->
+              <p>
+
+              </p>
+            </section>
+
+            <!--Button-->
+            <section>
+              <h3>Buttons</h3>
+              <p>
+                Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">React-Bootstrap</a>
+              </p>
+
+              <section>
+                <div>Enabled</div>
+                <p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-default">Default</button>
+                </p>
+
+                <div>Disabled</div>
+                <p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary" disabled>Primary</button>
+                  <button type="button" class="btn btn-default" disabled>Default</button>
+                </p>
+
+                <h3>Guidelines for buttons</h3>
+                <ul>
+                  <li>
+                    Width of the button varies according to its text label, but it has minimum value for that.
+                  </li>
+                  <li>
+                    Button does not have both an icon and text. Only a textual label is most used and an icon can be used in a button only for some most common meanings like "Search".
+                  </li>
+                  <li>
+                    Disabled button is used when the button is not yet active, but will change to active later, </br>
+                    e.g. when the user has filled in some information. </br>
+                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
+                    and a click displays a tooltip reason why it is not usable at the moment.
+                  </li>
+                  <li>
+                    A button can have the focus in case it is not disabled. </br>
+                    If a button has keyboard focus, pressing the Enter key raises the Click event.
+                  </li>
+                  <li>
+                    As a general rule for pop-ups and dialogs: </br>
+                    the first button is the one that takes the action forward: </br>
+                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                    the "cancelling" button, such as Cancel or Back.
+                  </li>
+                  <li>If the button is used to open e.g. a dialog it has an ellipsis (three dots) at the end of the text.</li>
+                  <li>Buttons, also called action buttons, are used when the user is exchanging information with the system. Buttons are NOT used for navigation.</li>
                 </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <main class="oc-main">
-            <div class="oc-title">
-                <h1>Components<h1>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-		    <div class="col-xs-12">
-		      <h2>Common</h2>
-		      <p>Shared components implemented in-house.</p>
-		      <hr />
 
-		      <section>
-			<h3>Rich editors</h3>
-			<p>
-			  Rich-editor-like components. Based on <a href="https://draftjs.org/" target="_blank">Draft.js</a> framework for building rich text editors.</br>
-			  Provides possibility to write formatted text and output it as plain text or html.
-			</p>
-			<div>
-			  <img src="images/components/rich-editors.gif" style="max-width: 640px; height: auto; display: block;" />
-			</div>
-		      </section>
-		      <hr />
-		      <section>
-			<h3>Reference search</h3>
-			<p>
-			  React component to select reference(s) of exiting domain objects on the form.</br>
-			  Each object could be selected (usually) using auto complete (like full text search) or modal dialog.</br>
-			  That provides possibility to perform search using specific object fields/properties.</br>
-			  Support multiselection, sorting and filtering.
-			</p>
-			<p>
-			  <h5><strong>Common reference search:</strong></h5>
-			  <img src="images/components/reference-search-1.gif" style="max-width: 640px; height: auto;" />
-			</p>
-		      </section>
-		      
-		      <section>
-			<h3>Internationalization ( i18n )</h3>
-			<p>Utility components for working in pair with <a href="https://github.com/OpusCapitaBES/js-i18n" target="_blank">opuscapita-i18n</a></p>
-		      </section>
-		      
-		      <section>
-			<h3>Overlays</h3>
-			<p>Modals, utility components for dynamic elements positioning, etc.</p>
-		      </section>
-		      
-		      <section>
-			<h3>SVG utilities</h3>
-			<p>
-			  Components to work with <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a>
-			</p>
-		      </section>
-		      
-		      <section>
-			<h3>Autocompletes</h3>
-			<p>Autocomplete components with fuzzy search</p>
-		      </section>
-		    </div>
-		      
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2>3rd party</h2>
-                        <p>Open source components.</p>
+                <h3>Order of the primary and secondary buttons.</h3>
+                <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
+                <ul>
+                  <li>
+                    As a general rule for pop-ups and dialogs: </br>
+                    the first button is the one that takes the action forward: </br>
+                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                    the "cancelling" button, such as Cancel or Back.
+                  </li>
+                  <li>
+                    If all needed buttons are having the same priority, then only secondary buttons are used.
+                  </li>
+                </ul>
+                <!-- <p class="text-danger">Inconsistencies of the defined button order exist in current implementations.</p> Do we need to mention this?-->
+                <p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary" disabled>Primary</button>
+                  <button type="button" class="btn btn-default" disabled>Default</button>
+                  <button type="button" class="btn btn-default" disabled>Default</button>
+                </p>
+              </section>
 
-                         <!--Accordion-->
-                        <section>
-                            <h3>Accordion</h3>
-                            <!--Description-->
-                            <p>
-                              For collapsible elements use <a href="https://react-bootstrap.github.io/components.html#panels-accordion" rel="noopener noreferrer" target="_blank">accordion</a> from react-bootstrap.
-                            </p>
-                        </section>
 
-                        <!--Autocomplete-->
-                        <section>
-                            <h3>Autocomplete</h3>
-                            <a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>
-                            <!--Description-->
-                            <p>
+              <!--Description-->
+              <p>
 
-                            </p>
-                        </section>
+              </p>
+            </section>
 
-                        <!--Button-->
-                        <section>
-                            <h2>Buttons</h2>
-                            <p>
-                              Use button from <a href="https://react-bootstrap.github.io/components.html#buttons" rel="noopener noreferrer" target="_blank">react-bootstrap</a>
-			      <blockquote>
-				There is no so much sence to use / create such components like Button and Label that renders plain html using predefined css classes?
-			      </blockquote>
-                            </p>
-                            
-                            <section>
-                            <div>Enabled</div>
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary">Primary</button>
-                                <button type="button" class="btn btn-default">Default</button>
-                            </p>
+            <!--Charting-->
+            <section>
+              <h3>Charting</h3>
+              <!--Description-->
+              <p>
+                For charting e.g. line, pie, bar etc. use <a href="http://recharts.org" rel="noopener noreferrer" target="_blank">Recharts</a>
+              </p>
+              <p>
+                Usually charting is used with <a href="#searchBar">grid layouting</a> to implement reporting solutions.
+              </p>
+            </section>
 
-                            <div>Disabled</div>
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary" disabled>Primary</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                            </p>
+            <!--Color picker-->
+            <section>
+              <h3>Color picker</h3>
+              <!--Description-->
+              <p>
+                For color picker use <a href="https://casesandberg.github.io/react-color/" rel="noopener noreferrer" target="_blank">React Color</a>.
+                This is used for example customer customization purposes.
+              </p>
+            </section>
 
-                            <h3>Guidelines for buttons</h3>
-                            <ul>
-                                <li>
-                                    Width of the button varies according to its text label, but it has minimum value for that.
-                                </li>
-                                <li>
-                                    Button does not have both an icon and text. Only a textual label is most used and an icon can be used in a button only for some most common meanings like "Search".
-                                </li>
-                                <li>
-                                    Disabled button is used when the button is not yet active, but will change to active later, </br>
-                                    e.g. when the user has filled in some information. </br>
-                                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
-                                    and a click displays a tooltip reason why it is not usable at the moment.
-                                </li>
-                                <li>
-                                    A button can have the focus in case it is not disabled. </br>
-                                    If a button has keyboard focus, pressing the Enter key raises the Click event.
-                                </li>
-                                <li>
-                                    As a general rule for pop-ups and dialogs: </br>
-                                    the first button is the one that takes the action forward: </br>
-                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
-                                    the "cancelling" button, such as Cancel or Back.
-                                </li>
-                                <li>If the button is used to open e.g. a dialog it has an ellipsis (three dots) at the end of the text.</li>
-                                <li>Buttons, also called action buttons, are used when the user is exchanging information with the system. Buttons are NOT used for navigation.</li>
-                            </ul>
+            <!--Datagrid-->
+            <section>
+              <h3>Datagrid</h3>
+              <!--<a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>-->
+              <!--Description-->
+              <p>
+                Currently using <a href="https://facebook.github.io/fixed-data-table/" rel="noopener noreferrer" target="_blank">FixedDataTable</a> with common wrapper.
+                Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
+              </p>
+              <p>Document other used datagrids and use cases here as well.</p>
+            </section>
 
-                            <h3>Order of the primary and secondary buttons.</h3>
-                            <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
-                              <ul>
-                                <li>
-                                    As a general rule for pop-ups and dialogs: </br>
-                                    the first button is the one that takes the action forward: </br>
-                                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
-                                    the "cancelling" button, such as Cancel or Back.
-                                </li>
-								 <li>
-                                    If all needed buttons are having the same priority, then only secondary buttons are used.
-                                </li>                                
-                               </ul>
-                            <!-- <p class="text-danger">Inconsistencies of the defined button order exist in current implementations.</p> Do we need to mention this?-->
-                            <p class="btn-toolbar">
-                                <button type="button" class="btn btn-primary" disabled>Primary</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                                <button type="button" class="btn btn-default" disabled>Default</button>
-                            </p>
-                         </section>                      
-                        
-                           
-                            <!--Description-->
-                            <p>
+            <!--Day picker-->
+            <section>
+              <h3>Day picker</h3>
+              <p><a href="http://react-day-picker.js.org/" rel="noopener noreferrer" target="_blank">react-day-picker</a></p>
+              <!--Description-->
+              <p>
 
-                            </p>
-                        </section>
+              </p>
+            </section>
 
-                        <!--Charting-->
-                        <section>
-                            <h3>Charting</h3>
-                            <!--Description-->
-                            <p>
-                                For charting e.g. line, pie, bar etc. use <a href="http://recharts.org" rel="noopener noreferrer" target="_blank">Recharts</a>
-                            </p>
-                            <p>
-                                Usually charting is used with <a href="#searchBar">grid layouting</a> to implement reporting solutions.
-                            </p>
-                        </section>
+            <!--Date and time picker-->
+            <section>
+              <h3>Date and time picker</h3>
+              <p>
+                #NEEDED
+              </p>
+            </section>
 
-                        <!--Color picker-->
-                        <section>
-                            <h3>Color picker</h3>
-                            <!--Description-->
-                            <p>
-                                For color picker use <a href="https://casesandberg.github.io/react-color/" rel="noopener noreferrer" target="_blank">React Color</a>.
-                                This is used for example customer customization purposes.
-                            </p>
-                        </section>
+            <!--Grid layouting-->
+            <section>
+              <h3 id="gridLayouting">Grid layouting</h3>
+              <p>
+                For configurable grid layouting use <a href="https://github.com/STRML/react-grid-layout" rel="noopener noreferrer" target="_blank">React-Grid-Layout</a>.
+                This is different than Bootstrap column layout and useful e.g. for dashboard implementations.
+              </p>
+            </section>
 
-                        <!--Datagrid-->
-                        <section>
-                            <h3>Datagrid</h3>
-                            <!--<a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>-->
-                            <!--Description-->
-                            <p>
-                                Currently using <a href="https://facebook.github.io/fixed-data-table/" rel="noopener noreferrer" target="_blank">FixedDataTable</a> with common wrapper.
-                                Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
-                            </p>
-                            <p>Document other used datagrids and use cases here as well.</p>
-                        </section>
+            <!--Scrollbar-->
+            <section>
+              <h3>Scrollbar</h3>
+              <p>
+                For replacing browser specific scrollbar use <a href="https://www.npmjs.com/package/react-perfect-scrollbar" rel="noopener noreferrer" target="_blank">React Perfect Scrollbar</a>.
+              </p>
+              <p>
+                This has issues with container that has changing content size.
+              </p>
+            </section>
 
-                        <!--Day picker-->
-                        <section>
-                            <h3>Day picker</h3>
-                            <p><a href="http://react-day-picker.js.org/" rel="noopener noreferrer" target="_blank">react-day-picker</a></p>
-                            <!--Description-->
-                            <p>
+            <!--Sidebar-->
+            <section>
+              <h3>Sidebar</h3>
+              <p>
+                For sidebar use <a href="https://github.com/balloob/react-sidebar" rel="noopener noreferrer" target="_blank">React Sidebar</a>.
+                This can be used for example context sensitive help.
+              </p>
+            </section>
 
-                            </p>
-                        </section>
+            <!--Tree-->
+            <section>
+              <h3>Tree</h3>
+              <p>
+                #NEEDED
+              </p>
+              <p>Tree is needed in various applications.</p>
+            </section>
 
-                        <!--Date and time picker-->
-                        <section>
-                            <h3>Date and time picker</h3>
-                            <p>
-                                #NEEDED
-                            </p>
-                        </section>
+            <!--Mega menu-->
+            <section>
+              <h2>Mega menu</h2>
+              <p>
+                Mega menu is for large amount of menu items.
+              </p>
+              <img class="img-responsive" src="images/megamenu.png" alt="Mega menu" />
+            </section>
 
-                        <!--Grid layouting-->
-                        <section>
-                            <h3 id="gridLayouting">Grid layouting</h3>
-                            <p>
-                                For configurable grid layouting use <a href="https://github.com/STRML/react-grid-layout" rel="noopener noreferrer" target="_blank">React-Grid-Layout</a>.
-                                This is different than Bootstrap column layout and useful e.g. for dashboard implementations.
-                            </p>
-                        </section>
+            <!--Tooltip-->
+            <section>
+              <h2>Tool tip</h2>
+              <p>
+                Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device.
+                <ul>
+                  <li>Delay for opening the tool tip should be - around 60 milliseconds - so users will not be impatient about its use.
+                  </li>
+                  <li>The duration is controlled by the time the user stays hovered over the object. </li>
+                  <li>It is recommended to use maximun 3 rows for tooltips.</li>
+                  <li>Tool tips do not include interactive elements like links or buttons.</li>
+                  <li>Do not overuse tool tips, but only when more information is needed.</li>
+                </ul>
 
-                         <!--Scrollbar-->
-                        <section>
-                            <h3>Scrollbar</h3>
-                            <p>
-                                For replacing browser specific scrollbar use <a href="https://www.npmjs.com/package/react-perfect-scrollbar" rel="noopener noreferrer" target="_blank">React Perfect Scrollbar</a>.
-                            </p>
-                            <p>
-                                This has issues with container that has changing content size.
-                            </p>
-                        </section>
+              </p>
+            </section>
 
-                        <!--Sidebar-->
-                        <section>
-                            <h3>Sidebar</h3>
-                            <p>
-                                For sidebar use <a href="https://github.com/balloob/react-sidebar" rel="noopener noreferrer" target="_blank">React Sidebar</a>.
-                                This can be used for example context sensitive help.
-                            </p>
-                        </section>
-
-                        <!--Tree-->
-                        <section>
-                            <h3>Tree</h3>
-                            <p>
-                                #NEEDED
-                            </p>
-                            <p>Tree is needed in various applications.</p>
-                        </section>
-                        
-                        <!--Mega menu-->
-                        <section>
-                            <h2>Mega menu</h2>
-                            <p>
-                                Mega menu is for large amount of menu items.
-                            </p>
-                            <img class="img-responsive" src="images/megamenu.png" alt="Mega menu" />
-                         </section>
-                         
-                         <!--Tooltip-->
-                        <section>
-                            <h2>Tool tip</h2>
-                            <p>
-                                Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device. 
-                                 <ul>
-								  <li>Delay for opening the tool tip should be - around 60 milliseconds - so users will not be impatient about its use.
-								  </li>
-								  <li>The duration is controlled by the time the user stays hovered over the object. </li>
-								  <li>It is recommended to use maximun 3 rows for tooltips.</li>
-								  <li>Tool tips do not include interactive elements like links or buttons.</li>
-								  <li>Do not overuse tool tips, but only when more information is needed.</li>
-								</ul> 
-                                   
-                            </p>                          
-                         </section>
-                        
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

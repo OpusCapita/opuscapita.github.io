@@ -8,6 +8,7 @@
     <title>OpusCapita</title>
     <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="styles/app.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
 </head>
@@ -31,7 +32,6 @@
                     <li><a href="index.html">Introduction</a></li>
                     <li><a href="brand.html">Brand</a></li>
                     <li><a href="javascript.html">JavaScript</a></li>
-                    <li><a href="css.html">CSS</a></li>
                     <li><a href="patterns.html">Patterns</a></li>
                     <li><a href="layout.html">Layout</a></li>
                     <li><a href="components.html">Components</a></li>
@@ -45,32 +45,118 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <section>
-                            <h2>Empty states</h2>
-                            <p>
-                                When e.g. query yields no results it needs to be indicated to the end user clearly.
-                            </p>
+                     <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                         <!--Buttons-->
+                         <section id="buttons">
+                            <h3>Buttons</h3>
+                            <h4>Standard labels</h4>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Label</th>
+                                        <th>For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Save</td>
+                                        <td>Saving information into a system e.g. at the end of a form.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cancel</td>
+                                        <td>Interrupting the action or process and returning to the previous page without saving or submitting information
+                                            at the end of the page. </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Submit</td>
+                                        <td>Submitting information to somebody else, or to some other system at the end of a form.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back</td>
+                                        <td>Returning to the previous page. Used in the context of informative content rather than actions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Close</td>
+                                        <td>Closing the browser window. Used only in informative pop-up windows.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reset</td>
+                                        <td>Resetting form fields. Prompt recommended if the form is long. </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Search</td>
+                                        <td>Label for search fields. For the button, it is ok to use the word “Go.” If there is no heading for the search
+                                            field," Search" is used as the button text.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stop</td>
+                                        <td>Stop the action or process and staying in the current page and keeping e.g. the processed search results.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OK</td>
+                                        <td>Accepting a single comment from the system.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Editing content or information.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Add</td>
+                                        <td>Creating a new page, user, etc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Delete</td>
+                                        <td>Deleting some record or a row. Confirmation recommended.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Approve</td>
+                                        <td>Approving an item in a workflow, task list, etc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reject</td>
+                                        <td>Rejecting an item in the workflow, task list, etc.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                          </section>
 
-                        <section>
-                            <h2>Selection</h2>
+                        <!--Icons-->
+                        <section id="icons">
+                            <h2>Icons</h2>
                             <p>
-                                TODO: How various items are selected e.g. checkbox and ctrl+click...
+                                In general use icons from <a href="http://fontawesome.io/" rel="noopener noreferrer" target="_blank">Font Awesome</a>.
                             </p>
-                         </section>
+                            <div class="bs-callout bs-callout-info">
+                                <h4>Usage</h4>
+                                Document here what icon should be used in which case. </br>
+                                <strong>Example</strong>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50px;">Icon</th>
+                                            <th>Use for</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50px;"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></td>
+                                            <td class="oc-table-vertical-center">indicating adding an item.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
 
-                        <section>
+                        <!--Scrolling-->
+                        <section id="scrolling">
                             <h2>Scrolling</h2>
                             <p>Avoid having horizontal scrollbar. By default content, e.g. text, should wrap and scroll vertically.</p>
+                        </section>
 
-                            <h2>Existing</h2>
-                            <p>Apply 3rd party fully and parts from new wherever possible with reasonable effort.</p>
-                         </section>
-
-                        <section>
+                        <!--Notifications-->
+                        <section id="notifications">
                             <h2>Notifications</h2>
-                            <p>Use common component Alerts for showing notifications. </br>
+                            <p>Use common component <a href="components.html#alerts" rel="noopener noreferrer" target="_self">Alerts</a> for showing notifications. </br>
                                 Multiple warning and error notification for same reason should not be stacked i.e. previous ones are removed.
                             </p>
                             <strong>Types</strong>
@@ -81,7 +167,7 @@
                                 <li>Error</li>
                             </ul>
                             <img class="img-responsive" src="images/notifications.png" alt="Notifications" />
-                            
+
                             <h3>Dismissing notifications</h3>
                             <p>
                                 User can dismiss every type of notification manually.
@@ -91,7 +177,8 @@
                             </p>
                         </section>
 
-                        <section>
+                        <!--Modals-->
+                        <section id="modals">
                             <h2>Modals</h2>
                             <p>
                                 Bootstrap is used as a basis for implementation. Overlapping modals i.e.
@@ -101,38 +188,41 @@
                         	  <p>
                                 Modal dialog dimms the background with Black and 22% transparency.
                    			</p>
-                         </section>
+                        </section>
 
-                        <section>
+                         <!--Confirmations-->
+                        <section id="confirmations">
                             <h2>Confirmations</h2>
                             <p>
                                 For obtrusive use modals and inline confirmation for unobtrusive.Obtrusiveness depends on the cardinality of the action e.g.
                                 invoice deletion requires an obtrusive confirmation.
                             </p>
-                         </section>
-                         
-                                                 
-                         <section>
+                        </section>
+
+                         <!--Validation-->
+                         <section id="fieldValidation">
                             <h2>Field validation</h2>
                             <p>
                                 Field data should be validated when the focus is moved out of the field. Do not start validation or any automated actions while the user is completing the text entry. Validation has to be done at latest when a button (Save/OK) is pushed. After that the focus is set on the first element that contained an error. Show an instruction text to explain the error reason to the user.  The error text and the field color in error case is red. Once corrected, the error label should be removed and the text color returns to default. Errors are not shown when an empty form is opened.
                             </p>
                          </section>
-                         
-                          <section>
+
+                        <!--Mandatory fields-->
+                        <section id="mandatoryFields">
                             <h2>Mandatory fields</h2>
                             <p>
                                 Indicate a mandatory field by using an asterisk ( * ) after the label.
                             </p>
                          </section>
-                         
-                         <section>
+
+                         <!--Touch-->
+                         <section id="touch">
                             <h2>Touch interaction</h2>
-                            <p>
-                                OPEN ISSUE: How widely we'll describe this here?
-                            </p>
+                            <div class="bs-callout bs-callout-info">
+                                <h4>Open</h4>
+                                How widely we'll describe this here?
+                            </div>
                          </section>
-                         
                     </div>
                 </div>
             </div>

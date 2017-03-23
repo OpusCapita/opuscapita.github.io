@@ -41,6 +41,10 @@ html, body {
   flex: none;
 }
 
+td.oc-table-vertical-center {
+    vertical-align: middle !important;
+}
+
 .oc-main {
   flex: 1;
   height: 100%;

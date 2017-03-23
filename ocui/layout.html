@@ -31,7 +31,6 @@
                     <li><a href="index.html">Introduction</a></li>
                     <li><a href="brand.html">Brand</a></li>
                     <li><a href="javascript.html">JavaScript</a></li>
-                    <li><a href="css.html">CSS</a></li>
                     <li><a href="patterns.html">Patterns</a></li>
                     <li><a href="layout.html">Layout</a></li>
                     <li><a href="components.html">Components</a></li>
@@ -45,72 +44,104 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <h2>Header</h2>
-                        <p>
-                            Header is optional in desktop and mandatory in mobile.
-                        </p>
+                     <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                        <!--Implementation-->
+                        <section>
+                            <h2>Implementation</h2>
+                            <p>
+                                In general use <a href="http://getbootstrap.com/css/#grid" rel="noopener noreferrer" target="_blank">Bootstrap grid system</a>
+                                for creating responsive content layout that is mobile friendly.
+                            </p>
+                            <p>
+                                Not everything can be accomplished by using the grid system though and in these cases
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" rel="noopener noreferrer" target="_blank">Flexbox</a>
+                                might be useful.
+                            </p>
+                        </section>
 
-                        <h2>Search</h2>
-                        <h3>Global</h3>
-                        <p>
-                            Located at the top of the page.
-                        </p>
-                        <h3>Component</h3>
-                        <p>
-                            It is important not to restyle search bars, as their appearance and layout is required to be uniformous everywhere: </br>
-                            use common component <strong>[not implemented yet]</strong>.
-                        </p>
+                        <!--Header-->
+                        <section>
+                            <h2>Header</h2>
+                            <p>
+                                Header is optional in desktop and mandatory in mobile.
+                            </p>
+                        </section>
 
-                        <h2>Content</h2>
-                        <p>Main content scrolls vertically by default.</p>
+                        <!--Search-->
+                        <section>
+                            <h2>Search</h2>
+                            <h3>Global</h3>
+                            <p>
+                                Located at the top of the page.
+                            </p>
+                            <h3>Component</h3>
+                            <p>
+                                It is important not to restyle search bars, as their appearance and layout is required to be uniformous everywhere: </br>
+                                use common component <strong>[not implemented yet]</strong>.
+                            </p>
+                        </section>
 
-                        <h2>Footer</h2>
-                        <p>
-                            Footer is optional. The footer contains the OpusCapita logo and a shorthand copyright notice. </br>
-                            The footer is located at the bottom of the viewport if the layout is shorter than the viewport. </br>
-                            If the layout exceeds the height of the viewport, the footer is found at the bottom of the scrollable content area.
-                        </p>
-                        <img class="img-responsive" src="images/footer.png" alt="Footer" />
+                        <!--Content-->
+                        <section>
+                            <h2>Content</h2>
+                            <p>Main content scrolls vertically by default.</p>
+                        </section>
 
-                        <h2>Navigation</h2>
-                        <h3>Menu</h3>
-                        <p>
-                            The application menu is rendered as a vertical sidebar on the left border of the viewport. </br>
-                            The application menu levels are kept to as few as possible and provide access to the entire suite of installed applications.
-                        </p>
+                        <!--Footer-->
+                        <section>
+                            <h2>Footer</h2>
+                            <p>
+                                Footer is optional. The footer contains the OpusCapita logo and a shorthand copyright notice. </br>
+                                The footer is located at the bottom of the viewport if the layout is shorter than the viewport. </br>
+                                If the layout exceeds the height of the viewport, the footer is found at the bottom of the scrollable content area.
+                            </p>
+                            <img class="img-responsive" src="images/footer.png" alt="Footer" />
+                        </section>
 
-                        <h4>Keyboard support and accessibility</h4>
-                        <p>
-                            Items in the menu that take user to a different view must be anchors: links can be opened in different page and can be copied to clipboard.
-                        </p>
+                        <!--Navigation-->
+                        <section>
+                            <h2>Navigation</h2>
+                            <h3>Menu</h3>
+                            <p>
+                                The application menu is rendered as a vertical sidebar on the left border of the viewport. </br>
+                                The application menu levels are kept to as few as possible and provide access to the entire suite of installed applications.
+                            </p>
 
-                        <h4>Desktop</h4>
-                        <p>
-                            Menu is shown always.
-                        </p>
+                            <h4>Keyboard support and accessibility</h4>
+                            <p>
+                                Items in the menu that take user to a different view must be anchors: links can be opened in different page and can be copied to clipboard.
+                            </p>
 
-                        <h4>Mobile</h4>
-                        <p>
-                            Menu that is toggled via a hamburger icon located on the page heading.
-                        </p>
+                            <h4>Desktop</h4>
+                            <p>
+                                Menu is shown always.
+                            </p>
 
-                        <h4>
-                            Layout examples for navigation on top
-                        </h4>                        
-                        <img class="img-responsive" src="images/layoutExample1280.png" alt="Layout example 1280" /><br><br>
-                        <img class="img-responsive" src="images/layoutExample768.png" alt="Layout example 768" /><br><br>
-                        <img class="img-responsive" src="images/layoutExample320.png" alt="Layout example 320" /><br><br>
-                        
-                         <h4>
-                            Layout examples for navigation on left
-                        </h4>
-                        <img class="img-responsive" src="images/layoutExampleSidenavi1280.png" alt="Layout sidenavi example 1280" /><br><br>
-                        <img class="img-responsive" src="images/layoutExampleSidenavi768closed.png" alt="Layout sidenavi example 768" /><br><br>
-                        <img class="img-responsive" src="images/layoutExampleSidenavi768open.png" alt="Layout sidenavi example 768" /><br><br>
-                        <img class="img-responsive" src="images/layoutExampleSidenavi320closed.png" alt="Layout sidenavi example 320" /><br><br>
-                        
-                        
+                            <h4>Mobile</h4>
+                            <p>
+                                Menu that is toggled via a hamburger icon located on the page heading.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2>
+                                Examples
+                            </h2>
+                            <h3>
+                                Navigation on top
+                            </h3>
+                            <img class="img-responsive" src="images/layoutExample1280.png" alt="Layout example 1280" /><br><br>
+                            <img class="img-responsive" src="images/layoutExample768.png" alt="Layout example 768" /><br><br>
+                            <img class="img-responsive" src="images/layoutExample320.png" alt="Layout example 320" /><br><br>
+
+                            <h3>
+                                Navigation on left
+                            </h3>
+                            <img class="img-responsive" src="images/layoutExampleSidenavi1280.png" alt="Layout sidenavi example 1280" /><br><br>
+                            <img class="img-responsive" src="images/layoutExampleSidenavi768closed.png" alt="Layout sidenavi example 768" /><br><br>
+                            <img class="img-responsive" src="images/layoutExampleSidenavi768open.png" alt="Layout sidenavi example 768" /><br><br>
+                            <img class="img-responsive" src="images/layoutExampleSidenavi320closed.png" alt="Layout sidenavi example 320" /><br><br>
+                        </section>
                     </div>
                 </div>
             </div>
