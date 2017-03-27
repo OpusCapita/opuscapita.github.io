@@ -175,6 +175,10 @@ td.oc-table-vertical-center {
     border-radius: 1rem;
 }
 
+.oc-icon-action:hover {
+	color: #FECA1D;
+} 
+
 .oc-color-info {
     display: -webkit-box;
     display: -ms-flexbox;
