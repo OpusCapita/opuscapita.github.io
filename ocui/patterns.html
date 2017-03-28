@@ -46,9 +46,26 @@
             <div class="container-fluid">
                 <div class="row">
                      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                        	
+                         <!--Focus-->
+                          <section id="focus">
+                            <h2>Focus</h2>
+                            <p>
+                                <strong>Focus is indicated with yellow color.</strong>
+                            </p>
+                            <p>Focused icon</p>
+                            <img class="img-responsive" src="images/iconFocused.PNG" alt="Focused icon" /><br>
+                            <p>Focus in pagination</p>
+                            <img class="img-responsive" src="images/pagingFocused.PNG" alt="Pagination with focus" /><br>
+                            <p>Focused hyperlink</p>
+                            <img class="img-responsive" src="images/hyperlinkFocused.PNG" alt="Focused hyperlink" /><br>
+                            <p>Focused button</p>
+                            <img class="img-responsive" src="images/buttonFocused.PNG" alt="Focused button" />
+                         </section>
+                        
                          <!--Buttons-->
                          <section id="buttons">
-                            <h3>Buttons</h3>
+                            <h2>Buttons</h2>
                             <p>Buttons, also called action buttons, are used when the user is exchanging information with the system.</p>
                              <ul>
                                 <li>Buttons are not used for navigation.</li>
@@ -197,7 +214,7 @@
                                     <tbody>
                                         <tr>
                                             <td style="width: 50px;"><i class="fa fa-bars fa-2x oc-icon-action" aria-hidden="true"></i></td>
-                                            <td class="oc-table-vertical-center">Open the main navigation.</td>
+                                            <td class="oc-table-vertical-center">Open and close the main navigation.</td>
                                         </tr>
                                         
                                          <tr>   
@@ -212,7 +229,7 @@
                                         
                                          <tr>
                                             <td style="width: 50px;"><i class="fa fa-times fa-2x oc-icon-action" aria-hidden="true"></i></td>
-                                            <td class="oc-table-vertical-center">Close a menu or a dialog</td>
+                                            <td class="oc-table-vertical-center">Close e.g. a dialog</td>
                                         </tr>
                                         
                                         <tr>
@@ -310,8 +327,33 @@
                                 By default warning and error notifications are not dismissed automatically.
                                 Dismiss behavior and automatic closing time can be adjusted case by case as needed.
                             </p>
+                            
+                            <h3>Contextual notifications</h3>
+                            <p>
+                                Contextual notifications can be used if the notified message is related toonly some part of data on the current page.
+                            </p>
+                            <img class="img-responsive" src="images/contextualNotifications.png" alt="Contextual notifications" />
+                            
                         </section>
 
+                      	<!--progress bars and waiting indicator-->
+                      	 <section id="progress">
+                            <h2>Progress and waiting indicators</h2>
+                            <p>
+                                Progress and waiting indicators are used to indicate that the system is loading content. It is recommended to tell the user how long or which phases an operation will take and it's progress, if it is known. If that information is not available, we'll visualize unspecified waiting time. If the loading action does not prevent user to proceed with other tasks, then user should be able to close the indicator and needs to be informed when the loading is completed.
+                   			</p>
+                       		
+                       		<h3>Progress bar filling from 0% to 100%</h3>
+                        	<img class="img-responsive" src="images/progressSpecified.PNG" alt="Progress bar with progress information" />
+                        	
+                        	<h3>Linear waiting indicator</h3>
+                        	<img class="img-responsive" src="images/waitingLinear.PNG" alt="Linear waiting indicator" />
+                        	
+                        	<h3>Circular waiting indicator</h3>
+                        	<img class="img-responsive" src="images/waitingCircular.PNG" alt="Circular waiting indicator" />
+                        	 
+                        </section>
+                       
                         <!--Modals-->
                         <section id="modals">
                             <h2>Modals</h2>
@@ -329,7 +371,7 @@
                         <section id="confirmations">
                             <h2>Confirmations</h2>
                             <p>
-                                For obtrusive use modals and inline confirmation for unobtrusive.Obtrusiveness depends on the cardinality of the action e.g.
+                                For obtrusive use modals and inline confirmation for unobtrusive. Obtrusiveness depends on the cardinality of the action e.g.
                                 invoice deletion requires an obtrusive confirmation.
                             </p>
                         </section>
@@ -340,6 +382,7 @@
                             <p>
                                 Field data should be validated when the focus is moved out of the field. Do not start validation or any automated actions while the user is completing the text entry. Validation has to be done at latest when a button (Save/OK) is pushed. After that the focus is set on the first element that contained an error. Show an instruction text to explain the error reason to the user.  The error text and the field color in error case is red. Once corrected, the error label should be removed and the text color returns to default. Errors are not shown when an empty form is opened.
                             </p>
+                            <img class="img-responsive" src="images/inputinvalid.PNG" alt="Invalid text input field" />
                          </section>
 
                         <!--Mandatory fields-->
@@ -348,6 +391,16 @@
                             <p>
                                 Indicate a mandatory field by using an asterisk ( * ) after the label.
                             </p>
+                            <img class="img-responsive" src="images/inputMandatory.PNG" alt="Mandatory text input field" />
+                         </section>
+                         
+                         <!--Focused field-->
+                        <section id="mandatoryFields">
+                            <h2>Focused field</h2>
+                            <p>
+                                Focused field is indicated with yellow.
+                            </p>
+                            <img class="img-responsive" src="images/inputFocused.PNG" alt="Focused text input field" />
                          </section>
 
                          <!--Touch-->
