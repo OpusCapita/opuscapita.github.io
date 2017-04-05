@@ -7,6 +7,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <title>OpusCapita</title>
     <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="scripts/spin.min.js"></script>
+    <script type="text/javascript" src="scripts/patterns.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="styles/app.css" rel="stylesheet">
@@ -35,6 +37,7 @@
                     <li><a href="patterns.html">Patterns</a></li>
                     <li><a href="layout.html">Layout</a></li>
                     <li><a href="components.html">Components</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -350,8 +353,10 @@
                         	<img class="img-responsive" src="images/waitingLinear.PNG" alt="Linear waiting indicator" />
 
                         	<h3>Circular waiting indicator</h3>
-                        	<img class="img-responsive" src="images/waitingCircular.PNG" alt="Circular waiting indicator" />
-
+                        	<!--<img class="img-responsive" src="images/waitingCircular.PNG" alt="Circular waiting indicator" />-->
+                            <div class="oc-spinner">
+                                <span id="spinner" />
+                            </div>
                         </section>
 
                         <!--Modals-->
@@ -382,7 +387,12 @@
                             <p>
                                 Field data should be validated when the focus is moved out of the field. Do not start validation or any automated actions while the user is completing the text entry. Validation has to be done at latest when a button (Save/OK) is pushed. After that the focus is set on the first element that contained an error. Show an instruction text to explain the error reason to the user.  The error text and the field color in error case is red. Once corrected, the error label should be removed and the text color returns to default. Errors are not shown when an empty form is opened.
                             </p>
-                            <img class="img-responsive" src="images/inputInvalid.PNG" alt="Invalid text input field" />
+                            <!--<img class="img-responsive" src="images/inputInvalid.PNG" alt="Invalid text input field" />-->
+                            <div class="form-group has-error oc-input-example">
+                                <label class="control-label">Phone number</label>
+                                <input type="text" class="form-control" value="+ 358 44 491">
+                                <span class="oc-help-block">The number is too short</span>
+                            </div>
                          </section>
 
                         <!--Mandatory fields-->
@@ -391,16 +401,26 @@
                             <p>
                                 Indicate a mandatory field by using an asterisk ( * ) after the label.
                             </p>
-                            <img class="img-responsive" src="images/inputMandatory.png" alt="Mandatory text input field" />
+                            <!--<img class="img-responsive" src="images/inputMandatory.png" alt="Mandatory text input field" />-->
+                            <div class="form-group oc-input-example oc-mandatory">
+                                <label class="control-label">Username</label>
+                                <input type="text" class="form-control" value="John Doe">
+                                <!--<span class="oc-help-block">The number is too short</span>-->
+                            </div>
                          </section>
 
                          <!--Focused field-->
-                        <section id="mandatoryFields">
+                        <section id="focusedFields">
                             <h2>Focused field</h2>
                             <p>
                                 Focused field is indicated with yellow.
                             </p>
-                            <img class="img-responsive" src="images/inputFocused.PNG" alt="Focused text input field" />
+                            <!--<img class="img-responsive" src="images/inputFocused.PNG" alt="Focused text input field" />-->
+                            <div class="form-group oc-input-example">
+                                <label class="control-label">Username</label>
+                                <input type="text" class="form-control  oc-input-examples-focus" value="John Doe">
+                                <!--<span class="oc-help-block">The number is too short</span>-->
+                            </div>
                          </section>
 
                          <!--Touch-->

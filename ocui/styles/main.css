@@ -45,6 +45,36 @@ td.oc-table-vertical-center {
     vertical-align: middle !important;
 }
 
+.oc-spinner {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.has-error > * {
+    color: #d82515;
+}
+
+.oc-help-block {
+    display: block;
+    margin: 5px 0 10px 0;
+    font-size: 12px;
+}
+
+.oc-input-example {
+    width: 250px;
+}
+
+.oc-input-examples-focus {
+    border-color: #feca1d;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(254,202,29,.6);
+}
+
+.oc-mandatory label::after {
+    content: " *";
+}
+
 .oc-main {
   flex: 1;
   height: 100%;
@@ -177,7 +207,7 @@ td.oc-table-vertical-center {
 
 .oc-icon-action:hover {
 	color: #FECA1D;
-} 
+}
 
 .oc-color-info {
     display: -webkit-box;
