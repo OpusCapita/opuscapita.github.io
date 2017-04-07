@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>OpusCapita</title>
+    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link href="styles/app.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="oc-container">
+        <nav class="navbar navbar-default oc-nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="padding: 0"><img src="images/logo-orange.svg" height="40" /></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <main class="oc-main">
+            <div class="oc-title">
+                <h1>Dashboard<h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                   <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                       <!--Description-->
+                       <section>
+                        <h2>Description</h2>
+                        <p>
+                            Dashboard is a container component for visualizing independent sections of information in an organized manner. Dashboard itself does not provide any content.
+                        </p>
+                       </section>
+
+                       <!--Components-->
+                       <section>
+                        <h2>Components</h2>
+                        <p>Dashboard is a composition of different components.</p>
+                        <h3>Charting</h3>
+                        <p>
+                            <a href="components.html#charting" rel="noopener noreferrer" target="_self">Charting</a> is used for visualizing data e.g. as pie charts.
+                        </p>
+
+                        <h3>Grid layout</h3>
+                        <p>
+                            <a href="components.html#gridLayout" rel="noopener noreferrer" target="_self">Grid layouting</a> is used for creating configurable, draggable and resizable grid layout container for gadgets.
+                        </p>
+
+                        <h3>Card</h3>
+                        <p>
+                            <a href="components.html#card" rel="noopener noreferrer" target="_self">Card</a> is not used yet, but should be considered as a wrapping component for the content in order to have a consistent look and feel throughout the solutions.
+                        </p>
+                       </section>
+
+                       <!--Features-->
+                       <section>
+                        <h2>Features</h2>
+                        <p>
+                            <ul>
+                                <li>Create new dashboard.</li>
+                                <li>Delete dashboard.</li>
+                                <li>Rename dashboard.</li>
+                                <li>Add gadgets.</li>
+                                <li>Remove gadget.</li>
+                                <li>Reorder gadgets using drag and drop.</li>
+                                <li>Resize gadgets</li>
+                                <li>Responsive</li>
+                                <li>Initialization of gadgets with their order and size from an object.</li>
+                                <li>Gadget full screen mode.</li>
+                                <li>Gadget canvas mode. Canvas mode is used for alternate e.g. detailed content.</li>
+                            </ul>
+                        </p>
+                       </section>
+
+                       <!--API-->
+                       <section>
+                        <h2>Common component</h2>
+                        <p>
+                            Dashboard is not yet available as a common component.
+                        </p>
+
+                        <h3>Gadgets</h3>
+                        <h4>Clock</h4>
+                        <p>This could be extracted and added into the common component library.</p>
+                        <h4>Graphs</h4>
+                        <p>
+                            <a href="http://recharts.org" rel="noopener noreferrer" target="_blank">Recharts</a> library provides React components and those are <var>dry</var> i.e. there is not much boilerplate code.
+                        </p>
+
+                        <h3>API & Models</h3>
+                        <p>
+                            Models i.e. object structures for dashboard and gadgets should be documented and extracted as classes into common component library.
+                        </p>
+                        <p>
+                            Dashboard could e.g. provide a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" rel="noopener noreferrer" target="_blank">Promise</a>
+                            , requires <a href="http://caniuse.com/#search=Promise" rel="noopener noreferrer" target="_blank">polyfill</a> for IE, based API interface which the consumer implements and passes as an object via props.
+<pre>
+    /** Consumer **/
+    ...
+    addDashboard = (dashboard) => {
+        return Promise((resolve, reject) => {
+            asyncAddDashboard(dashboard).then(
+                (result) => {
+                    ...
+                    resolve(result.id);
+                },
+                (error) => {
+                    ...
+                    reject(error);
+                }
+            )
+        });
+    }
+    ...
+    const api = { addDashboard: this.addDashboard };
+    ...
+    &lt;Dashboard api={this.api} .../&gt;
+
+    /** Dashboard **/
+    ...
+    onAddDashboard = (dashboard) => {
+        this.props.api.addDashboard(dashboard).then(
+            (result) => { /** Update state **/ },
+            (error) => { /** Handle error **/  }
+        )
+    }
+    ...
+</pre>
+                        </p>
+                        <p>
+                            By using API the dashboard does not need to know anything about the concrete implementation and consumer can implement it in any way needed.
+                        </p>
+
+                        <h3>Translations</h3>
+                        <p>
+                            Translations for dashboard texts, e.g. <var>Add new dashboard</var> should be provided via props. Dashboard could provide fallback translations e.g. in English.
+                        </p>
+                       </section>
+
+                       <section>
+                       <h2>Example</h2>
+                        <img src="images/components/dashboard.PNG" class="img-responsive" alt="Dashboard component"/>
+                       </section>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
