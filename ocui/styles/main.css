@@ -51,7 +51,7 @@ td.oc-table-vertical-center {
     position: relative;
 }
 
-.has-error > * {
+.has-error > input[type="text"], .oc-help-block {
     color: #d82515;
 }
 

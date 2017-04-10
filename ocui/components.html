@@ -31,7 +31,7 @@
             <li><a href="index.html">Introduction</a></li>
             <li><a href="brand.html">Brand</a></li>
             <li><a href="javascript.html">JavaScript</a></li>
-            <li><a href="patterns.html">Patterns</a></li>
+            <li><a href="design.html">Design</a></li>
             <li><a href="layout.html">Layout</a></li>
             <li><a href="components.html">Components</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
@@ -106,7 +106,7 @@
             <section id="alerts">
                 <h3>Alerts</h3>
                 <p>
-                    Component for showing <a href="patterns.html#glyphicons" rel="noopener noreferrer" target="_self">notifications</a>
+                    Component for showing <a href="design.html#notifications" rel="noopener noreferrer" target="_self">notifications</a>
                     to the end user.
                 </p>
             </section>
@@ -127,8 +127,20 @@
             </div>
             </section>
 
+            <!--Datagrid-->
+            <section id="dataGrid">
+              <h3>Datagrid</h3>
+              <!--<a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>-->
+              <!--Description-->
+              <p>
+                Currently using <a href="https://facebook.github.io/fixed-data-table/" rel="noopener noreferrer" target="_blank">FixedDataTable</a> with common wrapper.
+                Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
+              </p>
+              <p>Document other used datagrids and use cases here as well.</p>
+            </section>
+
             <!--Layouts-->
-            <section>
+            <section id="layouts">
               <h3>Layouts</h3>
               <h4>Application</h4>
               <p>Application layout component is the main layout of the application.</p>
@@ -140,14 +152,15 @@
                 <p></p>
                 <!--Description-->
                 <p>
-                    #NEEDED
-                </p>
-                <p>
                     Searchbar is a component that contains an input element and a button for invoking the search.
                 </p>
-              <p>
+                <p>
                     Same component is used throughout the applications in order to have a consistent look and feel.
                 </p>
+                <p>
+                    Component is stateless and takes value and callback for button click as properties.
+                </p>
+                <img src="images/components/searchbar.PNG" class="img-responsive" alt="Searchbar component"/>
             </section>
 
             <!--Rich editors-->
@@ -228,7 +241,8 @@
             <!--Wizard-->
             <section>
               <h3>Wizard</h3>
-              <p>Wizard is used to divide a task into smaller and simpler steps. Wizard can support multiple different use cases.</p>
+              <p>Wizard is used to divide a task into smaller and simpler steps. Wizard can be used multiple different use cases.</p>
+              <p></p>
               <img src="images/components/wizard.PNG" class="img-responsive" alt="Wizard component"/>
             </section>
           </div>
@@ -354,18 +368,6 @@
                 For color picker use <a href="https://casesandberg.github.io/react-color/" rel="noopener noreferrer" target="_blank">React Color</a>.
                 This is used for example customer customization purposes.
               </p>
-            </section>
-
-            <!--Datagrid-->
-            <section id="dataGrid">
-              <h3>Datagrid</h3>
-              <!--<a href="https://jedwatson.github.io/react-select/" rel="noopener noreferrer" target="_blank">react-select</a>-->
-              <!--Description-->
-              <p>
-                Currently using <a href="https://facebook.github.io/fixed-data-table/" rel="noopener noreferrer" target="_blank">FixedDataTable</a> with common wrapper.
-                Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
-              </p>
-              <p>Document other used datagrids and use cases here as well.</p>
             </section>
 
             <!--Day picker-->
