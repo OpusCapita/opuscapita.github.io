@@ -153,18 +153,6 @@ td.oc-table-vertical-center {
     color: #5bc0de;
 }
 
-.oc-font-light {
-    font-weight: 300;
-}
-
-.oc-font-normal {
-    font-weight: 400;
-}
-
-.oc-font-bold {
-    font-weight: 700;
-}
-
 .oc-colors-container {
     padding: 1rem;
     display: -webkit-box;

@@ -46,11 +46,11 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-           
+
             <h2>UI Components</h2>
-           
+
            <p>When designing and implementing user interface, try to be consistent in your choice of UI components. Users are familiar with UI components acting in a consistent way, so choosing common ones always when appropriate will help users with task completion and make also the implementation straightforward.</p>
-           
+
             <!--Info-->
             <div class="bs-callout bs-callout-info">
                 <h4>Checklist</h4>
@@ -105,7 +105,10 @@
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
             <h2>Common</h2>
-            <p>Shared components implemented in-house.</p>
+            <p>
+              Shared components implemented in-house:
+              <a href="https://opuscapita.github.io/oc-common-ui/" rel="noopener noreferrer" target="_blank">oc-common-ui</a>
+            </p>
 
             <!--Alerts-->
             <section id="alerts">
@@ -142,6 +145,15 @@
                 Wrapper provides e.g. sorting, reordering etc. This is usually in cases where simple read-only visualization is not enough and e.g. inline editing is needed.
               </p>
               <p>Document other used datagrids and use cases here as well.</p>
+            </section>
+
+            <!--Dates-->
+            <section id="dates">
+              <h3>Dates</h3>
+              <p>
+                React date(range) inputs/pickers:
+                <a href="https://github.com/OpusCapita/react-dates" rel="noopener noreferrer" target="_blank">react-dates</a>
+              </p>
             </section>
 
             <!--Layouts-->
@@ -235,8 +247,8 @@
             <section>
               <h3>Application main menu</h3>
               <p>The application menu is rendered as a vertical sidebar on the left border of the viewport. The application menu contains L1 and L2 menu nodes, and provides access to the entire suite of installed applications</p>
-              
-                                     
+
+
 				<p>
 					Items in the menu that take user to a different view must be anchors: links can be opened in different page and can be copied to clipboard.
 				</p>
@@ -387,15 +399,7 @@
               <p><a href="http://react-day-picker.js.org/" rel="noopener noreferrer" target="_blank">react-day-picker</a></p>
               <!--Description-->
               <p>
-
-              </p>
-            </section>
-
-            <!--Date and time picker-->
-            <section id="dateAndTimePicker">
-              <h3>Date and time picker</h3>
-              <p>
-                #NEEDED
+                See also <a href="#dates" rel="noopener noreferrer" target="_self">react-dates</a>.
               </p>
             </section>
 
