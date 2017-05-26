@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>OpusCapita</title>
+    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link href="styles/app.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="oc-container">
+        <nav class="navbar navbar-default oc-nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="padding: 0"><img src="images/logo-orange.svg" height="40" /></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <main class="oc-main">
+            <div class="oc-title">
+                <h1>Grid<h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                   <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                       <!--Description-->
+                       <section>
+                        <h2>Description</h2>
+                        <p>
+                            Data grids show structured data and their purpose is to make that data readable, scannable and easily comparable.
+                        </p>
+                        <img class="img-responsive" src="images/grid.PNG" alt="Grid" /><br>
+                        
+                       </section>
+
+                       <!--Loading data-->
+                       <section>
+                        <h2>Loading data</h2>
+                        <p>Data grid content shows the waiting indicator when loading of the data is ongoing (data grid column headers are visible). If there is no data available there should be a guidance text “There are no items to show in this grid.” This must be added to each grid so that all needed localizations are taken into account.</p>
+                        </section>
+                        
+
+
+                       
+
+                       <!--Features-->
+                       <section>
+                        <h2>Features</h2>
+                        <p>
+                           
+                           The size of the grid is adjusted automatically by the container it is in. If the grid does not fit, then a scrollbar appears so that the header row remains visible. Here are the main features of the grid:
+
+
+
+                            <ul>
+                                <li>The content of cells can be defined based on the needs.</li>
+                                <li>Cells can include e.g. icons with or without actions.</li>
+                                <li>Actions for mouse events must be added case by case.</li>
+                                <li>Data grid rows are not automatically resized based on the content, and text is not wrapped i.e. there is always one row of data in one row. If the text is longer that fits it is cut and this is indicated with ellipsis (…).</li>
+                                <li>User can select and reorder shown columns.</li>
+                                <li>User can resize the columns by dragging.</li>
+                                <li>The width of every column must be set.</li>
+                                <li>The row height can be adjusted if needed.</li>
+                                <li>The keyboard navigation is not supported by default.</li>
+                                <li>Sorting direction is indicated in a column header with an arrow. Default sorting can be defined.</li>
+                                <li>Filtering is by default off. If it is set on the grid includes a row with action bar. Text filtering is case insensitive with contains operation. </li>
+                                <li>The width of every column must be setThe data grid has optional features e.g. row selection (focus), context menu, filtering and multi selection (with or without checkboxes), and inline editing. </li>
+						   </ul>
+                        </p>
+                       </section>
+
+                       
+                       <!--Action bar-->
+                       <section>
+                        <h2>Action bar</h2>
+                        <p>Grid’s action bar is shown if filtering or/and inline editing is on or there is custom actions defined for the grid. User can open Grid’s action menu with ellipsis (…) from the action bar. Available actions are (if they are turned on): Show filtering row/Hide filtering row, Delete row and Select and reorder columns. Also custom actions can be added to this menu. Action bar enables custom header text or other components like buttons. The custom area is divided into right and left areas.</p>
+                        </section>
+                        
+                         <!--Column alignment-->
+                       <section>
+                        <h2>Column alignment</h2>
+                           <ul>
+                                <li>Columns that contain ONLY numerical data are always aligned to the right e.g. money amounts which are by default shown with two decimals.</li>
+                                <li>Columns that contain dates are aligned to the right.</li>
+                                <li>Columns that contain other types of data: text, numbers+text (including IBAN, BBAN) are aligned to the left.</li>
+                                
+						   </ul>
+                        </section>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
