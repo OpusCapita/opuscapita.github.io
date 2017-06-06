@@ -97,7 +97,7 @@
                                 <li>Buttons are not used for navigation.</li>
                                 <li>Button does not have both an icon and a textual label</li>
                                 <li>Disabled button is used when the button is not yet active, but will change to active later, e.g. when the user has filled in some information. </li>
-                                <li>If the button is used to open e.g. a dialog it has three dots at the end of the text.</li>
+                                <li>If the button is used to open e.g. a dialog it has ellipsis (...) at the end of the button text.</li>
                             </ul>
                             <h4>Common button labels</h4>
                             <p>Button labels need to describe the purpose of the action so that it helps end user to understand it. The table below describes the most common labels that should be used consistently in different products and views.<p>
@@ -149,7 +149,7 @@
                                     </tr>
                                     <tr>
                                         <td>Edit</td>
-                                        <td>Editing content or information.</td>
+                                        <td>Editing content or information. Do not use the command "Modify".</td>
                                     </tr>
                                     <tr>
                                         <td>Add</td>
@@ -157,11 +157,19 @@
                                     </tr>
                                     <tr>
                                         <td>Delete</td>
-                                        <td>Deleting some record or a row. Confirmation recommended.</td>
+                                        <td>Deleting some record or a row permanently. Confirmation mandatory.</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Remove</td>
+                                        <td>Removing some record or a row e.g. from a selection. No confirmation needed.</td>
+                                    </tr>
+                                       <tr>
+                                        <td>Inactivate</td>
+                                        <td>Inactivating e.g. an account so that new actions cannot be performed, but the ones already made remain valid and visible in the system. Reactivation can be supported. Confirmation recommended.</td>
                                     </tr>
                                     <tr>
                                         <td>Approve</td>
-                                        <td>Approving an item in a workflow, task list, etc.</td>
+                                        <td>Approving an item in a workflow, task list, etc. Do not use the command "Accept".</td>
                                     </tr>
                                     <tr>
                                         <td>Reject</td>
@@ -345,10 +353,10 @@
                             </p>
                             <strong>Types</strong>
                             <ul>
-                                <li>Success</li>
-                                <li>Informational</li>
-                                <li>Warning</li>
-                                <li>Error</li>
+                                <li>Success - can be dismissed automatically and when the user clicks some other element</li>
+                                <li>Informational - can be dismissed automatically and when the user clicks some other element</li>
+                                <li>Warning - must be dismissed by user</li>
+                                <li>Error - must be dismissed by user</li>
                             </ul>
                             <img class="img-responsive" src="images/notifications.png" alt="Notifications" />
 
@@ -401,20 +409,12 @@
                    			</p>
                         </section>
 
-                         <!--Confirmations-->
-                        <section id="confirmations">
-                            <h2>Confirmations</h2>
-                            <p>
-                                For obtrusive use modals and inline confirmation for unobtrusive. Obtrusiveness depends on the cardinality of the action e.g.
-                                invoice deletion requires an obtrusive confirmation.
-                            </p>
-                        </section>
-
+                     
                          <!--Validation-->
                          <section id="fieldValidation">
                             <h2>Field validation</h2>
                             <p>
-                                Field data should be validated when the focus is moved out of the field. Do not start validation or any automated actions while the user is completing the text entry. Validation has to be done at latest when a button (Save/OK) is pushed. After that the focus is set on the first element that contained an error. Show an instruction text to explain the error reason to the user.  The error text and the field color in error case is red. Once corrected, the error label should be removed and the text color returns to default. Errors are not shown when an empty form is opened.
+                                Field data should be validated e.g. when the focus is moved out of the field or while user is typing. Validation has to be done at latest when a button (Save/OK) is pushed. After that the focus is set on the first element that contained an error. Show an instruction text to explain the error reason to the user.  The error text and the field color in error case is red. Once corrected, the error label should be removed and the text color returns to default. Errors are not shown when an empty form is opened.
                             </p>
                             <!--<img class="img-responsive" src="images/inputInvalid.PNG" alt="Invalid text input field" />-->
                             <div class="form-group has-error oc-input-example">
@@ -452,6 +452,12 @@
                             </div>
                          </section>
 
+                          <!--Dimming & hiding-->
+                         <section id="touch">
+                            <h2>Dimming vs. hiding</h2>
+                            <p>A button, an input element (text input, radiobuttons etc) or an action icon is hidden if the user does not need it in any situation e.g. if he does not have access rights for that action. A button or an input element is dimmed if the user needs it e.g. after some other action, but it is not available currently. Action icons are never dimmed but hidden instead.</p>
+                         </section>
+                         
                          <!--Touch-->
                          <section id="touch">
                             <h2>Touch interaction</h2>
