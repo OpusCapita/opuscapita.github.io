@@ -216,7 +216,11 @@
 					<div class="col-md-6">
 						<h3>Title Capitalization</h3><br>
 						<h4>Button label</h4>
-						<div class="bs-example"></div>
+						<div class="bs-example">
+							<button class="btn btn-primary">Save</button>
+							<button class="btn btn-default">Show Terms</button>
+							<button class="btn btn-default">Save and New</button>
+						</div>
 						<h4>Header</h4>
 						<div class="bs-example"></div>
 						<h4>Menu label</h4>
@@ -352,6 +356,130 @@
 								<li>Avoid using the word please.</li>
 								<li>Instead of abort, use the words End, quit or stop.</li>
 							</ul>
+
+							<h2>List of Button Labels to use in out UI</h2>
+							<p>The following labels are approved to be used for the UI of <strong>PIM</strong> only:</p>
+							<table class="table table-striped">
+								<thead>
+									<th>English Label</th>
+									<th>German Label</th>
+									<th>Icon [Yes/No]</th>
+									<th>Icon Name</th>
+									<th>Comment</th>
+									<th>Example</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Action</td>
+										<td>Aktion</td>
+										<td>No</td>
+										<td></td>
+										<td>For dropdown buttons containing multiple actions</td>
+										<td>
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Action&nbsp;
+												<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu">
+												<li><a href="#">Dropdown link</a></li>
+												<li><a href="#">Dropdown link</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Add</td>
+										<td>Hinzufügen</td>
+										<td>Yes</td>
+										<td>glyphicon-plus</td>
+										<td>For dropdown buttons containing multiple actions</td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-plus"></i>
+												&nbsp;Add
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Approve</td>
+										<td>Bestätigen</td>
+										<td>Yes</td>
+										<td>glyphicon-ok</td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-ok"></i>
+												&nbsp;Approve
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Assign</td>
+										<td>Zuweisen</td>
+										<td>Yes</td>
+										<td>glyphicon-retweet</td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-retweet"></i>
+												&nbsp;Assign
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Cancel</td>
+										<td>Abbrechen</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">												
+												Cancel
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Copy</td>
+										<td>Kopieren</td>
+										<td>Yes</td>
+										<td>glyphicon-duplicate</td>
+										<td>Do not use "Duplicate" as label</td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-duplicate"></i>
+												&nbsp;Copy
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Delete</td>
+										<td>Löschen</td>
+										<td>Yes</td>
+										<td>glyphicon-trash</td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-trash"></i>
+												&nbsp;Delete
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Edit</td>
+										<td>Bearbeiten</td>
+										<td>Yes</td>
+										<td>glyphicon-pencil</td>
+										<td>Do not use glyphicon-edit</td>
+										<td>
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-pencil"></i>
+												&nbsp;Edit
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
 
       					</div><!--/right-->
