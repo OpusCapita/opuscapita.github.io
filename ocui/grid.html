@@ -82,7 +82,7 @@
                                 <li>Actions for mouse events must be added case by case.</li>
                                 <li>Data grid rows are not automatically resized based on the content, and text is not wrapped i.e. there is always one row of data in one row. If the text is longer that fits it is cut and this is indicated with ellipsis (…).</li>
                                 <li>User can select and reorder shown columns.</li>
-                                <li>User can resize the columns by dragging.</li>
+                                <li>User can resize the columns by dragging the line between the columns in the column title area.</li>
                                 <li>The width of every column must be set.</li>
                                 <li>The row height can be adjusted if needed.</li>
                                 <li>The keyboard navigation is not supported by default.</li>
@@ -99,6 +99,17 @@
                         <h2>Action bar</h2>
                         <p>Grid’s action bar is shown if filtering or/and inline editing is on or there is custom actions defined for the grid. User can open Grid’s action menu with ellipsis (…) from the action bar. Available actions are (if they are turned on): Show filtering row/Hide filtering row, Delete row and Select and reorder columns. Also custom actions can be added to this menu. Action bar enables custom header text or other components like buttons. The custom area is divided into right and left areas.</p>
                         </section>
+					
+					     <!--Inline editing-->
+                       <section>
+                        <h2>Inline editing</h2>
+                        <p>If inline editing is enabled the grid can be in two different modes:</p>
+						        <ul>
+                                <li>Add mode: Existing entries cannot be edited. If user presses “Enter”, a new row is added. .</li>
+                                <li>Edit mode: Existing entries can be edited but new ones cannot be added.</li>                             
+						   </ul>
+						 <p>Action buttons are shown in action bar if inline editing is enabled (Edit, Add / Save, Cancel).</p>
+                        </section>
                         
                          <!--Column alignment-->
                        <section>
@@ -107,6 +118,29 @@
                                 <li>Columns that contain ONLY numerical data are always aligned to the right e.g. money amounts which are by default shown with two decimals.</li>
                                 <li>Columns that contain dates are aligned to the right.</li>
                                 <li>Columns that contain other types of data: text, numbers+text (including IBAN, BBAN) are aligned to the left.</li>
+                                
+						   </ul>
+                        </section>
+					
+					        <!--Row multiselection-->
+                       <section>
+                        <h2>Row multiselection</h2>
+                           <ul>
+                                <li>Multiselection is an optional feature for the data grid usage, and it is utilized for mass action use cases.</li>
+                                <li>The leftmost column is reserved for the multiselect checkboxes, where one click/tap onto checkbox selects the row, and the second click/tap onto checkbox unselects it.</li>
+                                <li>There are also keyboard shortcuts for selecting one or all (with ‘Shift’ hold) between the first and second row click, or selecting miscellaneous rows (by holding ‘Ctrl’). These shortcut selections can be done from any horizontal spot of the row i.e. not only onto checkboxes.</li>
+                                
+						   </ul>
+                        </section>
+					
+					        <!--Filtering-->
+                       <section>
+                        <h2>Filtering</h2>
+						   <p>Filtering row can be set to be always visible or available for the user via grid's menu with action "Show filtering row". Data type and amount define which filtering option is used:</p>
+                           <ul>
+                                <li>Multiselect list when having maximum ten different values in that column. Values are presented ascending order in a popup.</li>
+                                <li>Date picker for filtering rows of the specific date.</li>
+                                <li>Free text entry field in case column has more than ten different values. Entered character string is matched with ‘contains’ operator for the column values i.e. a match might be even middle of the value.</li>
                                 
 						   </ul>
                         </section>
