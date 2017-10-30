@@ -143,8 +143,8 @@
                   <li>Buttons, also called action buttons, are used when the user is exchanging information with the system. Buttons are NOT used for navigation.</li>
                 </ul>
 
-                <h3>Order of the primary (orange) and secondary (gray) buttons.</h3>
-                <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
+                <h3>Order of the primary (orange) and default (gray) buttons.</h3>
+                <p>The primary button is the first and default buttons come after that. Buttons are aligned to the right in forms and centered in dialogs.</p>
                 <ul>
                   <li>
                     As a general rule for pop-ups and dialogs: </br>
@@ -153,12 +153,19 @@
                     the "cancelling" button, such as Cancel or Back.
                   </li>
                   <li>
-                    If all needed buttons are having the same priority, then only secondary buttons are used.
+                    If all needed buttons are having the same priority, then only default buttons are used.
                   </li>
+				  <li>Only one primary button per view is allowed and it takes the enter if user has pressed it from the keyboard.</li>
                 </ul>
+  				<p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-default">Default</button>
+				  <button type="button" class="btn btn-default">Default</button>
+				  <button type="button" class="btn btn-default">Default</button>
+                </p>
 
-                            <h4>Common button labels</h4>
-                            <p>Button labels need to describe the purpose of the action so that it helps end user to understand it. The table below describes the most common labels that should be used consistently in different products and views.<p>
+                            <h3>Common button labels</h3>
+                            <p>Button labels need to describe the purpose of the action so that it helps end user to understand it (as an example using of Delete and Cancel buttons in a dialog is preferred over using OK and Cancel buttons). The table below describes the most common labels that should be used consistently in different products and views.<p>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
@@ -518,9 +525,9 @@
 
 							<!--Tooltip-->
 							<section id="toolTip">
-							  <h3>Tool tip</h3>
+							  <h2>Tool tip</h2>
 							  <p>
-								Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device.
+								Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device.</p>
 								<ul>
 								  <li>Delay for opening the tool tip should be - around 60 milliseconds - so users will not be impatient about its use.
 								  </li>
@@ -529,7 +536,14 @@
 								  <li>Tool tips do not include interactive elements like links or buttons.</li>
 								  <li>Do not overuse tool tips, but only when more information is needed.</li>
 								</ul>
+								<img class="img-responsive" src="images/tooltip.PNG" alt="Tooltip" />
                          
+						 	<!--Badge-->
+							<section id="toolTip">
+							  <h2>Badge</h2>
+							  <p>Badges can be used to highlight new or unread items.</p>
+							  <img class="img-responsive" src="images/badge.PNG" alt="Badge" />
+								
                                              
                            <!--Help-->
                          <section id="help">
