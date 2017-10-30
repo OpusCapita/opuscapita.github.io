@@ -51,10 +51,10 @@
                 <div class="row">
                      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                          <section>
-                            <h2>Design patterns</h2>
-                            <p>
-                                This section describes OpusCapita design patterns and principles.
-                                A design pattern is a general repeatable solution to a commonly occurring problem.
+                           <h2>Design principles</h2>
+                           <p>
+                                This section describes OpusCapita design principles.
+                                A design principle is a general repeatable solution to a commonly occurring problem.
                                 It isn't necessarily a finished design that can be transformed directly into code
                                 but can be a description or template that can be used in many different situations.
                             </p>
@@ -99,6 +99,64 @@
                                 <li>Disabled button is used when the button is not yet active, but will change to active later, e.g. when the user has filled in some information. </li>
                                 <li>If the button is used to open e.g. a dialog it has ellipsis (...) at the end of the button text.</li>
                             </ul>
+							 
+			
+           
+              <section>
+                <div>Enabled</div>
+                <p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-default">Default</button>
+                </p>
+
+                <div>Disabled</div>
+                <p class="btn-toolbar">
+                  <button type="button" class="btn btn-primary" disabled>Primary</button>
+                  <button type="button" class="btn btn-default" disabled>Default</button>
+                </p>
+
+                <h3>Guidelines for buttons</h3>
+                <ul>
+                  <li>
+                    Width of the button varies according to its text label, but it has minimum value for that.
+                  </li>
+                  <li>
+                    Button does not have both an icon and text. Only a textual label is most used and an icon can be used in a button only for some most common meanings like "Search".
+                  </li>
+                  <li>
+                    Disabled button is used when the button is not yet active, but will change to active later, </br>
+                    e.g. when the user has filled in some information. </br>
+                    If we can’t assume user to understand why the button is inactive, it is left as active, </br>
+                    and a click displays a tooltip reason why it is not usable at the moment.
+                  </li>
+                  <li>
+                    A button can have the focus in case it is not disabled. </br>
+                    If a button has keyboard focus, pressing the Enter key raises the Click event.
+                  </li>
+                  <li>
+                    As a general rule for pop-ups and dialogs: </br>
+                    the first button is the one that takes the action forward: </br>
+                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                    the "cancelling" button, such as Cancel or Back.
+                  </li>
+                  <li>If the button is used to open e.g. a dialog it has an ellipsis (three dots) at the end of the text.</li>
+                  <li>Buttons, also called action buttons, are used when the user is exchanging information with the system. Buttons are NOT used for navigation.</li>
+                </ul>
+
+                <h3>Order of the primary (orange) and secondary (gray) buttons.</h3>
+                <p>The primary button is first and secondary buttons come after that. Buttons are aligned to the right.</p>
+                <ul>
+                  <li>
+                    As a general rule for pop-ups and dialogs: </br>
+                    the first button is the one that takes the action forward: </br>
+                    the "okaying" button, such as Continue, Save, Send, or Next. Next to the previous is its counterpart, </br>
+                    the "cancelling" button, such as Cancel or Back.
+                  </li>
+                  <li>
+                    If all needed buttons are having the same priority, then only secondary buttons are used.
+                  </li>
+                </ul>
+
                             <h4>Common button labels</h4>
                             <p>Button labels need to describe the purpose of the action so that it helps end user to understand it. The table below describes the most common labels that should be used consistently in different products and views.<p>
                             <table class="table table-hover">
@@ -457,16 +515,22 @@
                             <h2>Dimming vs. hiding</h2>
                             <p>A button, an input element (text input, radiobuttons etc) or an action icon is hidden if the user does not need it in any situation e.g. if he does not have access rights for that action. A button or an input element is dimmed if the user needs it e.g. after some other action, but it is not available currently. Action icons are never dimmed but hidden instead.</p>
                          </section>
+
+							<!--Tooltip-->
+							<section id="toolTip">
+							  <h3>Tool tip</h3>
+							  <p>
+								Tool tips are small text boxes that provide information about a component or area whenever the user "hovers" the pointer over that area, without pressing the mouse button or uses the long tap with a touch enabled device.
+								<ul>
+								  <li>Delay for opening the tool tip should be - around 60 milliseconds - so users will not be impatient about its use.
+								  </li>
+								  <li>The duration is controlled by the time the user stays hovered over the object. </li>
+								  <li>It is recommended to use maximun 3 rows for tooltips.</li>
+								  <li>Tool tips do not include interactive elements like links or buttons.</li>
+								  <li>Do not overuse tool tips, but only when more information is needed.</li>
+								</ul>
                          
-                         <!--Touch-->
-                         <section id="touch">
-                            <h2>Touch interaction</h2>
-                            <div class="bs-callout bs-callout-info">
-                                <h4>Open</h4>
-                                How widely we'll describe this here?
-                            </div>
-                         </section>
-                         
+                                             
                            <!--Help-->
                          <section id="help">
                             <h2>Product documentation and contextual help</h2>
