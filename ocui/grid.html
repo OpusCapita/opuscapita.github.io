@@ -88,7 +88,7 @@
                                 <li>The keyboard navigation is not supported by default.</li>
                                 <li>Sorting direction is indicated in a column header with an arrow. Default sorting can be defined.</li>
                                 <li>Filtering is by default off. If it is set on the grid includes a row with action bar. Text filtering is case insensitive with contains operation. </li>
-                                <li>The width of every column must be setThe data grid has optional features e.g. row selection (focus), context menu, filtering and multi selection (with or without checkboxes), and inline editing. </li>
+                                <li>The width of every column must be set. The data grid has optional features e.g. row selection (focus), context menu, filtering and multi selection (with or without checkboxes), and inline editing. </li>
 						   </ul>
                         </p>
                        </section>
@@ -143,6 +143,29 @@
                                 <li>Free text entry field in case column has more than ten different values. Entered character string is matched with ‘contains’ operator for the column values i.e. a match might be even middle of the value.</li>
                                 
 						   </ul>
+                        </section>
+					
+					
+					<!--Columns selecetion and prioritization-->
+                       <section>
+                        <h2>Column selection</h2>
+						   <p>Column selection and prioritization can be set available for the user via grid's menu with action "Select columns". This feature can be used e.g. if there is a lot of columns available or if different customers or users prioritizes offered data differently. This functionality is offered via a separate dialog:</p>
+                       
+						   <img class="img-responsive" src="images/ReorderColumnsInGrid.PNG" alt="Column selection" /><br>
+						   
+						   <ul>
+							   <li>User can select columns with checkboxes from the Available columns list.</li> 
+							   <li>Selected columns list displays the selected columns.</li>
+							   <li>User can unselect columns with checkboxes in the Available columns list or with x-ison in the Selected columns list.</li>
+							   <li>If there are no items in the Selected columns list the text “No columns” is shown instead of column names.</li>
+							   <li>A scrollbar is shown if the list(s) has more items than fits. </li>
+							   <li>User must be able to filter available columns list, because there may be many of those. </li>
+							   <li>User can change the column order by dragging the arrows up/down icon. The actual column order in a grid is updated after the user presses the OK button.</li>
+							   <li>User can select “Cancel” and then all changes are discarded.</li>
+							   <li>Locked items in the Selected columns list (indicated with a lock icon) cannot be removed or moved in the column order (arrows up/down icon is not shown for those). The locked columns are shown in the available columns list with disabled and selected checkbox.</li>
+					   
+						   </ul>
+						   
                         </section>
                         
 
