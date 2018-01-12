@@ -170,15 +170,45 @@
                 <p></p>
                 <!--Description-->
                 <p>
-                    Searchbar is a component that contains an input element and a button for invoking the search.
+                    Searchbar is a component that contains an input element and an optional button for invoking the search if it is not done automatically.
                 </p>
                 <p>
                     Same component is used throughout the applications in order to have a consistent look and feel.
                 </p>
                 <p>
-                    Component is stateless and takes value and callback for button click as properties.
+					There is two differnt ways of using the searchbar:</p>
+					<strong>1. Search is started automatically after user's input.</strong> 
+						<p>
+						<ul>
+						<li>
+						In this case the user does not need to press the search icon (magnifier) to start the search and thus the icon is shown as gray with white background.  
+						</li>
+						<li>
+						In this case the search bar can be adjusted with the parameter that defines how many characters need to be inputted after the search is started automatically. The default value for that parameter is 3 characters. 
+						</li>
+						<li>
+						After the user has inputted the first character the search icon is changed to X -icon, which the user can click to clear all characters.
+						</li>
+						</ul>
+						<img class="img-responsive" src="images/searchbarAuto.png" alt="Searchbar component auto"/><br>
+					<Strong>2. Search is started only after the user clicks the search icon.</Strong>
+						<ul>
+						<li>
+						The search icon is shown in this case as white with dark gray background. 
+						</li>
+						<li>
+						After the user has clicked the search icon the icon changes to X-icon, which the user can click to clear all characters. 
+						</li>
+						<li>
+						If the user then modifies the inputted string, the X-icon is changed back to the search icon.
+						</li>
+						<li>
+						User should be able to move the keyboard focus to both input and icon area separately.
+						</li>
+						</ul>
+						<img class="img-responsive" src="images/searchbar.png" alt="Searchbar component"/>	
                 </p>
-                <img src="images/components/searchbar.PNG" class="img-responsive" alt="Searchbar component"/>
+                
             </section>
 
             <!--Rich editors-->
