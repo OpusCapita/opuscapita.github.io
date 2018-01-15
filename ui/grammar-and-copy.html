@@ -361,7 +361,7 @@
 							<p>This list includes all labels, which can be used for the UI of OpusCapita. The buttons can be used either as icon-only, text-only or as icon-text combination.
 								This options should always be preferred, if there is enough space on the UI. Please note that a tooltip must be added if the button only includes an icon.
 							</p>
-							<p class="lead">The following labels are approved to be used for the UI of the <strong>PIM</strong>product line:</p>
+							<p class="lead">The following labels are approved to be used for the UI of the <strong>PIM</strong> product line:</p>
 							<table class="table table-striped">
 								<thead>
 									<th>English Label</th>
@@ -393,7 +393,7 @@
 										<td>Yes</td>
 										<td>glyphicon-plus</td>
 										<td></td>
-										<td>
+										<td style="text-align: pull-right;">
 											<button class="btn btn-primary">
 												<i class="glyphicon glyphicon-plus"></i>
 												&nbsp;Add
@@ -436,6 +436,21 @@
 												<i class="glyphicon glyphicon-retweet"></i>
 												&nbsp;Assign
 											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>Bulk Update</td>
+										<td>Massenaktualisierung</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Bulk Update&nbsp;
+												<span class="caret"></span>
+												</button>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -618,6 +633,18 @@
 										</td>
 									</tr>
 									<tr>
+										<td>Load</td>
+										<td>Laden</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												Load
+											</button>
+										</td>
+									</tr>
+									<tr>
 										<td>Log In</td>
 										<td>Log In</td>
 										<td>No</td>
@@ -645,19 +672,46 @@
 										</td>
 									</tr>
 									<tr>
-										<td>Preview</td>
-										<td>Vorschau</td>
-										<td>Yes</td>
-										<td>glyphicon-eye-open</td>
+										<td>Normalize</td>
+										<td>Normalisieren</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-primary" >
+												Normalize
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>OK</td>
+										<td>OK</td>
+										<td>No</td>
+										<td></td>
 										<td></td>
 										<td>
 											<button class="btn btn-primary">
-												<i class="glyphicon glyphicon-eye-open"></i>
-												&nbsp;Preview
+												OK
 											</button>
 										</td>
 									</tr>
 									<tr>
+										<tr>
+											<td>Preview</td>
+											<td>Vorschau</td>
+											<td>Yes</td>
+											<td>glyphicon-eye-open</td>
+											<td></td>
+											<td>
+												<button class="btn btn-primary">
+													<i class="glyphicon glyphicon-eye-open"></i>
+													&nbsp;Preview
+												</button>
+											</td>
+										</tr>
+										<tr>
 										<td>Refresh</td>
 										<td>Aktualisieren</td>
 										<td>Yes</td>
@@ -785,6 +839,18 @@
 										</td>
 									</tr>
 									<tr>
+										<td>Select</td>
+										<td>Auswählen</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												Select
+											</button>
+										</td>
+									</tr>
+									<tr>
 										<td>Show</td>
 										<td>Zeige</td>
 										<td>No</td>
@@ -813,6 +879,18 @@
 										</td>
 									</tr>
 									<tr>
+										<td>Upload</td>
+										<td>Hochladen</td>
+										<td>No</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button class="btn btn-primary">
+												Upload
+											</button>
+										</td>
+									</tr>
+									<tr>
 										<td>Usage</td>
 										<td>Verwendung</td>
 										<td>No</td>
@@ -821,18 +899,6 @@
 										<td>
 											<button class="btn btn-primary">
 												Usage
-											</button>
-										</td>
-									</tr>
-									<tr>
-										<td>Workflow</td>
-										<td>Verwendung</td>
-										<td>No</td>
-										<td></td>
-										<td></td>
-										<td>
-											<button class="btn btn-primary">
-												Workflow
 											</button>
 										</td>
 									</tr>
