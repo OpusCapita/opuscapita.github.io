@@ -164,8 +164,8 @@
 				  <button type="button" class="btn btn-default">Default</button>
                 </p>
 
-                            <h3>Common button labels</h3>
-                            <p>Button labels need to describe the purpose of the action so that it helps end user to understand it (as an example using of Delete and Cancel buttons in a dialog is preferred over using OK and Cancel buttons). The table below describes the most common labels that should be used consistently in different products and views.<p>
+                            <h3>Common button labels and action commands</h3>
+                            <p>Button labels need to describe the purpose of the action so that it helps end user to understand it (as an example using of Delete and Cancel buttons in a dialog is preferred over using OK and Cancel buttons). The table below describes the most common button labels and action commands for menus that should be used consistently in different products and views.<p>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
@@ -178,14 +178,18 @@
                                         <td>Save</td>
                                         <td>Saving information into a system e.g. at the end of a form.</td>
                                     </tr>
+									 <tr>
+                                        <td>Discard changes</td>
+                                        <td>All changes or creation of a new item is discarded. If this is appearing in a dialog after the user has selected to close e.g. a wizard then that wizard is also closed.</td>
+                                    </tr>
                                     <tr>
                                         <td>Cancel</td>
-                                        <td>Interrupting the action or process and returning to the previous page without saving or submitting information
-                                            at the end of the page. </td>
+                                        <td>Interrupting the action or process and returning to the previous page without saving or submitting information. 
+										</td>
                                     </tr>
                                     <tr>
                                         <td>Submit</td>
-                                        <td>Submitting information to somebody else, or to some other system at the end of a form.</td>
+                                        <td>Submitting information at the end of a form.</td>
                                     </tr>
                                     <tr>
                                         <td>Back</td>
@@ -193,7 +197,7 @@
                                     </tr>
                                     <tr>
                                         <td>Close</td>
-                                        <td>Closing the browser window. Used only in informative pop-up windows.</td>
+                                        <td>Closing the browser window. Used only in informative pop-up windows or in wizards.</td>
                                     </tr>
                                     <tr>
                                         <td>Reset</td>
@@ -201,8 +205,7 @@
                                     </tr>
                                     <tr>
                                         <td>Search</td>
-                                        <td>Label for search fields. For the button, it is ok to use the word “Go.” If there is no heading for the search
-                                            field," Search" is used as the button text.</td>
+                                        <td>Label for search fields. For the button, it is better to use only the magnifier icon.</td>
                                     </tr>
                                     <tr>
                                         <td>Stop</td>
@@ -218,7 +221,7 @@
                                     </tr>
                                     <tr>
                                         <td>Add</td>
-                                        <td>Creating a new page, user, etc.</td>
+                                        <td>Creating a new page, user, etc. Do not use command "Add new".</td>
                                     </tr>
                                     <tr>
                                         <td>Delete</td>
@@ -502,6 +505,10 @@
 							<h3>Required details missing</h3>
 							<img class="img-responsive" src="images/DialogReqDetailsMissing.PNG" alt="Required details missing dialog" />
 							<p><strong>When to use:</strong> Show this dialog when the user has chosen to close e.g. a wizard with a close button and there is required details missing that prevent using the item, but saving the item as inactive (or draft) is allowed.</p>
+							
+							<h3>Validation errors</h3>
+							<img class="img-responsive" src="images/DialogValidationErrors.PNG" alt="Validation errors dialog" />
+							<p><strong>When to use:</strong> Show this dialog when the user has chosen to close e.g. a wizard with a close button and there is validation errors that prevent saving the item.</p>
 							
                         </section>
 
