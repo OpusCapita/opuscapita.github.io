@@ -40,20 +40,16 @@
 						<a href="index.html" class="logo-expanded hidden-collapsed">
 							<img src="img/oc-logo-white.svg" style="height: 1.885em; margin-top: -15%; margin-left: -4%;"/>
 						</a>
-
 					</div>
 
 					<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
 					<div class="mobile-menu-toggle visible-xs">
-
 						<a href="#" data-toggle="mobile-menu">
 							<i class="fa-bars"></i>
 						</a>
 					</div>
 
 				</header>
-
-
 
 				<ul id="main-menu" class="main-menu">
 					<li>
@@ -151,13 +147,9 @@
 							</li>
 						</ul>
 					</li>
-
-
-
 				</ul>
 
 			</div>
-
 		</div>
 
 		<div class="main-content">
@@ -166,201 +158,198 @@
 				<div class="container">
 					<div class="row">
 
-
 				      <!--right-->
-				      <div class="col-md-9">
+				      <div class="col-md-10">
 
+        				<h1 id="sec0">Grammar and Copy</h1>
+        				<p class="lead">
+          				This guide introduces the standards of grammar, pronounciation, naming and text messaging for applications using OCUI.
+								</p>
+								<div class="bs-callout bs-callout-info">
+									<h4>Parts of this Page Have Been Copied from Various Sources.</h4>
+									<ul>
+										<li><a href="https://msdn.microsoft.com/en-us/library/bb158706.aspx" target="_blank">MSDN Capitalization and Pronounciation Guide</a></li>
+										<li><a href="https://msdn.microsoft.com/en-us/library/bb158574.aspx" target="_blank">MSDN UI Text Guidelines</a></li>
+									</ul>
+								</div>
+								<h2>User Interface Text Guidelines</h2>
+								<p>
+									The topics in this section provide guidelines for the design of user interface text. Because of the limited amount of screen space available on most Windows Mobile devices, it's extremely important to minimize the amount of textual information displayed on the device. In addition, mobile professionals don't have a lot of time or desire to read large amounts of text to accomplish specific tasks. When writing user interface (UI) text for OCUI applications, consider the following questions:
+								</p>
+								<ul>
+									<li>Is the user interface text clear, concise, and contextually relevant for the audience?</li>
+									<li>Does the text consistently follow the style, terminology, and tone and voice specified for the product?</li>
+									<li>Does the text follow localization and geopolitical guidelines?</li>
+								</ul>
 
-        <h1 id="sec0">Grammar and Copy</h1>
-        <p class="lead">
-          This guide introduces the standards of grammar, pronounciation, naming and text messaging for applications using OCUI.
-				</p>
-				<div class="bs-callout bs-callout-info">
-					<h4>Parts of this Page Have Been Copied from Various Sources.</h4>
-					<ul>
-						<li><a href="https://msdn.microsoft.com/en-us/library/bb158706.aspx" target="_blank">MSDN Capitalization and Pronounciation Guide</a></li>
-						<li><a href="https://msdn.microsoft.com/en-us/library/bb158574.aspx" target="_blank">MSDN UI Text Guidelines</a></li>
-					</ul>
-				</div>
-				<h2>User Interface Text Guidelines</h2>
-				<p>
-					The topics in this section provide guidelines for the design of user interface text. Because of the limited amount of screen space available on most Windows Mobile devices, it's extremely important to minimize the amount of textual information displayed on the device. In addition, mobile professionals don't have a lot of time or desire to read large amounts of text to accomplish specific tasks. When writing user interface (UI) text for OCUI applications, consider the following questions:
-				</p>
-				<ul>
-					<li>Is the user interface text clear, concise, and contextually relevant for the audience?</li>
-					<li>Does the text consistently follow the style, terminology, and tone and voice specified for the product?</li>
-					<li>Does the text follow localization and geopolitical guidelines?</li>
-				</ul>
+								<h3>User Interface Text Checklist</h3>
+								<p>When writing UI text for OCUI applications, use the guidelines in the following checklist:</p>
+								<ul>
+									<li>Use clear terminology.</li>
+									<li>Avoid technical jargon and colloquialisms.</li>
+									<li>Use as few words as possible without losing the meaning.</li>
+									<li>Use one term consistently for all concepts that have the same meaning.</li>
+									<li>Avoid negative and politically sensitive terms.</li>
+									<li>Write active sentences.</li>
+									<li>When writing instructional text, present the result before the required action. For example, "To begin importing contacts, click Next."</li>
+									<li>Allow for at least 30 percent text expansion for localization.</li>
+									<li>Follow the OCUI capitalization and punctuation guidelines.</li>
+									<li>Make sure UI command labels match labels for the UI they open.</li>
+									<li>Write informative error messages.</li>
+									<li>Ask an editor to review all UI text.</li>
+								</ul>
 
-				<h3>User Interface Text Checklist</h3>
-				<p>When writing UI text for OCUI applications, use the guidelines in the following checklist:</p>
-				<ul>
-					<li>Use clear terminology.</li>
-					<li>Avoid technical jargon and colloquialisms.</li>
-					<li>Use as few words as possible without losing the meaning.</li>
-					<li>Use one term consistently for all concepts that have the same meaning.</li>
-					<li>Avoid negative and politically sensitive terms.</li>
-					<li>Write active sentences.</li>
-					<li>When writing instructional text, present the result before the required action. For example, "To begin importing contacts, click Next."</li>
-					<li>Allow for at least 30 percent text expansion for localization.</li>
-					<li>Follow the OCUI capitalization and punctuation guidelines.</li>
-					<li>Make sure UI command labels match labels for the UI they open.</li>
-					<li>Write informative error messages.</li>
-					<li>Ask an editor to review all UI text.</li>
-				</ul>
+								<h2>Capitalization and Punctuation Guidelines</h2>
+								<p>The following table indicates the type of capitalization you should use for user interface (UI) controls.</p>
+								<p>Title capitalization specifies that all parts of speech are capitalized, with the exception of articles, coordinating conjunctions (and, but, for, not, or, so, and yet), and prepositions containing four or fewer letters. Sentence capitalization specifies that only the first word and any proper nouns are capitalized.</p>
+								<div class="row">
+									<div class="col-md-6">
+										<h3>Title Capitalization</h3><br>
+										<h4>Button label</h4>
+										<div class="bs-example">
+											<button class="btn btn-primary">Save</button>
+											<button class="btn btn-default">Show Terms</button>
+											<button class="btn btn-default">Save and New</button>
+										</div>
+										<h4>Header</h4>
+										<div class="bs-example"></div>
+										<h4>Menu label</h4>
+										<div class="bs-example"></div>
+										<h4>Menu command label</h4>
+										<div class="bs-example"></div>
+										<h4>Option button label</h4>
+										<div class="bs-example"></div>
+										<h4>Pop-up menu command</h4>
+										<div class="bs-example"></div>
+										<h4>Split button label</h4>
+										<div class="bs-example"></div>
+										<h4>Soft key or touchable tile labels</h4>
+										<div class="bs-example"></div>
+										<h4>Tab label</h4>
+										<div class="bs-example"></div>
+										<h4>Text header</h4>
+										<div class="bs-example"></div>
+										<h4>Toolbar buttons</h4>
+										<div class="bs-example"></div>
+										<h4>Screen tip</h4>
+										<div class="bs-example"></div>
+										<h4>Tree view label</h4>
+										<div class="bs-example"></div>
+										<h4>Window, dialog box, and error message titles</h4>
+										<div class="bs-example"></div>
+									</div>
+									<div class="col-md-6">
+										<h3>Sentence Capitalization</h3><br>
+										<h4>Check box label</h4>
+										<div class="bs-example"></div>
+										<h4>Combo box label</h4>
+										<div class="bs-example"></div>
+										<h4>Drop-down list items</h4>
+										<div class="bs-example"></div>
+										<h4>Instructional text</h4>
+										<div class="bs-example"></div>
+										<h4>List box label</h4>
+										<div class="bs-example"></div>
+										<h4>Option button label</h4>
+										<div class="bs-example"></div>
+										<h4>Error message text</h4>
+										<div class="bs-example"></div>
+										<h4>Slider label</h4>
+										<div class="bs-example"></div>
+										<h4>Progress bar label</h4>
+										<div class="bs-example"></div>
+										<h4>Text box label</h4>
+										<div class="bs-example"></div>
+										<h4>Drop-down list label</h4>
+										<div class="bs-example"></div>
+										<h4>Text sub header</h4>
+										<div class="bs-example"></div>
+										<h4>Time picker label</h4>
+										<div class="bs-example"></div>
+									</div>
+								</div>
+								<h2>Geopolitical Ready and Localized Text-Guidelines</h2>
+								<p>Apply the following geopolitical guidelines to the user interface text:</p>
+								<ul>
+									<li>Always use the term country/region instead of the word country.</li>
+									<li>Always use the term capital/major city instead of the word capital.</li>
+									<li>Be cautious when using an untranslated trademarked term from your country because it might be interpreted as an offensive or otherwise undesirable term in another language.</li>
+								</ul>
 
-				<h2>Capitalization and Punctuation Guidelines</h2>
-				<p>The following table indicates the type of capitalization you should use for user interface (UI) controls.</p>
-				<p>Title capitalization specifies that all parts of speech are capitalized, with the exception of articles, coordinating conjunctions (and, but, for, not, or, so, and yet), and prepositions containing four or fewer letters. Sentence capitalization specifies that only the first word and any proper nouns are capitalized.</p>
-				<div class="row">
-					<div class="col-md-6">
-						<h3>Title Capitalization</h3><br>
-						<h4>Button label</h4>
-						<div class="bs-example">
-							<button class="btn btn-primary">Save</button>
-							<button class="btn btn-default">Show Terms</button>
-							<button class="btn btn-default">Save and New</button>
-						</div>
-						<h4>Header</h4>
-						<div class="bs-example"></div>
-						<h4>Menu label</h4>
-						<div class="bs-example"></div>
-						<h4>Menu command label</h4>
-						<div class="bs-example"></div>
-						<h4>Option button label</h4>
-						<div class="bs-example"></div>
-						<h4>Pop-up menu command</h4>
-						<div class="bs-example"></div>
-						<h4>Split button label</h4>
-						<div class="bs-example"></div>
-						<h4>Soft key or touchable tile labels</h4>
-						<div class="bs-example"></div>
-						<h4>Tab label</h4>
-						<div class="bs-example"></div>
-						<h4>Text header</h4>
-						<div class="bs-example"></div>
-						<h4>Toolbar buttons</h4>
-						<div class="bs-example"></div>
-						<h4>Screen tip</h4>
-						<div class="bs-example"></div>
-						<h4>Tree view label</h4>
-						<div class="bs-example"></div>
-						<h4>Window, dialog box, and error message titles</h4>
-						<div class="bs-example"></div>
-					</div>
-					<div class="col-md-6">
-						<h3>Sentence Capitalization</h3><br>
-						<h4>Check box label</h4>
-						<div class="bs-example"></div>
-						<h4>Combo box label</h4>
-						<div class="bs-example"></div>
-						<h4>Drop-down list items</h4>
-						<div class="bs-example"></div>
-						<h4>Instructional text</h4>
-						<div class="bs-example"></div>
-						<h4>List box label</h4>
-						<div class="bs-example"></div>
-						<h4>Option button label</h4>
-						<div class="bs-example"></div>
-						<h4>Error message text</h4>
-						<div class="bs-example"></div>
-						<h4>Slider label</h4>
-						<div class="bs-example"></div>
-						<h4>Progress bar label</h4>
-						<div class="bs-example"></div>
-						<h4>Text box label</h4>
-						<div class="bs-example"></div>
-						<h4>Drop-down list label</h4>
-						<div class="bs-example"></div>
-						<h4>Text sub header</h4>
-						<div class="bs-example"></div>
-						<h4>Time picker label</h4>
-						<div class="bs-example"></div>
-					</div>
-				</div>
+								<p>Apply the following localization guidelines to the user interface text:</p>
+								<ul>
+									<li>Use terminology, punctuation, acronyms, and capitalization consistently.</li>
+									<li>Avoid idioms, jargon, colloquialisms, abbreviations, acronyms, and metaphors whenever possible. </li>
+									<li>Avoid long compound sentences with multiple nouns because they are difficult to translate. </li>
+									<li>Use descriptors wherever possible. </li>
+									<li>When using punctuation, take into account that other languages have different rules. </li>
+									<li>Localizing English text usually increases the length of the text, which may affect the layout of controls. As needed, use standard abbreviations and rephrase text to ensure that it fits on the screen. </li>
+									<li>The following illustration shows the difference in text length when the same content is localized in three different languages.</li>
+								</ul>
+								<br>
+								<div class="row">
+									<div class="col-md-4">
+										<h4>English</h4>
+										<div class="bs-example">
+											This is a simple filler text.
+										</div>
+									</div>
+									<div class="col-md-4">
+										<h4>German</h4>
+										<div class="bs-example">
+											Das ist ein einfacher Blindtext.
+										</div>
+									</div>
+									<div class="col-md-4">
+										<h4>Finnish</h4>
+										<div class="bs-example">
+											Tämä on yksinkertainen paikanvaraajateksti.
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<h4>French</h4>
+										<div class="bs-example">
+											Il s'agit d'un simple texte réservé.
+										</div>
+									</div>
+									<div class="col-md-4">
+										<h4>Russian</h4>
+										<div class="bs-example">
+											<p lang="ru" xml:lang="ru" dir="ltr">
+												Это простой текст-заглушка.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<h4>Japanese</h4>
+										<div class="bs-example">
+											これは単純なプレースホルダテキストです
+										</div>
+									</div>
+								</div>
+								<br/>
+								<h2>Error and Informational Message Guidelines</h2>
+								<p>Follow these guidelines when you write error messages and informational text:</p>
+								<ul>
+									<li>Identify the problem, indicate the cause if helpful, and provide a solution if possible.</li>
+									<li>Write phrases instead of complete sentences to conserve space. For example, write "Save using a different name" instead of "Save this document using a different file name." </li>
+									<li>Use title caps in the title bar of the message box and sentence caps in the message body text. </li>
+									<li>Title caps rules specify that all words are capitalized with the exception of articles, coordinating conjunctions (and, but, for, not, or, so, and yet), and prepositions containing four or fewer letters. </li>
+									<li>Sentence caps rules specify that only the first word and any proper nouns are capitalized. </li>
+									<li>Bold command names instead of using quotation marks.</li>
+									<li>When there may be a consequence of a user's action, preface the error message with the word "Warning." For example, write "Warning: If you synchronize now, duplicate items may appear in your Inbox."</li>
+									<li>Do not use exclamation points.</li>
+									<li>Do not write content that implies that applications can think or feel.</li>
+									<li>Avoid using the word please.</li>
+									<li>Instead of abort, use the words End, quit or stop.</li>
+								</ul>
 
-				<h2>Geopolitical Ready and Localized Text-Guidelines</h2>
-				<p>Apply the following geopolitical guidelines to the user interface text:</p>
-				<ul>
-					<li>Always use the term country/region instead of the word country.</li>
-					<li>Always use the term capital/major city instead of the word capital.</li>
-					<li>Be cautious when using an untranslated trademarked term from your country because it might be interpreted as an offensive or otherwise undesirable term in another language.</li>
-				</ul>
-
-				<p>Apply the following localization guidelines to the user interface text:</p>
-				<ul>
-					<li>Use terminology, punctuation, acronyms, and capitalization consistently.</li>
-					<li>Avoid idioms, jargon, colloquialisms, abbreviations, acronyms, and metaphors whenever possible. </li>
-					<li>Avoid long compound sentences with multiple nouns because they are difficult to translate. </li>
-					<li>Use descriptors wherever possible. </li>
-					<li>When using punctuation, take into account that other languages have different rules. </li>
-					<li>Localizing English text usually increases the length of the text, which may affect the layout of controls. As needed, use standard abbreviations and rephrase text to ensure that it fits on the screen. </li>
-					<li>The following illustration shows the difference in text length when the same content is localized in three different languages.</li>
-				</ul>
-				<br>
-				<div class="row">
-					<div class="col-md-4">
-						<h4>English</h4>
-						<div class="bs-example">
-							This is a simple filler text.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4>German</h4>
-						<div class="bs-example">
-							Das ist ein einfacher Blindtext.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4>Finnish</h4>
-						<div class="bs-example">
-							Tämä on yksinkertainen paikanvaraajateksti.
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<h4>French</h4>
-						<div class="bs-example">
-							Il s'agit d'un simple texte réservé.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4>Russian</h4>
-						<div class="bs-example">
-							<p lang="ru" xml:lang="ru" dir="ltr">
-								Это простой текст-заглушка.
-							</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4>Japanese</h4>
-						<div class="bs-example">
-							これは単純なプレースホルダテキストです
-						</div>
-					</div>
-				</div>
-							<br/>
-							<h2>Error and Informational Message Guidelines</h2>
-							<p>Follow these guidelines when you write error messages and informational text:</p>
-							<ul>
-								<li>Identify the problem, indicate the cause if helpful, and provide a solution if possible.</li>
-								<li>Write phrases instead of complete sentences to conserve space. For example, write "Save using a different name" instead of "Save this document using a different file name." </li>
-								<li>Use title caps in the title bar of the message box and sentence caps in the message body text. </li>
-								<li>Title caps rules specify that all words are capitalized with the exception of articles, coordinating conjunctions (and, but, for, not, or, so, and yet), and prepositions containing four or fewer letters. </li>
-								<li>Sentence caps rules specify that only the first word and any proper nouns are capitalized. </li>
-								<li>Bold command names instead of using quotation marks.</li>
-								<li>When there may be a consequence of a user's action, preface the error message with the word "Warning." For example, write "Warning: If you synchronize now, duplicate items may appear in your Inbox."</li>
-								<li>Do not use exclamation points.</li>
-								<li>Do not write content that implies that applications can think or feel.</li>
-								<li>Avoid using the word please.</li>
-								<li>Instead of abort, use the words End, quit or stop.</li>
-							</ul>
-
-							<h2>Glossary: Button Labels</h2>
-							<p>This list includes all labels, which can be used for the UI of OpusCapita. The buttons can be used either as icon-only, text-only or as icon-text combination.
-								This options should always be preferred, if there is enough space on the UI. Please note that a tooltip must be added if the button only includes an icon.
-							</p>
+								<h2>Glossary: Button Labels</h2>
+								<p>This list includes all labels, which can be used for the UI of OpusCapita. The buttons can be used either as icon-only, text-only or as icon-text combination.
+									This options should always be preferred, if there is enough space on the UI. Please note that a tooltip must be added if the button only includes an icon.
+								</p>
 							<p class="lead">The following labels are approved to be used for the UI of the <strong>PIM</strong> product line:</p>
 							<table class="table table-striped">
 								<thead>
@@ -556,11 +545,11 @@
 										<td>Edit</td>
 										<td>Bearbeiten</td>
 										<td>Yes</td>
-										<td>glyphicon-pencil</td>
+										<td>fa-pencil</td>
 										<td>Do not use glyphicon-edit</td>
 										<td>
 											<button class="btn btn-primary">
-												<i class="glyphicon glyphicon-pencil"></i>
+												<i class="fa fa-pencil"></i>
 												&nbsp;Edit
 											</button>
 										</td>
